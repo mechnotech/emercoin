@@ -1,0 +1,100 @@
+.contactPage {
+  padding: 0;
+  .fix_ok {
+    height: 300px;
+    position: relative;
+    width: 100%;
+  }
+  &-box {
+    background-color: #f6f2fb;
+    padding: 50px 0 41px;
+  }
+}
+
+.contactFlex {
+  @include box-sizing(border-box);
+  @include min-width($media-screen-tablet) {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+  }
+  &-left {
+    @include flex(none);
+    margin: 0 auto 40px;
+    img {
+      display: block;
+      margin: -72px auto 29px;
+      max-width: 100%;
+      @include min-width($media-screen-xs) {
+        margin: -92px auto 29px;
+      }
+    }
+    @include min-width($media-screen-tablet) {
+      margin: 0 0 0 5.4%;
+      width: 320px;
+      .ar & {
+        margin: 0 5.4% 0 0;
+      }
+      img {
+        margin: -92px auto 29px;
+      }
+    }
+  }
+  &-right {
+    @include box-sizing(border-box);
+    position: relative;
+    @include min-width($media-screen-tablet) {
+      @include display-flex;
+      @include justify-content(flex-end);
+      @include flex(1);
+      text-align: center;
+      padding-left: 26px;
+      .ar & {
+        padding-left: 0;
+        padding-right: 26px;
+      }
+      .formBox {
+        margin: 0;
+        width: 100%;
+        max-width: 636px;
+        .box_input-form {
+          padding-right: 0;
+          &.two {
+            .ar & {
+              padding-right: 110px;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.emailForm-box {
+  padding: 22px 0;
+}
+
+.emailForm {
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: $body-color;
+  padding: 12px 0 12px 49px;
+  background: url("../images/emailForm.svg") no-repeat scroll 0 50% transparent;
+  .ar & {
+    padding: 12px 49px 12px 0;
+    background-position: right 50%;
+  }
+  span {
+    display: inline-block;
+    border-bottom: 2px $menu-link-hover-color solid;
+  }
+  &:hover {
+    color: $menu-link-hover-color;
+  }
+}

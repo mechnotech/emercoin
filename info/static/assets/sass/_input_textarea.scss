@@ -1,0 +1,268 @@
+/*Стиль для placeholder ховер и цвет*/
+input,
+textarea {
+  @include placeholder(1, $input-color);
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+/*start style input textarea*/
+input {
+  color: $input-color;
+  @include box-sizing(border-box);
+  background-color: white;
+  padding: 0 15px;
+  border: 1px transparent solid;
+  width: 100%;
+  &.search {
+    @include flex(1);
+    height: 50px;
+    border-radius: 5px;
+    border: solid 1px #e4d6f5;
+    font-size: 16px;
+    padding: 0 8px 0 50px;
+    background: url("../images/search.svg") no-repeat scroll 17px 50% white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .ar & {
+      padding: 0 50px 0 8px;
+    }
+  }
+}
+
+.boxSubscribe {
+  max-width: 664px;
+  margin: 0 auto;
+  @include min-width($media-screen-tablet) {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+    @include flex-wrap(wrap);
+  }
+  .actions {
+    position: relative;
+    width: 100%;
+    @include box-sizing(border-box);
+    @include min-width($media-screen-tablet) {
+      margin-left: 110px;
+      width: calc(100% - 110px);
+      .ar & {
+        margin-left: 0;
+        margin-right: 110px;
+      }
+    }
+    .recaptcha {
+      padding-top: 24px;
+    }
+  }
+}
+
+/* Оболочка лабела с инпутом */
+.box_input {
+  margin-bottom: 24px;
+  position: relative;
+  &-form {
+    margin-bottom: 12px;
+    &.two {
+      padding-top: 2px;
+    }
+    .button {
+      max-width: 100%;
+      width: 100%;
+      font-size: 16px;
+      line-height: 50px;
+      height: 50px;
+      &-blue-subscribe {
+        padding: 0;
+        font-size: 16px;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        @include min-width($media-screen-xs) {
+          width: 127px;
+          @include flex(none);
+          height: 36px;
+          font-size: 11px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+  @include min-width($media-screen-tablet) {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include box-sizing(border-box);
+    padding-right: 25px;
+    @include flex(1);
+    margin-bottom: 0;
+    .ar & {
+      padding-right: 0;
+      padding-left: 25px;
+    }
+    &-form {
+      padding-right: 110px;
+      margin-bottom: 20px;
+      /*.ar & {
+        padding-right: 0;
+        padding-left: 110px;
+      }*/
+      &.two {
+        padding-left: 110px;
+        padding-top: 13px;
+        .ar & {
+          padding-right: 110px;
+          padding-left: 0;
+        }
+      }
+      &.topper {
+        @include align-items(flex-start);
+      }
+    }
+  }
+  /* Класс для лабела */
+  .label_input {
+    @include box-sizing(border-box);
+    width: 100%;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 11px;
+    line-height: 36px;
+    padding: 0;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    @include flex(none);
+    .ar & {
+      text-align: right;
+    }
+    &.black {
+      color: $body-color;
+    }
+    @include min-width($media-screen-tablet) {
+      width: 110px;
+      line-height: 14px;
+      padding-right: 5px;
+      .ar & {
+        padding-right: 0;
+        padding-left: 5px;
+      }
+      &-top {
+        @include align-items(flex-start);
+        line-height: 36px;
+      }
+      &-min {
+        width: 100px;
+      }
+    }
+    /* Класс для звездочки */
+    &.necessarily {
+      /* Звездочка */
+      &::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background-color: $red;
+        position: relative;
+        bottom: 8px;
+        margin: 0 0 0 3px;
+        display: inline-block;
+        @include border-radius(50%);
+        .ar & {
+          margin: 0 3px 0 0;
+        }
+      }
+    }
+  }
+  /* Оболочка для инпута */
+  .relative {
+    display: inline-block;
+    @include flex(1);
+    width: 100%;
+    @include min-width($media-screen-tablet) {
+      width: auto;
+    }
+    /* Класс для звездочки */
+    &.necessarily {
+      /* Звездочка */
+      &::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background-color: $red;
+        position: relative;
+        bottom: 10px;
+        display: inline-block;
+        @include border-radius(50%);
+      }
+    }
+    /* Класс для позиционирования по обеим сторонам */
+    &.between {
+      @include min-width($media-screen-tablet) {
+        @include display-flex;
+        @include justify-content(space-between);
+      }
+    }
+  }
+  /* Класс для инпута */
+  .form_input {
+    width: 100%;
+    height: 36px;
+    border: solid 1px $border-input;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+    padding: 0 12px;
+    color: $body-color;
+    background-color: white;
+    /* Стили для ошибок */
+    &.error {
+      border-color: $red;
+    }
+  }
+  /* Класс для текстареа */
+  .form_textarea {
+    width: 100%;
+    height: 98px;
+    border: solid 1px $border-input;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+    @include box-sizing(border-box);
+    padding: 9px 12px;
+    color: $body-color;
+    background-color: white;
+    resize: none;
+    &-textarea {
+      line-height: 0;
+    }
+    /* Стили для ошибок */
+    &.error {
+      border-color: $red;
+    }
+  }
+}
+
+.formBox {
+  width: 100%;
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+  .recaptcha {
+    @include box-sizing(border-box);
+    position: relative;
+    margin-bottom: 22px;
+    padding-top: 5px;
+    @include min-width($media-screen-tablet) {
+      margin-left: 110px;
+      margin-bottom: 10px;
+      padding-top: 0;
+      .ar & {
+        margin-left: 0;
+        margin-right: 110px;
+      }
+    }
+  }
+}
+
+/*end style input textarea*/

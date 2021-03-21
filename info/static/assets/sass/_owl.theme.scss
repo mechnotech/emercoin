@@ -1,0 +1,246 @@
+/* Owl Carousel v2.2.0 */
+.owl-theme {
+  /* Общий блок навигации */
+  .owl-nav {
+    margin-top: 1rem;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    [class*='owl-'] {
+      color: white;
+      font-size: 1rem;
+      margin: 1px;
+      padding: 0;
+      background: transparent;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 0;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    &.disabled + .owl-dots {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.owl-carousel {
+  /* Переключалки кружки */
+  .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      span {
+        display: block;
+        width: 0.9286rem;
+        height: 0.9286rem;
+        margin: 0.4rem;
+        opacity: 1;
+        @include border-radius(50%);
+        background: $owl-dot;
+      }
+      &.active,
+      &:hover {
+        span {
+          background: $owl-dot-active;
+        }
+      }
+    }
+  }
+  /* Переключалки кнопки */
+  .owl-nav {
+    div {
+      color: transparent;
+      display: inline-block;
+      zoom: 1;
+      *display: inline; /*IE7 life-saver */
+      margin: 0;
+      padding: 0;
+      text-indent: -9999px;
+      position: absolute;
+      width: 100%;
+    }
+    .owl-prev {
+      background: url("../images/prev.svg") no-repeat scroll 50% 50% transparent;
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      margin-top: -2.25rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      &.disabled,
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .owl-next {
+      background: url("../images/next.svg") no-repeat scroll 50% 50% transparent;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      margin-top: -2.25rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      &.disabled,
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &-1 {
+    .owl-dots {
+      @include min-width($media-screen-xs) {
+        display: none;
+      }
+    }
+    .owl-nav {
+      display: none;
+      @include min-width($media-screen-xs) {
+        display: block;
+      }
+      @include min-width($media-screen-sxx) {
+        .owl-prev {
+          left: -4.5rem;
+        }
+        .owl-next {
+          right: -4.5rem;
+        }
+      }
+    }
+  }
+  &-2 {
+    .owl-dots {
+      bottom: 1rem;
+    }
+  }
+  &-3 {
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        top: auto;
+        bottom: -94px;
+        @include min-width($media-screen-tablet) {
+          bottom: 0;
+          height: 100%;
+        }
+      }
+      .owl-prev {
+        left: auto;
+        right: 50%;
+        margin-right: 12px;
+        @include min-width($media-screen-tablet) {
+          left: 0;
+          right: auto;
+          margin-right: 0;
+          background-position: 0 50%;
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 222px;
+            @include linear-gradient(to left, rgba(41, 31, 64, 0), #291f40);
+            left: 0;
+            position: absolute;
+          }
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+          &.disabled {
+            &::before,
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+      .owl-next {
+        right: auto;
+        left: 50%;
+        margin-left: 12px;
+        @include min-width($media-screen-tablet) {
+          right: 0;
+          left: auto;
+          margin-left: 0;
+          background-position: right 50%;
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 222px;
+            @include linear-gradient(to right, rgba(41, 31, 64, 0), #291f40);
+            right: 0;
+            position: absolute;
+          }
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+          &.disabled {
+            &::before,
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.team-carousel {
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        top: auto;
+        bottom: 32px;
+      }
+      .owl-prev {
+        left: auto;
+        right: 50%;
+        margin-right: 12px;
+      }
+      .owl-next {
+        right: auto;
+        left: 50%;
+        margin-left: 12px;
+      }
+    }
+  }
+  /* Карусель с видео */
+  &.video {
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        top: 26%;
+      }
+    }
+  }
+}
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+  text-decoration: none;
+}
+
+/* preloading images */
+.owl-item.loading {
+  min-height: 150px;
+  background: url(../images/ajax-loader.gif) no-repeat center center;
+}

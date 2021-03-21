@@ -1,0 +1,89 @@
+.teamPage {
+  padding: 60px 0 20px;
+  .product {
+    margin: 0 0 126px;
+  }
+  &-box {
+    @include display-flex;
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    @include box-sizing(border-box);
+    .product {
+      width: 280px;
+      padding: 0 20px;
+      margin-bottom: 60px;
+      margin-top: 0;
+      @include flex(none);
+      @include min-width($media-screen-xs-plus) {
+        width: 350px;
+      }
+    }
+    &-two {
+      .product {
+        padding: 0 20px 44px;
+        .button {
+          @include translate(-50%, 0);
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.lineTime {
+  width: 100%;
+  height: 1px;
+  background-color: #e4d6f5;
+  margin: 0 0 50px;
+  @include min-width($media-screen-tablet) {
+    margin: 0 0 80px;
+  }
+}
+
+.modalTteam {
+  @include box-sizing(border-box);
+  @include min-width($media-screen-tablet) {
+    @include display-flex;
+    @include justify-content(flex-start);
+    @include align-items(flex-start);
+  }
+  &-title {
+    font: 35px/1.2 'RobotoRegular';
+    padding: 42px 10px 22px;
+    border-bottom: 1px #e4d6f5 solid;
+    text-align: left;
+    margin: -45px -10px 64px;
+    @include min-width($media-screen-tablet) {
+      margin: -80px -60px 64px;
+      padding: 42px 60px 22px;
+    }
+  }
+  .box_input {
+    padding-right: 0;
+  }
+  .product {
+    width: 260px;
+    @include flex(none);
+    margin: 0 auto;
+    @include min-width($media-screen-tablet) {
+      margin: 0;
+    }
+  }
+  &-text {
+    @include flex(1);
+    @include box-sizing(border-box);
+    @include min-width($media-screen-tablet) {
+      text-align: left;
+      padding-left: 26px;
+      .ar & {
+        padding-left: 0;
+        padding-right: 26px;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

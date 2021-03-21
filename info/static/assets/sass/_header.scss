@@ -1,0 +1,528 @@
+/* start style header */
+header {
+  border-bottom: 1px $border-header solid;
+  height: 5.2857rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  @include min-width(1024px) {
+    position: relative;
+    height: auto;
+  }
+  .lineHeader {
+    border-top: 1px $purple solid;
+  }
+  /* Кнопка закрытия модального меню */
+  .closeMenu {
+    width: 1.3rem;
+    height: 1.4rem;
+    background: url("../images/closeMenu.png") no-repeat scroll 50% 50% transparent;
+    @include background-size(contain);
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 1.9rem;
+    color: $h-color;
+    z-index: 2;
+    &:hover {
+      opacity: 0.7;
+    }
+    display: none;
+    @include min-width(1024px) {
+      display: none;
+    }
+  }
+  /* Кнопка открытия меню в мобильном */
+  #pull {
+    width: 1.5714rem;
+    height: 1.36rem;
+    position: absolute;
+    right: 10px;
+    margin-top: -0.68rem;
+    top: 50%;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 101;
+    /* Цветные линии в кнопке */
+    span {
+      display: block;
+      position: absolute;
+      height: 0.2rem;
+      width: 100%;
+      background: $pull-bacg;
+      @include border-radius(3px);
+      opacity: 1;
+      left: 0;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:nth-child(3) {
+        bottom: 1px;
+      }
+    }
+    @include min-width(1024px) {
+      display: none;
+    }
+  }
+  &.higher {
+    background-color: $menu-bacg;
+    .closeMenu {
+      display: block;
+    }
+    #pull {
+      display: none;
+    }
+  }
+}
+
+.header {
+  @include box-sizing(border-box);
+  position: relative;
+  /* @include min-width($media-screen-sx) {
+     @include display-flex;
+     @include justify-content(space-between);
+   }*/
+  /* левый блок с лого */
+  &-left {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include flex(none);
+    width: 100%;
+    z-index: 2;
+    padding: 1rem 0;
+    @include min-width(1024px) {
+      padding: 1.5rem 0;
+    }
+    /* лого */
+    .logo {
+      position: relative;
+      width: 202px;
+      @include flex(none);
+      background: url("../images/logo.svg") no-repeat scroll 50% 50% transparent;
+      @include background-size(contain);
+      height: 46px;
+      &.fixed {
+        background-image: url("../images/logo-white.png");
+        z-index: 101;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+        display: block;
+        height: 100%;
+      }
+    }
+    &-menu {
+      display: none;
+      @include min-width(1024px) {
+        @include display-flex;
+        @include justify-content(space-around);
+        @include box-sizing(border-box);
+        @include flex(1);
+      }
+      padding: 12px 10px 0 10px;
+      li {
+        line-height: 1.36;
+        height: auto;
+        @include flex(auto);
+        text-align: center;
+        position: relative;
+        &:not(:first-child)::after {
+          content: '';
+          width: 1px;
+          height: 14px;
+          background-color: #e4d6f5;
+          position: absolute;
+          left: 0;
+          top: 4px;
+          display: block;
+        }
+        a {
+          font-weight: bold;
+          font-size: 11px;
+          line-height: 1.36;
+          color: $h-color;
+          letter-spacing: 1.1px;
+          text-transform: uppercase;
+          display: inline-block;
+          position: relative;
+          &.active,
+          &:hover,
+          &:active {
+            color: $button-sub;
+          }
+          &.visited {
+            color: $body-color;
+            &::before {
+              content: '';
+              background-color: $li-active;
+              position: absolute;
+              left: -10px;
+              right: -8px;
+              top: -5px;
+              bottom: -5px;
+              z-index: -1;
+              @include border-radius(5px);
+              .ar & {
+                left: -8px;
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    &-top {
+      display: none;
+      @extend .after;
+      @include min-width($media-screen-xs) {
+        display: block;
+        @include flex(none);
+        margin-top: 5px;
+        border-bottom: none;
+        border-top: none;
+        padding: 0;
+        margin-right: 32px;
+      }
+      @include min-width($media-screen-xs-700) {
+        margin-right: 0;
+      }
+      .exchange {
+        height: 2.5714rem;
+        font-size: 0.7857rem;
+        line-height: 2.5714rem;
+        letter-spacing: 1.1px;
+        color: white;
+        border: 1px white solid;
+        padding: 0 5px;
+        display: inline-block;
+        @include border-radius(5px);
+        @include box-sizing(border-box);
+        @include transition(background 0.8s ease);
+        .higher & {
+          color: white;
+          border: 1px white solid;
+          @include linear-gradient(to left, #7b6696, #7b6696);
+        }
+        @include min-width($media-screen-xs) {
+          @include linear-gradient(to left, #ffffff, #ffffff);
+          @include border-radius(5px 0 0 5px);
+          color: $body-color;
+          border-color: $border-get;
+          padding: 0 14px;
+        }
+        span {
+          color: $green;
+          @include min-width($media-screen-xs) {
+            color: $green-light-two;
+          }
+          &::after {
+            content: '';
+            width: 0.7143rem;
+            height: 0.5714rem;
+            background: url("../images/exchange-green.svg") no-repeat scroll 50% 50% transparent;
+            @include background-size(contain);
+            display: inline-block;
+            margin: 0;
+            @include min-width($media-screen-xs) {
+              background-image: url("../images/exchange.svg");
+            }
+          }
+          &.red {
+            color: #ff6565;
+            &::after {
+              background-image: url("../images/exchange-red.svg");
+            }
+          }
+        }
+        &:hover {
+          color: white;
+          @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+          opacity: 1;
+          border-color: transparent;
+          @include min-width($media-screen-xs) {
+            span {
+              color: white;
+              &::after {
+                background-image: url("../images/exchange-hover.svg");
+              }
+              &.red {
+                &::after {
+                  background-image: url("../images/exchange-red-hover.svg");
+                }
+              }
+            }
+          }
+        }
+        &:active {
+          color: white;
+          @include linear-gradient(to left, #b292c0, #9982b5);
+          border-color: transparent;
+          @include min-width($media-screen-xs) {
+            span {
+              color: white;
+              &::after {
+                background-image: url("../images/exchange-hover.svg");
+              }
+              &.red {
+                &::after {
+                  background-image: url("../images/exchange-red-hover.svg");
+                }
+              }
+            }
+          }
+        }
+      }
+      .get {
+        text-transform: uppercase;
+        text-align: center;
+        float: right;
+        height: 2.5714rem;
+        padding: 0 6px;
+        border: 1px white solid;
+        @include box-sizing(border-box);
+        @include border-radius(5px);
+        font-size: 0.7857rem;
+        line-height: 2.5714rem;
+        letter-spacing: 1.1px;
+        color: white;
+        display: inline-block;
+        @include transition(background 0.8s ease);
+        .higher & {
+          border: 1px white solid;
+          @include linear-gradient(to left, #7b6696, #7b6696);
+        }
+        @include min-width($media-screen-xs) {
+          padding: 0 12px;
+          @include linear-gradient(to left, #c1a7cf, #c1a7cf);
+          @include border-radius(0 5px 5px 0);
+          border-color: $border-get;
+        }
+        &:hover {
+          color: white;
+          @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+          opacity: 1;
+          border-color: transparent;
+        }
+        &:active {
+          color: white;
+          @include linear-gradient(to left, #b292c0, #9982b5);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  /* правый блок с телефонами и меню */
+  &-right {
+    display: none;
+    margin: 0;
+    @include box-sizing(border-box);
+    position: fixed;
+    left: 0;
+    top: 5.2857rem;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 5.2857rem);
+    min-height: calc(100vh - 5.2857rem);
+    overflow: auto;
+    z-index: 100;
+    background-color: $menu-bacg;
+    border-top: 1px $menu-border-color solid;
+    @include min-width(1024px) {
+      display: block;
+      position: relative;
+      height: auto;
+      left: auto;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      overflow: visible;
+      background-color: white;
+      min-height: 1rem;
+      border-top-color: transparent;
+      margin: 0 -40px;
+      .ar & {
+        left: auto;
+        right: 0;
+      }
+    }
+    /* @include min-width($media-screen-sx) {
+       @include display-flex;
+       @include align-items(center);
+       @include justify-content(flex-end);
+       border-top: none;
+       margin: 0;
+     }*/
+    &-top {
+      border-bottom: 1px $menu-border-color solid;
+      padding: 1.5714rem 0.7143rem;
+      @extend .after;
+      @include min-width($media-screen-xs) {
+        margin-top: 0;
+        border-bottom: none;
+        border-top: none;
+        padding: 0;
+        position: absolute;
+        top: -4.4rem;
+        right: 40px;
+        .ar & {
+          right: auto;
+          left: 40px;
+        }
+        display: none;
+      }
+      /*@include min-width($media-screen-sx) {
+        @include flex(none);
+        position: relative;
+        top: auto;
+        right: auto;
+      }*/
+      .exchange {
+        height: 2.5714rem;
+        font-size: 0.7857rem;
+        line-height: 2.5714rem;
+        letter-spacing: 1.1px;
+        color: white;
+        border: 1px white solid;
+        padding: 0 5px;
+        display: inline-block;
+        @include border-radius(5px);
+        @include box-sizing(border-box);
+        @include transition(background 0.8s ease);
+        .ar & {
+          direction: ltr;
+        }
+        @include min-width(1024px) {
+          @include linear-gradient(to left, #ffffff, #ffffff);
+          @include border-radius(5px 0 0 5px);
+          color: $body-color;
+          border-color: $border-get;
+          padding: 0 14px;
+        }
+        span {
+          color: $green;
+          @include min-width(1024px) {
+            color: $green-light-two;
+          }
+          &::after {
+            content: '';
+            width: 0.7143rem;
+            height: 0.5714rem;
+            background: url("../images/exchange-green.svg") no-repeat scroll 50% 50% transparent;
+            @include background-size(contain);
+            display: inline-block;
+            margin: 0;
+            @include min-width(1024px) {
+              background-image: url("../images/exchange.svg");
+            }
+          }
+          &.red {
+            color: #ff6565;
+            &::after {
+              background-image: url("../images/exchange-red.svg");
+            }
+          }
+        }
+        &:hover {
+          color: white;
+          @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+          opacity: 1;
+          border-color: transparent;
+          @include min-width(1024px) {
+            span {
+              color: white;
+              &::after {
+                background-image: url("../images/exchange-hover.svg");
+              }
+              &.red {
+                &::after {
+                  background-image: url("../images/exchange-red-hover.svg");
+                }
+              }
+            }
+          }
+        }
+        &:active {
+          color: white;
+          @include linear-gradient(to left, #b292c0, #9982b5);
+          border-color: transparent;
+          @include min-width(1024px) {
+            span {
+              color: white;
+              &::after {
+                background-image: url("../images/exchange-hover.svg");
+              }
+              &.red {
+                &::after {
+                  background-image: url("../images/exchange-red-hover.svg");
+                }
+              }
+            }
+          }
+        }
+      }
+      .get {
+        text-transform: uppercase;
+        text-align: center;
+        float: right;
+        height: 2.5714rem;
+        padding: 0 6px;
+        border: 1px white solid;
+        @include box-sizing(border-box);
+        @include border-radius(5px);
+        font-size: 0.7857rem;
+        line-height: 2.5714rem;
+        letter-spacing: 1.1px;
+        color: white;
+        display: inline-block;
+        @include transition(background 0.8s ease);
+        .ar & {
+          @include max-width(1024px) {
+            float: left;
+          }
+        }
+        @include min-width(1024px) {
+          padding: 0 12px;
+          @include linear-gradient(to left, #c1a7cf, #c1a7cf);
+          @include border-radius(0 5px 5px 0);
+          border-color: $border-get;
+        }
+        &:hover {
+          color: white;
+          @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+          opacity: 1;
+          border-color: transparent;
+        }
+        &:active {
+          color: white;
+          @include linear-gradient(to left, #b292c0, #9982b5);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.ar {
+  header {
+    .closeMenu {
+      right: auto;
+      left: 10px;
+    }
+    #pull {
+      right: auto;
+      left: 10px;
+    }
+  }
+}
+
+/* end style header */

@@ -10,20 +10,20 @@
     <link rel="alternate" href="https://emercoin.com/en" hreflang="x-default" />
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
-    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="https://emercoin.com/assets/images/favicon/apple-touch-icon.png?v=47Meyq2Wo4">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://emercoin.com/assets/images/favicon/favicon-32x32.png?v=47Meyq2Wo4">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://emercoin.com/assets/images/favicon/favicon-16x16.png?v=47Meyq2Wo4">
-    <link rel="manifest" href="https://emercoin.com/assets/images/favicon/site.webmanifest?v=47Meyq2Wo4">
-    <link rel="mask-icon" href="https://emercoin.com/assets/images/favicon/safari-pinned-tab.svg?v=47Meyq2Wo4" color="#5bbad5">
-    <link rel="shortcut icon" href="https://emercoin.com/assets/images/favicon/favicon.ico?v=47Meyq2Wo4">
+    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static  'assets/images/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static  'assets/images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static  'assets/images/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static  'assets/images/favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static  'assets/images/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <link rel="shortcut icon" href="{% static  'assets/images/favicon/favicon.ico' %}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta property="og:title" content="Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса" />
-    <meta property="og:url" content="https://emercoin.com/ru" />
-    <meta property="og:image" content="https://emercoin.com/assets/img/share_image.png" />
+{#    <meta property="og:url" content="{% static  'ru' %}" />#}
+    <meta property="og:image" content="{% static  'assets/img/share_image.png' %}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
                 "@type": "Organization",
                 "name": "Emercoin",
                 "url": "https://emercoin.com",
-                "logo": "https://emercoin.com/assets/images/logo.svg"
+                "logo": "{% static  'assets/images/logo.svg' %}"
             },
             {
                 "@context": "http://schema.org/",
@@ -105,8 +105,8 @@
                     </ul>
                     <div class="header-left-top">
 
-                        <a href="https://emercoin.com/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-1268d42dd4e95652f31d15b8-="">Скачать кошелек</a>
-                        <a id="AB-button" href="https://emercoin.com/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-1268d42dd4e95652f31d15b8-="">Купить Emercoin</a>
+                        <a href="https://emercoin.com/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a id="AB-button" href="https://emercoin.com/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
                     </div>
                     <div id="pull">
                         <span></span>
@@ -121,8 +121,8 @@
                 <div class="header-right">
                     <div class="header-right-top">
 
-                        <a href="https://emercoin.com/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-1268d42dd4e95652f31d15b8-="">Купить Emercoin</a>
-                        <a href="https://emercoin.com/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-1268d42dd4e95652f31d15b8-="">Скачать кошелек</a>
+                        <a href="https://emercoin.com/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="https://emercoin.com/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
                     </div>
                     <nav>
                         <ul class="menuTop">
@@ -211,12 +211,12 @@
                             </li>
                             <li>
                                 <span class="link_menu">
-<span class="flag" style="background-image: url(https://emercoin.com/assets/img/flag/ru.svg)"></span> ru
+<span class="flag" style="background-image: url({% static 'assets/img/flag/ru.svg' %})"></span> ru
                                 </span>
                                 <ul class="dropdown_menu lang_menu">
                                     <li>
                                         <a href="https://emercoin.com/en">
-<span class="flag" style="background-image: url(https://emercoin.com/assets/img/flag/en.svg)"></span>
+<span class="flag" style="background-image: url({% static 'assets/img/flag/en.svg' %})"></span>
 en
 </a>
                                     </li>
@@ -269,8 +269,8 @@ en
                             <div class="promo__bg" style="background-color:#37255c;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/emercoin-partners-with-infopulse-to-introduce-emercoin-dsdks-and-blockchain-technologies-to-clients-in-22-countries" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/infopulse_banner_ru_450x350v2.png);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/infopulse_banner_ru_1110x390v2.png);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/infopulse_banner_ru_450x350v2.png' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/infopulse_banner_ru_1110x390v2.png' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -280,8 +280,8 @@ en
                             <div class="promo__bg" style="background-color:#FFFFFF;"></div>
                             <div class="promo__item-inner">
                                 <a target="_blank" rel="nofollow" href="https://www.trusted-diploma.com/" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/TD_450x350v2.png);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/TD_1110x390v2.png);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/TD_450x350v2.png' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/TD_1110x390v2.png' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -291,8 +291,8 @@ en
                             <div class="promo__bg" style="background-color:#FFFFFF;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/emercoin-and-bda-of-latvia-signed-a-partnership-agreement-to-work-on-blockchain-community-development" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/BDAL_ru_450x350.png);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/BDAL_ru_1110x390.png);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/BDAL_ru_450x350.png' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/BDAL_ru_1110x390.png' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -302,8 +302,8 @@ en
                             <div class="promo__bg" style="background-color:#D6BFD7 ;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/global-changes-in-emercoin-blockchain-segwit-tx-optimizer-stun-and-13-more-updates" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Global-changes_450х350.png);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Global-changes_1110х390.png);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/Global-changes_450x350.png' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/Global-changes_1110x390.png' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -313,8 +313,8 @@ en
                             <div class="promo__bg" style="background-color:#FFFFFF ;"></div>
                             <div class="promo__item-inner">
                                 <a href="#" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/newLocalization_450х350v2.png);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/newLocalization_1110х390v2.png);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/newLocalization_450x350v2.png' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/newLocalization_1110x390v2.png' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -324,8 +324,8 @@ en
                             <div class="promo__bg" style="background-color:#004B6B ;"></div>
                             <div class="promo__item-inner">
                                 <a target="_blank" rel="nofollow" href="https://www.youtube.com/watch?v=X-YyNQ4kIHk" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Blockshow_450x350.jpg);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Blockshow_1110x390.jpg);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/Blockshow_450x350.jpg' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/Blockshow_1110x390.jpg' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -335,8 +335,8 @@ en
                             <div class="promo__bg" style="background-color:#000000 ;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/emercoin-is-listed-on-worlds-2nd-largest-exchange-upbit" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Upbit_450x350.jpg);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Upbit_1310x390.jpg);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/Upbit_450x350.jpg' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/Upbit_1310x390.jpg' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -346,8 +346,8 @@ en
                             <div class="promo__bg" style="background-color:#811F86 ;"></div>
                             <div class="promo__item-inner">
                                 <a target="_blank" rel="nofollow" href="https://t.me/emercoin_official" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Телеграм_450х350.jpg);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Телеграм_1110х390.jpg);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/telegram_450x350.jpg' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/telegram_1110x390.jpg' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -357,8 +357,8 @@ en
                             <div class="promo__bg" style="background-color:#fffff ;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/the-bitcoin-podcast-necessary-solutions" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Эмер_подкаст_450х350.jpg);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Эмер_подкаст_1110х390.jpg);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/Эмер_подкаст_450х350.jpg' %});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/Эмер_подкаст_1110х390.jpg' %});"></div>
                                 </a>
                             </div>
                         </div>
@@ -368,47 +368,41 @@ en
                             <div class="promo__bg" style="background-color:#412E5B ;"></div>
                             <div class="promo__item-inner">
                                 <a href="/ru/news/coca-cola-us-state-dept-to-use-blockchain-to-combat-forced-labor" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url(assets/img/slide/Coca-Cola_450x350.jpg);"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url(assets/img/slide/Coca-Cola_1110x390.jpg);"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({% static 'assets/img/slide/Coca-Cola_450x350.jpg'%});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({% static 'assets/img/slide/Coca-Cola_1110x390.jpg'%});"></div>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <script src="https://www.youtube.com/iframe_api" defer type="1268d42dd4e95652f31d15b8-text/javascript"></script>
+{#            <script src="https://www.youtube.com/iframe_api" defer type="text/javascript"></script>#}
         </div>
         <div class="blueLightBox">
             <div class="wrapper">
                 <ul class="topLinkList">
                     <li>
-                        <a href="https://emercoin.com/ru/emercoin-blockchain">
-<span>Блокчейн Emercoin</span>
-</a>
+                        <a href="https://emercoin.com/ru/emercoin-blockchain"><span>Блокчейн Emercoin</span></a>
                     </li>
                     <li>
-                        <a href="https://emercoin.com/ru/benefits#download">
-<span>Купить Emercoin</span>
-</a>
+                        <a href="https://emercoin.com/ru/benefits#download"><span>Купить Emercoin</span></a>
                     </li>
                     <li>
-                        <a href="#techsolutions">
-<span class="dotted">Наши сервисы</span>
-</a>
+                        <a href="#techsolutions"><span class="dotted">Наши сервисы</span></a>
                     </li>
                     <li>
-                        <a href="#UpcomingEvents">
-<span class="dotted">События</span>
-</a>
+                        <a href="#UpcomingEvents"><span class="dotted">События</span></a>
                     </li>
                     <li>
-                        <a href="https://emercoin.com/ru/our-social-communities">
-<span>Cообщество</span>
-</a>
+                        <a href="https://emercoin.com/ru/our-social-communities"><span>Cообщество</span></a>
                     </li>
                 </ul>
             </div>
         </div>
+
+
+
+
         <div class="wrapper">
             <div class="asideBox">
                 <div class="asideBox-left">
@@ -427,6 +421,7 @@ en
                     </p>
                 </div>
             </div>
+
             <div class="owl-carousel owl-carousel-2">
                 <div class="product">
                     <div class="product-img product-img-min" style="background-image: url(https://emercoin.com/assets/images/flexibility.svg)"></div>
@@ -460,9 +455,9 @@ en
             <div class="box">
                 <a class="button" href="https://emercoin.com/ru/emercoin-blockchain">Узнать больше</a>
             </div>
-            <iframe src="https://revain.org/widget-v2/review-carousel?companyType=Project&companySlug=emercoin&consumer=emercoin.com&contentLines=4&elevationLevel=2&writeReviewAt=3&sortBy=recent&perPage=12&bg=neutral.0&reviewLocale=en&ratingProgressFill=%23eb9c35&blockchainLinkColor=%231f89e5&showMoreLinkColor=%231f89e5&dataSource=null&locale=en&theme=default"
-                width="100%" height="500" style="border: none; display: block"></iframe>
         </div>
+
+
         <div class="blueBox blueBox-still center ">
             <div class="wrapper">
                 <div class="whiteTitle">
@@ -470,6 +465,9 @@ en
                 <a class="button button-blue" target="_blank" href="https://emercoin.com/ru/benefits#download">Скачать кошелек</a>
             </div>
         </div>
+
+
+
         <div class="wrapper services__block">
             <div class="bigTitle bigTitle-services center" id="techsolutions">Распределённые блокчейн-сервисы для личных и бизнес-целей.</div>
             <div class="businesBox">
@@ -582,6 +580,8 @@ en
                 <a class="button">Показать все</a>
             </div>
         </div>
+
+
         <div class="clients _media">
             <div class="clients__header">
                 <div class="h2 _center">Media about us</div>
@@ -763,6 +763,8 @@ en
                     </div>
                 </div>
             </div>
+
+
             <div class="clients__contents">
                 <div class="clients__contents-wrapper">
                     <div class="clients__content" id="media-15">
@@ -1272,38 +1274,38 @@ en
                 </form>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="bigTitle bigTitle-tweets">
-                Твиты </div>
-            <div class="tweetsBox">
-                <a href="https://twitter.com/emercoin_press/status/1159129472047693825" rel="nofollow" target="_blank" class="tweetsBox-item">
-                    <div class="tweetsBox-item-top">
-                        <img src="https://pbs.twimg.com/profile_images/1067350262942175232/8MjfLpLt_normal.jpg" alt="" />
-                        <div class="top-text">
-                            <div class="top-text-title">Emercoin</div>
-                            <div class="top-text-mail">@emercoin_press</div>
-                        </div>
-                    </div>
-                    <div class="tweetsBox-item-text">Emercoin digest — July 2019 https://t.co/QApJivQIoQ https://t.co/MimQjpEz54</div>
-                    <div class="tweetsBox-item-image"><img src="https://pbs.twimg.com/media/EBYOGhlW4AIfOvm.jpg" /></div>
-                    <div class="tweetsBox-item-date">03:49 PM - 07 Aug 2019</div>
-                </a>
-                <a href="https://twitter.com/emercoin_press/status/1153523710621605888" rel="nofollow" target="_blank" class="tweetsBox-item">
-                    <div class="tweetsBox-item-top">
-                        <img src="https://pbs.twimg.com/profile_images/1067350262942175232/8MjfLpLt_normal.jpg" alt="" />
-                        <div class="top-text">
-                            <div class="top-text-title">Emercoin</div>
-                            <div class="top-text-mail">@emercoin_press</div>
-                        </div>
-                    </div>
-                    <div class="tweetsBox-item-text">RT @XBTS_EXCHANGE: New coins have been added to the Paper Wallet Generator: Emercoin $EMC and Litecoin $LTC are available. Paper Wallet G…</div>
-                    <div class="tweetsBox-item-date">04:34 AM - 23 Jul 2019</div>
-                </a>
-            </div>
-            <div class="box box-tweets">
-                <a class="button button-tweets" href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">Подписаться</a>
-            </div>
-        </div>
+{#        <div class="wrapper">#}
+{#            <div class="bigTitle bigTitle-tweets">#}
+{#                Твиты </div>#}
+{#            <div class="tweetsBox">#}
+{#                <a href="https://twitter.com/emercoin_press/status/1159129472047693825" rel="nofollow" target="_blank" class="tweetsBox-item">#}
+{#                    <div class="tweetsBox-item-top">#}
+{#                        <img src="https://pbs.twimg.com/profile_images/1067350262942175232/8MjfLpLt_normal.jpg" alt="" />#}
+{#                        <div class="top-text">#}
+{#                            <div class="top-text-title">Emercoin</div>#}
+{#                            <div class="top-text-mail">@emercoin_press</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="tweetsBox-item-text">Emercoin digest — July 2019 https://t.co/QApJivQIoQ https://t.co/MimQjpEz54</div>#}
+{#                    <div class="tweetsBox-item-image"><img src="https://pbs.twimg.com/media/EBYOGhlW4AIfOvm.jpg" /></div>#}
+{#                    <div class="tweetsBox-item-date">03:49 PM - 07 Aug 2019</div>#}
+{#                </a>#}
+{#                <a href="https://twitter.com/emercoin_press/status/1153523710621605888" rel="nofollow" target="_blank" class="tweetsBox-item">#}
+{#                    <div class="tweetsBox-item-top">#}
+{#                        <img src="https://pbs.twimg.com/profile_images/1067350262942175232/8MjfLpLt_normal.jpg" alt="" />#}
+{#                        <div class="top-text">#}
+{#                            <div class="top-text-title">Emercoin</div>#}
+{#                            <div class="top-text-mail">@emercoin_press</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="tweetsBox-item-text">RT @XBTS_EXCHANGE: New coins have been added to the Paper Wallet Generator: Emercoin $EMC and Litecoin $LTC are available. Paper Wallet G…</div>#}
+{#                    <div class="tweetsBox-item-date">04:34 AM - 23 Jul 2019</div>#}
+{#                </a>#}
+{#            </div>#}
+{#            <div class="box box-tweets">#}
+{#                <a class="button button-tweets" href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">Подписаться</a>#}
+{#            </div>#}
+{#        </div>#}
         <div class="teamBox">
             <div class="wrapper">
                 <div class="bigTitle bigTitle-team center">
@@ -1532,24 +1534,24 @@ en
                             <a href="https://emercoin.com/ru/emercoin-privacy-policy" target="_blank">Политика конфиденциальности</a>
                         </li>
                         <li>
-                            <a href="/files/pdf/en/whitepaper.pdf" target="_blank">Whitepaper</a>
+                            <a href="{% static 'files/pdf/whitepaper.pdf' %}" target="_blank">Whitepaper</a>
                         </li>
                         <li>
-                            <a href="/files/pdf/ru/one-page.pdf" target="_blank">One Pager</a>
+                            <a href="{% static 'files/pdf/one-page.pdf' %}" target="_blank">One Pager</a>
                         </li>
 
                     </ul>
                     <div class="footer-top-left-socset">
                         <div class="title">Мы в социальных сетях:</div>
                         <div class="socialBox">
-                            <a href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" class="social twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">twitter</a>
-                            <a href="https://t.me/emercoin_official" rel="nofollow" target="_blank" class="social telegram" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">telegram</a>
-                            <a href="https://www.facebook.com/EmerOfficialRUS/" rel="nofollow" target="_blank" class="social facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">facebook</a>
-                            <a href="https://www.youtube.com/channel/UCeHlonUkITqe4PtpW8p4wmg" rel="nofollow" target="_blank" class="social youtube" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">youtube</a>
-                            <a href="https://medium.com/@emer.tech" rel="nofollow" target="_blank" class="social medium" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">medium</a>
-                            <a href="https://bitcointalk.org/index.php?topic=362513.0" rel="nofollow" target="_blank" class="social bitcointalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">bitcointalk</a>
-                            <a href="https://open.kakao.com/o/gEbNbmS" rel="nofollow" target="_blank" class="social kakaotalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">kakaotalk</a>
-                            <a href="https://www.reddit.com/r/EmerCoin/" rel="nofollow" target="_blank" class="social reddit" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-1268d42dd4e95652f31d15b8-="">reddit</a>
+                            <a href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" class="social twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">twitter</a>
+                            <a href="https://t.me/emercoin_official" rel="nofollow" target="_blank" class="social telegram" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});" data-cf-modified-="">telegram</a>
+                            <a href="https://www.facebook.com/EmerOfficialRUS/" rel="nofollow" target="_blank" class="social facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">facebook</a>
+                            <a href="https://www.youtube.com/channel/UCeHlonUkITqe4PtpW8p4wmg" rel="nofollow" target="_blank" class="social youtube" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">youtube</a>
+                            <a href="https://medium.com/@emer.tech" rel="nofollow" target="_blank" class="social medium" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">medium</a>
+                            <a href="https://bitcointalk.org/index.php?topic=362513.0" rel="nofollow" target="_blank" class="social bitcointalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">bitcointalk</a>
+                            <a href="https://open.kakao.com/o/gEbNbmS" rel="nofollow" target="_blank" class="social kakaotalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">kakaotalk</a>
+                            <a href="https://www.reddit.com/r/EmerCoin/" rel="nofollow" target="_blank" class="social reddit" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">reddit</a>
                         </div>
                     </div>
                 </div>
@@ -1567,51 +1569,30 @@ en
         </div>
         <div class="join-telegram">
             <a href="https://t.me/emercoin_official?utm_source=EMERCOIN&amp;utm_medium=STICKYBUTTON&amp;utm_campaign=SITE_TG_STICKYBUTTON" rel="nofollow" target="_blank" class="join-telegram__link" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});"
-                data-cf-modified-1268d42dd4e95652f31d15b8-="">Join our Telegram Community</a>
+                data-cf-modified-="">Join our Telegram Community</a>
             <button type="button" class="join-telegram__close"></button>
         </div>
 
-        <script type="1268d42dd4e95652f31d15b8-text/javascript">
-            (function(m, e, t, r, i, k, a) {
-                m[i] = m[i] || function() {
-                    (m[i].a = m[i].a || []).push(arguments)
-                };
-                m[i].l = 1 * new Date();
-                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-            })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-            ym(23471215, "init", {
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                webvisor: true
-            });
-            console.log("Yandex online");
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/23471215" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
     </footer>
     <div class="up"></div>
-    <script src="//www.google.com/recaptcha/api.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/jquery.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/script.js?v=1616325823" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/js.js?v=1616325823" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
+{#    <script src="//www.google.com/recaptcha/api.js" type="text/javascript"></script>#}
+    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
 
-    <script src="https://emercoin.com/assets/js/owl.carousel.min.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/swiper.min.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/fancybox-3.min.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/in-viewport.min.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/plugins.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/autosize.min.js" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/common.js?v=1616325823" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/new.js?v=1616325823" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
-    <script src="https://emercoin.com/assets/js/jquery.nicescroll.min.js?v=1616325823" type="1268d42dd4e95652f31d15b8-text/javascript"></script>
+    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
     <!--[if IE]>
-<script src="https://emercoin.com/assets/js/html5shiv.js" type="text/javascript"></script>
-<script src="https://emercoin.com/assets/js/respond.min.js"></script>
+<script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
+<script src="{% static  'assets/js/respond.min.js' %}"></script>
 <![endif]-->
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="1268d42dd4e95652f31d15b8-|49" defer=""></script>
+{#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
 </body>
-
 </html>

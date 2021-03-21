@@ -1,0 +1,390 @@
+/*start style general class*/
+/* Флекс класс с позиционированием на всю шырину */
+.b-just {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include box-sizing(border-box);
+}
+
+/* Флекс класс с позиционированием слева */
+.b-start {
+  @include display-flex;
+  @include justify-content(flex-start);
+  @include box-sizing(border-box);
+}
+
+/* Флекс класс с позиционированием справа */
+.b-end {
+  @include display-flex;
+  @include justify-content(flex-end);
+  @include box-sizing(border-box);
+}
+
+/* Флекс класс с позиционированием по центру */
+.b-row-center {
+  @include display-flex;
+  @include justify-content(center);
+  @include box-sizing(border-box);
+}
+
+/* Флекс класс с позиционированием по центру с равными отступами*/
+.b-around {
+  @include display-flex;
+  @include justify-content(space-around);
+  @include box-sizing(border-box);
+}
+
+/* Класс для раздвижения дива, если есть флоаты в нем */
+.after {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* Флоатим слева */
+.left {
+  float: left;
+}
+
+/* Флоатим справа */
+.right {
+  float: right;
+}
+
+/* Задаем белый цвет */
+.white {
+  color: white;
+}
+
+/* Для задания позиций */
+.relative {
+  position: relative;
+}
+
+/* Стиль для италика */
+.italic {
+  font-style: italic;
+}
+
+/* Стиль для жирного текста */
+.strong,
+b,
+strong {
+  font-weight: 700;
+}
+
+/* Задает синюю заливку */
+.blueBox {
+  @extend .after;
+  background-color: $menu-bacg;
+  margin-bottom: 1rem;
+  position: relative;
+  &-still {
+    padding: 2.3rem 0 2.2rem;
+    position: relative;
+    .wrapper {
+      position: relative;
+      z-index: 2;
+    }
+    @include min-width($media-screen-xs) {
+      padding: 4rem 0 4.8rem;
+    }
+    @include min-width($media-screen-sm) {
+      &::before {
+        content: '';
+        display: block;
+        background: url("../images/still-left.png") no-repeat scroll 50% 50% transparent;
+        width: 504px;
+        height: 348px;
+        position: absolute;
+        left: 38px;
+        bottom: 29px;
+      }
+      &::after {
+        content: '';
+        display: block;
+        background: url("../images/still-right.png") no-repeat scroll 50% 50% transparent;
+        width: 504px;
+        height: 262px;
+        position: absolute;
+        right: 24px;
+        top: 72px;
+      }
+    }
+  }
+  &-contact {
+    padding: 39px 0 38px;
+  }
+  &-socset {
+    padding: 55px 0 64px;
+  }
+  &-gray {
+    background-color: $drop-hover;
+    margin-bottom: 0;
+    &::before,
+    &::after {
+      display: none;
+    }
+    .whiteTitle {
+      color: $body-color;
+    }
+  }
+  &-white {
+    background-color: white;
+    margin-bottom: 0;
+    &::before,
+    &::after {
+      display: none;
+    }
+    .whiteTitle {
+      color: $body-color;
+    }
+  }
+  &-get {
+    padding: 2.1rem 0 2.2rem;
+    margin-bottom: 0;
+    @include min-width($media-screen-xs) {
+      padding: 3.4rem 0 3rem;
+    }
+  }
+  &-form {
+    padding: 39px 0 30px;
+    margin-bottom: 0;
+    @include min-width($media-screen-xs) {
+      padding: 38px 0 29px;
+    }
+    @include min-width($media-screen-tablet) {
+      padding: 46px 0 52px;
+    }
+  }
+  &-subscribe {
+    position: relative;
+    padding: 2.6rem 0 2rem;
+    margin-bottom: 0;
+    @include min-width($media-screen-xs) {
+      padding: 3.1rem 0 4.2rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 14px 17px 0 17px;
+      border-color: white transparent transparent transparent;
+      left: 50%;
+      margin-left: -17px;
+      top: -1px;
+    }
+  }
+}
+
+.bottomColor {
+  border-bottom: 1px $button-sub solid;
+}
+
+/* Задает синий цвет */
+.blue {
+  color: $link-color;
+}
+
+/* Класс для бордера только вверху */
+.bordeTop {
+  border-top: 1px $border-top-color solid;
+  padding-top: 1.2rem;
+}
+
+/* Оболочка для кнопок или чего либо, чтобы отбивался от других блоков */
+.box {
+  @extend .after;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5rem;
+  @include min-width($media-screen-sm) {
+    padding-bottom: 10.8rem;
+  }
+  &-hideDesktop {
+    @include min-width($media-screen-sm) {
+      display: none;
+    }
+  }
+  &-busines {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    @include min-width($media-screen-sm) {
+      padding-top: 21px;
+      padding-bottom: 79px;
+    }
+  }
+  &-events {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    @include min-width($media-screen-sm) {
+      padding-top: 26px;
+      padding-bottom: 76px;
+    }
+  }
+  &-tweets {
+    padding-top: 10px;
+    padding-bottom: 38px;
+    @include min-width($media-screen-sm) {
+      padding-top: 31px;
+      padding-bottom: 82px;
+    }
+  }
+  &-latest {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    @include min-width($media-screen-sm) {
+      padding-top: 26px;
+      padding-bottom: 76px;
+    }
+  }
+  &-team {
+    padding-bottom: 42px;
+    @include min-width($media-screen-sm) {
+      padding-bottom: 78px;
+    }
+  }
+  &-newsButton {
+    padding-top: 3px;
+    padding-bottom: 18px;
+    @include min-width($media-screen-sm) {
+      padding-top: 3px;
+      padding-bottom: 18px;
+    }
+  }
+}
+
+/* Класс для центрирования */
+.center {
+  text-align: center;
+}
+
+/* Класс не флекс раздвигающий по всей шырине блоки */
+.justify_box {
+  width: 100%;
+  text-align: justify;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.formHidden {
+  display: none;
+}
+
+/* Класс для картинок */
+.img {
+  @include box-sizing(border-box);
+  width: 100%;
+  margin-bottom: 0.8rem;
+  /* Прибиваем справа */
+  &-right {
+    float: right;
+    margin-left: 1.5rem;
+    .ar & {
+      float: left;
+      margin-right: 1.5rem;
+    }
+  }
+  /* Прибиваем слева */
+  &-left {
+    float: left;
+    margin-right: 1.5rem;
+    .ar & {
+      float: right;
+      margin-left: 1.5rem;
+    }
+  }
+  /* Круглая картинка */
+  &-circle {
+    @include border-radius(50%);
+    overflow: hidden;
+  }
+  /* Сдвигаем вверх */
+  &-top {
+    margin-top: -3rem;
+  }
+  /* Класс для шырины картинки 40% */
+  &.XXL {
+    width: 40%;
+  }
+  /* Класс для шырины картинки 30% */
+  &.XL {
+    width: 30%;
+  }
+  /* Класс для шырины картинки 23% */
+  &.L {
+    width: 23%;
+  }
+  /* Класс для шырины картинки 18% */
+  &.S {
+    width: 18%;
+  }
+  /* Класс для шырины картинки 13% */
+  &.XS {
+    width: 13%;
+  }
+}
+
+/* Блок для двуколоночного дива */
+.columns-2 {
+  @include min-width($media-screen-xs) {
+    @include column-count(2);
+    @include column-gap(2rem);
+  }
+}
+
+/* Блок для видео */
+.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  margin: 0 0 1.5rem;
+  /* Делаем свою высоту и ширину ифрейма */
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Кнопка вверх */
+.up {
+  position: fixed;
+  right: 28px;
+  bottom: 94px;
+  display: none;
+  width: 43px;
+  height: 43px;
+  background: url("../images/up.svg") no-repeat scroll 50% 0 transparent;
+  @include background-size(100% 100%);
+  z-index: 101;
+  cursor: pointer;
+  text-align: center;
+  @include min-width($media-screen-xs) {
+    width: 50px;
+    height: 50px;
+    right: 25px;
+  }
+  &.mobile {
+    bottom: 100px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/*end style general class*/

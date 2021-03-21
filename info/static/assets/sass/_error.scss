@@ -1,0 +1,31 @@
+/*start style error*/
+.error {
+  border-color: $red;
+  /* Текст для оштбки */
+  &-text {
+    color: $red;
+    font-size: 0.6rem;
+    line-height: 110%;
+    padding-top: 0.1rem;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.answer {
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: $red;
+}
+
+.relative-textarea {
+  .answer {
+    margin-top: -6px;
+  }
+}
+
+/*end style error*/

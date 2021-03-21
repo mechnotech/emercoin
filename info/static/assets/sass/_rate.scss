@@ -1,0 +1,360 @@
+.rateBoxInfo {
+  @include box-sizing(border-box);
+  margin: 0 -10px;
+  text-align: center;
+  @include min-width($media-screen-xs) {
+    margin: 0;
+    text-align: left;
+  }
+  @include min-width($media-screen-sm) {
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding: 7px 0 40px;
+  }
+  &-top {
+    padding: 0 0 22px;
+    @include min-width($media-screen-xs) {
+      @include display-flex;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      @include box-sizing(border-box);
+      padding: 7px 24px 0;
+    }
+    @include min-width($media-screen-xs-plus) {
+      padding: 7px 44px 0;
+    }
+    @include min-width($media-screen-sm) {
+      display: block;
+      padding: 0 20px 0 0;
+    }
+    &-left {
+      padding-bottom: 21px;
+      @include box-sizing(border-box);
+      position: relative;
+      .ar & {
+        @include min-width($media-screen-xs) {
+          text-align: right;
+        }
+      }
+      @include min-width($media-screen-xs) {
+        padding-top: 3px;
+        @include flex(none);
+        padding-right: 20px;
+      }
+      &-cost {
+        @extend .roboto;
+        padding-bottom: 5px;
+        .ar & {
+          direction: ltr;
+        }
+        .price {
+          color: $button-sub;
+          font-size: 40px;
+          i {
+            font-size: 25px;
+          }
+        }
+        .rise {
+          @extend .roboto;
+          color: $green-rise;
+          font-size: 20px;
+          &::after {
+            content: '';
+            width: 16px;
+            height: 15px;
+            background: url("../images/rise.svg") no-repeat scroll 50% 50% transparent;
+            @include background-size(contain);
+            display: inline-block;
+            margin: 0 0 -1px 6px;
+          }
+          &.red {
+            color: #ff6565;
+            &::after {
+              background-image: url("../images/exchange-red-big.svg");
+            }
+          }
+        }
+      }
+      &-btc {
+        padding-bottom: 12px;
+        direction: ltr;
+        @include min-width($media-screen-xs) {
+          padding-bottom: 6px;
+        }
+      }
+      .chart {
+
+      }
+    }
+  }
+  &-bottom {
+    background-color: $drop-hover;
+    text-align: left;
+    @extend .after;
+    @include min-width($media-screen-xs-plus) {
+      padding: 0 38px 0 19px;
+      .ar & {
+        text-align: right;
+      }
+    }
+    @include min-width($media-screen-sm) {
+      padding: 0;
+      background-color: transparent;
+      @include display-flex;
+      @include justify-content(flex-end);
+    }
+    &-item {
+      @extend .after;
+      padding: 14px 10px;
+      border-top: 1px $border-header solid;
+      position: relative;
+      @include box-sizing(border-box);
+      &:first-child {
+        border-top: none;
+      }
+      .ar & {
+        text-align: right;
+      }
+      @include min-width($media-screen-xs) {
+        float: left;
+        width: 30%;
+        border-top: none;
+        padding: 23px 6px 19px 24px;
+        .ar & {
+          float: right;
+          padding: 23px 24px 19px 6px;
+        }
+        &:nth-child(3) {
+          width: 40%;
+        }
+        &::before {
+          content: '';
+          display: block;
+          width: 1px;
+          background-color: $border-header;
+          top: 23px;
+          bottom: 19px;
+          position: absolute;
+          left: 0;
+        }
+        &:first-child {
+          border-top: none;
+          &::before {
+            display: none;
+          }
+        }
+      }
+      @include min-width($media-screen-xs-plus) {
+        padding: 23px 6px 19px 27px;
+        .ar & {
+          padding: 23px 27px 19px 6px;
+        }
+      }
+      @include min-width($media-screen-sm) {
+        padding: 20px 6px 20px 55px;
+        min-width: 224px;
+        .ar & {
+          padding: 20px 55px 2px 6px;
+        }
+        &:first-child {
+          &::before {
+            display: block;
+          }
+        }
+        &:last-child {
+          .ar & {
+            padding-right: 24px;
+            @include min-width($media-screen-xs-plus) {
+              padding-right: 27px;
+            }
+            @include min-width($media-screen-sm) {
+              padding-right: 55px;
+            }
+          }
+        }
+      }
+      &-top {
+        @extend .after;
+        .ar & {
+          @include max-width($media-screen-xs) {
+            @include display-flex;
+            &::after {
+              display: none;
+            }
+          }
+        }
+        .title {
+          font-size: 16px;
+          line-height: 22px;
+          float: left;
+          width: 54%;
+          @include box-sizing(border-box);
+          padding-right: 10px;
+          @include min-width($media-screen-xs) {
+            float: none;
+            width: 100%;
+            font-size: 20px;
+            line-height: 26px;
+            padding: 0 0 4px;
+          }
+        }
+        .cost {
+          font-size: 14px;
+          line-height: 22px;
+          float: left;
+          width: 46%;
+          @include box-sizing(border-box);
+          .ar & {
+            float: right;
+          }
+          span {
+            display: inline-block;
+            width: 100%;
+          }
+          @include min-width($media-screen-xs) {
+            float: none;
+            width: 100%;
+            padding-bottom: 8px;
+          }
+        }
+      }
+      .chart {
+        margin-bottom: -8px;
+        position: relative;
+        top: -12px;
+        display: block;
+        float: left;
+        .ar & {
+          float: right;
+        }
+        @include min-width($media-screen-xs) {
+          margin-bottom: 0;
+          top: auto;
+        }
+      }
+      .text {
+        padding-top: 9px;
+        font-size: 14px;
+        @include min-width($media-screen-xs) {
+          padding: 20px 10px 0 0;
+          .ar & {
+            padding: 20px 0 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.chart {
+  font-size: 11px;
+  line-height: 15px;
+  color: $body-color;
+  text-transform: uppercase;
+  display: inline-block;
+  span {
+    border-bottom: 2px $menu-link-hover-color dotted;
+  }
+  &::before {
+    content: '';
+    width: 20px;
+    height: 18px;
+    background: url("../images/chart.svg") no-repeat scroll 50% 50% transparent;
+    display: inline-block;
+    margin: 0 8px -4px 0;
+    .ar & {
+      margin: 0 0 -4px 8px;
+    }
+  }
+}
+
+.boxRate {
+  position: relative;
+  &-last {
+    padding-bottom: 30px;
+  }
+  @include min-width($media-screen-xs) {
+    &-last {
+      padding-bottom: 46px;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 178px;
+      @include linear-gradient(to bottom, #f6f2fb, #ffffff);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+  @include min-width($media-screen-tablet) {
+    &-last {
+      padding-bottom: 0;
+    }
+  }
+  .wrapper {
+    position: relative;
+    &-first {
+      padding-bottom: 104px;
+    }
+    @include min-width($media-screen-xs) {
+      &-first {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &-BoxButtons {
+    @include box-sizing(border-box);
+    padding-bottom: 24px;
+    @include min-width($media-screen-xs) {
+      @include display-flex;
+      @include justify-content(space-between);
+      padding-bottom: 37px;
+    }
+    @include min-width($media-screen-tablet) {
+      padding-bottom: 66px;
+    }
+    &-buttons {
+      &-two {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+      }
+      @include min-width($media-screen-xs) {
+        &-two {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          width: auto;
+        }
+      }
+
+    }
+  }
+  .rateBlock {
+    position: relative;
+    margin: 0 -10px;
+    min-height: 100px;
+    @include min-width($media-screen-xs) {
+      margin: 0;
+      padding-bottom: 42px;
+    }
+    @include min-width($media-screen-tablet) {
+      padding-bottom: 76px;
+    }
+    &-loader {
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      left: 0;
+      top: 50%;
+      margin-top: -40px;
+      background: url("../images/loader.svg") no-repeat scroll 50% 50% transparent;
+    }
+  }
+}

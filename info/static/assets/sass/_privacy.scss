@@ -1,0 +1,89 @@
+.privacyPage {
+  &-top {
+    background: url("../images/privacyPage.png") no-repeat scroll 50% bottom #402D5A;
+    text-align: center;
+    margin: 0 0 24px;
+    &-marginNo {
+      margin: 0;
+    }
+    @include min-width($media-screen-sx) {
+      margin: 0 0 39px;
+      &-marginNo {
+        margin: 0;
+      }
+    }
+    h1 {
+      font-size: 35px;
+      line-height: 1.2;
+      color: white;
+      padding: 34px 10px 36px;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 1190px;
+      @include box-sizing(border-box);
+      @include min-width($media-screen-xs) {
+        padding: 76px 10px 83px;
+        font-size: 50px;
+        line-height: 1;
+      }
+      &.leftText {
+        text-align: left;
+        padding: 34px 10px 36px;
+        font-size: 28px;
+        line-height: 1.2;
+        .ar & {
+          direction: ltr;
+          text-align: right;
+        }
+        @include min-width($media-screen-xs) {
+          padding: 76px 40px 83px;
+          font-size: 42px;
+        }
+        @include min-width(1189px) {
+          padding: 76px 40px 83px 230px;
+          .ar & {
+            padding: 76px 230px 83px 40px;
+          }
+        }
+      }
+    }
+  }
+  &-box {
+    margin: 0 auto;
+    max-width: 790px;
+    padding: 0;
+    @include min-width($media-screen-xs) {
+      padding: 0 0 49px;
+    }
+    .date {
+      font-size: 11px;
+      line-height: 1.36;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #404750;
+      padding: 0;
+      margin: 0 0 23px;
+    }
+    .title1 {
+      font: 28px/1.21 'RobotoRegular';
+      color: #404750;
+      margin: 0 0 20px;
+      padding: 22px 0 0;
+      @include min-width($media-screen-xs) {
+        font-size: 35px;
+        line-height: 1.2;
+        margin: 0 0 21px;
+        padding: 19px 0 0;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      &.bigP {
+        font-size: 18px;
+        line-height: 1.44;
+        color: #8b9096;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

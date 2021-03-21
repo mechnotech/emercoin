@@ -1,0 +1,210 @@
+/*start style button*/
+.button {
+  width: 100%;
+  max-width: 9.0714rem;
+  text-align: center;
+  color: $body-color;
+  letter-spacing: 1.1px;
+  font-size: 0.7857rem;
+  line-height: 1;
+  background-color: transparent;
+  padding: 0.85rem 0.6rem;
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: solid 1px $border-get;
+  text-transform: uppercase;
+  @include transition (all 0.4s ease);
+  @include box-sizing(border-box);
+  @include border-radius(5px);
+  &-search {
+    width: 88px;
+    height: 50px;
+    background-color: #b09cc9;
+    margin-left: 10px;
+    @include flex(none);
+    font-size: 11px;
+    color: white;
+    @include min-width($media-screen-tablet) {
+      width: 127px;
+      margin-left: 17px;
+      .ar & {
+        margin-left: 0;
+        margin-right: 17px;
+      }
+    }
+  }
+  &-rate {
+    width: 71px;
+    margin-right: 0;
+    padding: 0.85rem 0.1rem;
+    margin-bottom: 5px;
+    @include min-width($media-screen-sm) {
+      width: 75px;
+    }
+    &.active {
+      background-color: $button-sub;
+      color: white;
+    }
+  }
+  &-filter {
+    max-width: 127px;
+    margin-right: 0;
+    padding: 0.85rem 0.1rem;
+    margin-bottom: 5px;
+    &-big {
+      max-width: 220px;
+    }
+    &.active {
+      background-color: $button-sub;
+      color: white;
+    }
+  }
+  &-hideRight {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    .ar & {
+      right: auto;
+      left: 0;
+    }
+    @include min-width($media-screen-sm) {
+      display: block;
+    }
+  }
+  &:hover {
+    color: white;
+    @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+    border-color: transparent;
+    opacity: 1;
+  }
+  &:active {
+    color: white;
+    @include linear-gradient(to left, #b292c0, #9982b5);
+    border-color: transparent;
+  }
+  &-blue {
+    font-size: 1.1429rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    width: 17.7rem;
+    max-width: 17.7rem;
+    padding: 1.15rem 0.5rem 1.07rem;
+    border-color: transparent;
+    color: white;
+    margin: 0;
+    @include linear-gradient(to left, #c5a9d1, #b09cc9);
+    &-subscribe {
+      padding: 0;
+      font-size: 16px;
+      width: 250px;
+      height: 50px;
+      line-height: 50px;
+      @include min-width($media-screen-xs) {
+        width: 127px;
+        @include flex(none);
+        height: 36px;
+        font-size: 11px;
+        line-height: 36px;
+      }
+    }
+    &:hover {
+      border-color: transparent;
+      @include linear-gradient(to left, #d8c0e2, #c2b2d7);
+      color: white;
+    }
+    &:active {
+      border-color: transparent;
+      @include linear-gradient(to left, #b292c0, #9982b5);
+      color: white;
+    }
+  }
+  &-chatbot {
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    max-width: 10.5rem;
+    width: 10.5rem;
+    font-size: 0.7857rem;
+    padding: 1.23rem 3.5rem 1.2rem 0.5rem;
+    position: relative;
+    line-height: 1;
+    .ar & {
+      padding: 1.23rem 0.5rem 1.2rem 3.5rem;
+    }
+    &::after {
+      content: '';
+      width: 2.5rem;
+      height: 2.5rem;
+      display: block;
+      background: url("../images/telegram.svg") no-repeat scroll 50% 50% transparent;
+      position: absolute;
+      top: 50%;
+      margin-top: -1.3rem;
+      right: 0.8rem;
+      .ar & {
+        right: auto;
+        left: 0.8rem;
+      }
+    }
+    &:hover,
+    &:active {
+      border-color: transparent;
+      color: white;
+    }
+  }
+  &-telegram,
+  &-tweets {
+    background-color: transparent;
+    min-width: 140px;
+    max-width: 100%;
+    width: auto;
+    font-size: 0.7857rem;
+    padding: 1.26rem 50px 1.2rem 10px;
+    position: relative;
+    line-height: 1;
+    margin: 0 2px;
+    .ar & {
+      padding: 1.26rem 10px 1.2rem 50px;
+    }
+    @include min-width($media-screen-xs-min) {
+      margin: 0 8px;
+    }
+    &::after {
+      content: '';
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: transparent;
+      margin: -17.5px 0 0;
+      .ar & {
+        right: auto;
+        left: 12px;
+      }
+    }
+  }
+  &-tweets {
+    &::after {
+      background-image: url("../images/twitts.svg");
+    }
+    &.two {
+      &::after {
+        background-image: url("../images/twitter.svg");
+      }
+    }
+  }
+  &-telegram {
+    &::after {
+      background-image: url("../images/telegram.svg");
+    }
+  }
+}
+
+/*end style button*/

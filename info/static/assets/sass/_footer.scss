@@ -1,0 +1,339 @@
+/* Footer */
+.footer {
+  background-color: $menu-bacg;
+  color: white;
+  @include min-width($media-screen-tablet) {
+    background-image: url("../images/footer.png");
+    background-repeat: no-repeat;
+    background-position: 90% bottom;
+  }
+  /* Класс для светлого фона футера */
+  &-light {
+    background-color: $menu-drop-bacg;
+  }
+  /* Верхний блок с меню телефонами и соцсетями */
+  &-top {
+    @include box-sizing(border-box);
+    padding: 2.6rem 0 1.8rem;
+    @include min-width($media-screen-sx) {
+      margin: 0 auto;
+      //max-width: 41rem;
+      padding: 2.6rem 0 0.8rem;
+    }
+    @include min-width($media-screen-sx) {
+      max-width: 100%;
+      padding: 2.6rem 0 2.3rem;
+    }
+    /* Блок с меню и соцсетями */
+    &-left {
+      @include box-sizing(border-box);
+      text-align: center;
+      padding: 0 1rem;
+      /*@include min-width($media-screen-sx) {
+        @include display-flex;
+        @include justify-content(space-between);
+        padding: 0;
+      }*/
+      /* Юлок с телефонами в футере */
+      &-terms {
+        margin-bottom: 2.4rem;
+        padding-top: 0.2rem;
+        @include min-width($media-screen-xs) {
+          @include display-flex;
+          @include justify-content(space-around);
+          padding-top: 0;
+        }
+        /*  @include min-width($media-screen-sx) {
+            display: block;
+            margin-bottom: 0;
+            padding-top: 0;
+          }*/
+        li {
+          margin-bottom: 1.6rem;
+          @include min-width($media-screen-xs) {
+            margin-left: 3rem;
+            float: left;
+            margin-bottom: 0;
+            .ar & {
+              margin-left: 0;
+              margin-right: 3rem;
+            }
+            &:first-child {
+              margin-left: 0;
+              .ar & {
+                margin-right: 0;
+              }
+            }
+          }
+          a {
+            font-size: 1rem;
+            color: $footer-link-two;
+            @include min-width($media-screen-sx) {
+              line-height: 2.5rem;
+            }
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+      /* Блок соцсетей в футере */
+      &-socset {
+        margin-bottom: 1rem;
+        text-align: center;
+       /* @include min-width($media-screen-sx) {
+          text-align: right;
+          margin-bottom: 0;
+          .ar & {
+            text-align: left;
+          }
+        }*/
+        /* Заголовок в блоке с соцсетями в футере */
+        .title {
+          font-size: 1.1429rem;
+          color: $footer-link;
+          line-height: 2.5rem;
+          text-align: center;
+          padding-bottom: 0.7rem;
+          @include min-width($media-screen-xs) {
+            margin-right: 0.4rem;
+            vertical-align: top;
+            display: inline-block;
+            .ar & {
+              margin-right: 0;
+              margin-left: 0.4rem;
+            }
+          }
+          /*@include min-width($media-screen-sx) {
+            padding-bottom: 0;
+          }*/
+        }
+        /*  */
+        .socialBox {
+          text-align: center;
+          @include min-width($media-screen-xs) {
+            display: inline-block;
+          }
+          .social {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: transparent;
+            text-indent: 100%;
+            overflow: hidden;
+            @include min-width($media-screen-xs) {
+              margin: 0 0 0 0.5rem;
+              .ar & {
+                margin: 0 0.5rem 0 0;
+              }
+            }
+            &.twitter {
+              background: url("../images/twitter.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/twitter_h.svg");
+              }
+              &:active {
+                background-image: url("../images/twitter_a.svg");
+              }
+            }
+            &.telegram {
+              background: url("../images/telegram.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/telegram_h.svg");
+              }
+              &:active {
+                background-image: url("../images/telegram_a.svg");
+              }
+            }
+            &.facebook {
+              background: url("../images/facebook.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/facebook_h.svg");
+              }
+              &:active {
+                background-image: url("../images/facebook_a.svg");
+              }
+            }
+            &.youtube {
+              background: url("../images/youtube.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/youtube_h.svg");
+              }
+              &:active {
+                background-image: url("../images/youtube_a.svg");
+              }
+            }
+            &.medium {
+              background: url("../images/medium.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/medium_h.svg");
+              }
+              &:active {
+                background-image: url("../images/medium_a.svg");
+              }
+            }
+            &.bitcointalk {
+              background: url("../images/bitcointalk.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/bitcointalk_h.svg");
+              }
+              &:active {
+                background-image: url("../images/bitcointalk_a.svg");
+              }
+            }
+            &.kakaotalk {
+              background: url("../images/kakaotalk.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/kakaotalk_h.svg");
+              }
+              &:active {
+                background-image: url("../images/kakaotalk_a.svg");
+              }
+            }
+            &.reddit {
+              background: url("../images/reddit.svg") no-repeat scroll 0 50% transparent;
+              &:hover {
+                background-image: url("../images/reddit_h.svg");
+              }
+              &:active {
+                background-image: url("../images/reddit_a.svg");
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Оболочка для меню футера */
+    &-right {
+      /* Меню футера */
+      &-menu {
+        @include box-sizing(border-box);
+        display: none;
+        @include min-width($media-screen-sm) {
+          @include display-flex;
+          @include flex-wrap(nowrap);
+          @include justify-content(space-between);
+          max-width: 100%;
+          margin: 0 0 1.1rem;
+          padding-top: 1.9rem;
+        }
+        li {
+          vertical-align: top;
+          @include box-sizing(border-box);
+          margin-bottom: 3rem;
+          text-align: left;
+          .ar & {
+            text-align: right;
+          }
+          @include min-width($media-screen-sm) {
+            width: auto;
+            padding: 0 0 0 45px;
+            max-width: 190px;
+            @include flex(1);
+            display: block;
+            .ar & {
+              padding: 0 45px 0 0;
+            }
+            &:first-child {
+              padding: 0;
+            }
+          }
+          /* Заголовок в списке меню */
+          .title {
+            text-transform: uppercase;
+            font-size: 0.7857rem;
+            line-height: 1.0714rem;
+            letter-spacing: 1.1px;
+            color: white;
+            padding: 0 0 1.2rem;
+          }
+          .footerLink {
+            border-top: 1px $footer-menu-border solid;
+            padding: 0.6rem 0 0.6rem;
+            &.githab {
+              a::before {
+                content: '';
+                display: inline-block;
+                background: url("../images/githab.png") no-repeat scroll 50% 50% transparent;
+                width: 1.4286rem;
+                height: 1.4286rem;
+                margin: 0.4rem 0.4rem -0.4rem 0;
+                .ar & {
+                  margin: 0.4rem 0 -0.4rem 0.4rem;
+                }
+              }
+            }
+          }
+          /* Стили для ссылок в списке меню */
+          a {
+            text-transform: uppercase;
+            font-size: 0.7857rem;
+            line-height: 1.0714rem;
+            letter-spacing: 1.1px;
+            color: $footer-link;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    @include box-sizing(border-box);
+    padding: 2.8rem 0 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5714rem;
+    color: $footer-link;
+    text-align: center;
+    position: relative;
+    @include min-width($media-screen-xs) {
+      @include display-flex;
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      @include align-items(center);
+      text-align: left;
+      padding: 2.6rem 0 2.7rem;
+      .ar & {
+        text-align: right;
+      }
+    }
+    &-left {
+      padding: 1.8rem 0 0;
+      @include min-width($media-screen-xs) {
+        padding: 0;
+      }
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 2rem;
+        height: 1.5714rem;
+        background: url("../images/DesignPlanet.svg") no-repeat scroll 0 50% transparent;
+        margin: 0 0.6rem -0.4rem 0;
+        .ar & {
+          margin: 0 0 -0.4rem 0.6rem;
+        }
+      }
+    }
+    &-center {
+      @include min-width($media-screen-xs) {
+        position: absolute;
+        margin-left: -5.25rem;
+        left: 50%;
+        top: 50%;
+        margin-top: -1.6429rem;
+      }
+    }
+    &-right {
+      padding-top: 1.8rem;
+      @include min-width($media-screen-xs) {
+        padding-top: 0;
+        text-align: right;
+        .ar & {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

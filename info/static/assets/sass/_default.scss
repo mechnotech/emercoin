@@ -1,0 +1,156 @@
+/* Основные размеры экранов */
+$media-screen-sxx: 1280px;
+$media-screen-sx: 1160px;
+$media-screen-sm: 992px;
+$media-screen-tablet-plus: 900px;
+$media-screen-tablet: 768px;
+$media-screen-xs-plus: 740px;
+$media-screen-xs-700: 700px;
+$media-screen-xs: 600px;
+$media-screen-xs-min: 500px;
+
+html {
+  font-size: 14px;
+  &.limited {
+    height: 100%;
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.helvetica {
+  font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+}
+
+.roboto {
+  font-family: 'RobotoRegular';
+}
+
+body {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: 'Helvetica', Arial, Helvetica, sans-serif;
+  width: 100%;
+  color: $body-color;
+  margin: 0;
+  padding: 5.2857rem 0 0;
+  min-width: 320px;
+  @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  @include min-width(1024px) {
+    padding-top: 0;
+  }
+  &.ar {
+    font-family: 'NotoSansArabic-Regular', Arial, Helvetica, sans-serif;
+    //.roboto {
+    //  font-family: 'NotoSansArabic-Bold';
+    //}
+  }
+  &.azia {
+    font-family: Arial, Helvetica, sans-serif;
+    .roboto {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  &.fixed {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Обертка задающая шырину внутреннего контента всего сайта */
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1190px;
+  padding: 0 10px;
+  @include box-sizing(border-box);
+  @extend .after;
+  @include min-width($media-screen-xs-700) {
+    padding: 0 40px;
+  }
+  .wrapper {
+    padding: 0;
+  }
+}
+
+p {
+  margin-bottom: 22px;
+  &.bigP {
+    font-size: 1.2857rem;
+    line-height: 1.8571rem;
+    color: $body-color-light;
+    margin-bottom: 18px;
+  }
+  &.docsTop {
+    margin-bottom: 22px;
+    @include min-width($media-screen-xs) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+.title1,
+h1,
+.h1 {
+  font: 35px/42px 'RobotoRegular';
+  color: $h-color;
+  margin: 0 0 14px;
+  padding: 0;
+  text-align: center;
+  @include min-width($media-screen-xs) {
+    margin: 0 0 23px;
+  }
+  @include min-width($media-screen-tablet) {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: left;
+    .ar & {
+      text-align: right;
+    }
+  }
+}
+
+h2,
+.h2 {
+  font: 28px/1.2 'RobotoRegular';
+  color: $h-color;
+  padding: 0.5rem 0 0;
+  margin: 0 0 14px;
+  font-size: 35px;
+  @include min-width($media-screen-xs) {
+    font-size: 35px;
+  }
+}
+
+h3 {
+  font: 20px/1.2 'RobotoRegular';
+  margin: 0 0 14px;
+  color: $h-color;
+}
+
+h4 {
+  font: 18px/1.2 'RobotoRegular';
+  padding: 0 0 14px;
+  width: 100%;
+  color: $h-color;
+}
+
+h5 {
+  font: 17px/1.2 'RobotoRegular';
+  padding: 0 0 14px;
+}
+
+h6 {
+  font: 16px/1.2 'RobotoRegular';
+  padding: 0 0 14px;
+  width: 100%;
+  color: $h-color;
+}

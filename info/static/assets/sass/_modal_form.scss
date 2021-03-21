@@ -1,0 +1,134 @@
+/* pop-ap */
+.modal_form {
+  display: none;
+  z-index: 130;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include box-sizing(border-box);
+  /* Блок по клику на который попап закрывается */
+  .modal_hide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  /* Сам попап с контентом */
+  .modal_content {
+    @extend .after;
+    @include box-sizing(border-box);
+    @include box-shadow(0 2px 8px 0 rgba(0, 55, 255, 0.19));
+    text-align: center;
+    padding: 45px 10px;
+    background-color: white;
+    max-width: 1020px;
+    width: 96%;
+    min-width: 300px;
+    margin: 2rem auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    display: none;
+    @include min-width($media-screen-tablet) {
+      padding: 80px 60px;
+    }
+    /* Кнопка закрытия попапа */
+    .modal_close {
+      width: 18px;
+      height: 19px;
+      display: block;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      cursor: pointer;
+      z-index: 11;
+      text-align: center;
+      font-size: 1.2rem;
+      color: $body-color;
+      background: url("../images/modal_close.png") no-repeat scroll 50% 50% transparent;
+      @include background-size(contain);
+      text-indent: -9999px;
+      .ar & {
+        right: auto;
+        left: 25px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+/* Блок оверлея для попапа */
+#overlay {
+  z-index: 129;
+  position: fixed;
+  background: rgba(49, 50, 51, 0.75);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+
+/* Классы для анимации открытия и закрытия попапа */
+.animatedPopap {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.fadeInDownPopap {
+  @include animation-name(fadeInDownPopap);
+}
+
+.fadeOutUpPopap {
+  @include animation-name(fadeOutUpPopap);
+}
+
+@include keyframes(fadeOutUpPopap) {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+  }
+}
+
+@include keyframes(fadeInDownPopap) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+  }
+  to {
+    opacity: 1;
+    @include transform(none);
+  }
+}
+
+@include keyframes(fadenone) {
+  from {
+    opacity: 1;
+    @include transform(none);
+  }
+  to {
+    opacity: 1;
+    @include transform(none);
+  }
+}
+
+/*end style pop-ap*/

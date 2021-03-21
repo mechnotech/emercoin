@@ -1,0 +1,56 @@
+.newsAllBox {
+  list-style: none;
+  @include display-flex;
+  @include flex-wrap(wrap);
+  @include align-items(stretch);
+  padding: 0;
+  margin: 0;
+  @include min-width($media-screen-xs) {
+    margin: 0 -1%;
+  }
+  @include min-width($media-screen-tablet) {
+    margin: 0 -1.4%;
+  }
+  .latestNews-item {
+    @include box-sizing(border-box);
+    width: 100%;
+    @include flex(none);
+    padding: 0 15px;
+    margin: 0 0 41px;
+    @include min-width($media-screen-xs) {
+      width: 48%;
+      margin: 0 1% 41px;
+    }
+    @include min-width($media-screen-tablet) {
+      width: 30.533%;
+      margin: 0 1.4% 41px;
+    }
+  }
+}
+
+.filterButtonNews {
+  padding: 0 0 40px;
+  text-align: center;
+  display: none;
+  @include min-width($media-screen-sx) {
+    display: block;
+    .boxSelect {
+      display: none;
+    }
+  }
+  .button-filter {
+    margin: 0 10px;
+  }
+}
+
+.boxSelectNews {
+  max-width: 300px;
+  margin: 0 auto 40px;
+  text-align: center;
+  select {
+    width: 100%;
+  }
+  @include min-width($media-screen-sx) {
+    display: none;
+  }
+}

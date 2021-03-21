@@ -1,0 +1,228 @@
+/* Owl Carousel v2.2.0 */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+  .ar & {
+    direction: ltr;
+  }
+  &.owl-swipe {
+    position: relative;
+    .owl-item {
+      display: inline-block;
+      float: none;
+      margin-bottom: 11px;
+    }
+    &::before {
+      content: '';
+      width: 59px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 24px;
+      @include linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      width: 59px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 24px;
+      @include linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+      z-index: 2;
+    }
+    .owl-stage-outer {
+      text-align: center;
+    }
+    .owl-stage {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+  /* Слайдер в один слайд */
+  &-1 {
+    margin: 0 auto;
+    max-width: 1110px;
+    .owl-item {
+      img {
+        width: 100%;
+        display: block;
+        -webkit-transform-style: preserve-3d;
+      }
+    }
+  }
+  /* Внутренняя оболочка слайдов */
+  .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    &::after {
+      content: ".";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+    /* Наружная оболочка слайдов */
+    &-outer {
+      position: relative;
+      overflow: hidden;
+      /* fix for flashing background */
+      -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+  }
+  /* Блок одного слайда */
+  .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    margin-bottom: 0;
+    .ar & {
+      float: right;
+    }
+    /* Owl Carousel - Lazy Load Plugin */
+    .owl-lazy {
+      opacity: 0;
+      @include transition(opacity 400ms ease);
+    }
+    img {
+      &.owl-lazy {
+        @include transform-style(preserve-3d);
+      }
+    }
+  }
+  /* Навигация кнопоками */
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      cursor: pointer;
+      cursor: hand;
+      @include user-select(none);
+    }
+  }
+  /* Навигация точками */
+  .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    @include user-select(none);
+  }
+  .owl-nav,
+  .owl-dots {
+    &.disabled {
+      display: none;
+    }
+  }
+  &.owl-loaded {
+    display: block;
+  }
+  &.owl-loading {
+    opacity: 0;
+    display: block;
+  }
+  &.owl-hidden {
+    opacity: 0;
+  }
+  &.owl-refresh {
+    .owl-item {
+      visibility: hidden;
+    }
+  }
+  &.owl-drag {
+    cursor: pointer;
+    .owl-item {
+      @include user-select(none);
+    }
+  }
+  &.owl-rtl {
+    direction: rtl;
+    .owl-item {
+      float: right;
+    }
+  }
+  /* Owl Carousel - Animate Plugin */
+  .animated {
+    @include animation-duration(1000ms);
+    @include animation-fill-mode(both);
+  }
+  .owl-animated-in {
+    z-index: 0;
+  }
+  .owl-animated-out {
+    z-index: 1;
+  }
+  .fadeOut {
+    @include animation-name(fadeOutOwl);
+  }
+  /* Owl Carousel - Video Plugin */
+  .owl-video {
+    &-wrapper {
+      position: relative;
+      height: 100%;
+      background: black;
+    }
+    &-play-icon {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      left: 50%;
+      top: 50%;
+      margin-left: -40px;
+      margin-top: -40px;
+      background: url("../images/owl.video.play.png") no-repeat;
+      cursor: pointer;
+      z-index: 1;
+      -webkit-backface-visibility: hidden;
+      @include transition(transform 100ms ease);
+      &:hover {
+        @include transform(scale(1.3, 1.3));
+      }
+    }
+    &-playing {
+      &.owl-video-tn,
+      &.owl-video-play-icon {
+        display: none;
+      }
+    }
+    &-tn {
+      opacity: 0;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @include background-size(contain);
+      @include transition(opacity 400ms ease);
+    }
+    &-frame {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+@include keyframes(fadeOutOwl) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*	Owl Carousel - Auto Height Plugin */
+.owl-height {
+  @include transition(height 500ms ease-in-out);
+}

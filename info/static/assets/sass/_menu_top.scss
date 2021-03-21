@@ -1,0 +1,303 @@
+/*start style menu top*/
+nav {
+  width: 100%;
+}
+
+.menuTop {
+  @include min-width(1024px) {
+    @include display-flex;
+    @include justify-content(space-between);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    background-color: transparent;
+    height: auto;
+    min-height: 2rem;
+    max-height: 100%;
+    width: auto;
+    margin: 0 0 0.3rem;
+    left: auto;
+    top: auto;
+    padding: 0 40px;
+  }
+  /*@include min-width($media-screen-sx) {
+    margin: 0;
+    padding: 0;
+  }
+  @include min-width($media-screen-sxx) {
+    padding-left: 1.8rem;
+  }*/
+  li {
+    text-align: center;
+    position: relative;
+    @include min-width(1024px) {
+      padding: 1.6rem 0;
+    }
+    /*@include min-width($media-screen-sx) {
+      margin-left: 10px;
+    }*/
+    /* Стили ссылок */
+    a,
+    .link_menu {
+      color: white;
+      cursor: pointer;
+      font-size: 11px;
+      line-height: 1.36;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 1.6rem 2rem;
+      text-align: left;
+      display: block;
+      border-bottom: 1px $menu-border-color solid;
+      position: relative;
+      .ar & {
+        text-align: right;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 2rem;
+        height: 100%;
+        background: url("../images/menu-arrow-white.png") no-repeat scroll 50% 50% transparent;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        @include min-width(1024px) {
+          background-image: url("../images/arrow.svg");
+          position: relative;
+          right: auto;
+          top: auto;
+          width: 0.7143rem;
+          height: 0.7143rem;
+          margin: 0 0 -1px;
+        }
+      }
+      &.active,
+      &:hover,
+      &:active {
+        color: $button-sub;
+      }
+      @include min-width(1024px) {
+        color: $h-color;
+        padding: 0;
+        border-bottom: none;
+        &.visited {
+          color: $body-color;
+          &::before {
+            content: '';
+            background-color: $li-active;
+            position: absolute;
+            left: -10px;
+            right: -8px;
+            top: -5px;
+            bottom: -5px;
+            z-index: -1;
+            @include border-radius(5px);
+            .ar & {
+              left: -8px;
+              right: -10px;
+            }
+          }
+        }
+      }
+      &.open {
+        color: $menu-link-hover-color;
+        &::after {
+          background-image: url("../images/menu-arrow-blue.png");
+          @include min-width(1024px) {
+            background-image: url("../images/menu-arrow-dark-up.png");
+          }
+        }
+      }
+      .flag {
+        display: inline-block;
+        width: 1.2143rem;
+        height: 1.2143rem;
+        @include border-radius(50%);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        @include background-size(100% 100%);
+        margin: -2px 6px -4px 0;
+        .ar & {
+          margin: -2px 0 -4px 6px;
+        }
+      }
+    }
+    &.mobileShow {
+      @include min-width(1024px) {
+        display: none;
+      }
+      a {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    /* Доп меню */
+    .dropdown_menu {
+      display: none;
+      @include min-width(1024px) {
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        width: 10rem;
+        margin-left: -5rem;
+        border: 1px $drop-border solid;
+        background-color: white;
+        &.lang {
+          width: 82px;
+          margin-left: -41px;
+        }
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 7.5px 7px 7.5px;
+          border-color: transparent transparent white transparent;
+          position: absolute;
+          left: 50%;
+          margin-left: -7.5px;
+          top: -7px;
+          z-index: 2;
+        }
+        &::before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 8.5px 8px 8.5px;
+          border-color: transparent transparent $drop-border transparent;
+          position: absolute;
+          left: 50%;
+          margin-left: -8.5px;
+          top: -8px;
+          z-index: 1;
+
+        }
+      }
+      /* @include min-width($media-screen-sxx) {
+         width: 12.3rem;
+         margin-left: -6.15rem;
+         &.lang {
+           width: 82px;
+           margin-left: -41px;
+         }
+       }*/
+      li {
+        @include min-width(1024px) {
+          border-top: 1px $drop-border solid;
+          padding: 0;
+          margin: 0;
+          position: relative;
+          &:first-child {
+            border-top: none;
+            &:hover {
+              &::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 7.5px 7px 7.5px;
+                border-color: transparent transparent $drop-hover transparent;
+                position: absolute;
+                left: 50%;
+                margin-left: -7.5px;
+                top: -7px;
+                z-index: 3;
+              }
+            }
+          }
+        }
+        a {
+          background-color: $menu-drop-bacg;
+          padding-left: 3rem;
+          @include min-width(1024px) {
+            background-color: white;
+            color: $body-color;
+            padding: 0.95rem 0.6rem 0.8rem;
+            font-size: 0.7143rem;
+            line-height: 1.5;
+            &:hover {
+              background-color: $drop-hover;
+            }
+          }
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &:last-child {
+      .dropdown_menu {
+        @include min-width(1024px) {
+          width: 82px;
+          margin-left: -41px;
+        }
+        @include min-width($media-screen-sxx) {
+          width: 82px;
+          margin-left: -41px;
+        }
+      }
+    }
+    &:hover {
+      .dropdown_menu {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Классы для анимации мобильного меню*/
+.animatedMenu {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+  opacity: 1 !important;
+  display: block !important;
+  @include min-width(1024px) {
+    -webkit-animation-duration: 0s;
+    animation-duration: 0s;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+    opacity: 1 !important;
+    display: flex !important;
+  }
+}
+
+.fadeInDownMenu {
+  @include animation-name(fadeInDownMenu);
+}
+
+.fadeOutUpMenu {
+  @include animation-name(fadeOutUpMenu);
+}
+
+@include keyframes(fadeOutUpMenu) {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+    @include min-width(1024px) {
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+@include keyframes(fadeInDownMenu) {
+  from {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+    @include min-width(1024px) {
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+  to {
+    opacity: 1;
+    @include transform(none);
+  }
+}
+
+/*end style menu top*/

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="28px" viewBox="0 0 34 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>telegram</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="61.2346759%" y1="43.69%" x2="74.7064382%" y2="80.24%" id="linearGradient-1">
+            <stop stop-color="#EFF7FC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-179.000000, -3081.000000)" id="Telegram">
+            <g transform="translate(169.000000, 3064.000000)">
+                <g id="telegram" transform="translate(10.000000, 17.000000)">
+                    <path d="M13.0890278,25.8854167 C12.0931003,25.8854167 12.2623331,25.5214998 11.9188462,24.6038115 L8.99013889,15.276046 L31.5340278,2.33333333" id="Shape" fill="#C8DAEA"></path>
+                    <path d="M13.0890278,25.8854167 C13.8575694,25.8854167 14.1971368,25.545275 14.6261111,25.1416667 L18.725,21.2845792 L13.6121485,18.3009021" id="Shape" fill="#A9C9DD"></path>
+                    <path d="M13.6116361,18.3016458 L26.0005278,27.1594604 C27.4142602,27.9143419 28.4346017,27.5235013 28.7867475,25.8892594 L33.8296617,2.89176562 C34.345968,0.888549375 33.0406,-0.020015625 31.688146,0.574191042 L2.07623558,11.6240848 C0.0549453819,12.4086667 0.0667296875,13.499971 1.70779671,13.9862348 L9.30688053,16.2815217 L26.8995678,5.54053208 C27.7300796,5.05315271 28.4923192,5.31517831 27.8667007,5.85251042" id="Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
