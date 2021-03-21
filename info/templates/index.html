@@ -1,31 +1,14 @@
+{% extends "base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html" dir="ltr" lang="ru">
 
 <head>
-    <title>Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса</title>
-    <meta name="csrf-token" content="SF6bKZPgnHEeJpgHadI3SEsSiV1QPviV5psd98lA" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="alternate" href="https://emercoin.com/en" hreflang="x-default" />
+    {% block css %}
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
-    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static  'assets/images/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static  'assets/images/favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static  'assets/images/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static  'assets/images/favicon/site.webmanifest' %}">
-    <link rel="mask-icon" href="{% static  'assets/images/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
-    <link rel="shortcut icon" href="{% static  'assets/images/favicon/favicon.ico' %}">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta property="og:title" content="Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса" />
-{#    <meta property="og:url" content="{% static  'ru' %}" />#}
-    <meta property="og:image" content="{% static  'assets/img/share_image.png' %}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {% endblock css %}
+    {% block open_scrypt %}
     <script type="application/ld+json">
         [{
                 "@context": "http://schema.org",
@@ -80,6 +63,8 @@
             }
         ]
     </script>
+    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
+    {% endblock open_scrypt %}
 </head>
 
 <body class="ru">
@@ -87,146 +72,11 @@
     <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV4MJVZ"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+    </noscript>
 
     <div class="loader" style="display: none;"></div>
-    <header>
-        <div class="header">
-            <div class="wrapper">
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="https://emercoin.com/ru"></a>
-                    </div>
-                    <ul class="header-left-menu">
-                        <li><a href="https://emercoin.com/ru/for-business">Для бизнеса</a></li>
-                        <li><a href="https://emercoin.com/ru/for-coinholders">Владельцам монет</a></li>
-                        <li><a href="https://emercoin.com/ru/for-developers">Разработчикам</a></li>
-                        <li><a href="https://emercoin.com/ru/our-social-communities">Cообщество</a></li>
-                    </ul>
-                    <div class="header-left-top">
 
-                        <a href="https://emercoin.com/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
-                        <a id="AB-button" href="https://emercoin.com/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
-                    </div>
-                    <div id="pull">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="closeMenu"></div>
-                </div>
-            </div>
-            <div class="lineHeader"></div>
-            <div class="wrapper">
-                <div class="header-right">
-                    <div class="header-right-top">
-
-                        <a href="https://emercoin.com/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
-                        <a href="https://emercoin.com/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
-                    </div>
-                    <nav>
-                        <ul class="menuTop">
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-business">Для бизнеса</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-coinholders">Владельцам монет</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-developers">Разработчикам</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/our-social-communities">Cообщество</a></li>
-                            <li>
-                                <span class="link_menu ">Технологии</span>
-                                <ul class="dropdown_menu">
-                                    <li>
-                                        <a href="/ru/emercoin-blockchain">Блокчейн Emercoin</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/tech-solutions">Технологии</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/documentation/introduction/specifications">Спецификации</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/documentation/emercoin-api">Справочник API</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/documentation/about-emercoin">Общая документация</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/emercoin" target="_blank" rel="nofollow">Наш GitHub</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="link_menu ">Экономика</span>
-                                <ul class="dropdown_menu">
-                                    <li>
-                                        <a href="/ru/benefits">Почему Emercoin?</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/benefits#download">Купить Emercoin</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/benefits#download">Скачайте кошелёк</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="link_menu ">Обозреватели блокчейна</span>
-                                <ul class="dropdown_menu">
-                                    <li>
-                                        <a href="https://explorer.emercoin.com/" target="_blank" rel="nofollow">Первый</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://explorer1.emercoin.com" target="_blank" rel="nofollow">Второй</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://explorer2.emercoin.com" target="_blank" rel="nofollow">Третий</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="link_menu ">Новости</span>
-                                <ul class="dropdown_menu">
-                                    <li>
-                                        <a href="/ru/news">Последние новости</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/events">События</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/road-map">Road Map</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="link_menu ">О нас</span>
-                                <ul class="dropdown_menu">
-                                    <li>
-                                        <a href="/ru/contacts">Контакты</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/partners-and-projects">Наши партнеры</a>
-                                    </li>
-                                    <li>
-                                        <a href="/ru/team">Наша команда</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="link_menu">
-<span class="flag" style="background-image: url({% static 'assets/img/flag/ru.svg' %})"></span> ru
-                                </span>
-                                <ul class="dropdown_menu lang_menu">
-                                    <li>
-                                        <a href="https://emercoin.com/en">
-<span class="flag" style="background-image: url({% static 'assets/img/flag/en.svg' %})"></span>
-en
-</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-    </header>
+    {% block content %}
     <main>
         <div class="promo">
             <div class="promo__slider swiper-container">
@@ -1453,132 +1303,11 @@ en
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="footer-top">
-                <div class="footer-top-right">
-                    <ul class="footer-top-right-menu">
-                        <li>
-                            <div class="title">Технологии</div>
-                            <div class="footerLink ">
-                                <a href="/ru/emercoin-blockchain">Блокчейн Emercoin</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/tech-solutions">Технологии</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/documentation/introduction/specifications">Спецификации</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/documentation/emercoin-api">Справочник API</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/documentation/about-emercoin">Общая документация</a>
-                            </div>
-                            <div class="footerLink github">
-                                <a href="https://github.com/emercoin" target="_blank" rel="nofollow">Наш GitHub</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">Экономика</div>
-                            <div class="footerLink ">
-                                <a href="/ru/benefits">Почему Emercoin?</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/benefits#download">Купить Emercoin</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/benefits#download">Скачайте кошелёк</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">Обозреватели блокчейна</div>
-                            <div class="footerLink ">
-                                <a href="https://explorer.emercoin.com/" target="_blank" rel="nofollow">Первый</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="https://explorer1.emercoin.com" target="_blank" rel="nofollow">Второй</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="https://explorer2.emercoin.com" target="_blank" rel="nofollow">Третий</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">Новости</div>
-                            <div class="footerLink ">
-                                <a href="/ru/news">Последние новости</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/events">События</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/road-map">Road Map</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">О нас</div>
-                            <div class="footerLink ">
-                                <a href="/ru/contacts">Контакты</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/partners-and-projects">Наши партнеры</a>
-                            </div>
-                            <div class="footerLink ">
-                                <a href="/ru/team">Наша команда</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-top-left">
-                    <ul class="footer-top-left-terms">
-                        <li>
-                            <a href="https://emercoin.com/ru/emercoin-terms-and-conditions" target="_blank">Условия использования</a>
-                        </li>
-                        <li>
-                            <a href="https://emercoin.com/ru/emercoin-privacy-policy" target="_blank">Политика конфиденциальности</a>
-                        </li>
-                        <li>
-                            <a href="{% static 'files/pdf/whitepaper.pdf' %}" target="_blank">Whitepaper</a>
-                        </li>
-                        <li>
-                            <a href="{% static 'files/pdf/one-page.pdf' %}" target="_blank">One Pager</a>
-                        </li>
+    {% endblock content %}
+    {% include 'footer.html' %}
 
-                    </ul>
-                    <div class="footer-top-left-socset">
-                        <div class="title">Мы в социальных сетях:</div>
-                        <div class="socialBox">
-                            <a href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" class="social twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">twitter</a>
-                            <a href="https://t.me/emercoin_official" rel="nofollow" target="_blank" class="social telegram" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});" data-cf-modified-="">telegram</a>
-                            <a href="https://www.facebook.com/EmerOfficialRUS/" rel="nofollow" target="_blank" class="social facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">facebook</a>
-                            <a href="https://www.youtube.com/channel/UCeHlonUkITqe4PtpW8p4wmg" rel="nofollow" target="_blank" class="social youtube" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">youtube</a>
-                            <a href="https://medium.com/@emer.tech" rel="nofollow" target="_blank" class="social medium" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">medium</a>
-                            <a href="https://bitcointalk.org/index.php?topic=362513.0" rel="nofollow" target="_blank" class="social bitcointalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">bitcointalk</a>
-                            <a href="https://open.kakao.com/o/gEbNbmS" rel="nofollow" target="_blank" class="social kakaotalk" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">kakaotalk</a>
-                            <a href="https://www.reddit.com/r/EmerCoin/" rel="nofollow" target="_blank" class="social reddit" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'other_community'});" data-cf-modified-="">reddit</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-light">
-            <div class="wrapper">
-                <div class="footer-bottom">
-
-                    <div class="footer-bottom-right">
-                        © 2021 Emercoin
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="join-telegram">
-            <a href="https://t.me/emercoin_official?utm_source=EMERCOIN&amp;utm_medium=STICKYBUTTON&amp;utm_campaign=SITE_TG_STICKYBUTTON" rel="nofollow" target="_blank" class="join-telegram__link" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});"
-                data-cf-modified-="">Join our Telegram Community</a>
-            <button type="button" class="join-telegram__close"></button>
-        </div>
-
-    </footer>
     <div class="up"></div>
+    {% block scrypt %}
 {#    <script src="//www.google.com/recaptcha/api.js" type="text/javascript"></script>#}
     <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
     <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
@@ -1593,10 +1322,11 @@ en
     <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
     <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
     <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
-    <!--[if IE]>
-<script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
-<script src="{% static  'assets/js/respond.min.js' %}"></script>
-<![endif]-->
-{#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
+        <!--[if IE]>
+    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
+    {% endblock scrypt %}
 </body>
 </html>
