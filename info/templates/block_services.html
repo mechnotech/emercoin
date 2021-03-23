@@ -6,7 +6,7 @@
                     <div class="businesBox-item-img" style="background-image: url({{ service.icon.url }});"></div>
                     <div class="businesBox-item-title">{{ service.title }}</div>
                     <div class="businesBox-item-text">
-                        {{ service.text }}
+                        {{ service.text|safe }}
                     </div>
                     <div class="businesBox-item-more">
                         <span>Узнать больше</span>

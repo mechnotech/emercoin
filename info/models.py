@@ -8,28 +8,31 @@ from django.core.validators import (
     FileExtensionValidator,
 )
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 def desktop_image_validator(image):
-    h, w, size = 390, 1110, 5 * 1048576
-    errors = []
-    if image.height != h or image.width != w:
-        errors.append(f'Размер картинки для мобильного должен быть {w}x{h}!')
-    if image.size > size:
-        errors.append(f'Файл слишком большой (не более 1 Mб)')
-    if errors:
-        raise ValidationError(errors)
+    pass
+    # h, w, size = 390, 1110, 5 * 1048576
+    # errors = []
+    # if image.height != h or image.width != w:
+    #     errors.append(f'Размер картинки для мобильного должен быть {w}x{h}!')
+    # if image.size > size:
+    #     errors.append(f'Файл слишком большой (не более 1 Mб)')
+    # if errors:
+    #     raise ValidationError(errors)
 
 
 def mobile_image_validator(image):
-    h, w, size = 350, 450, 1048576
-    errors = []
-    if image.height != h or image.width != w:
-        errors.append(f'Размер картинки для десктопа должен быть {w}x{h}!')
-    if image.size > size:
-        errors.append(f'Файл слишком большой (не более 5 Mб)')
-    if errors:
-        raise ValidationError(errors)
+    pass
+    # h, w, size = 350, 450, 1048576
+    # errors = []
+    # if image.height != h or image.width != w:
+    #     errors.append(f'Размер картинки для десктопа должен быть {w}x{h}!')
+    # if image.size > size:
+    #     errors.append(f'Файл слишком большой (не более 5 Mб)')
+    # if errors:
+    #     raise ValidationError(errors)
 
 
 class Promo(models.Model):
@@ -103,8 +106,8 @@ class Services(models.Model):
         'Slug',
         blank=False,
         help_text='Часть URL пути, например emerdns')
-    text = models.TextField('Краткое описание', max_length=1500, blank=False)
-    text_more = models.TextField(
+    text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_more = RichTextField(
         'Дополнительное описание',
         max_length=2000,
         blank=False)
@@ -141,3 +144,67 @@ class Services(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Content(models.Model):
+    """Публикации СМИ о нас"""
+    date = models.DateField('Дата публикаци', editable=True,)
+    link = models.URLField('Ссылка на публикацию', max_length=200)
+    brif = models.CharField('Заголовок публикации', max_length=80)
+
+    class Meta:
+        ordering = ['date']
+        verbose_name_plural = 'Публикации СМИ'
+        verbose_name = 'Публикация СМИ'
+
+    def __str__(self):
+        return self.brif
+
+
+class Media(models.Model):
+    name = models.CharField('Название СМИ', blank=False, max_length=25)
+    logo = models.FileField(
+        'Логотип СМИ малый',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None)
+    logo_big = models.FileField(
+        'Большой логотип СМИ',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None,
+        null=True)
+    contents = models.ManyToManyField(
+        Content,
+        through='MediaContent',
+        related_name='medium',
+        )
+
+    def count(self):
+        return self.contents.count()
+
+    def get_contents(self):
+        content = []
+        for i in self.mediacontent_set.all().order_by('-t_content__date'):
+            content.append(i)
+        return content
+
+    class Meta:
+        ordering = ['pk']
+        verbose_name_plural = 'СМИ'
+        verbose_name = 'СМИ'
+
+    def __str__(self):
+        return self.name
+
+
+class MediaContent(models.Model):
+    t_media = models.ForeignKey(Media, on_delete=models.CASCADE)
+    t_content = models.ForeignKey(Content, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Посты СМИ {self.t_media} - {self.t_content}'
