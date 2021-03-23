@@ -1,7 +1,7 @@
 from colorfield.fields import ColorField
 from django.core.exceptions import ValidationError
 from django.core.validators import (
-    URLValidator
+    URLValidator, MinValueValidator, MaxValueValidator
 )
 from django.core.validators import (
     get_available_image_extensions,
@@ -208,3 +208,31 @@ class MediaContent(models.Model):
 
     def __str__(self):
         return f'Посты СМИ {self.t_media} - {self.t_content}'
+
+
+class RoadMap(models.Model):
+    year = models.PositiveSmallIntegerField(
+        'Год',
+        default=2013,
+        help_text='Год, например 2021',
+        validators=[MinValueValidator(2012), MaxValueValidator(2100)]
+    )
+    text = RichTextField(
+        'События',
+        help_text='События или задачи года (каждое с новой строки)',
+        max_length=1000
+    )
+
+    @property
+    def short_text(self):
+        textlist = self.text.split('</p>')
+        return '</p>'.join(textlist[:2])
+
+
+    class Meta:
+        ordering = ['year']
+        verbose_name_plural = 'Дорожная карта'
+        verbose_name = 'Год Дорожной карты'
+
+    def __str__(self):
+        return str(self.year)
