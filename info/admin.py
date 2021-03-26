@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Promo, AboutEmer, Services, Media, RoadMap, Content
+from .models import (
+    Promo, AboutEmer, Services, Media, RoadMap, Content, News, Person
+)
 
 
 class PromoAdmin(admin.ModelAdmin):
@@ -39,9 +41,21 @@ class RoadMapAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'date', 'title', 'slug', 'image', 'text')
+    empty_value_display = '-пусто-'
+
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'name', 'whois', 'is_team', 'is_adviser')
+    empty_value_display = '-пусто-'
+
+
 admin.site.register(Promo, PromoAdmin)
 admin.site.register(AboutEmer, AboutEmerAdmin)
 admin.site.register(Services, ServicesAdmin)
 admin.site.register(Media, MediaAdmin)
 admin.site.register(Content, ContentAdmin)
 admin.site.register(RoadMap, RoadMapAdmin)
+admin.site.register(News, NewsAdmin)
+admin.site.register(Person, PersonAdmin)

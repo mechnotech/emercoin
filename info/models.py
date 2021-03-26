@@ -1,17 +1,17 @@
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from colorfield.fields import ColorField
-from django.core.exceptions import ValidationError
+from django.core.validators import (
+    FileExtensionValidator,
+)
 from django.core.validators import (
     URLValidator, MinValueValidator, MaxValueValidator
 )
-from django.core.validators import (
-    get_available_image_extensions,
-    FileExtensionValidator,
-)
 from django.db import models
-from ckeditor.fields import RichTextField
+from slugify import slugify
 
 
-def desktop_image_validator(image):
+def desktop_image_validator():
     pass
     # h, w, size = 390, 1110, 5 * 1048576
     # errors = []
@@ -23,7 +23,7 @@ def desktop_image_validator(image):
     #     raise ValidationError(errors)
 
 
-def mobile_image_validator(image):
+def mobile_image_validator():
     pass
     # h, w, size = 350, 450, 1048576
     # errors = []
@@ -148,7 +148,7 @@ class Services(models.Model):
 
 class Content(models.Model):
     """Публикации СМИ о нас"""
-    date = models.DateField('Дата публикаци', editable=True,)
+    date = models.DateField('Дата публикаци', editable=True, )
     link = models.URLField('Ссылка на публикацию', max_length=200)
     brif = models.CharField('Заголовок публикации', max_length=80)
 
@@ -162,6 +162,7 @@ class Content(models.Model):
 
 
 class Media(models.Model):
+    """ СМИ """
     name = models.CharField('Название СМИ', blank=False, max_length=25)
     logo = models.FileField(
         'Логотип СМИ малый',
@@ -182,7 +183,7 @@ class Media(models.Model):
         Content,
         through='MediaContent',
         related_name='medium',
-        )
+    )
 
     def count(self):
         return self.contents.count()
@@ -211,6 +212,7 @@ class MediaContent(models.Model):
 
 
 class RoadMap(models.Model):
+    """ Дорожная карта"""
     year = models.PositiveSmallIntegerField(
         'Год',
         default=2013,
@@ -228,7 +230,6 @@ class RoadMap(models.Model):
         textlist = self.text.split('</p>')
         return '</p>'.join(textlist[:2])
 
-
     class Meta:
         ordering = ['year']
         verbose_name_plural = 'Дорожная карта'
@@ -236,3 +237,81 @@ class RoadMap(models.Model):
 
     def __str__(self):
         return str(self.year)
+
+
+class News(models.Model):
+    """ Новости """
+    title = models.CharField('Заголовок', max_length=150, blank=False)
+    slug = models.SlugField(
+        'Slug',
+        unique=True,
+        allow_unicode=True,
+        max_length=250,
+        blank=True,
+        help_text='Часть URL адреса новости, если не указывать явно -'
+                  ' заполняется автоматически из Заголовка')
+    date = models.DateTimeField('Дата и время', editable=True)
+    image = models.ImageField(
+        'Картинка новости',
+        max_length=250,
+        blank=False,
+        help_text='Изображение 420*280 (примерно)'
+    )
+    text = RichTextUploadingField(
+        'Текст новости',
+        max_length=10000,
+        blank=False,
+        help_text='Текст (не более 10 тыс символов)'
+    )
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    class Meta:
+        ordering = ['-date']
+        verbose_name_plural = 'Новости'
+        verbose_name = 'Новость'
+
+    def __str__(self):
+        return f'Новость - {self.title}'
+
+
+class Person(models.Model):
+    name = models.CharField('Имя', max_length=90, blank=False)
+    image = models.ImageField(
+        'Фото',
+        max_length=250,
+        blank=False,
+        help_text='Изображение 360*360 квадрат (примерно)'
+    )
+    whois = models.CharField('Роль или должность', max_length=150, blank=False)
+    info_short = RichTextField(
+        'Краткое инфо',
+        max_length=450,
+        blank=False, help_text='Не более 250 символов')
+    info = RichTextField(
+        'Полное инфо',
+        max_length=1500,
+        blank=True,
+        help_text='Не более 550 символов')
+    is_team = models.BooleanField('Член команды?', default=False)
+    is_adviser = models.BooleanField('Адвайзер?', default=False)
+    linkedin = models.URLField('LinkedIn', max_length=250, blank=True)
+    facebook = models.URLField('Facebook', max_length=250, blank=True)
+    twitter = models.URLField('Twitter', max_length=250, blank=True)
+    # telegram = models.URLField('Telegram', max_length=250, blank=True)
+    # github = models.URLField('Github', max_length=250, blank=True)
+
+    @property
+    def socials(self):
+        return (self.linkedin,
+                self.facebook, self.twitter)
+
+    class Meta:
+        verbose_name_plural = 'Персоны'
+        verbose_name = 'Персона'
+
+    def __str__(self):
+        return self.name

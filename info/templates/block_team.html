@@ -1,0 +1,71 @@
+{% load static %}
+<div class="teamBox">
+            <div class="wrapper">
+                <div class="bigTitle bigTitle-team center">
+                    Встречайте команду Emercoin
+                </div>
+                <div class="staff swiper-container">
+                    <div class="staff__wrapper swiper-wrapper">
+
+                        {% for person in teammates %}
+                        <div class="staff__item swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <div class="product-social">
+                                        {% if person.facebook %}
+                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.linkedin %}
+                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.twitter %}
+                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
+                                        {%  endif %}
+                                    </div>
+                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />
+                                </div>
+                                <div class="product-title">{{ person.name }}</div>
+                                <div class="product-text">{{ person.whois }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="box box-team">
+                    <a class="button" href="https://emercoin.com/ru/team">Вся команда</a>
+                </div>
+
+
+                <div class="bigTitle bigTitle-team center two">
+                    Наши советники </div>
+                <div class="staff swiper-container">
+                    <div class="staff__wrapper swiper-wrapper">
+
+                        {% for person in advisers %}
+                        <div class="staff__item swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <div class="product-social">
+                                        {% if person.facebook %}
+                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.linkedin %}
+                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.twitter %}
+                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
+                                        {%  endif %}
+                                    </div>
+                                        <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />                                </div>
+                                <div class="product-title">{{ person.name }}</div>
+                                <div class="product-text">{{ person.whois }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <span id="bp_mobile" class="bp_checking team_checking"></span>
+            </div>
+        </div>

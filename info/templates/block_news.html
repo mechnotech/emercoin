@@ -1,0 +1,44 @@
+<div class="wrapper">
+            <div class="bigTitle bigTitle-latest">
+                Последние новости <a class="button button-hideRight" href="https://emercoin.com/ru/news">Прочесть все</a>
+            </div>
+            <div class="latestNews swiper-container">
+                <div class="swiper-wrapper">
+                    {% for post in news %}
+                    <a href="/news/{{ post.slug }}" class="latestNews-item swiper-slide">
+                        <div class="latestNews-item-img">
+                            <img src="{{ post.image.url }}" alt="{{ post.title }}" />
+                        </div>
+                        <div class="latestNews-item-info">
+                            <div class="latestNews-item-info-date">{{ post.date }}</div>
+                            <div class="latestNews-item-info-text">{{ post.title }}</div>
+                            <div class="more">Узнать больше</div>
+                        </div>
+                    </a>
+                    {% endfor %}
+{#                    <a href="https://emercoin.com/ru/news/augustseptember-digest" class="latestNews-item swiper-slide">#}
+{#                        <div class="latestNews-item-img">#}
+{#                            <img src="https://emercoin.com/images/uploads/6edec4187943c0de766d1e1870a53cc2.png" alt="Дайджест август-сентябрь" />#}
+{#                        </div>#}
+{#                        <div class="latestNews-item-info">#}
+{#                            <div class="latestNews-item-info-date">October 14, 2019</div>#}
+{#                            <div class="latestNews-item-info-text">Дайджест август-сентябрь</div>#}
+{#                            <div class="more">Узнать больше</div>#}
+{#                        </div>#}
+{#                    </a>#}
+{#                    <a href="https://emercoin.com/ru/news/logging-on-to-livecoinnet-with-emerssl" class="latestNews-item swiper-slide">#}
+{#                        <div class="latestNews-item-img">#}
+{#                            <img src="https://emercoin.com/images/uploads/ebbb57d5a137f7bb6d7e434f4474ce2a.jpg" alt="На биржу LiveCoin.net  можно зайти используя блокчейн-сертификат EmerSSL" />#}
+{#                        </div>#}
+{#                        <div class="latestNews-item-info">#}
+{#                            <div class="latestNews-item-info-date">September 16, 2019</div>#}
+{#                            <div class="latestNews-item-info-text">На биржу LiveCoin.net можно зайти используя блокчейн-сертификат EmerSSL</div>#}
+{#                            <div class="more">Узнать больше</div>#}
+{#                        </div>#}
+{#                    </a>#}
+                </div>
+            </div>
+            <div class="box box-latest box-hideDesktop">
+                <a class="button" href="https://emercoin.com/ru/news">Прочесть все</a>
+            </div>
+        </div>

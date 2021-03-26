@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'colorfield',
     'ckeditor',
+    'ckeditor_uploader',
     'info',
 ]
 
@@ -49,7 +50,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'django.template.context_processors.media',
+                # 'django.template.context_processors.media',
             ],
         },
     },
@@ -95,6 +96,36 @@ LANGUAGES = (
     ('en', gettext('English')),
 )
 
+CKEDITOR_CONFIGS = {
+    'default':
+        {
+            "skin": "moono-lisa",
+            "toolbar_Basic": [["Source", "-", "Bold", "Italic"]],
+            "toolbar_Full": [
+                [
+                    "Styles",
+                    "Format",
+                    "Bold",
+                    "Italic",
+                    "Underline",
+                    "Strike",
+                    "SpellChecker",
+                    "Undo",
+                    "Redo",
+                ],
+                ["Link", "Unlink", "Anchor"],
+                ["Image", "Iframe", "Table", "HorizontalRule"],
+                ["TextColor", "BGColor"],
+                ["Smiley", "SpecialChar"],
+                ["Source"],
+            ],
+            "toolbar": "Full",
+            "height": 291,
+            "width": 835,
+            "filebrowserWindowWidth": 940,
+            "filebrowserWindowHeight": 725,
+        }}
+
 # static
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -102,3 +133,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
