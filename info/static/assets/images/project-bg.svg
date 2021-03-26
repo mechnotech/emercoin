@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="224px" height="202px" viewBox="0 0 224 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>project-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="50.7555389 0 0 91.0009554 50.7555389 182 155.245405 182 206 91.0009554 155.245405 0"></polygon>
+        <filter x="-7.3%" y="-8.2%" width="114.6%" height="116.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.4   0 0 0 0 0.588235294  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Our-partners" transform="translate(-360.000000, -616.000000)">
+            <g id="Group-4" transform="translate(344.000000, 626.000000)">
+                <g id="Group-35" transform="translate(25.000000, 0.000000)">
+                    <g id="project-bg">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

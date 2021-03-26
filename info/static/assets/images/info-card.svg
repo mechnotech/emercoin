@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92" height="106" viewBox="0 0 92 106">
+    <defs>
+        <linearGradient id="a" x1="1.507%" x2="98.618%" y1="98.493%" y2="1.382%">
+            <stop offset="0%" stop-color="#B299D1"/>
+            <stop offset="100%" stop-color="#D5B1E4"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F6F2FB" d="M92 26.505L46 0 0 26.505v52.61L46 106l46-27.302z"/>
+        <text fill="#BAA9D0" font-family="Helvetica" font-size="14" transform="translate(21 29)">
+            <tspan x="0" y="31">F6F2FB</tspan>
+        </text>
+        <g transform="translate(22 29)">
+            <rect width="50" height="42" y="6" fill="url(#a)" rx="4"/>
+            <path fill="#7B6696" d="M4 0h42a4 4 0 0 1 4 4v8H0V4a4 4 0 0 1 4-4z"/>
+            <g fill="#7B6696" transform="translate(9 18)">
+                <rect width="24" height="3" x="6" rx="1.5"/>
+                <path d="M0 0h3v3H0z"/>
+            </g>
+            <g fill="#7B6696" transform="translate(9 28)">
+                <rect width="24" height="3" x="6" rx="1.5"/>
+                <path d="M0 0h3v3H0z"/>
+            </g>
+            <g fill="#7B6696" transform="translate(9 38)">
+                <rect width="24" height="3" x="6" rx="1.5"/>
+                <path d="M0 0h3v3H0z"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>doc</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.50669643%" y1="98.4933036%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="doc">
+            <path d="M18.9994295,7.04824699 C18.8407007,7.02904716 18.6791225,7.01916504 18.5152588,7.01916504 L10.7549329,7.01916504 L9.70471847,5.60731719 C8.94977956,4.59669878 7.75692446,4 6.5,4 L2.51574707,4 C2.34100433,4 2.16886079,4.01123784 2,4.03302904 L2,2 C2,0.8954305 2.8954305,2.02906125e-16 4,0 L17,0 C18.1045695,-2.02906125e-16 19,0.8954305 19,2 L19,7 C19,7.01612763 18.9998091,7.03221067 18.9994295,7.04824699 Z" id="Combined-Shape" fill="#7B6696"></path>
+            <path d="M9.65200714,8.33705764 L7.82827607,5.88533854 C7.41379173,5.33048218 6.75172208,5 6.05980957,5 L2.21058313,5 C0.991446532,5 0,5.99255182 0,7.21058313 L0,18.7894169 C0,20.0074482 0.991446532,21 2.21058313,21 L18.7894169,21 C20.0085535,21 21,20.0074482 21,18.7894169 L21,10.5476408 C21,9.32960947 20.0085535,8.33705764 18.7894169,8.33705764 L9.65200714,8.33705764 Z" id="Path" fill="url(#linearGradient-1)"></path>
+        </g>
+    </g>
+</svg>

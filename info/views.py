@@ -37,3 +37,14 @@ def blockchain(request):
         return render(request, 'emercoin-blockchain.html', context)
     else:
         return render(request, 'emercoin-blockchain_en.html', context)
+
+
+def tech_solutions(request):
+    services = Services.objects.all()
+    context = {
+        'services': services,
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'tech-solutions.html', context)
+    else:
+        return render(request, 'tech-solutions_en.html', context)

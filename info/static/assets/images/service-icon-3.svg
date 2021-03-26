@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="106px" viewBox="0 0 92 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>service-icon-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.50669643%" y1="98.4933036%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Tech-Solutions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-817.000000, -757.000000)">
+        <g id="3" transform="translate(735.000000, 757.000000)">
+            <g id="Group-3">
+                <g id="Big-icons/InfoCard" transform="translate(82.000000, 0.000000)">
+                    <polygon id="Page-1" fill="#F6F2FB" transform="translate(46.000000, 53.000000) rotate(-270.000000) translate(-46.000000, -53.000000) " points="19.5051456 7 -7 53.0001298 19.5051456 99 72.1151068 99 99 53 71.6983107 7"></polygon>
+                    <g id="Group-3" stroke-width="1" transform="translate(21.000000, 29.000000)">
+                        <text id="F6F2FB" font-family="Helvetica" font-size="14" font-weight="normal" fill="#BAA9D0">
+                            <tspan x="0" y="31">F6F2FB</tspan>
+                        </text>
+                        <g id="Group-20" transform="translate(1.000000, 0.000000)">
+                            <rect id="Rectangle-5" fill="url(#linearGradient-1)" x="0" y="6" width="50" height="42" rx="4"></rect>
+                            <path d="M4,0 L46,0 C48.209139,-4.05812251e-16 50,1.790861 50,4 L50,12 L0,12 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle-5" fill="#7B6696"></path>
+                            <g id="Group-8" transform="translate(9.000000, 18.000000)" fill="#7B6696">
+                                <rect id="Rectangle-23" x="6" y="0" width="24" height="3" rx="1.5"></rect>
+                                <rect id="Rectangle-23" x="0" y="0" width="3" height="3"></rect>
+                            </g>
+                            <g id="Group-8" transform="translate(9.000000, 28.000000)" fill="#7B6696">
+                                <rect id="Rectangle-23" x="6" y="0" width="24" height="3" rx="1.5"></rect>
+                                <rect id="Rectangle-23" x="0" y="0" width="3" height="3"></rect>
+                            </g>
+                            <g id="Group-8" transform="translate(9.000000, 38.000000)" fill="#7B6696">
+                                <rect id="Rectangle-23" x="6" y="0" width="24" height="3" rx="1.5"></rect>
+                                <rect id="Rectangle-23" x="0" y="0" width="3" height="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

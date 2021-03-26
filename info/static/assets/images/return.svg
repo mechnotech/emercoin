@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152px" height="143px" viewBox="0 0 152 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>return</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="68" cy="68" r="68"></circle>
+        <linearGradient x1="1.50669643%" y1="98.4933036%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-3">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Benefits" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1015.000000, -565.000000)">
+        <g id="return" transform="translate(1016.000000, 566.000000)">
+            <g id="Path-3" transform="translate(15.000000, 6.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F6F2FB" xlink:href="#path-1"></use>
+                <polyline stroke="url(#linearGradient-3)" stroke-width="2" fill="#F6F2FB" mask="url(#mask-2)" points="105.867047 129.825149 86.6262166 97 49.1016751 97 40.7675781 110.695801"></polyline>
+                <polyline stroke="url(#linearGradient-3)" stroke-width="2" fill="#F6F2FB" mask="url(#mask-2)" points="95.4179688 18.7421875 87 32.8251493 106.101675 65 143.626217 65"></polyline>
+            </g>
+            <polyline id="Path-3" stroke="url(#linearGradient-3)" stroke-width="2" points="46 5.82514934 65.1016751 38 102.626217 38"></polyline>
+            <polygon id="Path-3" stroke="url(#linearGradient-3)" stroke-width="2" points="60.6577171 32 37.9968879 70.9413545 60.6577171 109.111242 105.174087 109.111242 128 70.9413545 105.174087 32"></polygon>
+            <polygon id="Path-3" stroke="#7B6696" stroke-width="3" fill="url(#linearGradient-3)" points="64.1016751 38 45 70.8251493 64.1016751 103 101.626217 103 120.867047 70.8251493 101.626217 38"></polygon>
+            <text id="6" font-family="Helvetica" font-size="42" font-weight="normal" fill="#F6F2FB">
+                <tspan x="68.3208008" y="87">6</tspan>
+            </text>
+            <g id="Fill-385-+-Fill-386">
+                <path d="M119.5,139 C117.014719,139 115,136.985281 115,134.5 C115,132.014719 117.014719,130 119.5,130 C121.985281,130 124,132.014719 124,134.5 C124,136.985281 121.985281,139 119.5,139 Z M119.5,137 C120.880712,137 122,135.880712 122,134.5 C122,133.119288 120.880712,132 119.5,132 C118.119288,132 117,133.119288 117,134.5 C117,135.880712 118.119288,137 119.5,137 Z" id="Oval-6" fill="#7B6696" fill-rule="nonzero"></path>
+                <path d="M111.5,27 C109.014719,27 107,24.9852814 107,22.5 C107,20.0147186 109.014719,18 111.5,18 C113.985281,18 116,20.0147186 116,22.5 C116,24.9852814 113.985281,27 111.5,27 Z M111.5,25 C112.880712,25 114,23.8807119 114,22.5 C114,21.1192881 112.880712,20 111.5,20 C110.119288,20 109,21.1192881 109,22.5 C109,23.8807119 110.119288,25 111.5,25 Z" id="Oval-6" fill="#7B6696" fill-rule="nonzero"></path>
+                <path d="M45.5,8 C43.0147186,8 41,5.98528137 41,3.5 C41,1.01471863 43.0147186,-1 45.5,-1 C47.9852814,-1 50,1.01471863 50,3.5 C50,5.98528137 47.9852814,8 45.5,8 Z M45.5,6 C46.8807119,6 48,4.88071187 48,3.5 C48,2.11928813 46.8807119,1 45.5,1 C44.1192881,1 43,2.11928813 43,3.5 C43,4.88071187 44.1192881,6 45.5,6 Z" id="Oval-6" fill="#7B6696" fill-rule="nonzero"></path>
+                <path d="M54.5,125 C52.0147186,125 50,122.985281 50,120.5 C50,118.014719 52.0147186,116 54.5,116 C56.9852814,116 59,118.014719 59,120.5 C59,122.985281 56.9852814,125 54.5,125 Z M54.5,123 C55.8807119,123 57,121.880712 57,120.5 C57,119.119288 55.8807119,118 54.5,118 C53.1192881,118 52,119.119288 52,120.5 C52,121.880712 53.1192881,123 54.5,123 Z" id="Oval-6" fill="#7B6696" fill-rule="nonzero"></path>
+                <text id="%" font-family="Helvetica" font-size="25" font-weight="normal" fill="#F6F2FB">
+                    <tspan x="90.385498" y="74">%</tspan>
+                </text>
+                <g id="Group-17" transform="translate(0.000000, 13.000000)">
+                    <circle id="Oval-3" stroke="#B09CC9" stroke-width="2" cx="23" cy="23" r="23"></circle>
+                    <path d="M23,4 C12.5240909,4 4,12.5240909 4,23 C4,33.4776364 12.5240909,42 23,42 C33.4759091,42 42,33.4776364 42,23 C42,12.5240909 33.4759091,4 23,4" id="Fill-385" fill="url(#linearGradient-3)"></path>
+                    <path d="M26.5331078,12 L24.141131,14.477659 L27.5244079,17.9821272 L19.7665539,17.9821272 C16.0347994,17.9821272 13,21.1256352 13,24.9910636 C13,28.856492 16.0347994,32 19.7665539,32 L21.4581924,32 L21.4581924,28.4955318 L19.7665539,28.4955318 C17.9006767,28.4955318 16.3832769,26.9237778 16.3832769,24.9910636 C16.3832769,23.0601016 17.9006767,21.4865954 19.7665539,21.4865954 L27.5244079,21.4865954 L24.141131,24.9910636 L26.5331078,27.4687226 L34,19.7343613 L26.5331078,12 Z" id="Fill-386" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

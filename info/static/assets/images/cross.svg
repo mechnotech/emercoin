@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Event" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1182.000000, -813.000000)">
+        <g id="Group-5" transform="translate(1116.000000, 711.000000)" fill="#B09CC9">
+            <g id="Group-4" transform="translate(39.000000, 86.000000)">
+                <g id="Group-2" transform="translate(11.000000, 0.000000)">
+                    <path d="M30,26 L40,26 L40,30 L30,30 L30,40 L26,40 L26,30 L16,30 L16,26 L26,26 L26,16 L30,16 L30,26 Z" id="cross"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
