@@ -1,8 +1,8 @@
-{% extends "blocks_ru/base.html" %}
+{% extends "blocks_en/base.html" %}
 {% load static %}
 
 {% block title %}
-    Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса
+    Official website of Emercoin blockchain platform. Decentralized solutions for business
 {% endblock title %}
     {% block css %}
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
@@ -43,21 +43,21 @@
                     "position": 2,
                     "item": {
                         "@id": "Cryptocurrency",
-                        "name": "/ru"
+                        "name": "/en"
                     }
                 }, {
                     "@type": "ListItem",
                     "position": 3,
                     "item": {
                         "@id": "Download Wallet",
-                        "name": "/ru/benefits#download"
+                        "name": "/en/benefits#download"
                     }
                 }, {
                     "@type": "ListItem",
                     "position": 4,
                     "item": {
                         "@id": "Buy Emercoin",
-                        "name": "/ru/benefits#buy"
+                        "name": "/en/benefits#buy"
                     }
                 }]
             }
@@ -77,11 +77,11 @@
 
 
     {% block content %}
-        <body class="ru">
-        <div class="loader" style="display: none;"></div>
+        <body class="en">
+          <div class="loader" style="display: none;"></div>
     <main>
 
-        {% include 'blocks_ru/block_promo.html' with promos=promos %}
+        {% include 'blocks_en/block_promo.html' with promos=promos %}
 
 {#        <div class="blueLightBox">#}
 {#            <div class="wrapper">#}
@@ -106,23 +106,23 @@
 {#        </div>#}
 
 
-      {% include 'blocks_ru/block_about_blockchain.html' with emer_blocks=emer_blocks %}
+      {% include 'blocks_en/block_about_blockchain.html' with emer_blocks=emer_blocks %}
 
 
         <div class="blueBox blueBox-still center ">
             <div class="wrapper">
                 <div class="whiteTitle">
-                    У вас ещё нет Emercoin? </div>
-                <a class="button button-blue" target="_blank" href="/ru/benefits#download">Скачать кошелек</a>
+                    Still don't have Emercoins? </div>
+                <a class="button button-blue" target="_blank" href="/ru/benefits#download">Download the wallet</a>
             </div>
         </div>
 
 
 
-       {% include 'blocks_ru/block_services.html' with services=services %}
-        {% include 'blocks_ru/block_media.html' with medium=medium %}
-        {% include 'blocks_ru/block_roadmap.html' with roadmap=roadmap %}
-        {% include 'blocks_ru/block_news.html' with news=news %}
+       {% include 'blocks_en/block_services.html' with services=services %}
+        {% include 'blocks_en/block_media.html' with medium=medium %}
+        {% include 'blocks_en/block_roadmap.html' with roadmap=roadmap %}
+        {% include 'blocks_en/block_news.html' with news=news %}
 
 {#        <div class="blueBox blueBox-subscribe center ">#}
 {#            <div class="fix_ok fix_ok-blue">#}
@@ -146,11 +146,11 @@
 {#            </div>#}
 {#        </div>#}
 
-    {% include 'blocks_ru/block_team.html' with advisers=advisers teammates=teammates  %}
+    {% include 'blocks_en/block_team.html' with advisers=advisers teammates=teammates  %}
 
     </main>
     {% endblock content %}
-    {% include 'blocks_ru/footer.html' %}
+    {% include 'blocks_en/footer.html' %}
 
     <div class="up"></div>
     {% block scrypt %}

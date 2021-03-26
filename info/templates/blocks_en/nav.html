@@ -1,0 +1,142 @@
+{% load static %}
+
+<div class="header">
+    <div class="wrapper">
+        <div class="header-left">
+            <div class="logo">
+                <a href="/en"></a>
+            </div>
+            <ul class="header-left-menu">
+                <li>
+                    <a href="/en/for-business">For business</a>
+                </li>
+                <li>
+                    <a href="/en/for-coinholders">For coinholders</a>
+                </li>
+                <li>
+                    <a href="/en/for-developers">For developers</a>
+                </li>
+                <li>
+                    <a href="/en/our-social-communities">Community</a>
+                </li>
+            </ul>
+            <div class="header-left-top">
+                <a href="/en/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })">Get a wallet</a>
+                <a id="AB-button" href="/en/for-coinholders#buy" data-ab="Get a wallet" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
+            </div>
+            <div id="pull">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="closeMenu"></div>
+        </div>
+    </div>
+    <div class="lineHeader"></div>
+    <div class="wrapper">
+        <div class="header-right" style="display: flex;">
+            <div class="header-right-top">
+                <a href="/en/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
+                <a href="/en/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })">wallet</a>
+            </div>
+            <nav>
+                <ul class="menuTop">
+                    <li class="mobileShow">
+                        <a href="/en/for-business">For business</a>
+                    </li>
+                    <li class="mobileShow">
+                        <a href="/en/for-coinholders">For coinholders</a>
+                    </li>
+                    <li class="mobileShow">
+                        <a href="/en/for-developers">For developers</a>
+                    </li>
+                    <li class="mobileShow">
+                        <a href="/en/our-social-communities">Community</a>
+                    </li>
+                    <li>
+                        <span class="link_menu ">EmerTech</span>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="/en/emercoin-blockchain">Emercoin Blockchain</a>
+                            </li>
+                            <li>
+                                <a href="/en/tech-solutions">Tech Solutions</a>
+                            </li>
+                            <li>
+                                <a href="/en/documentation/introduction/specifications">Specifications</a>
+                            </li>
+                            <li>
+                                <a href="/en/documentation/emercoin-api">API references</a>
+                            </li>
+                            <li>
+                                <a href="/en/documentation/about-emercoin">General Documentations</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/emercoin" target="_blank" rel="nofollow">View on GitHub</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="link_menu ">Emercoins</span>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="/en/benefits">Benefits</a>
+                            </li>
+                            <li>
+                                <a href="/en/benefits#download">Get Emercoin</a>
+                            </li>
+                            <li>
+                                <a href="/en/benefits#download">Download Wallet</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="link_menu ">Explorers</span>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="https://explorer.emercoin.com/" target="_blank" rel="nofollow">Emer Explorer</a>
+                            </li>
+                            <li>
+                                <a href="https://explorer1.emercoin.com" target="_blank" rel="nofollow">Explorer 2</a>
+                            </li>
+                            <li>
+                                <a href="https://explorer2.emercoin.com" target="_blank" rel="nofollow">Explorer 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="link_menu ">News</span>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="/en/news">Latest News</a>
+                            </li>
+                            <li>
+                                <a href="/en/events">Events</a>
+                            </li>
+                            <li>
+                                <a href="/en/road-map">Road Map</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="link_menu ">About Us</span>
+                        <ul class="dropdown_menu">
+                            <li>
+                                <a href="/en/team">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="/en/partners-and-projects">Our Partners</a>
+                            </li>
+                            <li>
+                                <a href="/en/contacts">Contact us</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        {% include 'lang_selector.html' %}
+                            </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

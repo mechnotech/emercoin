@@ -11,10 +11,7 @@ def index(request):
     news = News.objects.all()[:3]
     advisers = Person.objects.filter(is_adviser=True)
     teammates = Person.objects.filter(is_team=True)
-    return render(
-        request,
-        'index.html',
-        {'promos': promos,
+    context = {'promos': promos,
          'emer_blocks': emer_blocks,
          'services': services,
          'medium': medium,
@@ -23,4 +20,20 @@ def index(request):
          'advisers': advisers,
          'teammates': teammates,
          }
-    )
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'index.html', context)
+    else:
+        return render(request, 'index_en.html', context)
+
+
+def blockchain(request):
+    services = Services.objects.all()
+    emer_blocks = AboutEmer.objects.all()
+    context = {
+               'services': services,
+               'emer_blocks': emer_blocks,
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'emercoin-blockchain.html', context)
+    else:
+        return render(request, 'emercoin-blockchain_en.html', context)

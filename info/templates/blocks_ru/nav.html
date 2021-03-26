@@ -119,16 +119,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <span class="link_menu">
-                                <span class="flag" style="background-image: url({% static 'assets/img/flag/ru.svg' %})"></span> ru
-                                </span>
-                                <ul class="dropdown_menu lang_menu">
-                                    <li>
-                                        <a href="https://emercoin.com/en">
-                                        <span class="flag" style="background-image: url({% static 'assets/img/flag/en.svg' %})"></span> en
-</a>
-                                    </li>
-                                </ul>
+                               {% include 'lang_selector.html' %}
                             </li>
                         </ul>
                     </nav>

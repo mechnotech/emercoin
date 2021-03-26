@@ -1,10 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html" dir="ltr" lang="ru">
+<html xmlns="http://www.w3.org/1999/html" dir="ltr" lang="en">
 
 <head>
-    <title>Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса</title>
-    {% csrf_token %}
+    <title>{% block title %} {% endblock %}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="alternate" href="https://emercoin.com/en" hreflang="x-default" />
@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <meta property="og:title" content="Официальный сайт блокчейн-платформы Emercoin. Децентрализованные решения для бизнеса" />
+    <meta property="og:title" content="Official website of Emercoin blockchain platform. Decentralized solutions for business" />
 {#    <meta property="og:url" content="{% static  'ru' %}" />#}
     <meta property="og:image" content="{% static  'assets/img/share_image.png' %}" />
     <meta property="og:image:width" content="1200" />
@@ -31,7 +31,7 @@
 
 </head>
 <body>
-        {% include 'nav.html' %}
+        {% include 'blocks_en/nav.html' %}
 
 
 
@@ -40,7 +40,7 @@
                 {% endblock content %}
 
 
-        {% include 'footer.html' %}
+        {% include 'blocks_en/footer.html' %}
 </body>
 
 {% block scrypt %}

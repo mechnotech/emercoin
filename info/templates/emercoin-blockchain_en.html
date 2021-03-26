@@ -1,0 +1,167 @@
+{% extends "blocks_ru/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" dir="ltr" lang="en">
+<head>
+    <title>Emercoin Blockchain</title>
+    {% block css %}
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
+    {% endblock css %}
+    {% block open_scrypt %}
+    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
+    {% endblock open_scrypt %}
+</head>
+
+<body class="en">
+
+    {% block content %}
+
+<main>
+    <div class="infobox _bg_transparent">
+        <div class="infobox__inner">
+            <div class="infobox__header">
+                <div class="h1">Emercoin Blockchain</div>
+            </div>
+            <div class="infobox__body">
+                <div class="h2">About Emercoin</div>
+                <p>
+                    Emercoin is a blockchain platform. Since 2013 it has developed a wide range of easy-to-use dSDKs. dSDK (Decentralized Software Development Kit) is a set of software development tools that allows the creation of software, services and solutions. Usually, it includes APIs, technical documentation and parts of code for fast and easy development on a certain platform.
+                </p>
+                <p>
+                    dSDKs are already implemented in numerous innovative technical solutions built on the blockchain. Emercoin offers services that have a potential to change the way different industries operate, providing means for data protection, secure storage of information, and creation of distributed services.                </p>
+            </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="wrapper">
+                <div class="owl-carousel owl-carousel-2">
+                {% for block in emer_blocks %}
+                <div class="product">
+                    <div class="product-img product-img-min" style="background-image: url({{ block.image.url }})"></div>
+                    <div class="product-title product-title-big">
+                        {{ block.title }}
+                    </div>
+                    <div class="product-text product-text-big">
+                        {{ block.text }}
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+    </div>
+    {% include 'blocks_ru/block_services.html' with servises=services %}
+    <div class="infobox _bg_filled">
+        <div class="infobox__inner">
+            <div class="infobox__header">
+                <div class="h3">How can I use the Emercoin blockchain?</div>
+            </div>
+            <div class="infobox__body">
+                <p>The Emercoin Blockchain has its own currency, Emercoins (EMC). To use any of the services listed above, you would use tiny fractions of EMC.</p>
+                <p>What sets Emercoin apart from other service blockchains is that Emercoin has pioneered a groundbreaking data organization system that allows for these services to utilize valuable data without needing immense amounts of storage space and complicated coding languages. To buy Emercoin, you must have compatible wallet software. Visit our site for wallet links.</p>
+            </div>
+        </div>
+    </div>
+    <div class="tech-tree">
+        <div class="h2">Древо технологий</div>
+        <a href="{% static 'assets/images/tech-tree.png' %}" target="_blank" class="tech-tree__hero">
+            <img src="{% static 'assets/images/tech-tree.png' %}" alt="" class="tech-tree__image"></a>
+        </div>
+{#        <div class="companies">#}
+{#            <div class="h2 _center">Компании, сотрудничающие с Emercoin</div>#}
+{#            <div class="partners">#}
+{#                <div class="partners__container">#}
+{#                    <div class="partners__wrapper">#}
+{#                        <div class="partners__item">#}
+{#                            <a href="https://www2.deloitte.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                <img src="https://emercoin.com/assets/images/cuet/deloitte.png" srcset="https://emercoin.com/assets/images/cuet/deloitte2x.png" alt="Deloitte" class="partners__image">#}
+{#                                    <img src="https://emercoin.com/assets/images/cuet/deloitte_color.png" srcset="https://emercoin.com/assets/images/cuet/deloitte_color2x.png" alt="Deloitte" class="partners__image _color"></a>#}
+{#                                </div>#}
+{#                                <div class="partners__item">#}
+{#                                    <a href="https://unadesk.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                        <img src="https://emercoin.com/assets/images/cuet/unadesk.png" srcset="https://emercoin.com/assets/images/cuet/unadesk2x.png" alt="UnaDesk" class="partners__image">#}
+{#                                            <img src="https://emercoin.com/assets/images/cuet/unadesk_color.png" srcset="https://emercoin.com/assets/images/cuet/unadesk_color2x.png" alt="UnaDesk" class="partners__image _color"></a>#}
+{#                                        </div>#}
+{#                                        <div class="partners__item">#}
+{#                                            <a href="https://authorizer.io/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                <img src="https://emercoin.com/assets/images/cuet/authorizer.png" srcset="https://emercoin.com/assets/images/cuet/authorizer2x.png" alt="Authorizer" class="partners__image">#}
+{#                                                    <img src="https://emercoin.com/assets/images/cuet/authorizer_color.png" srcset="https://emercoin.com/assets/images/cuet/authorizer_color2x.png" alt="Authorizer" class="partners__image _color"></a>#}
+{#                                                </div>#}
+{#                                                <div class="partners__item">#}
+{#                                                    <a href="https://foundico.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                        <img src="https://emercoin.com/assets/images/cuet/foundico.png" srcset="https://emercoin.com/assets/images/cuet/foundico2x.png" alt="Foundico" class="partners__image">#}
+{#                                                            <img src="https://emercoin.com/assets/images/cuet/foundico_color.png" srcset="https://emercoin.com/assets/images/cuet/foundico_color2x.png" alt="Foundico" class="partners__image _color"></a>#}
+{#                                                        </div>#}
+{#                                                        <div class="partners__item">#}
+{#                                                            <a href="http://kolionovo.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                                <img src="https://emercoin.com/assets/images/cuet/kolionovo.png" srcset="https://emercoin.com/assets/images/cuet/kolionovo2x.png" alt="Kolionovo" class="partners__image">#}
+{#                                                                    <img src="https://emercoin.com/assets/images/cuet/kolionovo_color.png" srcset="https://emercoin.com/assets/images/cuet/kolionovo_color2x.png" alt="Kolionovo" class="partners__image _color"></a>#}
+{#                                                                </div>#}
+{#                                                                <div class="partners__item">#}
+{#                                                                    <a href="https://vinchain.io/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                                        <img src="https://emercoin.com/assets/images/cuet/vinchain.png" srcset="https://emercoin.com/assets/images/cuet/vinchain2x.png" alt="Vinchain" class="partners__image">#}
+{#                                                                            <img src="https://emercoin.com/assets/images/cuet/vinchain_color.png" srcset="https://emercoin.com/assets/images/cuet/vinchain_color2x.png" alt="Vinchain" class="partners__image _color"></a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                                <div class="partners__pagination"></div>#}
+{#                                                            </div>#}
+{#                                                            <div class="companies__text">ПО Emercoin также доступно в каталогах Microsoft Azure и RedHat.</div>#}
+{#                                                        </div>#}
+
+
+{#    <div class="links">#}
+{#                                                            <div class="links__list">#}
+{#                                                                <div class="links__item">#}
+{#                                                                    <a href="https://emercoin.com/ru/emercoin-blockchain" rel="nofollow" class="links__link _type_service">#}
+{#                                                                        <span class="links__text">Технологические сервисы и решения</span>#}
+{#                                                                    </a>#}
+{#                                                                </div>#}
+{#                                                                <div class="links__item">#}
+{#                                                                    <a href="https://docs.emercoin.com/en/Introduction/Specifications.html" rel="nofollow" class="links__link _type_spec">#}
+{#                                                                        <span class="links__text">Спецификации</span>#}
+{#                                                                    </a>#}
+{#                                                                </div>#}
+{#                                                                <div class="links__item">#}
+{#                                                                    <a href="https://docs.emercoin.com/en/Emercoin_API.html" rel="nofollow" class="links__link _type_api">#}
+{#                                                                        <span class="links__text">Справочник API</span>#}
+{#                                                                    </a>#}
+{#                                                                </div>#}
+{#                                                                <div class="links__item">#}
+{#                                                                    <a href="https://docs.emercoin.com/en/About_Emercoin.html" rel="nofollow" class="links__link _type_doc">#}
+{#                                                                        <span class="links__text">Общая документация</span>#}
+{#                                                                    </a>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+
+    </main>
+
+    {% endblock content %}
+
+    {% include 'blocks_ru/footer.html' %}
+
+    <div class="up"></div>
+    {% block scrypt %}
+{#    <script src="//www.google.com/recaptcha/api.js" type="text/javascript"></script>#}
+    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
+
+    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
+        <!--[if IE]>
+    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
+    {% endblock scrypt %}
+</body>
+</html>
