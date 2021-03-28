@@ -7,4 +7,6 @@ urlpatterns = [
     path('emercoin-blockchain/', views.blockchain, name='blockchain'),
     path('tech-solutions/', views.tech_solutions, name='tech-solutions'),
     path('for-business/', views.for_business, name='for-business'),
+    path('partners-and-projects/<slug:slug>', views.company, name='partner'),
+    path('partners-and-projects/', views.partners, name='partners'),
     ]

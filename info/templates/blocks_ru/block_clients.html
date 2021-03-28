@@ -39,7 +39,7 @@
                      {{ company.text|safe }}
                   </div>
                   <div class="company__more">
-                     <a href="partners-and-projects/{{ company.slug }}" class="more-link">Узнать больше</a>
+                     <a href="{% url 'partners' %}{{ company.slug }}" class="more-link">Узнать больше</a>
                   </div>
                </div>
             </div>

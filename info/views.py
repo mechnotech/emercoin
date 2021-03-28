@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
 )
@@ -61,3 +61,19 @@ def for_business(request):
         return render(request, 'for-business.html', context)
     else:
         return render(request, 'for-business_en.html', context)
+
+
+def partners(request):
+    companies_partners = Company.objects.filter(is_partner=True)
+    companies_implements = Company.objects.filter(is_used=True)
+    context = {
+        'partners': companies_partners,
+        'implements': companies_implements,
+    }
+    return render(request, 'partners-and-projects.html', context)
+
+
+def company(request, slug):
+    comp = get_object_or_404(Company, slug=slug)
+    context = {'company': comp}
+    return render(request, 'company.html', context)

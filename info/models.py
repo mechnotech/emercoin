@@ -347,6 +347,16 @@ class Company(models.Model):
         null=True,
         help_text='Размер 200*80 пикселей'
     )
+    is_partner = models.BooleanField(
+        'Партнер?',
+        default=True,
+        help_text='Заключили партнерство?'
+    )
+    is_used = models.BooleanField(
+        'Применяют?',
+        default=False,
+        help_text='Применяют технологии?'
+    )
     text = RichTextField('Краткое описание', max_length=1500, blank=False)
     text_more = RichTextField(
         'Дополнительное описание',
