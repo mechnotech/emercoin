@@ -8,10 +8,10 @@
                         <li>
                             <div class="title">Технологии</div>
                             <div class="footerLink ">
-                                <a href="/ru/emercoin-blockchain">Блокчейн Emercoin</a>
+                                <a href="{% url 'blockchain' %}">Блокчейн Emercoin</a>
                             </div>
                             <div class="footerLink ">
-                                <a href="/ru/tech-solutions">Технологии</a>
+                                <a href="{% url 'tech-solutions' %}">Технологии</a>
                             </div>
                             <div class="footerLink ">
                                 <a href="/ru/documentation/introduction/specifications">Спецификации</a>
@@ -112,7 +112,7 @@
                 <div class="footer-bottom">
 
                     <div class="footer-bottom-right">
-                        © 2021 Emercoin
+                        © {% now "Y" %} Emercoin
                     </div>
                 </div>
             </div>

@@ -1,21 +1,21 @@
 {% load static %}
-<header>
+
         <div class="header">
             <div class="wrapper">
                 <div class="header-left">
                     <div class="logo">
-                        <a href="https://emercoin.com/ru"></a>
+                        <a href="{% url 'emercoin' %}"></a>
                     </div>
                     <ul class="header-left-menu">
-                        <li><a href="https://emercoin.com/ru/for-business">Для бизнеса</a></li>
-                        <li><a href="https://emercoin.com/ru/for-coinholders">Владельцам монет</a></li>
-                        <li><a href="https://emercoin.com/ru/for-developers">Разработчикам</a></li>
-                        <li><a href="https://emercoin.com/ru/our-social-communities">Cообщество</a></li>
+                        <li><a href="{% url 'for-business' %}">Для бизнеса</a></li>
+                        <li><a href="/ru/for-coinholders">Владельцам монет</a></li>
+                        <li><a href="/ru/for-developers">Разработчикам</a></li>
+                        <li><a href="/ru/our-social-communities">Cообщество</a></li>
                     </ul>
                     <div class="header-left-top">
 
-                        <a href="https://emercoin.com/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
-                        <a id="AB-button" href="https://emercoin.com/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a id="AB-button" href="/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
                     </div>
                     <div id="pull">
                         <span></span>
@@ -30,15 +30,15 @@
                 <div class="header-right">
                     <div class="header-right-top">
 
-                        <a href="https://emercoin.com/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
-                        <a href="https://emercoin.com/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a href="/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
                     </div>
                     <nav>
                         <ul class="menuTop">
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-business">Для бизнеса</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-coinholders">Владельцам монет</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/for-developers">Разработчикам</a></li>
-                            <li class="mobileShow"><a href="https://emercoin.com/ru/our-social-communities">Cообщество</a></li>
+                            <li class="mobileShow"><a href="/ru/for-business">Для бизнеса</a></li>
+                            <li class="mobileShow"><a href="/ru/for-coinholders">Владельцам монет</a></li>
+                            <li class="mobileShow"><a href="/ru/for-developers">Разработчикам</a></li>
+                            <li class="mobileShow"><a href="/ru/our-social-communities">Cообщество</a></li>
                             <li>
                                 <span class="link_menu ">Технологии</span>
                                 <ul class="dropdown_menu">
@@ -125,4 +125,4 @@
                     </nav>
                 </div>
             </div>
-    </header>
+        </div>

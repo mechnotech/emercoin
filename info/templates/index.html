@@ -80,7 +80,7 @@
         <body class="ru">
         <div class="loader" style="display: none;"></div>
     <main>
-
+        {% csrf_token %}
         {% include 'blocks_ru/block_promo.html' with promos=promos %}
 
 {#        <div class="blueLightBox">#}

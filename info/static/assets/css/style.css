@@ -4481,10 +4481,20 @@ nav {
 .lg-css3.lg-no-trans .lg-prev-slide,
 .lg-css3.lg-no-trans .lg-next-slide,
 .lg-css3.lg-no-trans .lg-current {
-    -webkit-transition: trans-prefix(none, 0s ease 0s !important, webkit);
-    -moz-transition: trans-prefix(none, 0s ease 0s !important, moz);
-    -o-transition: trans-prefix(none, 0s ease 0s !important, o);
+    -webkit-transition: trans-prefix(none, 0s ease 0s !important, webkit);, moz);, o);
     transition: none 0s ease 0s !important
+}
+
+.lg-css3.lg-no-trans .lg-prev-slide,
+.lg-css3.lg-no-trans .lg-next-slide,
+.lg-css3.lg-no-trans .lg-current {
+    -o-transition: trans-prefix(none, 0s ease 0s !important
+}
+
+.lg-css3.lg-no-trans .lg-prev-slide,
+.lg-css3.lg-no-trans .lg-next-slide,
+.lg-css3.lg-no-trans .lg-current {
+    -moz-transition: trans-prefix(none, 0s ease 0s !important
 }
 
 .lg-css3.lg-use-css3 .lg-item {

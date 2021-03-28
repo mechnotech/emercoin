@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1110px" height="142px" viewBox="0 0 1110 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>E5392470-F6DE-4040-975A-26D21F38E48C</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1110" height="142"></rect>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bounty-program" transform="translate(-166.000000, -789.000000)">
+            <g id="Article" transform="translate(166.000000, 789.000000)">
+                <g id="Bg">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#412E5B" xlink:href="#path-1"></use>
+                    <path d="M-3.52562424e-12,-4.48752147e-13 C246.8623,-13.5151644 268,110.105619 555,110.105619 C842,110.105619 879.189616,2.96873637e-13 1110,-4.48752147e-13 C1110,33.0110151 1110,80.3443484 1110,142 L555,142 L-3.52562424e-12,142 C-3.52562424e-12,94.3205623 -3.52562424e-12,46.987229 -3.52562424e-12,-4.48752147e-13 Z" id="Rectangle-35" fill="#9072B6" opacity="0.262850996" mask="url(#mask-2)"></path>
+                    <path d="M1110,74.6077557 L1110,142 L0,142 C1.75267208e-13,83.647657 1.75267208e-13,36.3143237 0,0 C230.810384,8.18557028e-13 228.696746,102.021713 372.089681,101.493624 C515.482616,100.965534 660.92334,31.4992943 797.770345,31.4992943 C889.001682,31.4992943 993.078234,45.8687814 1110,74.6077557 Z" id="Rectangle-35" fill="#8F75AF" opacity="0.128396739" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

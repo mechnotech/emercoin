@@ -1,0 +1,555 @@
+{% extends 'blankpage.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <div class="intro _short">
+        <div class="intro__inner animate-it _animated">
+            <h1 class="intro__title">Для бизнеса</h1>
+            <div class="intro__hero">
+                <img src="{% static 'assets/images/business.png' %}" srcset="{% static 'assets/images/business@2x.png' %} 2x" alt="" class="intro__image">
+            </div>
+            <div class="intro__body">
+                <div class="intro__text">
+                    <div class="intro__visible-2">
+                        <div class="intro__visible-2">
+                            <p>Emercoin предлагает различные сценарии бизнес-решений на блокчейне. Благодаря децентрализованности, они более надежны, прозрачны, безопасны и инновационны, по сравнению с централизованными аналогами. Блокчейн обладает огромным потенциалом для хранения финансовых, государственных и частных записей.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-services animate-it _animated">
+        <div class="b-services__title">Блокчейн-сервисы</div>
+        <div class="b-services__slider swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); height: 342px;">
+                <div class="b-services__item swiper-slide swiper-slide-active" style="width: 380px;">
+                    <div class="b-service">
+                        <div class="b-service__hero">
+                            <img src="{% static 'assets/images/icon-easy-and-fast.svg' %}" alt="" class="b-service__image">
+                        </div>
+                        <div class="b-service__caption">Легко и быстро</div>
+                        <div class="b-service__text">Простота внедрения – не требуют специальных навыков и знаний блокчейн-технологий. Набор dSDK позволяет быстро внедрять технологии блокчейна Emercoin в любой сфере бизнеса</div>
+                    </div>
+                </div>
+                <div class="b-services__item swiper-slide swiper-slide-next" style="width: 380px;">
+                    <div class="b-service">
+                        <div class="b-service__hero">
+                            <img src="{% static 'assets/images/icon-reliability.svg' %}" alt="" class="b-service__image">
+                        </div>
+                        <div class="b-service__caption">Надежность</div>
+                        <div class="b-service__text">Emercoin использует алгоритмы консенсуса PoW и PoS, которые делают его безопасным и устойчивым к хакерским атакам</div>
+                    </div>
+                </div>
+                <div class="b-services__item swiper-slide" style="width: 380px;">
+                    <div class="b-service">
+                        <div class="b-service__hero">
+                            <img src="{% static 'assets/images/icon-flexible.svg' %}" alt="" class="b-service__image">
+                        </div>
+                        <div class="b-service__caption">Гибкость</div>
+                        <div class="b-service__text">Блокчейн Emercoin построен таким образом, чтобы его можно было использовать в любой отрасли, будь то финансы, производство, технологии и многое другое</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-services__pagination _hidden swiper-pagination-clickable swiper-pagination-bullets">
+                <span class="b-services__bullet _active" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+    <div class="services-list js-services-filter">
+        <div class="services-list__header animate-it _animated">
+            <div class="services-list__btn-holder">
+                <div class="services-dd">
+                    <button type="button" class="services-dd__btn btn _type_default _size_lg _wide">
+                        <span class="services-dd__btn-text">Все индустрии</span>
+                        <span class="services-dd__btn-icon"></span>
+                    </button>
+                    <div class="services-dd__popup">
+                        <button type="button" class="services-dd__close"></button>
+                        <div class="shortcuts">
+                            <a href="#all" class="shortcuts__item js-services-filter-link">
+                                <div class="shortcuts__hero">
+                                    <img src="{% static 'assets/images/all.svg' %}" alt="" class="shortcuts__image">
+                                </div>
+                                <div class="shortcuts__text js-services-filter-text">Все индустрии</div>
+                            </a>
+                            <a href="#industry-13" class="shortcuts__item js-services-filter-link">
+                                <div class="shortcuts__hero">
+                                    <img src="{% static 'images/uploads/bcccf39d8e29c7ce8eb77e958a8a2deb.svg' %}" alt="" class="shortcuts__image">
+                                </div>
+                                <div class="shortcuts__text js-services-filter-text">Аэрокосмическая промышленность</div>
+                            </a>
+                            <a href="#industry-37" class="shortcuts__item js-services-filter-link">
+                                <div class="shortcuts__hero">
+                                    <img src="{% static 'images/uploads/fbc691d475fd7dc522943dca24958a73.svg' %}" alt="" class="shortcuts__image">
+                                </div>
+                                <div class="shortcuts__text js-services-filter-text">Система образования</div>
+                            </a>
+                            <a href="#industry-21" class="shortcuts__item js-services-filter-link">
+                                <div class="shortcuts__hero">
+                                    <img src="{% static 'images/uploads/331593911e35ba726b22dc2ba22835c2.svg' %}" alt="" class="shortcuts__image">
+                                </div>
+                                <div class="shortcuts__text js-services-filter-text">Удобрения и агрохимические препараты</div>
+                            </a>
+                            <a href="#industry-29" class="shortcuts__item js-services-filter-link">
+                                <div class="shortcuts__hero">
+                                    <img src="{% static 'images/uploads/f799e5e1204a48e12237a94af25df56a.svg' %}" alt="" class="shortcuts__image">
+                                </div>
+                                <div class="shortcuts__text js-services-filter-text">Фармацевтические препараты</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="services-list__title">Преимущества блокчейна Emercoin для индустрий</h2>
+        </div>
+        <div class="services-list__body">
+            <div class="industry animate-it js-services-filter-item _animated" id="industry-13">
+                <div class="industry__header">
+                    <div class="industry__title">Аэрокосмическая промышленность</div>
+                    <div class="industry__hero">
+                        <img src="{% static 'images/uploads/bcccf39d8e29c7ce8eb77e958a8a2deb.svg' %}" alt="" class="industry__image">
+                    </div>
+                </div>
+                <div class="industry__body">
+                    <div class="industry__group">
+                        <div class="industry__info">
+                            <div class="industry__text">
+                                <div class="industry__info">
+                                    <div class="industry__text">
+                                        <p>
+                                            <a href="/ru/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme" target="_blank" rel="noopener">Анти-контрафакция</a>
+                                            – защита аэрокосмической промышленности от подделок</p>
+                                    </div>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">Проблема</div>
+                                    <p>В отличии от других отраслей, подделки в аэрокосмической промышленности могут стоить жизни. Поддельные запчасти могут стать причиной серьезных проблем и привести к поломке или даже авиакатастрофе. Риски огромны, и хотя члены аэрокосмической ассоциации пытаются бороться с этой проблемой, они не всегда могут определить время и место, где поддельные запчасти попадают в цепочку поставок аэрокосмической промышленности.</p>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">Решение</div>
+                                    <div class="industry__text">
+                                        <p>Emercoin Antifake предлагает новый, элегантный и безопасный способ определения подделок и улучшения технического обслуживания в аэрокосмической промышленности. За счет широких масштабов и географии взаимодействия, блокчейн является наиболее подходящим решением для улучшения доверия между партнерами. EmerDPO Antifake позволяет создавать для продукции цифровые паспорта с уникальными ID. В процессе обслуживания службы могут проверить подлинность купленных и используемых деталей с помощью уникальных ID.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry__base">
+                            <div class="industry__subcaption">Построено на базе</div>
+                            <div class="tags">
+                                <a href="/ru/emerdpo" class="tags__item">EmerDPO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="industry animate-it js-services-filter-item" id="industry-37">
+                <div class="industry__header">
+                    <div class="industry__title">Система образования</div>
+                    <div class="industry__hero">
+                        <img src="{% static 'images/uploads/fbc691d475fd7dc522943dca24958a73.svg' %}" alt="" class="industry__image">
+                    </div>
+                </div>
+                <div class="industry__body">
+                    <div class="industry__group">
+                        <div class="industry__info">
+                            <div class="industry__text">
+                                <div class="industry__info">
+                                    <div class="industry__text">
+                                        <p>
+                                            <span data-sheets-value="{" data-sheets-userformat="{">
+                                                <a href="/ru/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme" target="_blank" rel="noopener">Анти-контрафакция</a>
+                                                – защита образовательных сертификатов от подделок</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">Проблема</div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    Каждый год по всему миру покупают около 200 000 образовательных дипломов, 30% соискателей врут о своем образовании, а компании, торгующие поддельными дипломами, зарабатывают $51 млн. в год. Это серьезная проблема для всех индустрий и стран.</div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">&nbsp;</div>
+                                    <div class="industry__caption">Решение</div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    Блокчейн Emercoin и EmerDPO Antifake могут решить глобальную проблему среди образовательных учреждений, бизнеса и выпускников, чтобы с помощью онлайн-сервиса подтверждать достоверность и подлинность образовательных документов. Учебное заведение может добавить в блокчейн уникальные ID дипломов, информацию об области обучения и другие соответствующие данные. Выпускники, рекрутеры и работодатели могут просматривать эти данные и быстро проверять достоверность образовательных сертификатов и дипломов.</div>
+                            </div>
+                        </div>
+                        <div class="industry__base">
+                            <div class="industry__subcaption">Построено на базе</div>
+                            <div class="tags">
+                                <a href="/ru/emerdpo" class="tags__item">EmerDPO</a>
+                            </div>
+                        </div>
+                        <div class="industry__customers">
+                            <div class="industry__subcaption">Используется</div>
+                            <div class="customers swiper-container swiper-container-horizontal">
+                                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); height: 118px;">
+                                    <div class="customers__item swiper-slide swiper-slide-active" style="width: 505px;">
+                                        <div class="customers__hero">
+                                            <img src="{% static 'images/uploads/6040f927d0e68a1ab05b895b09fb5afd.png' %}" srcset="{% static 'images/uploads/f0e6152bee324fd718e59bf9f4d460c5.png' %} 2x" alt="" class="clients__image">
+                                        </div>
+                                        <div class="customers__body">
+                                            <div class="customers__text">Business and Technology University в Тбилиси использует Trusted Diploma - систему, которая помогает проверять подлинность сертификатов выпускников.</div>
+                                            <div class="customers__more">
+                                                <a href="/ru/partners-and-projects/btu" class="more-link">Читать дальше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customers__pagination _hidden swiper-pagination-clickable swiper-pagination-bullets">
+                                    <span class="customers__bullet _active" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+{#            <div class="feedback _open animate-it    _shadowed js-services-filter-item  ">#}
+{#                <div class="feedback__body">#}
+{#                    <form data-action="/ru/json/feedback" class="feedback__form form feedback_modern">#}
+{#                        <input type="hidden" name="page_uri" value="/ru/for-business">#}
+{#                        <div class="feedback__form-inner">#}
+{#                            <div class="feedback__title">#}
+{#                                Напишите нам#}
+{#                            </div>#}
+{#                            <div class="feedback__columns">#}
+{#                                <div class="feedback__leftside">#}
+{#                                    <div class="form__group">#}
+{#                                        <div class="form__label _required">E-mail</div>#}
+{#                                        <input type="text" name="email" class="form__entry entry">#}
+{#                                    </div>#}
+{#                                    <div class="form__group">#}
+{#                                        <div class="form__label _required">Полное имя</div>#}
+{#                                        <input type="text" name="name" class="form__entry entry">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="feedback__rightside">#}
+{#                                    <div class="form__group">#}
+{#                                        <div class="form__label _required">Сообщение</div>#}
+{#                                        <textarea class="form__entry entry _textarea" name="message" style="overflow: hidden; overflow-wrap: break-word; height: 123.995px;"></textarea>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="feedback__footer">#}
+{#                                <div class="feedback__btn-holder">#}
+{#                                    <button type="submit" class="btn _type_default _size_lg _wide">Отправить</button>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </form>#}
+{#                    <div class="feedback__success">#}
+{#                        <div class="feedback__success-caption">Спасибо!</div>#}
+{#                        <div class="feedback__success-text">Ваша заявка успешно отправлена. Мы сообщим о своем решении в течение 7 дней.</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+
+            <div class="industry animate-it js-services-filter-item" id="industry-21">
+                <div class="industry__header">
+                    <div class="industry__title">Удобрения и агрохимические препараты</div>
+                    <div class="industry__hero">
+                        <img src="{% static 'images/uploads/331593911e35ba726b22dc2ba22835c2.svg' %}" alt="" class="industry__image">
+                    </div>
+                </div>
+                <div class="industry__body">
+                    <div class="industry__group">
+                        <div class="industry__info">
+                            <div class="industry__text">
+                                <div class="industry__info">
+                                    <div class="industry__text">
+                                        <p>
+                                            <span data-sheets-value="{" data-sheets-userformat="{">
+                                                <a href="/ru/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme" target="_blank" rel="noopener">Анти-контрафакция</a>
+                                                – защита сельскохозяйственных химических продуктов от подделок</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">
+                                        <span data-sheets-value="{" data-sheets-userformat="{">Проблема<br></span>
+                                    </div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    <span data-sheets-value="{" data-sheets-userformat="{">Подделки имеют сильное влияние на рынок агрохимической продукции. На сегодняшний день согласно исследованиям
+                                        <a href="https://www.europol.europa.eu/newsroom/news/europol-warns-of-growing-trade-in-counterfeit-pesticides-worth-billions-of-euros-yea" target="_blank" rel="noopener">Европола</a>, около 15% продаваемых в мире агрохимикатов поддельные.<br></span>
+                                </div>
+                                <div class="industry__caption">&nbsp;</div>
+                                <p>
+                                    <span data-sheets-value="{" data-sheets-userformat="{">Перед миром стоит задача: производить больше при уменьшающемся количестве обрабатываемых земель. Качество химических веществ и семян очень важно в сельском хозяйстве. И, как правило, их часто подделывают, особенно если брать во внимание мировые бренды. Потери в случае применения некачественной или поддельной продукции могут быть огромными и представляют риск загрязнения пищевых продуктов из-за использования непроверенных химических веществ.<br></span>
+                                </p>
+                                <div class="industry__info">
+                                    <div class="industry__caption">
+                                        <span data-sheets-value="{" data-sheets-userformat="{">Решение<br></span>
+                                    </div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    <span data-sheets-value="{" data-sheets-userformat="{">Решение, построенное на блокчейне Emercoin, поможет построить доверительные отношения между производителями химических веществ/семян и фермерскими хозяйствами. Программа EmerDPO Antifake может хранить весь спектр данных: от данных о цепочке поставок, до информации о производимых удобрениях и сельскохозяйственных химикатах. Производители, фермеры и клиенты могут просматривать данные и проверять подлинность произведенных семян и химических веществ.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry__base">
+                            <div class="industry__subcaption">Построено на базе</div>
+                            <div class="tags">
+                                <a href="/ru/emerdpo" class="tags__item">EmerDPO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="industry animate-it js-services-filter-item" id="industry-29">
+                <div class="industry__header">
+                    <div class="industry__title">Фармацевтические препараты</div>
+                    <div class="industry__hero">
+                        <img src="{% static 'images/uploads/f799e5e1204a48e12237a94af25df56a.svg' %}" alt="" class="industry__image">
+                    </div>
+                </div>
+                <div class="industry__body">
+                    <div class="industry__group">
+                        <div class="industry__info">
+                            <div class="industry__text">
+                                <div class="industry__info">
+                                    <div class="industry__text">
+                                        <p>
+                                            <span data-sheets-value="{" data-sheets-userformat="{">
+                                                <a href="/ru/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme" target="_blank" rel="noopener">Анти-контрафакция</a>
+                                                – защита фармацевтических препаратов от подделок</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">
+                                        <span data-sheets-value="{" data-sheets-userformat="{">Проблема<br></span>
+                                    </div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    <span data-sheets-value="{" data-sheets-userformat="{">Согласно данным Интерпола, ежегодно более 200 000 человек умирают от контрафактных противоаллергических препаратов. По оценкам Всемирной организации здравоохранения (ВОЗ) примерно десять процентов фармацевтической продукции в мире может быть поддельной и этот показатель гораздо выше в развивающихся странах. В 2017 году фармацевтический рынок был оценен в 1,04 триллиона долларов, а контрафактная промышленность – 100 млрд. долларов.<br></span>
+                                </div>
+                                <div class="industry__info">
+                                    <div class="industry__caption">
+                                        <span id="" data-sheets-value="{" data-sheets-userformat="{">Решение</span>
+                                    </div>
+                                    <div class="industry__caption">&nbsp;</div>
+                                    <span id="" data-sheets-value="{" data-sheets-userformat="{">
+                                        Emercoin Antifake имеет большое значение для фармацевтической промышленности, так как оно может использоваться для хранения в блокчейне уникальных ID, записей о произведенных медицинских препаратах, а также с другой важной для пользователей информации. Потребители смогут проверить подлинность лекарств и обнаружить контрафактную продукцию, поскольку без зашифрованного закрытого ключа невозможно создать уникальный ID.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry__base">
+                            <div class="industry__subcaption">Построено на базе</div>
+                            <div class="tags">
+                                <a href="/ru/emerdpo" class="tags__item">EmerDPO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+{#    <div class="calculator">#}
+{#        <div class="calculator__body">#}
+{#            <form class="calculator" id="calculator" method="post" data-action="/ru/json/calculator">#}
+{#                <input type="hidden" name="page_uri" value="/ru/for-business">#}
+{#                <div class="calculator__wrapper">#}
+{#                    <div class="calculator__title">#}
+{#                        Расчет стоимости хранения данных в EmerNVS#}
+{#                    </div>#}
+{#                    <div class="calculator__subtitle">#}
+{#                        Вы можете рассчитать стоимость хранения данных в EmerNVS с помощью следующей формулы:#}
+{#                    </div>#}
+{#                    <div class="calculator__columns _border_bottom">#}
+{#                        <div class="calculator__columns_container">#}
+{#                            <div class="calculator__columns_header">#}
+{#                                Период#}
+{#                                <span class="questions-icon" title="Выберите период хранения записи (от 1 дня до 9999 лет). Стоимость увеличивается с увеличением периода хранения."></span>#}
+{#                            </div>#}
+{#                            <div class="slidercontainer">#}
+{#                                <input class="range_slider" name="range_period" type="range" min="0" max="6" value="2">#}
+{#                                <div class="slider_items">#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="0">1 день</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="1">1 месяц</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="2">1 год</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="3">5 лет</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="4">10 лет</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="5">20 лет</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="6">9 999 лет</span>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="calculator__select_container">#}
+{#                                <select class="calculator__select" name="select_period">#}
+{#                                    <option value="1">1 день</option>#}
+{#                                    <option value="30">1 месяц</option>#}
+{#                                    <option value="365" selected="">1 год</option>#}
+{#                                    <option value="1825">5 лет</option>#}
+{#                                    <option value="3650">10 лет</option>#}
+{#                                    <option value="7300">20 лет</option>#}
+{#                                    <option value="3649635">9 999 лет</option>#}
+{#                                </select>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="calculator__columns _border_bottom">#}
+{#                        <div class="calculator__columns_container">#}
+{#                            <div class="calculator__columns_header">#}
+{#                                Размер записи «имя и значение»#}
+{#                                <span class="questions-icon" title="Имя - название записи, под которым она будет храниться в блокчейне.#}
+{#                                     Значение - данные, которые вы хотите добавить в блокчейн."></span>#}
+{#                            </div>#}
+{#                            <div class="slidercontainer">#}
+{#                                <input class="range_slider" name="range_record_size_byte" type="range" min="0" max="6" value="1">#}
+{#                                <div class="slider_items">#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="0">20 байт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="1">100 байт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="2">500 байт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="3">1 Кбайт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="4">5 Кбайт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="5">10 Кбайт</span>#}
+{#                                    </div>#}
+{#                                    <div class="range_slider_container">#}
+{#                                        <span class="slider_scale"></span>#}
+{#                                        <span class="range_slider_label" data-value="6">20 Кбайт</span>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="calculator__select_container">#}
+{#                                <select class="calculator__select" name="select_record_size_byte">#}
+{#                                    <option value="20">20 байт</option>#}
+{#                                    <option value="100" selected="">100 байт</option>#}
+{#                                    <option value="500">500 байт</option>#}
+{#                                    <option value="1000">1 Кбайт</option>#}
+{#                                    <option value="5000">5 Кбайт</option>#}
+{#                                    <option value="10000">10 Кбайт</option>#}
+{#                                    <option value="20000">20 Кбайт</option>#}
+{#                                </select>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="calculator__two_columns">#}
+{#                        <div class="calculator__columns">#}
+{#                            <div class="calculator__columns_header">#}
+{#                                Тип записи#}
+{#                                <span class="questions-icon" title="Вы можете добавить новую запись или обновить существующую"></span>#}
+{#                            </div>#}
+{#                            <div class="calculator__radio_record_type">#}
+{#                                <label class="container">Новая запись#}
+{#                                    <input type="radio" checked="checked" name="record_type" value="new">#}
+{#                                    <span class="checkmark"></span>#}
+{#                                </label>#}
+{#                                <label class="container">Обновление текущей записи#}
+{#                                    <input type="radio" name="record_type" value="old">#}
+{#                                    <span class="checkmark"></span>#}
+{#                                </label>#}
+{#                            </div>#}
+{#                            <div class="calculator__footer">#}
+{#                                <div class="btn-holder">#}
+{#                                    <button type="submit" class="btn _type_default _size_lg _wide">Рассчитать</button>#}
+{#                                </div>#}
+{#                                <div class="questions">#}
+{#                                    <span class="_questions-text _img_coin">Как вычисляется награда?#}
+{#                                        <span class="questions-icon" title="Награда пересчитывается каждые 10 минут и зависит от сложности PoW майнинга"></span>#}
+{#                                    </span>#}
+{#                                    <span class="_questions-text">Что влияет на стоимость?#}
+{#                                        <span class="questions-icon" title="Стоимость зависит от: размера награды за последний PoW блок, периода хранения данных, размера записи &quot;имя-значение&quot; и типа записи (новая запись/обновление текущей записи)"></span>#}
+{#                                    </span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="calculator__result" id="calculator__result">#}
+{#                            <div class="result_header">Результат расчета</div>#}
+{#                            <div class="result_body">#}
+{#                                <span class="result" id="calculator_result"></span>#}
+{#                            </div>#}
+{#                            <div class="result_footer">В расчетах возможна погрешность до 1%</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+
+    {% include 'blocks_ru/block_clients.html' with companies=companies %}
+
+{#    <div class="feedback _open animate-it    _bordered  ">#}
+{#        <div class="feedback__body">#}
+{#            <form data-action="/ru/json/feedback" class="feedback__form form feedback_modern">#}
+{#                <input type="hidden" name="page_uri" value="/ru/for-business">#}
+{#                <div class="feedback__form-inner">#}
+{#                    <div class="feedback__title">#}
+{#                        Напишите нам#}
+{#                    </div>#}
+{#                    <div class="feedback__subtitle">Если у вас есть какие-либо вопросы относительно внедрения blockchain в ваш бизнес</div>#}
+{#                    <div class="feedback__columns">#}
+{#                        <div class="feedback__leftside">#}
+{#                            <div class="form__group">#}
+{#                                <div class="form__label _required">E-mail</div>#}
+{#                                <input type="text" name="email" class="form__entry entry">#}
+{#                            </div>#}
+{#                            <div class="form__group">#}
+{#                                <div class="form__label _required">Полное имя</div>#}
+{#                                <input type="text" name="name" class="form__entry entry">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="feedback__rightside">#}
+{#                            <div class="form__group">#}
+{#                                <div class="form__label _required">Сообщение</div>#}
+{#                                <textarea class="form__entry entry _textarea" name="message" style="overflow: hidden; overflow-wrap: break-word; height: 123.995px;"></textarea>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="feedback__footer">#}
+{#                        <div class="feedback__btn-holder">#}
+{#                            <button type="submit" class="btn _type_default _size_lg _wide">Отправить</button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </form>#}
+{#            <div class="feedback__success">#}
+{#                <div class="feedback__success-caption">Спасибо!</div>#}
+{#                <div class="feedback__success-text">Ваша заявка успешно отправлена. Мы сообщим о своем решении в течение 7 дней.</div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+</main>
+{% endblock content %}

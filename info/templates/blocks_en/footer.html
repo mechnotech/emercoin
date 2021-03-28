@@ -7,10 +7,10 @@
                     <li>
                         <div class="title">EmerTech</div>
                         <div class="footerLink ">
-                            <a href="/en/emercoin-blockchain">Emercoin Blockchain</a>
+                            <a href="{% url 'blockchain' %}">Emercoin Blockchain</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/tech-solutions">Tech Solutions</a>
+                            <a href="{% url 'tech-solutions' %}">Tech Solutions</a>
                         </div>
                         <div class="footerLink ">
                             <a href="/en/documentation/introduction/specifications">Specifications</a>
@@ -109,7 +109,7 @@
         <div class="wrapper">
             <div class="footer-bottom">
                 <div class="footer-bottom-right">
-                    © 2021 Emercoin
+                    © {% now "Y" %} Emercoin
                 </div>
             </div>
         </div>

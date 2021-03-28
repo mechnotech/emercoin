@@ -245,7 +245,7 @@ class News(models.Model):
     slug = models.SlugField(
         'Slug',
         unique=True,
-        allow_unicode=True,
+        allow_unicode=False,
         max_length=250,
         blank=True,
         help_text='Часть URL адреса новости, если не указывать явно -'
@@ -301,6 +301,7 @@ class Person(models.Model):
     linkedin = models.URLField('LinkedIn', max_length=250, blank=True)
     facebook = models.URLField('Facebook', max_length=250, blank=True)
     twitter = models.URLField('Twitter', max_length=250, blank=True)
+
     # telegram = models.URLField('Telegram', max_length=250, blank=True)
     # github = models.URLField('Github', max_length=250, blank=True)
 
@@ -315,3 +316,51 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Company(models.Model):
+    title = models.CharField('Название', max_length=150, blank=False)
+    slug = models.SlugField(
+        'Slug',
+        unique=True,
+        allow_unicode=False,
+        max_length=250,
+        blank=True,
+        help_text='Часть URL адреса новости, если не указывать явно -'
+                  ' заполняется автоматически из Названия')
+    logo = models.FileField(
+        'Логотип Компании малый',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None,
+        help_text='Размер 100*40 пикселей'
+    )
+    logo_big = models.FileField(
+        'Большой логотип Компании',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None,
+        null=True,
+        help_text='Размер 200*80 пикселей'
+    )
+    text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_more = RichTextField(
+        'Дополнительное описание',
+        max_length=2000,
+        blank=False)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'Компании'
+        verbose_name = 'Компания'
+
+    def __str__(self):
+        return self.title

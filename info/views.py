@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import Promo, AboutEmer, Services, Media, RoadMap, News, Person
+from .models import (
+    Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
+)
 
 
 def index(request):
@@ -48,3 +50,14 @@ def tech_solutions(request):
         return render(request, 'tech-solutions.html', context)
     else:
         return render(request, 'tech-solutions_en.html', context)
+
+
+def for_business(request):
+    companies = Company.objects.all()
+    context = {
+        'companies':companies
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'for-business.html', context)
+    else:
+        return render(request, 'for-business_en.html', context)

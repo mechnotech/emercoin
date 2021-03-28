@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/close" transform="translate(-1.000000, 0.000000)" fill="#AF9BC9">
+            <path d="M7.81411818,9.23986239 L0.996988062,2.18051751 L3.22530604,0.0286558466 L9.96729149,7.01018615 L16.7092769,0.0286558466 L18.9375949,2.18051751 L12.1204648,9.23986239 L18.9375949,16.2992073 L16.7092769,18.4510689 L9.96729149,11.4695386 L3.22530604,18.4510689 L0.996988062,16.2992073 L7.81411818,9.23986239 Z" id="close"></path>
+        </g>
+    </g>
+</svg>
