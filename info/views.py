@@ -83,6 +83,7 @@ def for_developers(request):
     else:
         return render(request, 'for-developers_en.html', context)
 
+
 def socials(request):
     news = News.objects.all()[:3]
     context = {

@@ -1,56 +1,18 @@
-{% extends "blocks_ru/base.html" %}
+{% extends "blankpage.html" %}
 {% load static %}
 
 {% block title %}
     Блокчейн Эмеркоин
 {% endblock title %}
-    {% block css %}
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
-    {% endblock css %}
-    {% block open_scrypt %}
-    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
-    {% endblock open_scrypt %}
 
 
 
 
-    {% block content %}
+
+{% block content %}
 
 <main>
-    <div class="infobox _bg_transparent">
-        <div class="infobox__inner">
-            <div class="infobox__header">
-                <div class="h1">Блокчейн Emercoin</div>
-            </div>
-            <div class="infobox__body">
-                <div class="h2">Об Emercoin</div>
-                <p>
-                    Emercoin специализируется на криптовалюте и блокчейне. Начиная с 2013 года, она разработала широкий спектр простых в использовании dSDK. dSDK (Decentralized Software Development Kit) представляет собой набор инструментов для разработки программного обеспечения, который позволяет создавать программное обеспечение, сервисы и решения. Обычно он включает в себя API, техническую документацию и фрагменты кода для быстрой и легкой разработки на определенной платформе.
-                </p>
-                <p>
-                    dSDK уже успешно используются в многочисленных инновационных технических решениях, построенных на блокчейне. Emercoin предоставляет сервисы, которые могут изменить работу различных отраслей, обеспечивая средства для защиты данных, безопасного хранения информации и создания распределенных сервисов.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="separator"></div>
-    <div class="wrapper">
-                <div class="owl-carousel owl-carousel-2">
-                {% for block in emer_blocks %}
-                <div class="product">
-                    <div class="product-img product-img-min" style="background-image: url({{ block.image.url }})"></div>
-                    <div class="product-title product-title-big">
-                        {{ block.title }}
-                    </div>
-                    <div class="product-text product-text-big">
-                        {{ block.text }}
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
-    </div>
+    {% include 'blocks_ru/block_about_blockchain.html' with emer_blocks=emer_blocks %}
     {% include 'blocks_ru/block_services.html' with servises=services %}
     <div class="infobox _bg_filled">
         <div class="infobox__inner">
@@ -139,28 +101,3 @@
     </main>
 
     {% endblock content %}
-
-    {% include 'blocks_ru/footer.html' %}
-
-
-    {% block scrypt %}
-{#    <script src="//www.google.com/recaptcha/api.js" type="text/javascript"></script>#}
-    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
-
-    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
-        <!--[if IE]>
-    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/respond.min.js' %}"></script>
-    <![endif]-->
-    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
-    {% endblock scrypt %}

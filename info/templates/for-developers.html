@@ -1,29 +1,27 @@
-{% extends 'blankpage_en.html' %}
+{% extends 'blankpage.html' %}
 {% load static %}
 {% block content %}
-<main style="min-height: 77.1994px;">
+<main>
    <div class="intro _short">
       <div class="intro__inner animate-it _animated">
-         <h1 class="intro__title">For Developers</h1>
+         <h1 class="intro__title">Для разработчиков</h1>
          <div class="intro__hero">
             <img src="{% static 'assets/images/developers.png' %}" srcset="{% static 'assets/images/developers@2x.png' %} 2x" alt="" class="intro__image">
          </div>
          <div class="intro__body">
             <div class="intro__text">
                <div class="intro__visible-2">
-                  <p>The blockchain is the next step in the development of innovative tools and applications. And Emercoin offers a wide range of dSDK for tech solutions on blockchain that can bring more intelligence and security to your projects, making them decentralized.</p>
+                <p> Блокчейн - это база данных, которую не нужно обслуживать. Emercoin предлагает много сценариев технических решений на блокчейне, которые могут повысить рентабельность и безопасность ваших проектов, сделав их децентрализованными. </p>
                </div>
                <div class="intro__hidden-2" style="display: none;">
                   <p>
-                     <b>dSDKs</b> – specifically for developers, Emercoin created decentralized software development kits. They are so easy to use that even non-developers can integrate them into their projects and build technology on Emercoin Blockchain. You don’t need to have immense amounts of storage space or to know complicated coding languages.
-                  </p>
+                     Emercoin создал децентрализованные комплекты разработки программного обеспечения. Они настолько просты в использовании, что даже не разработчики могут интегрировать их в свои проекты и создавать технологии на блокчейне Emercoin. Вам не нужно иметь много места для хранения или знать сложные языки программирования.                   </p>
                   <p>
-                     <b>Three-in-one hybrid mining</b> – Combining PoW, Merged Mining, and PoS technologies, Emercoin blockchain is protected from any form of malicious attacks, even from 51% vulnerability that poses a high risk for other coins.
-                  </p>
+                    <b> Гибридный майнинг «три в одном» </b> - объединяя технологии PoW, Merged Mining и PoS, блокчейн Emercoin защищен от любых форм злонамеренных атак, даже от 51% уязвимости, которая представляет высокий риск для других монет.                   </p>
                </div>
                <div class="intro__more-2">
                   <div class="intro__more-2-item">
-                     <a href="#" class="intro__more-link"><span class="intro__more-text">See General</span></a>
+                     <a href="#" class="intro__more-link"><span class="intro__more-text">Общее</span></a>
                   </div>
 {#                  <div class="intro__more-2-item">#}
 {#                     <a href="#" class="intro__coins-link"><span class="intro__coins-text">Get 10 free testnet coins</span></a>#}
@@ -38,7 +36,7 @@
       <div class="services-list__header animate-it _animated">
          <div class="services-list__btn-holder">
             <div class="services-dd">
-               <button type="button" class="services-dd__btn btn _type_default _size_lg _wide"><span class="services-dd__btn-text">All dSDKs</span><span class="services-dd__btn-icon"></span></button>
+               <button type="button" class="services-dd__btn btn _type_default _size_lg _wide"><span class="services-dd__btn-text">Все сценарии</span><span class="services-dd__btn-icon"></span></button>
                <div class="services-dd__popup">
                   <button type="button" class="services-dd__close"></button>
                   <div class="shortcuts">
@@ -46,7 +44,7 @@
                         <div class="shortcuts__hero">
                            <img src="{% static 'assets/images/all.svg' %}" alt="" class="shortcuts__image">
                         </div>
-                        <div class="shortcuts__text js-services-filter-text">All dSDKs</div>
+                        <div class="shortcuts__text js-services-filter-text">Все</div>
                      </a>
 
                       {% for service in services %}
@@ -62,7 +60,7 @@
                </div>
             </div>
          </div>
-         <h2 class="services-list__title">dSDKs by Emercoin</h2>
+         <h2 class="services-list__title">Сценарии использования Emercoin</h2>
       </div>
 
       <div class="services-list__body _grid">
@@ -75,22 +73,22 @@
                <div class="solution__content">
                   <div class="solution__title">{{ service.title }}</div>
                   <div class="solution__text">
-                    {{ service.text_more_en|safe }}
+                    {{ service.text_more|safe }}
                   </div>
                   <div class="solution__more">
                      <div class="solution__more-item">
-                        <a href="{% url 'service' slug=service.slug %}" class="more-link">More about {{ service.title }}</a>
+                        <a href="{% url 'service' slug=service.slug %}" class="more-link">Больше о {{ service.title }}</a>
                      </div>
                   </div>
                </div>
             </div>
             <div class="solution__details">
-               <span class="solution__details-text">show the best solution</span>
+               <span class="solution__details-text">Покзать лучшее решение</span>
             </div>
             <div class="solution__info">
-               <div class="solution__info-title">{{ service.title }} is the best solution:</div>
+               <div class="solution__info-title">{{ service.title }} подходит для:</div>
                <div class="solution__list">
-                   {% for solution in service.best_for_en %}
+                   {% for solution in service.best_for %}
                   <div class="solution__list-item">{{ solution }}</div>
                   {% endfor %}
                </div>
@@ -102,7 +100,7 @@
    </div>
 
    <div class="connect animate-it">
-      <div class="connect__title">Connect with the Development Community</div>
+      <div class="connect__title">Присоединяйтесь с сообществу разработчиков</div>
       <div class="connect__list">
          <a href="/documentation/emercoin-api" class="connect__link _type_api">
             <div class="connect__link-inner">
@@ -113,17 +111,17 @@
          <a href="https://github.com/emercoin" target="_blank" rel="nofollow" class="connect__link _type_github">
             <div class="connect__link-inner">
                <img src="{% static 'assets/images/connect-github.svg' %}" alt="" class="connect__image">
-               <span class="connect__text">View on Github</span>
+               <span class="connect__text">Код на Github</span>
             </div>
          </a>
-         <a href="https://t.me/emercoin_official" target="_blank" rel="nofollow" class="connect__link _type_telegram" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});">
+         <a href="https://t.me/emernews" target="_blank" rel="nofollow" class="connect__link _type_telegram" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'telegram_community'});">
             <div class="connect__link-inner">
                <img src="{% static 'assets/images/connect-telegram.svg' %}" alt="" class="connect__image">
-               <span class="connect__text">Telegram</span>
+               <span class="connect__text">Телеграм</span>
             </div>
          </a>
       </div>
    </div>
-   {% include 'blocks_en/block_clients.html' with companies=companies %}
+   {% include 'blocks_ru/block_clients.html' with companies=companies %}
 </main>
 {% endblock content %}

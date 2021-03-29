@@ -79,7 +79,10 @@ class AboutEmer(models.Model):
     Блоки технологий для "О Блокчейне Эмера"
     """
     title = models.CharField('Заголовок', max_length=20, blank=False)
+    title_en = models.CharField('Title', max_length=20, blank=True, null=True)
     text = models.TextField('Описание', max_length=500, blank=False)
+    text_en = models.TextField('Description', max_length=500, blank=True,
+                               null=True)
     image = models.FileField(
         'Изображение блока',
         upload_to='info/',
@@ -107,16 +110,30 @@ class Services(models.Model):
         blank=False,
         help_text='Часть URL пути, например emerdns')
     text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_en = RichTextField('Short description', max_length=1500, blank=True,
+                            null=True)
     text_more = RichTextField(
         'Дополнительное описание',
         max_length=2000,
         blank=False)
+    text_more_en = RichTextField(
+        'Long description',
+        max_length=2000,
+        blank=True, null=True)
     scenarios = models.TextField(
         'Где применимо',
         help_text='Список тезисисов, разделитель  - |',
         max_length=1000,
         blank=False,
         default='Там | Тут'
+    )
+    scenarios_en = models.TextField(
+        'Where can use',
+        help_text='List of theses, divider  - |',
+        max_length=1000,
+        blank=True,
+        null=True,
+        default='Here | and Here'
     )
     image = models.FileField(
         'Изображение блока (большое)',
@@ -141,6 +158,9 @@ class Services(models.Model):
 
     def best_for(self):
         return self.scenarios.split('|')
+
+    def best_for_en(self):
+        return self.scenarios_en.split('|')
 
     def __str__(self):
         return self.title
