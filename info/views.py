@@ -55,7 +55,7 @@ def tech_solutions(request):
 def for_business(request):
     companies = Company.objects.all()
     context = {
-        'companies':companies
+        'companies': companies
     }
     if request.LANGUAGE_CODE == 'ru':
         return render(request, 'for-business.html', context)
@@ -73,8 +73,10 @@ def for_coinholders(request):
 
 def for_developers(request):
     companies = Company.objects.all()
+    services = Services.objects.all()
     context = {
-        'companies': companies
+        'companies': companies,
+        'services': services,
     }
     if request.LANGUAGE_CODE == 'ru':
         return render(request, 'for-developers.html', context)
@@ -98,3 +100,14 @@ def company(request, slug):
     return render(request, 'company.html', context)
 
 
+def service(request, slug):
+    one_service = get_object_or_404(Services, slug=slug)
+    services = Services.objects.all()
+    context = {
+        'services': services,
+        'one_service': one_service,
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'service.html', context)
+    else:
+        return render(request, 'service_en.html', context)
