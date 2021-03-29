@@ -83,6 +83,16 @@ def for_developers(request):
     else:
         return render(request, 'for-developers_en.html', context)
 
+def socials(request):
+    news = News.objects.all()[:3]
+    context = {
+        'news': news,
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'social-communities.html', context)
+    else:
+        return render(request, 'social-communities_en.html', context)
+
 
 def partners(request):
     companies_partners = Company.objects.filter(is_partner=True)
