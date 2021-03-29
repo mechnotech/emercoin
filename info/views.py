@@ -71,6 +71,17 @@ def for_coinholders(request):
         return render(request, 'for-coinholders_en.html', context)
 
 
+def for_developers(request):
+    companies = Company.objects.all()
+    context = {
+        'companies': companies
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'for-developers.html', context)
+    else:
+        return render(request, 'for-developers_en.html', context)
+
+
 def partners(request):
     companies_partners = Company.objects.filter(is_partner=True)
     companies_implements = Company.objects.filter(is_used=True)
