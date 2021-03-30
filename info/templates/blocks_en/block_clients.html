@@ -36,7 +36,7 @@
                <div class="company__body">
                   <div class="company__title">{{ company.title }}</div>
                   <div class="company__text">
-                     {{ company.text|safe }}
+                     {{ company.text_en|safe }}
                   </div>
                   <div class="company__more">
                      <a href="{% url 'partners' %}{{ company.slug }}" class="more-link">Learn more</a>

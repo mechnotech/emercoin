@@ -11,18 +11,18 @@
                     <a href="{% url 'for-business' %}">For business</a>
                 </li>
                 <li>
-                    <a href="/en/for-coinholders">For coinholders</a>
+                    <a href="{% url 'for-coinholders' %}">For coinholders</a>
                 </li>
                 <li>
-                    <a href="/en/for-developers">For developers</a>
+                    <a href="{% url 'for-developers' %}">For developers</a>
                 </li>
                 <li>
-                    <a href="/en/our-social-communities">Community</a>
+                    <a href="{% url 'socials' %}">Community</a>
                 </li>
             </ul>
             <div class="header-left-top">
-                <a href="/en/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })">Get a wallet</a>
-                <a id="AB-button" href="/en/for-coinholders#buy" data-ab="Get a wallet" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
+                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })">Get a wallet</a>
+                <a id="AB-button" href="{% url 'for-coinholders' %}#buy" data-ab="Get a wallet" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
             </div>
             <div id="pull">
                 <span></span>
@@ -36,31 +36,31 @@
     <div class="wrapper">
         <div class="header-right" style="display: flex;">
             <div class="header-right-top">
-                <a href="/en/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
-                <a href="/en/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })">wallet</a>
+                <a href="{% url 'for-coinholders' %}#buy" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
+                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })">wallet</a>
             </div>
             <nav>
                 <ul class="menuTop">
                     <li class="mobileShow">
-                        <a href="/en/for-business">For business</a>
+                        <a href="{% url 'for-business' %}">For business</a>
                     </li>
                     <li class="mobileShow">
-                        <a href="/en/for-coinholders">For coinholders</a>
+                        <a href="{% url 'for-coinholders' %}">For coinholders</a>
                     </li>
                     <li class="mobileShow">
-                        <a href="/en/for-developers">For developers</a>
+                        <a href="{% url 'for-developers' %}">For developers</a>
                     </li>
                     <li class="mobileShow">
-                        <a href="/en/our-social-communities">Community</a>
+                        <a href="{% url 'socials' %}">Community</a>
                     </li>
                     <li>
                         <span class="link_menu ">EmerTech</span>
                         <ul class="dropdown_menu">
                             <li>
-                                <a href="/en/emercoin-blockchain">Emercoin Blockchain</a>
+                                <a href="{% url 'blockchain' %}">Emercoin Blockchain</a>
                             </li>
                             <li>
-                                <a href="/en/tech-solutions">Tech Solutions</a>
+                                <a href="{% url 'tech-solutions' %}">Tech Solutions</a>
                             </li>
                             <li>
                                 <a href="/en/documentation/introduction/specifications">Specifications</a>
@@ -80,13 +80,13 @@
                         <span class="link_menu ">Emercoins</span>
                         <ul class="dropdown_menu">
                             <li>
-                                <a href="/en/benefits">Benefits</a>
+                                <a href="{% url 'for-coinholders' %}">Benefits</a>
                             </li>
                             <li>
-                                <a href="/en/benefits#download">Get Emercoin</a>
+                                <a href="{% url 'for-coinholders' %}#download">Get Emercoin</a>
                             </li>
                             <li>
-                                <a href="/en/benefits#download">Download Wallet</a>
+                                <a href="{% url 'for-coinholders' %}#download">Download Wallet</a>
                             </li>
                         </ul>
                     </li>
@@ -108,10 +108,7 @@
                         <span class="link_menu ">News</span>
                         <ul class="dropdown_menu">
                             <li>
-                                <a href="/en/news">Latest News</a>
-                            </li>
-                            <li>
-                                <a href="/en/events">Events</a>
+                                <a href="{% url 'news'%}">Latest News</a>
                             </li>
                             <li>
                                 <a href="/en/road-map">Road Map</a>
@@ -122,10 +119,10 @@
                         <span class="link_menu ">About Us</span>
                         <ul class="dropdown_menu">
                             <li>
-                                <a href="/en/team">Our Team</a>
+                                <a href="{% url 'team' %}">Our Team</a>
                             </li>
                             <li>
-                                <a href="/en/partners-and-projects">Our Partners</a>
+                                <a href="{% url 'partners' %}">Our Partners</a>
                             </li>
                             <li>
                                 <a href="/en/contacts">Contact us</a>

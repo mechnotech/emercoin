@@ -14,6 +14,8 @@ urlpatterns = [
     path('our-social-communities/', views.socials, name='socials'),
     path('partners-and-projects/<slug:slug>', views.company, name='partner'),
     path('partners-and-projects/', views.partners, name='partners'),
+    path('team/', views.team, name='team'),
+    path('news/', views.news, name='news')
 
 
     ]

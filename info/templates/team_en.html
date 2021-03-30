@@ -1,0 +1,62 @@
+{% extends 'blankpage_en.html' %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="privacyPage-top">
+      <h1>Meet the Emercoin Team</h1>
+   </div>
+   <div class="teamPage">
+      <div class="wrapper">
+         <div class="teamPage-box">
+
+             {% for person in persons %}
+                 {% if person.is_team %}
+            <div class="product" data-cooperator="{{ person.pk }}">
+               <div class="product-img">
+                  <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}">
+               </div>
+               <div class="product-title">{{ person.name_en }}</div>
+               <div class="product-text">{{ person.whois_en }}</div>
+                {% include 'misc/product-social.html' with person=person %}
+               <div class="product-info">
+                  {{ person.info_short_en|safe }}
+               </div>
+            </div>
+                 {% endif %}
+             {% endfor %}
+
+         </div>
+      </div>
+      <div class="lineTime"></div>
+      <div class="wrapper">
+         <div class="bigTitle bigTitle-big bigTitle-teamPage center">
+            Our Advisors
+         </div>
+         <div class="teamPage-box teamPage-box-two">
+             {% for person in persons %}
+                 {% if person.is_adviser %}
+            <div class="product">
+               <div class="product-img">
+                  <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}">
+               </div>
+               <div class="product-title">{{ person.name_en }}</div>
+               <div class="product-text">{{ person.whois_en }}</div>
+
+               {% include 'misc/product-social.html' with person=person %}
+
+               <div class="product-info">
+                  {{ person.info_short_en|safe }}
+               </div>
+               <div class="detail-text" style="display: none;">
+                  {{ person.info_en|safe }}
+               </div>
+{#               <div class="button go">Read more</div>#}
+            </div>
+                {% endif %}
+             {% endfor %}
+
+         </div>
+      </div>
+   </div>
+</main>
+{% endblock content %}

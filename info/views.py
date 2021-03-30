@@ -14,14 +14,14 @@ def index(request):
     advisers = Person.objects.filter(is_adviser=True)
     teammates = Person.objects.filter(is_team=True)
     context = {'promos': promos,
-         'emer_blocks': emer_blocks,
-         'services': services,
-         'medium': medium,
-         'roadmap': roadmap,
-         'news': news,
-         'advisers': advisers,
-         'teammates': teammates,
-         }
+               'emer_blocks': emer_blocks,
+               'services': services,
+               'medium': medium,
+               'roadmap': roadmap,
+               'news': news,
+               'advisers': advisers,
+               'teammates': teammates,
+               }
     if request.LANGUAGE_CODE == 'ru':
         return render(request, 'index.html', context)
     else:
@@ -32,8 +32,8 @@ def blockchain(request):
     services = Services.objects.all()
     emer_blocks = AboutEmer.objects.all()
     context = {
-               'services': services,
-               'emer_blocks': emer_blocks,
+        'services': services,
+        'emer_blocks': emer_blocks,
     }
     if request.LANGUAGE_CODE == 'ru':
         return render(request, 'emercoin-blockchain.html', context)
@@ -102,13 +102,19 @@ def partners(request):
         'partners': companies_partners,
         'implements': companies_implements,
     }
-    return render(request, 'partners-and-projects.html', context)
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'partners-and-projects.html', context)
+    else:
+        return render(request, 'partners-and-projects_en.html', context)
 
 
 def company(request, slug):
     comp = get_object_or_404(Company, slug=slug)
     context = {'company': comp}
-    return render(request, 'company.html', context)
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'company.html', context)
+    else:
+        return render(request, 'company_en.html', context)
 
 
 def service(request, slug):
@@ -122,3 +128,18 @@ def service(request, slug):
         return render(request, 'service.html', context)
     else:
         return render(request, 'service_en.html', context)
+
+
+def team(request):
+    persons = Person.objects.all()
+    context = {
+        'persons': persons
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'team.html', context)
+    else:
+        return render(request, 'team_en.html', context)
+
+
+def news(request):
+    return None

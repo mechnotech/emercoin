@@ -3,17 +3,19 @@
             <div class="promo__slider swiper-container">
                 <div class="swiper-wrapper">
                     {% for promo in promos %}
+                        {% if promo.desktop_img_en %}
                     <div class="promo__item swiper-slide">
                         <div class="item-slide item-slide-157">
                             <div class="promo__bg" style="background-color:{{ promo.bg_color }};"></div>
                             <div class="promo__item-inner">
                                 <a href="{{ promo.link }}" class="promo__image-link">
-                                    <div class="promo__bg _type_mobile" style="background-image: url({{ promo.mobile_img.url }});"></div>
-                                    <div class="promo__bg _type_desktop" style="background-image: url({{ promo.desktop_img.url }});"></div>
+                                    <div class="promo__bg _type_mobile" style="background-image: url({{ promo.mobile_img_en.url }});"></div>
+                                    <div class="promo__bg _type_desktop" style="background-image: url({{ promo.desktop_img_en.url }});"></div>
                                 </a>
                             </div>
                         </div>
                     </div>
+                        {% endif %}
                     {% endfor %}
 
                     </div>

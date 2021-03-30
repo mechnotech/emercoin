@@ -8,14 +8,14 @@
                     </div>
                     <ul class="header-left-menu">
                         <li><a href="{% url 'for-business' %}">Для бизнеса</a></li>
-                        <li><a href="/ru/for-coinholders">Владельцам монет</a></li>
-                        <li><a href="/ru/for-developers">Разработчикам</a></li>
-                        <li><a href="/ru/our-social-communities">Cообщество</a></li>
+                        <li><a href="{% url 'for-coinholders' %}">Владельцам монет</a></li>
+                        <li><a href="{% url 'for-developers' %}">Разработчикам</a></li>
+                        <li><a href="{% url 'socials' %}">Cообщество</a></li>
                     </ul>
                     <div class="header-left-top">
 
-                        <a href="/ru/for-coinholders#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
-                        <a id="AB-button" href="/ru/for-coinholders#buy" data-AB="Скачать кошелек" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="{%  url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a id="AB-button" href="{%  url 'for-coinholders' %}#buy" data-AB="Скачать кошелек" class="get" onclick="dataLayer.push({event: 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
                     </div>
                     <div id="pull">
                         <span></span>
@@ -30,15 +30,15 @@
                 <div class="header-right">
                     <div class="header-right-top">
 
-                        <a href="/ru/benefits#buy" class="get" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
-                        <a href="/ru/benefits#download" class="get _theme_orange _margin_l_sm" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a href="{%  url 'for-coinholders' %}#buy" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="{%  url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
                     </div>
                     <nav>
                         <ul class="menuTop">
-                            <li class="mobileShow"><a href="/ru/for-business">Для бизнеса</a></li>
-                            <li class="mobileShow"><a href="/ru/for-coinholders">Владельцам монет</a></li>
-                            <li class="mobileShow"><a href="/ru/for-developers">Разработчикам</a></li>
-                            <li class="mobileShow"><a href="/ru/our-social-communities">Cообщество</a></li>
+                            <li class="mobileShow"><a href="{% url 'for-business' %}">Для бизнеса</a></li>
+                            <li class="mobileShow"><a href="{% url 'for-coinholders' %}">Владельцам монет</a></li>
+                            <li class="mobileShow"><a href="{% url 'for-developers' %}">Разработчикам</a></li>
+                            <li class="mobileShow"><a href="{% url 'socials' %}">Cообщество</a></li>
                             <li>
                                 <span class="link_menu ">Технологии</span>
                                 <ul class="dropdown_menu">
@@ -66,13 +66,13 @@
                                 <span class="link_menu ">Экономика</span>
                                 <ul class="dropdown_menu">
                                     <li>
-                                        <a href="/ru/benefits">Почему Emercoin?</a>
+                                        <a href="{% url 'for-coinholders' %}">Почему Emercoin?</a>
                                     </li>
                                     <li>
-                                        <a href="/ru/benefits#download">Купить Emercoin</a>
+                                        <a href="{% url 'for-coinholders' %}#download">Купить Emercoin</a>
                                     </li>
                                     <li>
-                                        <a href="/ru/benefits#download">Скачайте кошелёк</a>
+                                        <a href="{% url 'for-coinholders' %}#download">Скачайте кошелёк</a>
                                     </li>
                                 </ul>
                             </li>
@@ -94,11 +94,9 @@
                                 <span class="link_menu ">Новости</span>
                                 <ul class="dropdown_menu">
                                     <li>
-                                        <a href="/ru/news">Последние новости</a>
+                                        <a href="{% url 'news' %}">Последние новости</a>
                                     </li>
-                                    <li>
-                                        <a href="/ru/events">События</a>
-                                    </li>
+
                                     <li>
                                         <a href="/ru/road-map">Road Map</a>
                                     </li>
@@ -111,10 +109,10 @@
                                         <a href="/ru/contacts">Контакты</a>
                                     </li>
                                     <li>
-                                        <a href="/ru/partners-and-projects">Наши партнеры</a>
+                                        <a href="{% url 'partners' %}">Наши партнеры</a>
                                     </li>
                                     <li>
-                                        <a href="/ru/team">Наша команда</a>
+                                        <a href="{% url 'team' %}">Наша команда</a>
                                     </li>
                                 </ul>
                             </li>

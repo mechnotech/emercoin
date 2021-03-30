@@ -11,17 +11,7 @@
                         <div class="staff__item swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <div class="product-social">
-                                        {% if person.facebook %}
-                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.linkedin %}
-                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.twitter %}
-                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
-                                        {%  endif %}
-                                    </div>
+                                  {% include 'misc/product-social.html' with person=person %}
                                     <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />
                                 </div>
                                 <div class="product-title">{{ person.name }}</div>
@@ -46,17 +36,7 @@
                         <div class="staff__item swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <div class="product-social">
-                                        {% if person.facebook %}
-                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.linkedin %}
-                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.twitter %}
-                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
-                                        {%  endif %}
-                                    </div>
+                                {% include 'misc/product-social.html' with person=person %}
                                         <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />                                </div>
                                 <div class="product-title">{{ person.name }}</div>
                                 <div class="product-text">{{ person.whois }}</div>

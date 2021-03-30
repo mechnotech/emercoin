@@ -1,20 +1,22 @@
 <div class="wrapper">
             <div class="bigTitle bigTitle-latest">
-                Last news <a class="button button-hideRight" href="https://emercoin.com/ru/news">Прочесть все</a>
+                Last news <a class="button button-hideRight" href="https://emercoin.com/ru/news">Read all</a>
             </div>
             <div class="latestNews swiper-container">
                 <div class="swiper-wrapper">
                     {% for post in news %}
+                        {% if post.title_en %}
                     <a href="/news/{{ post.slug }}" class="latestNews-item swiper-slide">
                         <div class="latestNews-item-img">
-                            <img src="{{ post.image.url }}" alt="{{ post.title }}" />
+                            <img src="{{ post.image_en.url }}" alt="{{ post.title_en }}" />
                         </div>
                         <div class="latestNews-item-info">
                             <div class="latestNews-item-info-date">{{ post.date }}</div>
-                            <div class="latestNews-item-info-text">{{ post.title }}</div>
+                            <div class="latestNews-item-info-text">{{ post.title_en }}</div>
                             <div class="more">Learn more</div>
                         </div>
                     </a>
+                        {% endif %}
                     {% endfor %}
 {#                    <a href="https://emercoin.com/ru/news/augustseptember-digest" class="latestNews-item swiper-slide">#}
 {#                        <div class="latestNews-item-img">#}
@@ -39,6 +41,6 @@
                 </div>
             </div>
             <div class="box box-latest box-hideDesktop">
-                <a class="button" href="https://emercoin.com/ru/news">Прочесть все</a>
+                <a class="button" href="https://emercoin.com/ru/news">Read all</a>
             </div>
         </div>

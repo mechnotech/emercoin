@@ -11,7 +11,7 @@ from django.db import models
 from slugify import slugify
 
 
-def desktop_image_validator():
+def desktop_image_validator(image):
     pass
     # h, w, size = 390, 1110, 5 * 1048576
     # errors = []
@@ -23,7 +23,7 @@ def desktop_image_validator():
     #     raise ValidationError(errors)
 
 
-def mobile_image_validator():
+def mobile_image_validator(image):
     pass
     # h, w, size = 350, 450, 1048576
     # errors = []
@@ -64,6 +64,31 @@ class Promo(models.Model):
         help_text='Картинка для десктопа (1110*390 пиксел, не больше 5 Мб)',
         validators=[desktop_image_validator]
     )
+    mobile_img_en = models.ImageField(
+        'Mobile image',
+        upload_to='info/',
+        blank=True,
+        null=True,
+        max_length=150,
+        help_text='If exists ~(450*350 pixel) no more 1Mb please)',
+
+    )
+    desktop_img_en = models.ImageField(
+        'Desktop image',
+        upload_to='info/',
+        blank=True,
+        null=True,
+        max_length=150,
+        help_text='If exists ~(1110*390 pixel, no more 5 Мб please)',
+
+    )
+
+    # def save(self, *args, **kwargs):
+    #     if not self.mobile_img_en:
+    #         self.mobile_img_en = self.mobile_img
+    #     if not self.desktop_img_en:
+    #         self.desktop_img_en = self.desktop_img
+    #     super().save(*args, **kwargs)
 
     class Meta:
         ordering = ['-pk']
@@ -244,10 +269,22 @@ class RoadMap(models.Model):
         help_text='События или задачи года (каждое с новой строки)',
         max_length=1000
     )
+    text_en = RichTextField(
+        'Goals',
+        help_text='Events and goals of year (with new paragraph for each)',
+        max_length=1000,
+        blank=True,
+        null=True,
+    )
 
     @property
     def short_text(self):
         textlist = self.text.split('</p>')
+        return '</p>'.join(textlist[:2])
+
+    @property
+    def short_text_en(self):
+        textlist = self.text_en.split('</p>')
         return '</p>'.join(textlist[:2])
 
     class Meta:
@@ -261,7 +298,8 @@ class RoadMap(models.Model):
 
 class News(models.Model):
     """ Новости """
-    title = models.CharField('Заголовок', max_length=150, blank=False)
+    title = models.CharField('Заголовок', max_length=150, blank=True, null=True)
+    title_en = models.CharField('Title', max_length=150, blank=True, null=True)
     slug = models.SlugField(
         'Slug',
         unique=True,
@@ -277,11 +315,25 @@ class News(models.Model):
         blank=False,
         help_text='Изображение 420*280 (примерно)'
     )
+    image_en = models.ImageField(
+        'News image',
+        max_length=250,
+        blank=True,
+        null=True,
+        help_text='Image ~ 420*280 px'
+    )
     text = RichTextUploadingField(
         'Текст новости',
         max_length=10000,
-        blank=False,
+        blank=True,
         help_text='Текст (не более 10 тыс символов)'
+    )
+    text_en = RichTextUploadingField(
+        'News text',
+        max_length=10000,
+        blank=True,
+        null=True,
+        help_text='Post (no more than 10K letters)',
     )
 
     def save(self, *args, **kwargs):
@@ -300,6 +352,7 @@ class News(models.Model):
 
 class Person(models.Model):
     name = models.CharField('Имя', max_length=90, blank=False)
+    name_en = models.CharField('Имя', max_length=90, blank=True, null=True)
     image = models.ImageField(
         'Фото',
         max_length=250,
@@ -307,15 +360,28 @@ class Person(models.Model):
         help_text='Изображение 360*360 квадрат (примерно)'
     )
     whois = models.CharField('Роль или должность', max_length=150, blank=False)
+    whois_en = models.CharField('The role', max_length=150, blank=True,
+                                null=True)
     info_short = RichTextField(
         'Краткое инфо',
         max_length=450,
         blank=False, help_text='Не более 250 символов')
+    info_short_en = RichTextField(
+        'Short_info',
+        max_length=450,
+        null=True,
+        blank=True, help_text='No more 250 letters')
     info = RichTextField(
         'Полное инфо',
         max_length=1500,
         blank=True,
         help_text='Не более 550 символов')
+    info_en = RichTextField(
+        'Full info',
+        max_length=1500,
+        blank=True,
+        null=True,
+        help_text='No more 550 letters')
     is_team = models.BooleanField('Член команды?', default=False)
     is_adviser = models.BooleanField('Адвайзер?', default=False)
     linkedin = models.URLField('LinkedIn', max_length=250, blank=True)
@@ -378,10 +444,18 @@ class Company(models.Model):
         help_text='Применяют технологии?'
     )
     text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_en = RichTextField('Short description', max_length=1500,
+                            blank=True, null=True)
     text_more = RichTextField(
         'Дополнительное описание',
         max_length=2000,
         blank=False)
+    text_more_en = RichTextField(
+        'More description',
+        max_length=2000,
+        blank=True,
+        null=True
+    )
 
     def save(self, *args, **kwargs):
         if not self.slug:

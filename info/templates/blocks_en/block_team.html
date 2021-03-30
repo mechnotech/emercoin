@@ -2,7 +2,7 @@
 <div class="teamBox">
             <div class="wrapper">
                 <div class="bigTitle bigTitle-team center">
-                    Встречайте команду Emercoin
+                    Meet the Emercoin Team
                 </div>
                 <div class="staff swiper-container">
                     <div class="staff__wrapper swiper-wrapper">
@@ -11,21 +11,11 @@
                         <div class="staff__item swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <div class="product-social">
-                                        {% if person.facebook %}
-                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.linkedin %}
-                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.twitter %}
-                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
-                                        {%  endif %}
-                                    </div>
-                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />
+                        {% include 'misc/product-social.html' with person=person %}
+                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" />
                                 </div>
-                                <div class="product-title">{{ person.name }}</div>
-                                <div class="product-text">{{ person.whois }}</div>
+                                <div class="product-title">{{ person.name_en }}</div>
+                                <div class="product-text">{{ person.whois_en }}</div>
                             </div>
                         </div>
                         {% endfor %}
@@ -33,12 +23,12 @@
                     </div>
                 </div>
                 <div class="box box-team">
-                    <a class="button" href="https://emercoin.com/ru/team">Вся команда</a>
+                    <a class="button" href="https://emercoin.com/ru/team">MEET EVERYONE</a>
                 </div>
 
 
                 <div class="bigTitle bigTitle-team center two">
-                    Наши советники </div>
+                    Our Advisors </div>
                 <div class="staff swiper-container">
                     <div class="staff__wrapper swiper-wrapper">
 
@@ -46,20 +36,10 @@
                         <div class="staff__item swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <div class="product-social">
-                                        {% if person.facebook %}
-                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.linkedin %}
-                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
-                                        {% endif %}
-                                        {% if person.twitter %}
-                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
-                                        {%  endif %}
-                                    </div>
-                                        <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name }}" />                                </div>
-                                <div class="product-title">{{ person.name }}</div>
-                                <div class="product-text">{{ person.whois }}</div>
+                                   {% include 'misc/product-social.html' with person=person %}
+                                        <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" />                                </div>
+                                <div class="product-title">{{ person.name_en }}</div>
+                                <div class="product-text">{{ person.whois_en }}</div>
                             </div>
                         </div>
                         {% endfor %}
