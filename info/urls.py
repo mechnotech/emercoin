@@ -15,6 +15,7 @@ urlpatterns = [
     path('partners-and-projects/<slug:slug>', views.company, name='partner'),
     path('partners-and-projects/', views.partners, name='partners'),
     path('team/', views.team, name='team'),
+    path('news/<slug:slug>', views.post, name='post'),
     path('news/', views.news, name='news'),
     path('road-map/', views.road_map, name='road-map')
 

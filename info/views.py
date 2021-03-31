@@ -1,7 +1,17 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
 )
+
+DEFAULT_PAGE_SIZE = 9
+
+
+def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
+    paginator = Paginator(recipe_list, page_size)
+    page_number = request.GET.get('page')
+    page = paginator.get_page(page_number)
+    return page, paginator
 
 
 def index(request):
@@ -142,12 +152,27 @@ def team(request):
 
 
 def news(request):
-    return None
+    if request.LANGUAGE_CODE == 'ru':
+        news_list = News.objects.filter(title__isnull=False)
+        page, paginator = get_paginated_view(request, news_list)
+        context = {
+            "page": page,
+            "paginator": paginator,
+        }
+        return render(request, 'news.html', context)
+    else:
+        news_list = News.objects.filter(title_en__isnull=False)
+        page, paginator = get_paginated_view(request, news_list)
+        context = {
+            "page": page,
+            "paginator": paginator,
+        }
+        return render(request, 'news_en.html', context)
 
 
 def road_map(request):
     cnt = RoadMap.objects.count()
-    roadmap = RoadMap.objects.all()[:cnt-1]
+    roadmap = RoadMap.objects.all()[:cnt - 1]
     this_year = RoadMap.objects.last()
     context = {
         'roadmap': roadmap,
@@ -157,3 +182,7 @@ def road_map(request):
         return render(request, 'roadmap.html', context)
     else:
         return render(request, 'roadmap_en.html', context)
+
+
+def post(request):
+    return None

@@ -313,7 +313,8 @@ class News(models.Model):
     image = models.ImageField(
         'Картинка новости',
         max_length=250,
-        blank=False,
+        blank=True,
+        null=True,
         help_text='Изображение 420*280 (примерно)'
     )
     image_en = models.ImageField(
@@ -339,7 +340,12 @@ class News(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
+            if self.title and not self.title_en:
+                self.slug = slugify(self.title)
+            elif self.title_en:
+                self.slug = slugify(self.title_en)
+            else:
+                return
         super().save(*args, **kwargs)
 
     class Meta:
