@@ -28,13 +28,13 @@
                     <li>
                         <div class="title">Emercoins</div>
                         <div class="footerLink ">
-                            <a href="/en/benefits">Benefits</a>
+                            <a href="{% url 'for-coinholders' %}">Benefits</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/benefits#download">Get Emercoin</a>
+                            <a href="{% url 'for-coinholders' %}#download">Get Emercoin</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/benefits#download">Download Wallet</a>
+                            <a href="{% url 'for-coinholders' %}#download">Download Wallet</a>
                         </div>
                     </li>
                     <li>
@@ -52,11 +52,9 @@
                     <li>
                         <div class="title">News</div>
                         <div class="footerLink ">
-                            <a href="/en/news">Latest News</a>
+                            <a href="{% url 'news' %}">Latest News</a>
                         </div>
-                        <div class="footerLink ">
-                            <a href="/en/events">Events</a>
-                        </div>
+
                         <div class="footerLink ">
                             <a href="/en/road-map">Road Map</a>
                         </div>
@@ -64,10 +62,10 @@
                     <li>
                         <div class="title">About Us</div>
                         <div class="footerLink ">
-                            <a href="/en/team">Our Team</a>
+                            <a href="{%  url 'team' %}">Our Team</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/partners-and-projects">Our Partners</a>
+                            <a href="{% url 'partners' %}">Our Partners</a>
                         </div>
                         <div class="footerLink ">
                             <a href="/en/contacts">Contact us</a>

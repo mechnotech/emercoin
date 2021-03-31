@@ -298,7 +298,8 @@ class RoadMap(models.Model):
 
 class News(models.Model):
     """ Новости """
-    title = models.CharField('Заголовок', max_length=150, blank=True, null=True)
+    title = models.CharField('Заголовок', max_length=150, blank=True,
+                             null=True)
     title_en = models.CharField('Title', max_length=150, blank=True, null=True)
     slug = models.SlugField(
         'Slug',

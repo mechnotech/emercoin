@@ -143,3 +143,17 @@ def team(request):
 
 def news(request):
     return None
+
+
+def road_map(request):
+    cnt = RoadMap.objects.count()
+    roadmap = RoadMap.objects.all()[:cnt-1]
+    this_year = RoadMap.objects.last()
+    context = {
+        'roadmap': roadmap,
+        'this_year': this_year,
+    }
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'roadmap.html', context)
+    else:
+        return render(request, 'roadmap_en.html', context)

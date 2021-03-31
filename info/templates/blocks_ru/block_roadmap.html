@@ -10,7 +10,7 @@
                         <div class="history__wrapper swiper-wrapper">
                              {% for milestone in roadmap %}
                             <div class="history__item swiper-slide">
-                                <a href="/ru/road-map" class="history__link">
+                                <a href="{% url 'road-map' %}" class="history__link">
                                     <div class="history__meta">
                                         <div class="history__year">{{ milestone.year }}</div>
                                         <div class="history__more">Узнать больше</div>

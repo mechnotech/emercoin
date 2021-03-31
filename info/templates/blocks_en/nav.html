@@ -111,7 +111,7 @@
                                 <a href="{% url 'news'%}">Latest News</a>
                             </li>
                             <li>
-                                <a href="/en/road-map">Road Map</a>
+                                <a href="{% url 'road-map' %}">Road Map</a>
                             </li>
                         </ul>
                     </li>
@@ -130,7 +130,7 @@
                         </ul>
                     </li>
                     <li>
-                        {% include 'lang_selector.html' %}
+                        {% include 'misc/lang_selector.html' %}
                             </li>
                 </ul>
             </nav>
