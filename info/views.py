@@ -184,5 +184,10 @@ def road_map(request):
         return render(request, 'roadmap_en.html', context)
 
 
-def post(request):
-    return None
+def post(request, slug):
+    one_post = get_object_or_404(News, slug=slug)
+    context = {'post': one_post}
+    if request.LANGUAGE_CODE == 'ru':
+        return render(request, 'post.html', context)
+    else:
+        return render(request, 'post_en.html', context)
