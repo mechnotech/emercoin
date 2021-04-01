@@ -1,0 +1,529 @@
+ <div class="clients _media">
+            <div class="clients__header">
+                <div class="h2 _center">Media about us</div>
+            </div>
+            <div class="clients__body">
+                <div class="clients__slider swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for media in medium %}
+                        <div class="clients__item swiper-slide">
+                            <a href="#media-{{ media.pk }}" class="clients__link _toggle" title="{{ media.name }}">
+                                <div class="clients__hero">
+                                    <img src="{{ media.logo.url }}" srcset="{{ media.logo_big.url }} 2x" alt="{{ media.name }}" class="clients__image" />
+                                </div>
+                                {% if media.count > 1 %}
+                                    <div class="clients__number">{{ media.count }}</div>
+                                {% endif %}
+                            </a>
+                        </div>
+                        {% endfor %}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-12" class="clients__link _toggle" title="Newsweek">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/15868690f4bf33ab55fa2984284ecfd5.png" srcset="https://emercoin.com/images/uploads/aeb47434c64b972a23b9bc5fae476ff1.png 2x" alt="Newsweek" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-8" class="clients__link _toggle" title="Euronews">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/7605f9cbb9e28fa556bded029718e2af.png" srcset="https://emercoin.com/images/uploads/b52b38114454924018e2ff3a478fb92c.png 2x" alt="Euronews" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-23" class="clients__link _toggle" title="Forbs">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/9f6a28a228495c90e1e99480393d0897.png" srcset="https://emercoin.com/images/uploads/8d9e6b2c3a7881a63ccfa91ac851bb85.png 2x" alt="Forbs" class="clients__image" />#}
+{#                                </div>#}
+{#                                <div class="clients__number">3</div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-18" class="clients__link _toggle" title="Cointelegraph">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/a64a7445d782a6814c8d04372bfbb77b.png" srcset="https://emercoin.com/images/uploads/ac09be248fbe03a00238c56f4c7ddbce.png 2x" alt="Cointelegraph" class="clients__image" />#}
+{#                                </div>#}
+{#                                <div class="clients__number">2</div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-13" class="clients__link _toggle" title="BrandChannel">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/6e85a1d35f6957357e7e54f36cac3e3d.png" srcset="https://emercoin.com/images/uploads/0acac35cacea508551e0ea73eaa4be49.png 2x" alt="BrandChannel" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-16" class="clients__link _toggle" title="Cryptovest">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/29e2f93c01a4e722f317991565ed46c5.png" srcset="https://emercoin.com/images/uploads/551e2f4e3e84edeb436feb0e6a1d6aef.png 2x" alt="Cryptovest" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-14" class="clients__link _toggle" title="Cryptolsate">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/211bb7d5fa45684f6f141a06431a3043.png" srcset="https://emercoin.com/images/uploads/1e97b69a450a125b64d6ea095e94adb9.png 2x" alt="Cryptolsate" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-1" class="clients__link _toggle" title="Digital Trends">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/a9a9a5cbf25f193e115d490679f9092d.png" srcset="https://emercoin.com/images/uploads/13676d65f82ed5dacf6aa7109deb009c.png 2x" alt="Digital Trends" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-2" class="clients__link _toggle" title="Engadget">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/cc2ddeb4602c4fa3f6989a803517c2c1.png" srcset="https://emercoin.com/images/uploads/13b4e94ca3d4bb6a3d824c01b6f6297b.png 2x" alt="Engadget" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-3" class="clients__link _toggle" title="NewsBTC">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/3a97bf2546a9ac837292322bbea7390a.png" srcset="https://emercoin.com/images/uploads/fb7bfd5e6e4fed8aae9b4ed461a4014f.png 2x" alt="NewsBTC" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-4" class="clients__link _toggle" title="TechCircle">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/dcebc6e2036f0f2c05df70945425020b.png" srcset="https://emercoin.com/images/uploads/3e960da90400e110df4287bd40f25f24.png 2x" alt="TechCircle" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-5" class="clients__link _toggle" title="Al Jazeera">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/11894835e6f50a969bf4026e2813266b.png" srcset="https://emercoin.com/images/uploads/514e611203f8aa58c3bf26b077f634ab.png 2x" alt="Al Jazeera" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-6" class="clients__link _toggle" title="BitsOnline">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/4c82fcc1419468fbe429a41d951d5b43.png" srcset="https://emercoin.com/images/uploads/967e4811d7aee0981ab3bc1082513753.png 2x" alt="BitsOnline" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-17" class="clients__link _toggle" title="BNN">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/f69d3cbaa577f91730fa5995edd920c4.png" srcset="https://emercoin.com/images/uploads/54ca605115ed79ecd8d5b0d15cfce8ab.png 2x" alt="BNN" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-7" class="clients__link _toggle" title="Business Times">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/38a6473bcc494fd815c41e2cf7dff94c.png" srcset="https://emercoin.com/images/uploads/732d0f1a23e695681420834d4780a9c6.png 2x" alt="Business Times" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-9" class="clients__link _toggle" title="The Drum">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/a44344e00ed3ab3c8db3078ab5dfce0b.png" srcset="https://emercoin.com/images/uploads/c159408b519344cb08db7f9d5faa0f44.png 2x" alt="The Drum" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-19" class="clients__link _toggle" title="GadgetsNow">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/c86545e00ce14a036996c03efa257108.png" srcset="https://emercoin.com/images/uploads/791d8543b476da621f68885fabd1957e.png 2x" alt="GadgetsNow" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-20" class="clients__link _toggle" title="KFGO">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/e97eb24e7ef3af8b0a3045fa73a1df39.png" srcset="https://emercoin.com/images/uploads/9da908ae5fbe648f1451a94a876413e2.png 2x" alt="KFGO" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-21" class="clients__link _toggle" title="Morung Express">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/f2d0dda41eaf3200e0203abdd4436ee6.png" srcset="https://emercoin.com/images/uploads/10b9a3afa09bac1b6f5d1af0ab210ce1.png 2x" alt="Morung Express" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-10" class="clients__link _toggle" title="MyBroadband">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/1f3964572e27db680ef91dad878ecb00.png" srcset="https://emercoin.com/images/uploads/d3dcc95cf3be016782b6fc325759d577.png 2x" alt="MyBroadband" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-11" class="clients__link _toggle" title="Newsmax">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/b8485cc67afd1e93bfddc2926985b682.png" srcset="https://emercoin.com/images/uploads/0b1380ff05a663f94b003f0462e954a7.png 2x" alt="Newsmax" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-22" class="clients__link _toggle" title="UTB">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/08076027352bbe3fcf51e2983bb160ce.png" srcset="https://emercoin.com/images/uploads/a41a05e64cb709b4af6974aafefc977b.png 2x" alt="UTB" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="clients__item swiper-slide">#}
+{#                            <a href="#media-24" class="clients__link _toggle" title="Business Insider">#}
+{#                                <div class="clients__hero">#}
+{#                                    <img src="https://emercoin.com/images/uploads/c6f1735b3d5086b729bee569cea067b7.png" srcset="https://emercoin.com/images/uploads/cf2b9fb9c4e718e9b7a372a2f3d6d265.png 2x" alt="Business Insider" class="clients__image" />#}
+{#                                </div>#}
+{#                            </a>#}
+                        </div>
+                    </div>
+                </div>
+{#            </div>#}
+
+
+            <div class="clients__contents">
+                <div class="clients__contents-wrapper">
+                    {% for media in medium %}
+                    <div class="clients__content" id="media-{{ media.pk }}">
+                        <div class="newsline swiper-container">
+                            <div class="swiper-wrapper">
+                                {% for post in media.get_contents %}
+                                <a href="{{ post.t_content.link }}" target="_blank" rel="nofollow" class="newsline__item swiper-slide">
+                                    <div class="newsline__date">{{ post.t_content.date }}</div>
+                                    <div class="newsline__text">{{ post.t_content.brif }}</div>
+                                    <div class="newsline__more">
+                                        <span class="newsline__more-text">Узнать больше</span>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+{#                    <div class="clients__content" id="media-12">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://www.newsweek.com/cocal-cola-and-state-department-are-using-blockchain-combat-slave-labor-850079" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">Cocal Cola and The State Department Are Using Blockchain to Combat Slave Labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-8">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://www.euronews.com/2018/03/16/coca-cola-us-state-dept-to-use-blockchain-to-combat-forced-labour" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 16, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, U.S. State Dept to use blockchain to combat forced labour</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-23">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.forbes.com/sites/rogeraitken/2016/02/08/microsoft-partner-emercoin-joins-cryptos-openledger-to-deliver-robust-blockchain-services/#6e6d7e143d12" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">February 08, 2016</div>#}
+{#                                    <div class="newsline__text">Microsoft Partner Emercoin Joins Crypto&#039;s OpenLedger To Deliver Robust Blockchain Services</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                                <a href="http://forbes.ge/news/3866/Emercoin-Builds-New-Blockchain-System" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">May 09, 2018</div>#}
+{#                                    <div class="newsline__text">Emercoin Builds New Blockchain System to Verify Graduate Certificates</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                                <a href="http://forbes.ge/news/4493/Emercoin-Blockchain-Solution" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">August 03, 2018</div>#}
+{#                                    <div class="newsline__text">Emercoin Blockchain Solution: Businesses Can Finally Rely on Graduates’ Credentials</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-18">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://cointelegraph.com/news/us-state-department-and-coca-cola-to-use-blockchain-technology-to-fight-forced-labor" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 16, 2018</div>#}
+{#                                    <div class="newsline__text">US State Department And Coca-Cola To Use Blockchain Technology To Fight Forced Labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                                <a href="https://cointelegraph.com/press-releases/global-changes-in-emercoin-blockchain-segwit-tx-optimizer-stun-and-13-more-updates" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">July 30, 2018</div>#}
+{#                                    <div class="newsline__text">Global Changes in Emercoin Blockchain: SegWit, TX Optimizer, STUN and 13 More Updates</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-13">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://brandchannel.com/2018/03/16/coca-cola-blockchain-supply-chain/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 16, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola Looks to Blockchain to Monitor Treatment of Workers</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-16">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://cryptovest.com/news/coca-cola-backs-blockchain-project-to-fight-forced-labor/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 19, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola Backs Blockchain Project to Fight Forced Labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-14">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://cryptoslate.com/coca-cola-blockchain/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 19, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola Combatting Forced Labor Using Blockchain Technology</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-1">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.digitaltrends.com/cool-tech/coca-cola-blockchain-forced-labor/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">State Department and Coca-Cola to use blockchain in fight against forced labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-2">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.engadget.com/2018/03/18/coca-cola-and-us-government-use-blockchain-to-curb-forced-labor/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola and US government use blockchain to curb forced labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-3">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.newsbtc.com/2018/03/18/coca-cola-u-s-state-department-teams-reduce-forced-labour-using-blockchain/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola and the U.S. State Department Teams Up To Reduce Forced Labour Using Blockchain</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-4">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://techcircle.vccircle.com/2018/03/19/how-coca-cola-is-using-blockchain-technology-to-fight-forced-labour" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 19, 2018</div>#}
+{#                                    <div class="newsline__text">How Coca-Cola is using blockchain technology to fight forced labour</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-5">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.aljazeera.com/news/2018/03/coca-cola-verify-suppliers-blockchain-180317125204446.html" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-cola will verify suppliers with blockchain</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-6">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.bitsonline.com/state-coca-cola-blockchain-slavery/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">State Dept. and Coca-Cola in Blockchain Team Up to Fight Slave Labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-17">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.bnn.ca/coca-cola-u-s-state-department-to-use-blockchain-to-combat-forced-labor-1.1029494" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 16, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, U.S. State Department to use blockchain to combat forced labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-7">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.businesstimes.com.sg/consumer/coca-cola-us-state-dept-to-use-blockchain-to-combat-forced-labour" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, US State Dept to use blockchain to combat forced labour</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-9">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://www.thedrum.com/news/2018/03/18/coca-cola-turns-blockchain-fight-against-forced-labour" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola turns to blockchain in fight against forced labour</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-19">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.gadgetsnow.com/tech-news/coca-cola-us-state-dept-to-use-blockchain-to-combat-forced-labor/articleshow/63342903.cms" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, US State Dept to use blockchain to combat forced labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-20">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://kfgo.com/news/articles/2018/mar/16/coca-cola-us-state-department-to-use-blockchain-to-combat-forced-labor/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 16, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, U.S. State Dept to use blockchain to combat forced labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-21">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="http://morungexpress.com/coca-cola-u-s-state-department-to-use-blockchain-to-combat-forced-labour/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, U.S. State Department to use blockchain to combat forced labour</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-10">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://mybroadband.co.za/news/technology/252783-coca-cola-to-use-blockchain.html" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 18, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola to use blockchain</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-11">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://www.newsmax.com/finance/streettalk/coca-cola-state-department-blockchain/2018/03/17/id/849265/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">August 17, 2018</div>#}
+{#                                    <div class="newsline__text">Coca-Cola, State Department to Use Blockchain to Combat Forced Labor</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-22">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://usethebitcoin.com/coca-cola-and-the-us-state-department-work-together-using-blockchain-technology/" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">March 17, 2018</div>#}
+{#                                    <div class="newsline__text">Coca Cola and the US State Department Work Together Using Blockchain Technology</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="clients__content" id="media-24">#}
+{#                        <div class="newsline swiper-container">#}
+{#                            <div class="swiper-wrapper">#}
+{#                                <a href="https://markets.businessinsider.com/news/stocks/emercoin-blockchain-solution-combats-global-manipulation-crisis-in-education-sector-1027426939" target="_blank" rel="nofollow" class="newsline__item swiper-slide">#}
+{#                                    <div class="newsline__date">August 02, 2018</div>#}
+{#                                    <div class="newsline__text">Emercoin Blockchain Solution Combats Global Manipulation Crisis in Education Sector</div>#}
+{#                                    <div class="newsline__more">#}
+{#                                        <span class="newsline__more-text">Узнать больше</span>#}
+{#                                    </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </div>
+                </div>
+            </div>
+</div>

@@ -1,0 +1,57 @@
+ <div class="feedback animate-it _bordered" id="get-coins">
+      <div class="feedback__header">
+         <div class="feedback__question">Get 10 free testnet coins</div>
+         <div class="feedback__toggle-holder">
+            <button type="button" class="feedback__toggle btn _type_default _size_lg _wide">Get coins</button>
+         </div>
+      </div>
+      <div class="feedback__body ">
+         <form data-action="https://emercoin.com/ru/json/testnet_coin" class="feedback__form form feedback_modern">
+            <input name="type" value="testnet_coin" type="hidden">
+            <div class="feedback__form-inner">
+               <div class="feedback__title">Apply for testnet coins</div>
+               <div class="feedback__subtitle">Get 10 free testnet coins for testing purposes</div>
+               <div class="feedback__columns">
+                  <div class="feedback__leftside">
+                     <div class="form__group">
+                        <div class="form__label _required">Name</div>
+                        <input type="text" name="name" class="form__entry entry">
+                     </div>
+                     <div class="form__group">
+                        <div class="form__label _required">Company Name/Project Name</div>
+                        <input type="text" name="project_name" class="form__entry entry">
+                     </div>
+                     <div class="form__group">
+                        <div class="form__label">Phone Number</div>
+                        <input type="tel" name="phone" class="form__entry entry">
+                     </div>
+                     <div class="form__group">
+                        <div class="form__label _required">Email</div>
+                        <input type="text" name="email" class="form__entry entry">
+                     </div>
+                  </div>
+                  <div class="feedback__rightside">
+                     <div class="form__group _wallet-address">
+                        <div class="form__label _required">Wallet address</div>
+                        <input name="wallet_address" type="text" class="form__entry entry">
+                        <div class="form__note">5 requests per day</div>
+                     </div>
+                     <div class="form__group">
+                        <div class="form__label _required">Reasons for Application</div>
+                        <textarea name="message" class="form__entry entry _textarea _textarea_coins" style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+                     </div>
+                  </div>
+               </div>
+               <div class="feedback__footer">
+                  <div class="feedback__btn-holder">
+                     <button type="submit" class="btn _type_default _size_lg _wide">get coins</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+         <div class="feedback__success _coins">
+            <div class="feedback__success-caption">Thank you!</div>
+            <div class="feedback__success-text">We sent you 10 testnet coins, soon they will be yours.</div>
+         </div>
+      </div>
+   </div>

@@ -1,0 +1,51 @@
+{% load static %}
+<div class="teamBox">
+            <div class="wrapper">
+                <div class="bigTitle bigTitle-team center">
+                    Meet the Emercoin Team
+                </div>
+                <div class="staff swiper-container">
+                    <div class="staff__wrapper swiper-wrapper">
+
+                        {% for person in teammates %}
+                        <div class="staff__item swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                        {% include 'misc/product-social.html' with person=person %}
+                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" />
+                                </div>
+                                <div class="product-title">{{ person.name_en }}</div>
+                                <div class="product-text">{{ person.whois_en }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="box box-team">
+                    <a class="button" href="https://emercoin.com/ru/team">MEET EVERYONE</a>
+                </div>
+
+
+                <div class="bigTitle bigTitle-team center two">
+                    Our Advisors </div>
+                <div class="staff swiper-container">
+                    <div class="staff__wrapper swiper-wrapper">
+
+                        {% for person in advisers %}
+                        <div class="staff__item swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                   {% include 'misc/product-social.html' with person=person %}
+                                        <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" />                                </div>
+                                <div class="product-title">{{ person.name_en }}</div>
+                                <div class="product-text">{{ person.whois_en }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <span id="bp_mobile" class="bp_checking team_checking"></span>
+            </div>
+        </div>

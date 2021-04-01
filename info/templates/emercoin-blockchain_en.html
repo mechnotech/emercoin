@@ -1,0 +1,78 @@
+{% extends "blankpage_en.html" %}
+{% load static %}
+{% block title %}
+Emercoin Blockchain
+{% endblock title %}
+
+
+    {% block content %}
+
+<main>
+
+
+    {% include 'blocks_en/block_about_blockchain.html' with emer_blocks=emer_blocks %}
+
+    {% include 'blocks_en/block_services.html' with servises=services %}
+    <div class="infobox _bg_filled">
+        <div class="infobox__inner">
+            <div class="infobox__header">
+                <div class="h3">How can I use the Emercoin blockchain?</div>
+            </div>
+            <div class="infobox__body">
+                <p>The Emercoin Blockchain has its own currency, Emercoins (EMC). To use any of the services listed above, you would use tiny fractions of EMC.</p>
+                <p>What sets Emercoin apart from other service blockchains is that Emercoin has pioneered a groundbreaking data organization system that allows for these services to utilize valuable data without needing immense amounts of storage space and complicated coding languages. To buy Emercoin, you must have compatible wallet software. Visit our site for wallet links.</p>
+            </div>
+        </div>
+    </div>
+    <div class="tech-tree">
+        <div class="h2">Tech Tree</div>
+        <a href="{% static 'assets/images/tech-tree.png' %}" target="_blank" class="tech-tree__hero">
+            <img src="{% static 'assets/images/tech-tree.png' %}" alt="" class="tech-tree__image"></a>
+        </div>
+{#        <div class="companies">#}
+{#            <div class="h2 _center">Компании, сотрудничающие с Emercoin</div>#}
+{#            <div class="partners">#}
+{#                <div class="partners__container">#}
+{#                    <div class="partners__wrapper">#}
+{#                        <div class="partners__item">#}
+{#                            <a href="https://www2.deloitte.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                <img src="https://emercoin.com/assets/images/cuet/deloitte.png" srcset="https://emercoin.com/assets/images/cuet/deloitte2x.png" alt="Deloitte" class="partners__image">#}
+{#                                    <img src="https://emercoin.com/assets/images/cuet/deloitte_color.png" srcset="https://emercoin.com/assets/images/cuet/deloitte_color2x.png" alt="Deloitte" class="partners__image _color"></a>#}
+{#                                </div>#}
+{#                                <div class="partners__item">#}
+{#                                    <a href="https://unadesk.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                        <img src="https://emercoin.com/assets/images/cuet/unadesk.png" srcset="https://emercoin.com/assets/images/cuet/unadesk2x.png" alt="UnaDesk" class="partners__image">#}
+{#                                            <img src="https://emercoin.com/assets/images/cuet/unadesk_color.png" srcset="https://emercoin.com/assets/images/cuet/unadesk_color2x.png" alt="UnaDesk" class="partners__image _color"></a>#}
+{#                                        </div>#}
+{#                                        <div class="partners__item">#}
+{#                                            <a href="https://authorizer.io/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                <img src="https://emercoin.com/assets/images/cuet/authorizer.png" srcset="https://emercoin.com/assets/images/cuet/authorizer2x.png" alt="Authorizer" class="partners__image">#}
+{#                                                    <img src="https://emercoin.com/assets/images/cuet/authorizer_color.png" srcset="https://emercoin.com/assets/images/cuet/authorizer_color2x.png" alt="Authorizer" class="partners__image _color"></a>#}
+{#                                                </div>#}
+{#                                                <div class="partners__item">#}
+{#                                                    <a href="https://foundico.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                        <img src="https://emercoin.com/assets/images/cuet/foundico.png" srcset="https://emercoin.com/assets/images/cuet/foundico2x.png" alt="Foundico" class="partners__image">#}
+{#                                                            <img src="https://emercoin.com/assets/images/cuet/foundico_color.png" srcset="https://emercoin.com/assets/images/cuet/foundico_color2x.png" alt="Foundico" class="partners__image _color"></a>#}
+{#                                                        </div>#}
+{#                                                        <div class="partners__item">#}
+{#                                                            <a href="http://kolionovo.com/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                                <img src="https://emercoin.com/assets/images/cuet/kolionovo.png" srcset="https://emercoin.com/assets/images/cuet/kolionovo2x.png" alt="Kolionovo" class="partners__image">#}
+{#                                                                    <img src="https://emercoin.com/assets/images/cuet/kolionovo_color.png" srcset="https://emercoin.com/assets/images/cuet/kolionovo_color2x.png" alt="Kolionovo" class="partners__image _color"></a>#}
+{#                                                                </div>#}
+{#                                                                <div class="partners__item">#}
+{#                                                                    <a href="https://vinchain.io/" rel="nofollow" target="_blank" class="partners__link">#}
+{#                                                                        <img src="https://emercoin.com/assets/images/cuet/vinchain.png" srcset="https://emercoin.com/assets/images/cuet/vinchain2x.png" alt="Vinchain" class="partners__image">#}
+{#                                                                            <img src="https://emercoin.com/assets/images/cuet/vinchain_color.png" srcset="https://emercoin.com/assets/images/cuet/vinchain_color2x.png" alt="Vinchain" class="partners__image _color"></a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                                <div class="partners__pagination"></div>#}
+{#                                                            </div>#}
+{#                                                            <div class="companies__text">ПО Emercoin также доступно в каталогах Microsoft Azure и RedHat.</div>#}
+{#                                                        </div>#}
+
+
+    <div class="up"></div>
+    </main>
+
+    {% endblock content %}

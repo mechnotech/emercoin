@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="36px" viewBox="0 0 42 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>press</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="37.9882812%" y1="100%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Our-partners-1" transform="translate(-400.000000, -1375.000000)">
+            <g id="Group-5" transform="translate(400.000000, 1375.000000)">
+                <g id="press">
+                    <path d="M15.7156,32.2365882 L10,30.7836471 L10,25.6290588 L19.0794,27.6788235 L15.7156,32.2365882 Z M39.1791992,2 L39.1791992,2.68011765 L2.99841309,11.0601807 L2.99841309,23.09021 L6.00061562,23.7014118 L6.00061562,31.5942353 C6.00061562,32.6202353 6.68701563,33.5143529 7.66601562,33.7647059 L16.0654,35.9351765 C16.2436,35.9798824 16.4218,36 16.6,36 C17.282,36 17.9376,35.6781176 18.36,35.1058824 L23.794,27.7450588 L39.4609375,31.0868235 L39.4609375,33.7647059 L42,33.7647059 L42,2 L39.1791992,2 Z" id="Fill-190" fill="url(#linearGradient-1)"></path>
+                    <rect id="Rectangle-10" fill="#7B6696" x="0" y="9" width="3" height="16" rx="1.5"></rect>
+                    <rect id="Rectangle-10" fill="#7B6696" x="39" y="0" width="3" height="35" rx="1.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

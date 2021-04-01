@@ -1,0 +1,28 @@
+ <div class="history">
+            <div class="history__header">
+                <div class="history__title h2 _center">Road map</div>
+            </div>
+            <div class="history__body">
+                <div class="history__fade _direction_left"></div>
+                <div class="history__fade _direction_right"></div>
+                <div class="history__inner">
+                    <div class="history__container swiper-container">
+                        <div class="history__wrapper swiper-wrapper">
+                             {% for milestone in roadmap %}
+                            <div class="history__item swiper-slide">
+                                <a href="{% url 'road-map' %}" class="history__link">
+                                    <div class="history__meta">
+                                        <div class="history__year">{{ milestone.year }}</div>
+                                        <div class="history__more">Learn more</div>
+                                    </div>
+                                    <div class="history__text">
+                                        {{ milestone.short_text_en|safe }}
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

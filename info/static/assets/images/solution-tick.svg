@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>solution-tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/bullets/check/small">
+            <g id="solution-tick">
+                <circle id="Oval-2" fill="#08B2BF" cx="10" cy="10" r="10"></circle>
+                <path d="M9.13966546,12.2009184 L13.6839752,6.82965882 C13.9941635,6.46302411 14.5428369,6.41726523 14.9094716,6.72745349 C15.2761063,7.03764175 15.3218652,7.58631517 15.0116769,7.95294988 L9.86185771,14.0399064 C9.53505987,14.4261732 8.94876687,14.4529516 8.5881184,14.0980832 L5.91185068,11.4647081 C5.56953225,11.127876 5.56508469,10.5773157 5.90191678,10.2349973 C6.23874887,9.89267886 6.78930915,9.8882313 7.13162758,10.2250634 L9.13966546,12.2009184 Z" id="Path-3" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

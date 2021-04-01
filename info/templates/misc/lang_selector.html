@@ -1,0 +1,26 @@
+{% load static %}
+                    <span class="link_menu">
+                                <span class="flag" style="background-image:
+                                        {% if request.LANGUAGE_CODE == 'ru' %}
+                                            url({% static 'assets/img/flag/ru.svg' %})"></span> ru</span>
+                                        {% else %}
+                                            url({% static 'assets/img/flag/en.svg' %})"></span> en</span>
+                                        {% endif %}
+
+                                <ul class="dropdown_menu lang_menu">
+                                    <li>
+                                        <a href="
+                                        {% if request.path|slice:":4" == '/en/' %}/ru/{{ request.path|slice:"4:"}}
+                                        {% else %}/en/{{ request.path|slice:"4:"}}
+                                        {% endif %}
+                                        ">
+                                        <span class="flag" style="background-image:
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    url({% static 'assets/img/flag/en.svg' %})"></span> en
+                                                {% else %}
+                                                    url({% static 'assets/img/flag/ru.svg' %})"></span> ru
+                                                {% endif %}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>

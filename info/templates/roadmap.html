@@ -1,0 +1,169 @@
+{% extends 'blankpage.html' %}
+{% load myfilers %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="privacyPage-top">
+      <h1>Дорожная карта</h1>
+   </div>
+   <div class="lineColor">
+      <div class="wrapper">
+         <div class="owl-carousel owl-swipe owl-loaded">
+            <div class="owl-stage-outer">
+               <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 475px;">
+                  <div class="owl-item active" style="width: auto;">
+                     <div class="tabClik tab_js active" data-id="road1">
+                        <span>События</span>
+                     </div>
+                  </div>
+{#                  <div class="owl-item active" style="width: auto;">#}
+{#                     <div class="tabClik tab_js" data-id="road2">#}
+{#                        <span>Бизнес</span>#}
+{#                     </div>#}
+{#                  </div>#}
+{#                  <div class="owl-item active" style="width: auto;">#}
+{#                     <div class="tabClik tab_js" data-id="road3">#}
+{#                        <span>Технологии</span>#}
+{#                     </div>#}
+{#                  </div>#}
+               </div>
+            </div>
+            <div class="owl-nav disabled">
+               <div class="owl-prev">prev</div>
+               <div class="owl-next">next</div>
+            </div>
+            <div class="owl-dots disabled"></div>
+         </div>
+      </div>
+   </div>
+   <div class="wrapper">
+      <div class="tabePane active" data-id="road1">
+         <div class="boxTimeline">
+             {% for milestone in roadmap %}
+                 {% if forloop.counter|divisibleby:2 %}
+            <div class="timelineBlock">
+               <div class="timelineItem">
+                  <div class="timelineItemDate">
+                     <span>{{ milestone.year }}</span>
+                  </div>
+                  <div class="timelineItem-box">
+                     <div class="titleTimline"></div>
+                     <ul class="timelineItemList">
+                         {{ milestone.text|lili|safe }}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+                 {% else %}
+            <div class="timelineBlock">
+               <div class="timelineItem right">
+                  <div class="timelineItemDate right">
+                     <span>{{ milestone.year }}</span>
+                  </div>
+                  <div class="timelineItem-box right">
+                     <div class="titleTimline"></div>
+                     <ul class="timelineItemList">
+                         {{ milestone.text|lili|safe }}
+                     </ul>
+{#                     <div class="titleTimline"></div>#}
+{#                     <ul class="timelineItemList">#}
+{#                        <li>#}
+{#                           Запуск Name-Value Storage — универсальной платформы для расширения блокчейн-сервисов.#}
+{#                        </li>#}
+{#                        <li>#}
+{#                           Запуск EmerDNS — децентрализованной, неизменной и надёжной системы доменных имён.#}
+{#                        </li>#}
+{#                     </ul>#}
+                  </div>
+               </div>
+            </div>
+                 {% endif %}
+             {% endfor %}
+
+         </div>
+         <div class="centerTimeline">
+            <div class="centerTimelineDate">
+               {% now "Y" %}
+            </div>
+            <div class="centerTimelineTitle">
+               В этом и последующем году:
+            </div>
+         </div>
+         <ul class="flexListTimeline">
+            {{ this_year.text|flexitem|safe }}
+         </ul>
+      </div>
+
+    <!--  <div class="tabePane" data-id="road2">
+         <div class="boxTimeline">
+            <div class="timelineBlock">
+               <div class="timelineItem">
+                  <div class="timelineItemDate">
+                     <span>2015</span>
+                  </div>
+                  <div class="timelineItem-box">
+                     <ul class="timelineItemList">
+                        <li>
+                           Emercoin появляется на биржах Livecoin, Cryptopia и YoBit
+                        </li>
+                        <li>
+                           Emercoin входит в список двадцати самых популярных валют на Coinmarketcap
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="timelineBlock">
+               <div class="timelineItem right">
+                  <div class="timelineItemDate right">
+                     <span>2016</span>
+                  </div>
+                  <div class="timelineItem-box right">
+                     <ul class="timelineItemList">
+                        <li>
+                           Emercoin появляется на биржах BTC38 и xBTCe
+                        </li>
+                        <li>
+                           Сотрудничество с Организацией Объединённых Наций
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="timelineBlock">
+               <div class="timelineItem">
+                  <div class="timelineItemDate">
+                     <span>2017</span>
+                  </div>
+                  <div class="timelineItem-box">
+                     <ul class="timelineItemList">
+                        <li>
+                           UnaDesk пытается децентрализовать рынок недвижимости и коммунальных услуг с
+                           использованием блокчейна Emer
+                        </li>
+                        <li>
+                           Истории успеха: Deloitte, eZuce, РЖД, SipXcom, HashCoin, AbitSystems
+                        </li>
+                        <li>
+                           Emercoin появляется на биржах HitBTC, Indacoin, BITTREX и USDX
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div> -->
+
+
+
+   <div class="chatbots">
+      <div class="chatbots__title">Следите за новостями:</div>
+      <div class="chatbots__buttons">
+         <a class="button button-telegram" href="https://t.me/emernews" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'telegram_community'});">Telegram</a>
+         <a class="button button-tweets two" href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'other_community'});">Twitter</a>
+      </div>
+   </div></div>
+</main>
+{% endblock content %}

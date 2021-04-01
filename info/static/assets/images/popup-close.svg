@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="21px" viewBox="0 0 19 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>popup-close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-336.000000, -754.000000)" fill="#404750" id="Buttons">
+            <g transform="translate(162.000000, 461.000000)">
+                <g id="Lupa" transform="translate(0.000000, 275.000000)">
+                    <g id="Regular" transform="translate(155.000000, 0.000000)">
+                        <g id="popup-close" transform="translate(19.000000, 19.000000)">
+                            <g id="Icons/close/color">
+                                <path d="M7.45227437,9.5 L0.0291664372,1.81314671 L2.14835666,-0.233331498 L9.5,7.37951804 L16.8516433,-0.233331498 L18.9708336,1.81314671 L11.5477256,9.5 L18.9708336,17.1868533 L16.8516433,19.2333315 L9.5,11.620482 L2.14835666,19.2333315 L0.0291664372,17.1868533 L7.45227437,9.5 Z" id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

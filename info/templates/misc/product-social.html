@@ -1,0 +1,13 @@
+{% load static %}
+<div class="product-social">
+                                        {% if person.facebook %}
+                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.linkedin %}
+                                            <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
+                                        {% endif %}
+                                        {% if person.twitter %}
+                                            <a href="{{ person.twitter }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_twitter.svg' %}" alt=""></a>
+                                        {%  endif %}
+{#                                            <a class="go mail"><img src="https://emercoin.com/assets/images/mail_tean.svg" alt=""></a>#}
+                                    </div>

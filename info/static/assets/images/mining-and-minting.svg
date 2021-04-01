@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="38px" viewBox="0 0 40 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>mining-and-minting</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="432.00339%" x2="50%" y2="-94.1933569%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="9.45498181%" y1="91.484233%" x2="118.418143%" y2="-11.6986913%" id="linearGradient-2">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benefits" transform="translate(-976.000000, -2868.000000)">
+            <g id="2-step" transform="translate(0.000000, 2594.000000)">
+                <g id="Group-49" transform="translate(499.000000, 249.000000)">
+                    <g id="Group-31" transform="translate(401.000000, 0.000000)">
+                        <g id="Group-8" transform="translate(75.000000, 25.000000)">
+                            <g id="mining-and-minting">
+                                <g id="Group-17" transform="translate(16.282496, 16.140502) rotate(-2.000000) translate(-16.282496, -16.140502) translate(1.282496, 0.640502)">
+                                    <path d="M6,0.294716662 C11.0329596,-0.892988685 17.4526949,1.54627379 22.7715282,6.94077936 C28.0903614,12.3352849 30.6344647,17.9494545 29.4175909,23.7123075 C26.5068196,19.0212799 23.5182103,15.1679613 19.1556544,10.6154706 C14.7930984,6.06297994 10.2813042,2.90438388 6,0.294716662 Z" id="Path-5" fill="url(#linearGradient-1)"></path>
+                                    <path d="M16.6091736,10 L20.4066208,13.7974472 L4.58392423,29.6201437 C3.53528815,30.6687798 1.83511314,30.6687798 0.78647706,29.6201437 C-0.26215902,28.5715076 -0.26215902,26.8713326 0.78647706,25.8226965 L16.6091736,10 Z" id="Rectangle-14" fill="url(#linearGradient-2)"></path>
+                                    <path d="M28.6961708,1.78647706 C29.7448068,2.83511314 29.7448068,4.53528815 28.6961708,5.58392423 L26.7974472,7.48264782 L23,3.68520065 L24.8987236,1.78647706 C25.9473597,0.73784098 27.6475347,0.73784098 28.6961708,1.78647706 Z" id="Rectangle-14" fill="#7B6696"></path>
+                                </g>
+                                <g id="Group-32" transform="translate(10.000000, 17.000000)">
+                                    <g id="Page-1" transform="translate(6.000000, 5.000000)">
+                                        <circle id="Oval-8" fill="#7B6696" cx="8" cy="8" r="8"></circle>
+                                        <polygon id="Fill-2" fill="#FFFFFF" points="4 5.83207274 7.08329237 5.83207274 7.08329237 7.27772165 4 7.27772165 4 9.01181225 8.81872303 9.01181225 8.81872303 5.83207274 10.2645693 5.83207274 10.2645693 10.2648063 4 10.2648063 4 12 12 12 12 4 4 4"></polygon>
+                                    </g>
+                                    <g id="Page-1" transform="translate(23.000000, 6.000000)" fill="#7B6696">
+                                        <circle id="Oval-8" cx="3.5" cy="3.5" r="3.5"></circle>
+                                    </g>
+                                    <g id="Page-1" transform="translate(0.000000, 11.000000)" fill="#7B6696">
+                                        <circle id="Oval-8" cx="2" cy="2" r="2"></circle>
+                                    </g>
+                                    <g id="Page-1" transform="translate(27.000000, 0.000000)" fill="#7B6696">
+                                        <circle id="Oval-8" cx="2" cy="2" r="2"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

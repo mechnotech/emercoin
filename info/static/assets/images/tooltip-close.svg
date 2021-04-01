@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>tooltip-close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-387.000000, -1170.000000)" fill="#FFFFFF" id="Hint">
+            <g transform="translate(236.000000, 1164.000000)">
+                <g id="Icons/close/white" transform="translate(151.000000, 6.000000)">
+                    <path d="M4.60280781,6 L0.572869534,1.82687675 L2.01882303,0.430535695 L6,4.55316513 L9.98117697,0.430535695 L11.4271305,1.82687675 L7.39719219,6 L11.4271305,10.1731232 L9.98117697,11.5694643 L6,7.44683487 L2.01882303,11.5694643 L0.572869534,10.1731232 L4.60280781,6 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

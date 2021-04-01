@@ -1,0 +1,137 @@
+{% extends "blocks_en/base.html" %}
+{% load static %}
+
+{% block title %}
+    Emercoin Tech Solutions
+{% endblock title %}
+    {% block css %}
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
+    {% endblock css %}
+    {% block open_scrypt %}
+    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
+    {% endblock open_scrypt %}
+
+
+    {% block content %}
+        <main>
+    <div class="infobox _bg_transparent">
+        <div class="infobox__inner">
+            <div class="infobox__header">
+                <div class="h1">Blockchain Solutions</div>
+            </div>
+            <div class="infobox__body">
+<div class="h2">
+About the Emercoin Blockchain
+</div>
+<p>
+Emercoin is a blockchain platform. Since 2013 it has developed a wide range of easy-to-use dSDKs. dSDK (Decentralized Software Development Kit) is a set of software development tools that allows the creation of software, services and solutions. Usually, it includes APIs, technical documentation and parts of code for fast and easy development on a certain platform.
+</p>
+<p>
+dSDKs are already implemented in numerous innovative technical solutions built on the blockchain. Emercoin offers services that have a potential to change the way different industries operate, providing means for data protection, secure storage of information, and creation of distributed services.
+</p>
+<p>
+The Emercoin Blockchain, on the other hand, is like programming with words. The Emercoin Blockchain is much easier to code programs on and, as a result, the Emercoin team has been able to develop a whole suite of programs on top of its blockchain.
+</p> </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+        <div class="services">
+        <div class="services__header" id="services">
+            <div class="h2">Our Services</div>
+        </div>
+        <div class="services__thumbs-holder">
+            <div class="services__thumbs swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+{% for serv in services %}
+                        <div class="services__thumb swiper-slide" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'GAevent', 'eventCategory': 'Tech Solutions', 'eventAction': 'Click', 'eventLabel': '{{ serv.title }}'});">
+                            <div class="services__thumb-hero">
+                                <img src="{{ serv.icon.url }}" width="92" height="106" alt="" class="services__icon">
+                                    <svg width="92" height="106" viewBox="0 0 92 106" xmlns="http://www.w3.org/2000/svg" class="services__icon-overlay">
+                                        <path transform="translate(46, 53) rotate(-270) translate(-46, -53)" d="M20.3720365,8.5 L-5.26881213,53.0001277 L20.372034,97.5 L71.2543848,97.5 L97.2591745,53.0058554 L70.8442824,8.5 L20.3720365,8.5 Z" class="services__icon-overlay-path"></path>
+                                    </svg>
+                                </div>
+                                <div class="services__caption">{{ serv.title }}</div>
+                        </div>
+ {% endfor %}
+
+                                                    </div>
+                                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                                </div>
+                                                <button class="services__arrow _type_prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></button>
+                                                <button class="services__arrow _type_next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></button>
+                                            </div>
+                                            <div class="services__content swiper-container swiper-container-horizontal swiper-container-autoheight">
+                                                <div class="swiper-wrapper" style="height: 783px; transform: translate3d(0px, 0px, 0px);">
+
+                                                   {% for serv in services %}
+                                                    <div class="services__item swiper-slide swiper-slide-active" style="width: 1658px;">
+                                                        <div class="services__item-inner">
+                                                            <div class="services__hero">
+                                                                <img src="{{ serv.image.url }}" alt="" class="services__image"></div>
+                                                                <div class="services__body">
+                                                                    <div class="services__item-text">
+{#                                                                        <div class="technology__documentation">#}
+{#                                                                            <a class="btn _type_default _size_md" href="https://emercoin.com/documentation/blockchain-services/emerdns/emerdns-introduction">Документация EmerDNS</a>#}
+{#                                                                        </div>#}
+                                                                        {{ serv.text|safe }}
+                                                                        {{ serv.text_more|safe }}
+                                                                    </div>
+                                                                    <div class="s-links">
+                                                                        <div class="s-links__list">
+                                                                            <div class="s-links__item">
+                                                                                <a href="https://docs.emercoin.com/en/Introduction/Specifications.html" class="s-links__link _type_spec" rel="nofollow" target="_blank">
+                                                                                    <span class="s-links__text">SPECIFICATIONS</span>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="s-links__item">
+                                                                                <a href="https://docs.emercoin.com/en/Emercoin_API.html" class="s-links__link _type_api" rel="nofollow" target="_blank">
+                                                                                    <span class="s-links__text">API REFERENCES</span>
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="s-links__item">
+                                                                                <a href="https://docs.emercoin.com/en/About_Emercoin.html" class="s-links__link _type_doc" rel="nofollow" target="_blank">
+                                                                                    <span class="s-links__text">GENERAL DOCUMENTATIONS</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+
+
+                                                </div>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                            </div>
+    </div>
+        </main>
+
+    {% endblock content %}
+
+    {% include 'blocks_en/footer.html' %}
+
+
+    {% block scrypt %}
+
+    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
+
+    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
+        <!--[if IE]>
+    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
+    {% endblock scrypt %}

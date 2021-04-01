@@ -11,9 +11,10 @@ urlpatterns = [
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
-urlpatterns += [ #i18n_patterns(
-    path('', include('info.urls'))
-]
+urlpatterns += i18n_patterns(
+    path('', include('info.urls')),
+    #prefix_default_language=False
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

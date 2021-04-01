@@ -1,0 +1,147 @@
+<div class="calculator">
+      <div class="calculator__body">
+         <form class="calculator" id="calculator" method="post" data-action="https://emercoin.com/ru/json/calculator">
+            <input type="hidden" name="page_uri" value="/ru/for-developers">
+            <div class="calculator__wrapper">
+               <div class="calculator__title">
+                  Расчет стоимости хранения данных в EmerNVS
+               </div>
+               <div class="calculator__subtitle">
+                  Вы можете рассчитать стоимость хранения данных в EmerNVS с помощью следующей формулы:
+               </div>
+               <div class="calculator__columns _border_bottom">
+                  <div class="calculator__columns_container">
+                     <div class="calculator__columns_header">
+                        Период <span class="questions-icon" title="Выберите период хранения записи (от 1 дня до 9999 лет). Стоимость увеличивается с увеличением периода хранения."></span>
+                     </div>
+                     <div class="slidercontainer">
+                        <input class="range_slider" name="range_period" type="range" min="0" max="6" value="2">
+                        <div class="slider_items">
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="0">1 день</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="1">1 месяц</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="2">1 год</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="3">5 лет</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="4">10 лет</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="5">20 лет</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="6">9 999 лет</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="calculator__select_container">
+                        <select class="calculator__select" name="select_period">
+                           <option value="1">1 день</option>
+                           <option value="30">1 месяц</option>
+                           <option value="365" selected="">1 год</option>
+                           <option value="1825">5 лет</option>
+                           <option value="3650">10 лет</option>
+                           <option value="7300">20 лет</option>
+                           <option value="3649635">9 999 лет</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <div class="calculator__columns _border_bottom">
+                  <div class="calculator__columns_container">
+                     <div class="calculator__columns_header">
+                        Размер записи «имя и значение» <span class="questions-icon" title="Имя - название записи, под которым она будет храниться в блокчейне.
+                           Значение - данные, которые вы хотите добавить в блокчейн."></span>
+                     </div>
+                     <div class="slidercontainer">
+                        <input class="range_slider" name="range_record_size_byte" type="range" min="0" max="6" value="1">
+                        <div class="slider_items">
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="0">20 байт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="1">100 байт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="2">500 байт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="3">1 Кбайт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="4">5 Кбайт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="5">10 Кбайт</span>
+                           </div>
+                           <div class="range_slider_container">
+                              <span class="slider_scale"></span>
+                              <span class="range_slider_label" data-value="6">20 Кбайт</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="calculator__select_container">
+                        <select class="calculator__select" name="select_record_size_byte">
+                           <option value="20">20 байт</option>
+                           <option value="100" selected="">100 байт</option>
+                           <option value="500">500 байт</option>
+                           <option value="1000">1 Кбайт</option>
+                           <option value="5000">5 Кбайт</option>
+                           <option value="10000">10 Кбайт</option>
+                           <option value="20000">20 Кбайт</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <div class="calculator__two_columns">
+                  <div class="calculator__columns">
+                     <div class="calculator__columns_header">
+                        Тип записи <span class="questions-icon" title="Вы можете добавить новую запись или обновить существующую"></span>
+                     </div>
+                     <div class="calculator__radio_record_type">
+                        <label class="container">Новая запись <input type="radio" checked="checked" name="record_type" value="new">
+                        <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Обновление текущей записи <input type="radio" name="record_type" value="old">
+                        <span class="checkmark"></span>
+                        </label>
+                     </div>
+                     <div class="calculator__footer">
+                        <div class="btn-holder">
+                           <button type="submit" class="btn _type_default _size_lg _wide">Рассчитать</button>
+                        </div>
+                        <div class="questions">
+                           <span class="_questions-text _img_coin">Как вычисляется награда? <span class="questions-icon" title="Награда пересчитывается каждые 10 минут и зависит от сложности PoW майнинга"></span></span>
+                           <span class="_questions-text">Что влияет на стоимость? <span class="questions-icon" title="Стоимость зависит от: размера награды за последний PoW блок, периода хранения данных, размера записи &quot;имя-значение&quot; и типа записи (новая запись/обновление текущей записи)"></span></span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="calculator__result" id="calculator__result">
+                     <div class="result_header">Результат расчета</div>
+                     <div class="result_body"><span class="result" id="calculator_result"> </span></div>
+                     <div class="result_footer">В расчетах возможна погрешность до 1%</div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>

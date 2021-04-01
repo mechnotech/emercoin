@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>progress</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benefits" transform="translate(-746.000000, -3355.000000)" fill="#6C5589">
+            <g id="2-step" transform="translate(0.000000, 2594.000000)">
+                <g id="Group-50" transform="translate(344.000000, 441.000000)">
+                    <g id="Binance" transform="translate(290.000000, 309.000000)">
+                        <g id="Icon-application-in-progress" transform="translate(112.000000, 11.000000)">
+                            <path d="M28.8906379,16 L32,16 C32,24.8223863 24.8220376,32 15.9992227,32 C7.1779624,32 0,24.8223863 0,16 C0,7.17761368 7.1779624,0 15.9992227,0 C19.9621046,0 23.7679639,1.47842985 26.6876549,4.09949475 L26.6876549,0.38865138 L29.797017,0.38865138 L29.797017,9.45821998 L20.7285624,9.45821998 L20.7285624,6.34900894 L24.5328669,6.34900894 C22.1899626,4.27827439 19.1583345,3.10921104 15.9992227,3.10921104 C8.89277559,3.10921104 3.10936209,8.89234357 3.10936209,16 C3.10936209,23.1076564 8.89277559,28.890789 15.9992227,28.890789 C23.1072244,28.890789 28.8906379,23.1076564 28.8906379,16 Z M14,8 L17.3107943,8 L17.3107943,17.006437 L24,17.006437 L24,20 L14,20 L14,8 Z" id="progress"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

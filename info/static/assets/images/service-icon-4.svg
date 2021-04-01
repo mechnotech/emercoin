@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="106px" viewBox="0 0 92 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>service-icon-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.50669643%" y1="98.4933036%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Tech-Solutions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1101.000000, -757.000000)">
+        <g id="4" transform="translate(1020.000000, 757.000000)">
+            <g id="Big-icons/EMCTTS" transform="translate(81.000000, 0.000000)">
+                <g id="Group-3">
+                    <g id="Group-20">
+                        <polygon id="Page-1" fill="#F6F2FB" transform="translate(46.000000, 53.000000) rotate(-270.000000) translate(-46.000000, -53.000000) " points="19.5051456 7 -7 53.0001298 19.5051456 99 72.1151068 99 99 53 71.6983107 7"></polygon>
+                        <path d="M27,29 L54.4772294,29 L63,29 C65.209139,29 67,30.790861 67,33 L67,43.0115877 L67,70 C67,72.209139 65.209139,74 63,74 L27,74 C24.790861,74 23,72.209139 23,70 L23,33 C23,30.790861 24.790861,29 27,29 Z" id="Rectangle-5" fill="url(#linearGradient-1)"></path>
+                        <path d="M58.4891512,37.5327638 C59.1797497,36.6707038 60.4384282,36.5317069 61.3004881,37.2223055 C62.1625481,37.912904 62.3015451,39.1715825 61.6109465,40.0336424 L44.7798377,61.0435692 L35.4800025,51.2024024 C34.7213463,50.3995857 34.7571454,49.1337619 35.559962,48.3751057 C36.3627786,47.6164495 37.6286024,47.6522486 38.3872586,48.4550652 L44.5310047,54.9564308 L58.4891512,37.5327638 Z M66.5276389,34.5077524 C65.8605078,35.3880988 64.6060294,35.5609441 63.7256829,34.893813 C62.8453364,34.2266819 62.6724912,32.9722035 63.3396223,32.091857 L67.128648,27.091857 C67.795779,26.2115105 69.0502575,26.0386653 69.9306039,26.7057964 C70.8109504,27.3729275 70.9837956,28.6274059 70.3166645,29.5077524 L66.5276389,34.5077524 Z" id="Path-8" fill="#7B6696" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

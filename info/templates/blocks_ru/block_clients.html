@@ -1,0 +1,51 @@
+{% load static %}
+<div class="clients _media animate-it _animated">
+   <div class="clients__header">
+      <div class="h2 _center">Компании, сотрудничающие с Emercoin</div>
+   </div>
+   <div class="clients__body">
+      <div class="clients__slider swiper-container swiper-container-horizontal">
+         <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+             {% for company in companies %}
+
+            <div class="clients__item swiper-slide swiper-slide-active">
+               <a href="#company-{{ company.pk }}" class="clients__link _toggle">
+                  <div class="clients__hero">
+                     <img src="{{ company.logo.url }}" srcset="{{ company.logo_big.url }} 2x" alt="{{ company.title }}" class="clients__image">
+                  </div>
+               </a>
+            </div>
+
+             {% endfor %}
+
+         </div>
+         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+      <button class="clients__arrow _type_prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></button><button class="clients__arrow _type_next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></button>
+   </div>
+   <div class="clients__contents">
+      <div class="clients__contents-wrapper">
+
+          {% for company in companies %}
+         <div class="clients__content" id="company-{{ company.pk }}">
+            <div class="company">
+               <div class="company__hero">
+                  <img src="{{ company.logo.url }}" srcset="{{ company.logo.url }} 2x" alt="{{ company.title }}" class="clients__image">
+               </div>
+               <div class="company__body">
+                  <div class="company__title">{{ company.title }}</div>
+                  <div class="company__text">
+                     {{ company.text|safe }}
+                  </div>
+                  <div class="company__more">
+                     <a href="{% url 'partners' %}{{ company.slug }}" class="more-link">Узнать больше</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+          {% endfor %}
+
+      </div>
+   </div>
+</div>

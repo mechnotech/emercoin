@@ -11,7 +11,7 @@ from django.db import models
 from slugify import slugify
 
 
-def desktop_image_validator():
+def desktop_image_validator(image):
     pass
     # h, w, size = 390, 1110, 5 * 1048576
     # errors = []
@@ -23,7 +23,7 @@ def desktop_image_validator():
     #     raise ValidationError(errors)
 
 
-def mobile_image_validator():
+def mobile_image_validator(image):
     pass
     # h, w, size = 350, 450, 1048576
     # errors = []
@@ -64,6 +64,31 @@ class Promo(models.Model):
         help_text='Картинка для десктопа (1110*390 пиксел, не больше 5 Мб)',
         validators=[desktop_image_validator]
     )
+    mobile_img_en = models.ImageField(
+        'Mobile image',
+        upload_to='info/',
+        blank=True,
+        null=True,
+        max_length=150,
+        help_text='If exists ~(450*350 pixel) no more 1Mb please)',
+
+    )
+    desktop_img_en = models.ImageField(
+        'Desktop image',
+        upload_to='info/',
+        blank=True,
+        null=True,
+        max_length=150,
+        help_text='If exists ~(1110*390 pixel, no more 5 Мб please)',
+
+    )
+
+    # def save(self, *args, **kwargs):
+    #     if not self.mobile_img_en:
+    #         self.mobile_img_en = self.mobile_img
+    #     if not self.desktop_img_en:
+    #         self.desktop_img_en = self.desktop_img
+    #     super().save(*args, **kwargs)
 
     class Meta:
         ordering = ['-pk']
@@ -79,7 +104,10 @@ class AboutEmer(models.Model):
     Блоки технологий для "О Блокчейне Эмера"
     """
     title = models.CharField('Заголовок', max_length=20, blank=False)
+    title_en = models.CharField('Title', max_length=20, blank=True, null=True)
     text = models.TextField('Описание', max_length=500, blank=False)
+    text_en = models.TextField('Description', max_length=500, blank=True,
+                               null=True)
     image = models.FileField(
         'Изображение блока',
         upload_to='info/',
@@ -107,16 +135,30 @@ class Services(models.Model):
         blank=False,
         help_text='Часть URL пути, например emerdns')
     text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_en = RichTextField('Short description', max_length=1500, blank=True,
+                            null=True)
     text_more = RichTextField(
         'Дополнительное описание',
         max_length=2000,
         blank=False)
+    text_more_en = RichTextField(
+        'Long description',
+        max_length=2000,
+        blank=True, null=True)
     scenarios = models.TextField(
         'Где применимо',
         help_text='Список тезисисов, разделитель  - |',
         max_length=1000,
         blank=False,
         default='Там | Тут'
+    )
+    scenarios_en = models.TextField(
+        'Where can use',
+        help_text='List of theses, divider  - |',
+        max_length=1000,
+        blank=True,
+        null=True,
+        default='Here | and Here'
     )
     image = models.FileField(
         'Изображение блока (большое)',
@@ -141,6 +183,9 @@ class Services(models.Model):
 
     def best_for(self):
         return self.scenarios.split('|')
+
+    def best_for_en(self):
+        return self.scenarios_en.split('|')
 
     def __str__(self):
         return self.title
@@ -224,10 +269,22 @@ class RoadMap(models.Model):
         help_text='События или задачи года (каждое с новой строки)',
         max_length=1000
     )
+    text_en = RichTextField(
+        'Goals',
+        help_text='Events and goals of year (with new paragraph for each)',
+        max_length=1000,
+        blank=True,
+        null=True,
+    )
 
     @property
     def short_text(self):
         textlist = self.text.split('</p>')
+        return '</p>'.join(textlist[:2])
+
+    @property
+    def short_text_en(self):
+        textlist = self.text_en.split('</p>')
         return '</p>'.join(textlist[:2])
 
     class Meta:
@@ -241,11 +298,13 @@ class RoadMap(models.Model):
 
 class News(models.Model):
     """ Новости """
-    title = models.CharField('Заголовок', max_length=150, blank=False)
+    title = models.CharField('Заголовок', max_length=150, blank=True,
+                             null=True)
+    title_en = models.CharField('Title', max_length=150, blank=True, null=True)
     slug = models.SlugField(
         'Slug',
         unique=True,
-        allow_unicode=True,
+        allow_unicode=False,
         max_length=250,
         blank=True,
         help_text='Часть URL адреса новости, если не указывать явно -'
@@ -254,19 +313,39 @@ class News(models.Model):
     image = models.ImageField(
         'Картинка новости',
         max_length=250,
-        blank=False,
+        blank=True,
+        null=True,
         help_text='Изображение 420*280 (примерно)'
+    )
+    image_en = models.ImageField(
+        'News image',
+        max_length=250,
+        blank=True,
+        null=True,
+        help_text='Image ~ 420*280 px'
     )
     text = RichTextUploadingField(
         'Текст новости',
         max_length=10000,
-        blank=False,
+        blank=True,
         help_text='Текст (не более 10 тыс символов)'
+    )
+    text_en = RichTextUploadingField(
+        'News text',
+        max_length=10000,
+        blank=True,
+        null=True,
+        help_text='Post (no more than 10K letters)',
     )
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
+            if self.title and not self.title_en:
+                self.slug = slugify(self.title)
+            elif self.title_en:
+                self.slug = slugify(self.title_en)
+            else:
+                return
         super().save(*args, **kwargs)
 
     class Meta:
@@ -280,6 +359,7 @@ class News(models.Model):
 
 class Person(models.Model):
     name = models.CharField('Имя', max_length=90, blank=False)
+    name_en = models.CharField('Имя', max_length=90, blank=True, null=True)
     image = models.ImageField(
         'Фото',
         max_length=250,
@@ -287,20 +367,34 @@ class Person(models.Model):
         help_text='Изображение 360*360 квадрат (примерно)'
     )
     whois = models.CharField('Роль или должность', max_length=150, blank=False)
+    whois_en = models.CharField('The role', max_length=150, blank=True,
+                                null=True)
     info_short = RichTextField(
         'Краткое инфо',
         max_length=450,
         blank=False, help_text='Не более 250 символов')
+    info_short_en = RichTextField(
+        'Short_info',
+        max_length=450,
+        null=True,
+        blank=True, help_text='No more 250 letters')
     info = RichTextField(
         'Полное инфо',
         max_length=1500,
         blank=True,
         help_text='Не более 550 символов')
+    info_en = RichTextField(
+        'Full info',
+        max_length=1500,
+        blank=True,
+        null=True,
+        help_text='No more 550 letters')
     is_team = models.BooleanField('Член команды?', default=False)
     is_adviser = models.BooleanField('Адвайзер?', default=False)
     linkedin = models.URLField('LinkedIn', max_length=250, blank=True)
     facebook = models.URLField('Facebook', max_length=250, blank=True)
     twitter = models.URLField('Twitter', max_length=250, blank=True)
+
     # telegram = models.URLField('Telegram', max_length=250, blank=True)
     # github = models.URLField('Github', max_length=250, blank=True)
 
@@ -315,3 +409,69 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Company(models.Model):
+    title = models.CharField('Название', max_length=150, blank=False)
+    slug = models.SlugField(
+        'Slug',
+        unique=True,
+        allow_unicode=False,
+        max_length=250,
+        blank=True,
+        help_text='Часть URL адреса новости, если не указывать явно -'
+                  ' заполняется автоматически из Названия')
+    logo = models.FileField(
+        'Логотип Компании малый',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None,
+        help_text='Размер 100*40 пикселей'
+    )
+    logo_big = models.FileField(
+        'Большой логотип Компании',
+        upload_to='info/',
+        blank=False,
+        max_length=150,
+        validators=[FileExtensionValidator(['jpg', 'png', 'svg'])],
+        default=None,
+        null=True,
+        help_text='Размер 200*80 пикселей'
+    )
+    is_partner = models.BooleanField(
+        'Партнер?',
+        default=True,
+        help_text='Заключили партнерство?'
+    )
+    is_used = models.BooleanField(
+        'Применяют?',
+        default=False,
+        help_text='Применяют технологии?'
+    )
+    text = RichTextField('Краткое описание', max_length=1500, blank=False)
+    text_en = RichTextField('Short description', max_length=1500,
+                            blank=True, null=True)
+    text_more = RichTextField(
+        'Дополнительное описание',
+        max_length=2000,
+        blank=False)
+    text_more_en = RichTextField(
+        'More description',
+        max_length=2000,
+        blank=True,
+        null=True
+    )
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'Компании'
+        verbose_name = 'Компания'
+
+    def __str__(self):
+        return self.title

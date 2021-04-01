@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>connect-telegram_Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="104.677734%" id="linearGradient-1">
+            <stop stop-color="#37AEE2" offset="0%"></stop>
+            <stop stop-color="#1E96C8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.2346759%" y1="43.69%" x2="74.7064382%" y2="80.24%" id="linearGradient-2">
+            <stop stop-color="#EFF7FC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Developers" transform="translate(-1027.000000, -5362.000000)">
+            <g id="Development-community" transform="translate(0.000000, 5198.000000)">
+                <g id="Telegram" transform="translate(925.000000, 134.000000)">
+                    <g id="connect-telegram" transform="translate(102.000000, 30.000000)">
+                        <rect id="Rectangle-28" fill="url(#linearGradient-1)" x="0" y="0" width="50" height="50" rx="25"></rect>
+                        <path d="M18.3755556,35.3463542 C17.5553799,35.3463542 17.6947482,35.0474224 17.4118766,34.293607 L15,26.631514 L33.5655556,16" id="Shape" fill="#C8DAEA"></path>
+                        <path d="M19,35.230137 C19.6329167,35.230137 19.9125603,34.9507349 20.2658333,34.6191995 L23.6413889,31.4508776 L19.4308053,29" id="Shape" fill="#A9C9DD"></path>
+                        <path d="M18.7851602,29.709287 L28.9877769,36.9853489 C30.1520271,37.6054301 30.9923083,37.2843825 31.2823107,35.9419695 L35.4352989,17.0511711 C35.8604924,15.405672 34.7854834,14.6593508 33.6716977,15.1474491 L9.28541857,24.2241475 C7.62082664,24.8686255 7.63053136,25.7650541 8.98199832,26.164485 L15.2400674,28.0498992 L29.7281628,19.2269435 C30.4121136,18.8265962 31.0398404,19.0418315 30.5246251,19.4832114" id="Shape" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
