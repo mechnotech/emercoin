@@ -1,0 +1,62 @@
+{% extends 'blankpage_en.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+   <div class="privacyPage-top">
+      <h1>Emercoin Latest News</h1>
+   </div>
+   <div class="wrapper content news">
+      <div class="newsAllBox">
+          {% for post in page %}
+              {% if post.title_en %}
+         <a href="{% url 'post' slug=post.slug %}" class="latestNews-item">
+            <div class="latestNews-item-img">
+               <img src="{{ post.image_en.url }}" alt="{{ post.title_en }}">
+            </div>
+            <div class="latestNews-item-info">
+               <div class="latestNews-item-info-date">{{ post.date }}</div>
+               <div class="latestNews-item-info-text">{{ post.title_en }}</div>
+               <div class="more">Learn more</div>
+            </div>
+         </a>
+              {% endif %}
+          {% endfor %}
+       </div>
+
+   {% include 'misc/paginator.html' with page=page paginator=paginator %}
+
+   </div>
+
+{#   <div class="blueBox blueBox-subscribe center blueBox-gray bottomColor">#}
+{#      <div class="fix_ok fix_ok-blue">#}
+{#         <div class="fix_ok-text white"></div>#}
+{#      </div>#}
+{#      <div class="wrapper">#}
+{#         <div class="whiteTitle">#}
+{#            Подписаться#}
+{#            <div class="whiteTitle whiteTitle-min">на новости и события</div>#}
+{#         </div>#}
+{#         <form class="subscribe boxSubscribe" method="post" data-action="https://emercoin.com/ru/json/subscribe">#}
+{#            <div class="box_input">#}
+{#               <div class="label_input label_input-min">E-mail</div>#}
+{#               <div class="relative">#}
+{#                  <input class="form_input" type="text" name="email">#}
+{#               </div>#}
+{#            </div>#}
+{#            <button class="button button-blue button-blue-subscribe" type="submit">Подписаться</button>#}
+{#            <div class="actions"></div>#}
+{#         </form>#}
+{#      </div>#}
+{#   </div>#}
+
+   <div class="blueBox blueBox-socset blueBox-gray center">
+      <div class="wrapper">
+         <div class="whiteTitle whiteTitle-small">Join us and find out about the latest updates:</div>
+         <a class="button button-telegram" href="https://t.me/emercoin_official" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'telegram_community'});">Telegram</a>
+         <a class="button button-tweets two" href="https://twitter.com/emercoin_press" rel="nofollow" target="_blank" onclick="dataLayer.push({'event': 'other_community'});">Twitter</a>
+      </div>
+   </div>
+</main>
+
+{% endblock content %}

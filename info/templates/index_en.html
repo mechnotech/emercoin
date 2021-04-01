@@ -1,0 +1,179 @@
+{% extends "blocks_en/base.html" %}
+{% load static %}
+
+{% block title %}
+    Official website of Emercoin blockchain platform. Decentralized solutions for business
+{% endblock title %}
+    {% block css %}
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
+    {% endblock css %}
+    {% block open_scrypt %}
+    <script type="application/ld+json">
+        [{
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "Emercoin",
+                "url": "",
+                "logo": "{% static  'assets/images/logo.svg' %}"
+            },
+            {
+                "@context": "http://schema.org/",
+                "@type": "Product",
+                "name": "EMC Coin",
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "0.08",
+                    "availability": "http://schema.org/InStock"
+                }
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "Emercoin",
+                        "name": ""
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "Cryptocurrency",
+                        "name": "/en"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "Download Wallet",
+                        "name": "/en/benefits#download"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "Buy Emercoin",
+                        "name": "/en/benefits#buy"
+                    }
+                }]
+            }
+        ]
+    </script>
+    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
+    {% endblock open_scrypt %}
+
+
+
+
+{#    <noscript>#}
+{#    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV4MJVZ"#}
+{#            height="0" width="0" style="display:none;visibility:hidden"></iframe>#}
+{#    </noscript>#}
+
+
+
+    {% block content %}
+        <body class="en">
+          <div class="loader" style="display: none;"></div>
+    <main>
+        {% csrf_token %}
+        {% include 'blocks_en/block_promo.html' with promos=promos %}
+
+{#        <div class="blueLightBox">#}
+{#            <div class="wrapper">#}
+{#                <ul class="topLinkList">#}
+{#                    <li>#}
+{#                        <a href="/ru/emercoin-blockchain"><span>Блокчейн Emercoin</span></a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="/ru/benefits#download"><span>Купить Emercoin</span></a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="#techsolutions"><span class="dotted">Наши сервисы</span></a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="#UpcomingEvents"><span class="dotted">События</span></a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="/ru/our-social-communities"><span>Cообщество</span></a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+
+
+      {% include 'blocks_en/block_about_blockchain.html' with emer_blocks=emer_blocks %}
+        <div class="box">
+                <a class="button" href="https://emercoin.com/ru/emercoin-blockchain">Learn more</a>
+            </div>
+
+
+        <div class="blueBox blueBox-still center ">
+            <div class="wrapper">
+                <div class="whiteTitle">
+                    Still don't have Emercoins? </div>
+                <a class="button button-blue" target="_blank" href="/ru/benefits#download">Download the wallet</a>
+            </div>
+        </div>
+
+
+
+       {% include 'blocks_en/block_services.html' with services=services %}
+        {% include 'blocks_en/block_media.html' with medium=medium %}
+        {% include 'blocks_en/block_roadmap.html' with roadmap=roadmap %}
+        {% include 'blocks_en/block_news.html' with news=news %}
+
+{#        <div class="blueBox blueBox-subscribe center ">#}
+{#            <div class="fix_ok fix_ok-blue">#}
+{#                <div class="fix_ok-text white"></div>#}
+{#            </div>#}
+{#            <div class="wrapper">#}
+{#                <div class="whiteTitle">#}
+{#                    Подписаться#}
+{#                    <div class="whiteTitle whiteTitle-min">на новости и события</div>#}
+{#                </div>#}
+{#                <form class="subscribe boxSubscribe" method="post" data-action="/ru/json/subscribe">#}
+{#                    <div class="box_input">#}
+{#                        <div class="label_input label_input-min">E-mail</div>#}
+{#                        <div class="relative">#}
+{#                            <input class="form_input" type="text" name="email" />#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <button class="button button-blue button-blue-subscribe" type="submit">Подписаться</button>#}
+{#                    <div class="actions"></div>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+
+    {% include 'blocks_en/block_team.html' with advisers=advisers teammates=teammates  %}
+
+    </main>
+    {% endblock content %}
+    {% include 'blocks_en/footer.html' %}
+
+    <div class="up"></div>
+    {% block scrypt %}
+{#    <script src="//www.google.com/recaptcha/api.js" type="text/javascript"></script>#}
+    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
+
+    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
+        <!--[if IE]>
+    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
+    <script src="{% static  'assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
+    {% endblock scrypt %}

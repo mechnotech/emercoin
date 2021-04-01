@@ -1,0 +1,126 @@
+{% load static %}
+
+        <div class="header">
+            <div class="wrapper">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="{% url 'emercoin' %}"></a>
+                    </div>
+                    <ul class="header-left-menu">
+                        <li><a href="{% url 'for-business' %}">Для бизнеса</a></li>
+                        <li><a href="{% url 'for-coinholders' %}">Владельцам монет</a></li>
+                        <li><a href="{% url 'for-developers' %}">Разработчикам</a></li>
+                        <li><a href="{% url 'socials' %}">Cообщество</a></li>
+                    </ul>
+                    <div class="header-left-top">
+
+                        <a href="{%  url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                        <a id="AB-button" href="{%  url 'for-coinholders' %}#buy" data-AB="Скачать кошелек" class="get" onclick="dataLayer.push({event: 'getemercoin_click'});" style="border-radius: 5px;" data-cf-modified-="">Купить Emercoin</a>
+                    </div>
+                    <div id="pull">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="closeMenu"></div>
+                </div>
+            </div>
+            <div class="lineHeader"></div>
+            <div class="wrapper">
+                <div class="header-right">
+                    <div class="header-right-top">
+
+                        <a href="{%  url 'for-coinholders' %}#buy" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px" data-cf-modified-="">Купить Emercoin</a>
+                        <a href="{%  url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })" data-cf-modified-="">Скачать кошелек</a>
+                    </div>
+                    <nav>
+                        <ul class="menuTop">
+                            <li class="mobileShow"><a href="{% url 'for-business' %}">Для бизнеса</a></li>
+                            <li class="mobileShow"><a href="{% url 'for-coinholders' %}">Владельцам монет</a></li>
+                            <li class="mobileShow"><a href="{% url 'for-developers' %}">Разработчикам</a></li>
+                            <li class="mobileShow"><a href="{% url 'socials' %}">Cообщество</a></li>
+                            <li>
+                                <span class="link_menu ">Технологии</span>
+                                <ul class="dropdown_menu">
+                                    <li>
+                                        <a href="{% url 'blockchain' %}">Блокчейн Emercoin</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'tech-solutions' %}">Технологии</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ru/documentation/introduction/specifications">Спецификации</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ru/documentation/emercoin-api">Справочник API</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ru/documentation/about-emercoin">Общая документация</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/emercoin" target="_blank" rel="nofollow">Наш GitHub</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="link_menu ">Экономика</span>
+                                <ul class="dropdown_menu">
+                                    <li>
+                                        <a href="{% url 'for-coinholders' %}">Почему Emercoin?</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'for-coinholders' %}#download">Купить Emercoin</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'for-coinholders' %}#download">Скачайте кошелёк</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="link_menu ">Обозреватели блокчейна</span>
+                                <ul class="dropdown_menu">
+                                    <li>
+                                        <a href="https://explorer.emercoin.com/" target="_blank" rel="nofollow">Первый</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://explorer1.emercoin.com" target="_blank" rel="nofollow">Второй</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://explorer2.emercoin.com" target="_blank" rel="nofollow">Третий</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="link_menu ">Новости</span>
+                                <ul class="dropdown_menu">
+                                    <li>
+                                        <a href="{% url 'news' %}">Последние новости</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'road-map' %}">Road Map</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="link_menu ">О нас</span>
+                                <ul class="dropdown_menu">
+                                    <li>
+                                        <a href="/ru/contacts">Контакты</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'partners' %}">Наши партнеры</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'team' %}">Наша команда</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                               {% include 'misc/lang_selector.html' %}
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>

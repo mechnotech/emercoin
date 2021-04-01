@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="60px" viewBox="0 0 85 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>indacoin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benefits" transform="translate(-1035.000000, -3903.000000)">
+            <g id="2-step" transform="translate(0.000000, 2330.000000)">
+                <g id="Buy-emercoin" transform="translate(345.000000, 1133.000000)">
+                    <g id="indacoin" transform="translate(690.000000, 440.000000)">
+                        <rect id="Rectangle-12" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="85" height="60"></rect>
+                        <polyline id="path-1" fill="#D8D8D8" points="14.1666667 19.3273003 28.8545334 49.2198101 38.6197893 49.2198101 23.9319226 19.3273003 14.1666667 19.3273003"></polyline>
+                        <polygon id="path-4" fill="#D8D8D8" points="57.9691126 49.2198101 67.6281914 49.2198101 53.1035232 19.3273003 43.4444444 19.3273003"></polygon>
+                        <polyline id="Shape" fill="#38A960" fill-rule="nonzero" points="54 19 38.9850931 49 29 49 44.0149066 19 54 19"></polyline>
+                        <polyline id="Shape" fill="#38A960" fill-rule="nonzero" points="25 19 9.98220482 49 0 49 15.0153904 19 25 19"></polyline>
+                        <polyline id="Shape" fill="#38A960" fill-rule="nonzero" points="85 19 69.9850932 49 60 49 75.0149068 19 85 19"></polyline>
+                        <polyline id="Shape" fill="#38A960" fill-rule="nonzero" points="28 9 25.1749127 15 16 15 18.8339162 9 28 9"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

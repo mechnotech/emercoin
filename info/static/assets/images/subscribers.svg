@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="35px" viewBox="0 0 38 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>subscribers</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6,6.55430773 C6,2.93960701 8.91525,0 12.5,0 C16.08475,0 19,2.93960701 19,6.55430773 C19,10.1690084 16.08475,13.1086155 12.5,13.1086155 C8.91525,13.1086155 6,10.1690084 6,6.55430773 Z" id="path-1"></path>
+        <path d="M25,28 L0,28 L0,26.2857143 C0,20.2291429 5.140625,16 12.5,16 C19.8609375,16 25,20.2291429 25,26.2857143 L25,28 Z" id="path-2"></path>
+    </defs>
+    <g id="Our-Social-Channels" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-240.000000, -298.000000)">
+        <g id="subscribers" transform="translate(243.000000, 298.000000)">
+            <g id="Group-8" transform="translate(10.000000, 0.000000)" fill="#B09CC9">
+                <path d="M6,6.55430773 C6,2.93960701 8.91525,0 12.5,0 C16.08475,0 19,2.93960701 19,6.55430773 C19,10.1690084 16.08475,13.1086155 12.5,13.1086155 C8.91525,13.1086155 6,10.1690084 6,6.55430773 Z" id="Fill-297"></path>
+                <path d="M25,27 L0,27 L0,25.2857143 C0,19.2291429 5.140625,15 12.5,15 C19.8609375,15 25,19.2291429 25,25.2857143 L25,27 Z" id="Fill-298"></path>
+            </g>
+            <g id="Group-8" transform="translate(0.000000, 4.000000)">
+                <g id="Fill-297">
+                    <use fill="#B09CC9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#FFFFFF" stroke-width="3" d="M4.5,6.55430773 C4.5,2.11396082 8.08401624,-1.5 12.5,-1.5 C16.9159838,-1.5 20.5,2.11396082 20.5,6.55430773 C20.5,10.9946546 16.9159838,14.6086155 12.5,14.6086155 C8.08401624,14.6086155 4.5,10.9946546 4.5,6.55430773 Z"></path>
+                </g>
+                <g id="Fill-298">
+                    <use fill="#B09CC9" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <path stroke="#FFFFFF" stroke-width="3" d="M26.5,29.5 L-1.5,29.5 L-1.5,26.2857143 C-1.5,19.3293701 4.36937271,14.5 12.5,14.5 C20.6316583,14.5 26.5,19.3289495 26.5,26.2857143 L26.5,29.5 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

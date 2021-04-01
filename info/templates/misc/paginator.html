@@ -1,0 +1,22 @@
+ <div class="pagination">
+{#        {% if page.has_other_pages %}#}
+{#         <div class="box box-newsButton">#}
+{#            <a class="button" href="{% url 'news' %}?page={{ page.next_page_number }}">Узнать больше</a>#}
+{#         </div>#}
+{#        {% endif %}#}
+         <div class="pagination_box">
+             {% if page.has_previous %}
+            <a href="{% url 'news' %}?page={{ page.previous_page_number }}" class="ditto_previous_link"><<</a>
+             {% endif %}
+            {% for i in paginator.page_range %}
+                {% if page.number == i %}
+                <span class="ditto_currentpage">{{ i }}</span>
+                {% else %}
+                <a class="ditto_page" href="{% url 'news' %}?page={{ i }}">{{ i }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if page.has_next %}
+            <a href="{% url 'news' %}?page={{ page.next_page_number }}" class="ditto_next_link">>></a>
+            {% endif %}
+         </div>
+      </div>

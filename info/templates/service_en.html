@@ -1,0 +1,82 @@
+{% extends 'blankpage_en.html' %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="technology">
+      <div class="technology__header">
+         <div class="technology__hero animate-it _animated">
+            <img src="{{ one_service.icon.url }}" alt="" class="technology__hero-image">
+         </div>
+         <h1 class="technology__title animate-it _animated">{{ one_service.title }}</h1>
+      </div>
+      <div class="technology__body">
+         <div class="technology__back animate-it _animated">
+            <a href="{% url 'for-developers' %}" class="btn _type_info _size_sm">
+               <svg width="5" height="8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 8" class="btn__back-icon">
+                  <path class="st0" d="M4,8C3.7,8,3.5,7.9,3.3,7.7l-3-3.1C0.1,4.4,0,4.2,0,3.9s0.1-0.5,0.3-0.7l3-2.9c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L2.4,3.9l2.3,2.4c0.4,0.4,0.4,1,0,1.4C4.5,7.9,4.3,8,4,8z"></path>
+               </svg>
+               All Services
+            </a>
+         </div>
+         <div class="technology__main animate-it _animated">
+            <div class="technology__text">
+                {{ one_service.text_more_en|safe }}
+                <p><a class="btn _type_default _size_md" href="https://emercoin.com/documentation/blockchain-services/emerdns/emerdns-introduction">EmerDNS Documentation</a></p>
+            </div>
+            <div class="technology__caption">{{ one_service.title }} is the best solution:</div>
+            <div class="t-list">
+                {% for solution in one_service.best_for_en %}
+               <div class="t-list__item">{{ solution }}</div>
+                {% endfor %}
+            </div>
+            <div class="docs-list">
+               <div class="docs-list__item">
+                  <a href="https://docs.emercoin.com/en/Introduction/Specifications.html" target="_blank" class="docs-list__link">
+                  <img src="{% static 'assets/images/specification.svg' %}" alt="" class="docs-list__icon">
+                  <span class="docs-list__text">Specifications</span>
+                  </a>
+               </div>
+               <div class="docs-list__item">
+                  <a href="https://docs.emercoin.com/en/Emercoin_API.html" target="_blank" class="docs-list__link">
+                  <img src="{% static 'assets/images/api-references.svg' %}" alt="" class="docs-list__icon">
+                  <span class="docs-list__text">API references</span>
+                  </a>
+               </div>
+               <div class="docs-list__item">
+                  <a href="https://docs.emercoin.com/en/About_Emercoin.html" target="_blank" class="docs-list__link">
+                  <img src="{% static 'assets/images/general-doc.svg' %}" alt="" class="docs-list__icon">
+                  <span class="docs-list__text">General Documentations</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="technology__sidebar animate-it _animated">
+            <div class="technology__image">
+               <a href="#zoom-image" class="technology__image-link js-popup-open-button"></a>
+               <img src="{{ one_service.image.url }}" alt="" class="technology__image-hero">
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="our-services animate-it _animated">
+      <div class="our-services__title">Our services</div>
+      <div class="our-services__list">
+
+          {% for service in services %}
+         <div class="our-services__item">
+            <a href="{%  url 'service' slug=service.slug %}" class="our-services__link">
+               <div class="our-services__hero">
+                  <img src="{{ service.icon.url }}" alt="" class="our-services__image">
+               </div>
+               <div class="our-services__caption">
+                  <span class="our-services__caption-text">{{ service.title }}</span>
+               </div>
+            </a>
+         </div>
+          {% endfor %}
+
+      </div>
+   </div>
+</main>
+{% endblock content %}

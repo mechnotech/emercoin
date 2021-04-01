@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>D9B1A9EA-FF78-43FC-AF8A-1EE0CA9C5A6F</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="350" height="88"></rect>
+        <filter x="-4.3%" y="-17.0%" width="108.6%" height="134.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.4   0 0 0 0 0.588235294  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bounty-program" transform="translate(-250.000000, -688.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="7312"></rect>
+            <g id="Bg" transform="translate(0.000000, 591.000000)" fill="#F6F2FB">
+                <polygon id="Rectangle-40" points="0 0 1440 0 1440 5646 0 5646"></polygon>
+            </g>
+            <g id="Buttons" transform="translate(165.000000, 661.000000)">
+                <g id="Article">
+                    <g id="Bg">
+                        <g id="Rectangle-7">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                    <g id="Link" transform="translate(85.000000, 27.000000)">
+                        <g id="Icons/general-documentations-2">
+                            <g id="Icons/bounty-program/article">
+                                <path d="M25.685135,32 L5.31486497,32 C4.03672906,32 3,30.9307892 3,29.6119813 L3,2.38801865 C3,1.06921077 4.03672906,0 5.31486497,0 L25.685135,0 C26.9632709,0 28,1.06921077 28,2.38801865 L28,29.6119813 C28,30.9307892 26.9632709,32 25.685135,32" id="Fill-3" fill="#C8DAEA"></path>
+                                <path d="M28.6850417,34 L8.31462143,34 C7.03654346,34 6,32.9302426 6,31.6120746 L6,4.38792544 C6,3.06941141 7.03654346,2 8.31462143,2 L28.6850417,2 C29.9631197,2 31,3.06941141 31,4.38792544 L31,31.6120746 C31,32.9302426 29.9631197,34 28.6850417,34" id="Fill-5" fill="#E4F2FF"></path>
+                                <path d="M10.9901755,13.012559 C10.2639063,13.012559 9.67503931,12.340786 9.67503931,11.5123592 C9.67503931,10.684332 10.2639063,10.012559 10.9901755,10.012559 L25.0186391,10.012559 C25.7452527,10.012559 26.3337753,10.684332 26.3337753,11.5123592 C26.3337753,12.340786 25.7452527,13.012559 25.0186391,13.012559 L10.9901755,13.012559 Z M25.0187768,16.012559 C25.7450461,16.012559 26.333913,16.662507 26.333913,17.4644964 C26.333913,18.2664858 25.7450461,18.9164338 25.0187768,18.9164338 L10.9903132,18.9164338 C10.2636996,18.9164338 9.67517706,18.2664858 9.67517706,17.4644964 C9.67517706,16.662507 10.2636996,16.012559 10.9903132,16.012559 L25.0187768,16.012559 Z M18.9738338,22.012559 C19.7073347,22.012559 20.3020559,22.669542 20.3020559,23.4802122 C20.3020559,24.2908823 19.7073347,24.9482565 18.9738338,24.9482565 L11.003468,24.9482565 C10.2699671,24.9482565 9.67524593,24.2908823 9.67524593,23.4802122 C9.67524593,22.669542 10.2699671,22.012559 11.003468,22.012559 L18.9738338,22.012559 Z" id="Combined-Shape" fill="#7B6798"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

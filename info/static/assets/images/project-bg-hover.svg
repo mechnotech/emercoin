@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="264px" height="242px" viewBox="0 0 264 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>project-bg-hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="56.1760333 0 0 101.00106 56.1760333 202 171.825012 202 228 101.00106 171.825012 0"></polygon>
+        <filter x="-13.2%" y="-14.9%" width="126.3%" height="129.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.4   0 0 0 0 0.588235294  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-3" points="61.7555389 9 11 100.000955 61.7555389 191 166.245405 191 217 100.000955 166.245405 9"></polygon>
+        <filter x="-14.6%" y="-16.5%" width="129.1%" height="133.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.4   0 0 0 0 0.588235294  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Our-partners" transform="translate(-629.000000, -596.000000)">
+            <g id="Group-13" transform="translate(630.000000, 616.000000)">
+                <g id="project-bg-hover" transform="translate(17.000000, 0.000000)">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <path stroke="#08B2BF" stroke-width="1" d="M56.4700712,0.5 L0.572135605,101.001058 L56.4700682,201.5 L171.530974,201.5 L227.427867,101.001058 L171.530971,0.5 L56.4700712,0.5 Z"></path>
+                    </g>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-3"></use>
+                        <use fill="#08B2BF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

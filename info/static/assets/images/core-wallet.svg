@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61px" height="38px" viewBox="0 0 61 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>core-wallet</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.50669643%" y1="98.4933036%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-1">
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-17.8689236%" y1="117.868924%" x2="98.6180786%" y2="1.38192135%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#B299D1" offset="0%"></stop>
+            <stop stop-color="#D5B1E4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desctop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benefits" transform="translate(-436.000000, -1843.000000)">
+            <g id="1-step" transform="translate(0.000000, 1689.000000)">
+                <g id="Group-9" transform="translate(314.000000, 133.000000)">
+                    <g id="Group-5" transform="translate(122.000000, 21.000000)">
+                        <g id="core-wallet">
+                            <path d="M43,15 L56,15 C57.6568542,15 59,16.3431458 59,18 L59,34.9946289 C59,36.6514832 57.6568542,37.9946289 56,37.9946289 L33,37.9946289 C31.3431458,37.9946289 30,36.6514832 30,34.9946289 L30,33.4102564 L40,33.4102564 C41.6568542,33.4102564 43,32.0723086 43,30.4218663 L43,15 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                            <path d="M52.2728619,21 L59,21 C60.1045695,21 61,21.8954305 61,23 L61,29 C61,30.1045695 60.1045695,31 59,31 L52.2119531,31 C51.5407899,31 50.9143731,30.6633539 50.5440168,30.1036252 L48,26.2587891 L50.5552661,21.975371 C50.9161088,21.3704869 51.5685238,21 52.2728619,21 Z" id="Rectangle" fill="#7B6696"></path>
+                            <ellipse id="Oval-3" fill="#FFFFFF" cx="54" cy="25.9487179" rx="2" ry="1.94871795"></ellipse>
+                            <path d="M1.05128205,4.74972174e-16 C0.470675007,0 0,0.478850378 0,1.06954225 L0,30.0843039 C9.33726031e-16,30.6749958 0.470675007,31.1538462 1.05128205,31.1538462 L39.9487179,31.1538462 C40.529325,31.1538462 41,30.6749958 41,30.0843039 L41,1.06954225 C41,0.478850378 40.529325,1.42491652e-15 39.9487179,0 L1.05128205,4.74972174e-16 Z" id="Rectangle-20" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                            <rect id="Rectangle-5" fill="#7B6696" x="16" y="32" width="9" height="5.84615385"></rect>
+                            <rect id="Rectangle-5" fill="#7B6696" x="13" y="36" width="15" height="1.94871795"></rect>
+                            <rect id="Rectangle-6" fill="#7B6696" x="3" y="4" width="35" height="20.4615385"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

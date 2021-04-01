@@ -1,0 +1,113 @@
+{% extends 'blankpage.html' %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="privacyPage-top">
+      <h1 class="leftText">{{ post.title }}</h1>
+   </div>
+   <div class="article">
+      <div class="article__back">
+         <a href="{% url 'news' %}" class="article__back-link">К списку новостей</a>
+      </div>
+      <div class="article__content">
+         <div class="article__body">
+            <div class="article__meta">
+               <time class="article__date" datetime="{{ post.date }}"></time>
+            </div>
+            <div class="article__text">
+               {{ post.text|safe }}
+            </div>
+         </div>
+         <div class="article__share">
+            <div class="share">
+               <div class="share__item">
+                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Femercoin.com%2Fru%2Fnews%2F10-most-common-questions-and-answers-about-emercoin" target="_blank" class="share__link _type_twitter"></a>
+               </div>
+               <div class="share__item">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Femercoin.com%2Fru%2Fnews%2F10-most-common-questions-and-answers-about-emercoin" target="_blank" class="share__link _type_facebook"></a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="article__back _bottom">
+         <section class="social-blocks-section _m-b animate-it _animated" style="text-transform: none; padding-bottom:0;">
+            <h3 style="margin-bottom:30px;text-align:center;">Присоединяйтесь, cпрашивайте, советуйте и создавайте<br>свои проекты на основе блокчейна Emercoin</h3>
+            <div class="grid-container_grid" style="padding: 0;">
+               <div class="grid-row">
+                  <div class="grid-col-xl-4 grid-col-lg-6 grid-col-sm-6 _style-margin-b-md _style-display-f">
+                     <div class="social-box">
+                        <a href="https://t.me/emernews" class="social-box__link" target="_blank" onclick="dataLayer.push({'event': 'telegram_community'});">
+                           <div class="social-box__content">
+                              <div class="social-box__image-wrapper _flag _flag-ru">
+                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCIgdmlld0JveD0iMCAwIDM0IDM0Ij4gICAgPGRlZnM+ICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSI2Ni42NyUiIHgyPSI0MS42NyUiIHkxPSIxNi42NyUiIHkyPSI3NSUiPiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzN0FFRTIiLz4gICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxRTk2QzgiLz4gICAgICAgIDwvbGluZWFyR3JhZGllbnQ+ICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgxPSI2MS4yMzUlIiB4Mj0iNzQuNzA2JSIgeTE9IjQzLjY5JSIgeTI9IjgwLjI0JSI+ICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0VGRjdGQyIvPiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0ZGRiIvPiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4gICAgPC9kZWZzPiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGNpcmNsZSBjeD0iMTciIGN5PSIxNyIgcj0iMTciIGZpbGw9InVybCgjYSkiLz4gICAgICAgIDxwYXRoIGZpbGw9IiNDOERBRUEiIGQ9Ik0xMy44ODMgMjQuNzkyYy0uNTUgMC0uNDU3LS4yMDgtLjY0Ny0uNzMzbC0xLjYyLTUuMzMgMTIuNDY3LTcuMzk2LTEwLjIgMTMuNDU5eiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0E5QzlERCIgZD0iTTEzLjg4MyAyNC43OTJjLjQyNSAwIC42MTMtLjE5NS44NS0uNDI1TDE3IDIyLjE2M2wtMi44MjctMS43MDUtLjI5IDQuMzM0eiIvPiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTE0LjE3MiAyMC40NThsNi44NTEgNS4wNjJjLjc4Mi40MzEgMS4zNDYuMjA4IDEuNTQxLS43MjZsMi43ODktMTMuMTQyYy4yODUtMS4xNDQtLjQzNy0xLjY2My0xLjE4NC0xLjMyNEw3Ljc5MyAxNi42NDJjLTEuMTE3LjQ0OS0xLjExIDEuMDcyLS4yMDMgMS4zNWw0LjIwMiAxLjMxMiA5LjcyOC02LjEzOGMuNDYtLjI3OC44ODEtLjEyOS41MzUuMTc4Ii8+ICAgIDwvZz48L3N2Zz4=" alt="Telegram Ru" class="social-box__img">
+                              </div>
+                              <div class="social-box__intro" style="margin:0">
+                                 <h3 class="social-box__title">Telegram Ru</h3>
+                                 <span class="social-box__users">256 users</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="grid-col-xl-4 grid-col-lg-6 grid-col-sm-6 _style-margin-b-md _style-display-f">
+                     <div class="social-box">
+                        <a href="https://twitter.com/emercoin_press" class="social-box__link" target="_blank" onclick="dataLayer.push({'event': 'other_community'});">
+                           <div class="social-box__content">
+                              <div class="social-box__image-wrapper _flag _flag-en">
+                                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNHB4IiBoZWlnaHQ9IjM0cHgiIHZpZXdCb3g9IjAgMCAzNCAzNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT41MUIwRkUxMi1GMjUwLTQ0RDktQkI4Ri1FNzZFOUU3RTEzN0U8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ikljb25zL3NvY2lhbC90d2l0dGVyIj4gICAgICAgICAgICA8ZyBpZD0iVHdpdHRlciI+ICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDE3IEMwLDcuNjExMTU4NzkgNy42MTExNTg3OSwwIDE3LDAgQzI2LjM4ODg0MTIsMCAzNCw3LjYxMTE1ODc5IDM0LDE3IEMzNCwyNi4zODg4NDEyIDI2LjM4ODg0MTIsMzQgMTcsMzQgQzcuNjExMTU4NzksMzQgMCwyNi4zODg4NDEyIDAsMTcgWiIgaWQ9ImJhY2siIGZpbGw9IiM1NUFDRUUiPjwvcGF0aD4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQ5MDg1MTksMTMuODE3ODEyOSBMMTYuNTI2NTI1MywxNC40MDYwNTEzIEwxNS45MzE5Njc5LDE0LjMzNDAyMjEgQzEzLjc2Nzc3ODgsMTQuMDU3OTEwMiAxMS44NzcwODYyLDEzLjEyMTUzMDggMTAuMjcxNzgxMSwxMS41NDg4OTM2IEw5LjQ4Njk2NTMzLDEwLjc2ODU3NzQgTDkuMjg0ODE1ODEsMTEuMzQ0ODEwOSBDOC44NTY3MzQ0NiwxMi42MjkzMzE0IDkuMTMwMjMwODgsMTMuOTg1ODgxIDEwLjAyMjA2NywxNC44OTgyNTA3IEMxMC40OTc3MTMsMTUuNDAyNDU1IDEwLjM5MDY5MjYsMTUuNDc0NDg0MiA5LjU3MDIwMzM3LDE1LjE3NDM2MjYgQzkuMjg0ODE1ODEsMTUuMDc4MzIzNyA5LjAzNTEwMTY5LDE1LjAwNjI5NDUgOS4wMTEzMTkzOSwxNS4wNDIzMDkxIEM4LjkyODA4MTM1LDE1LjEyNjM0MzIgOS4yMTM0Njg5MiwxNi4yMTg3ODU4IDkuNDM5NDAwNzQsMTYuNjUwOTYwOSBDOS43NDg1NzA2LDE3LjI1MTIwNDEgMTAuMzc4ODAxNSwxNy44Mzk0NDI1IDExLjA2ODQ4ODEsMTguMTg3NTgzNiBMMTEuNjUxMTU0NCwxOC40NjM2OTU0IEwxMC45NjE0Njc4LDE4LjQ3NTcwMDMgQzEwLjI5NTU2MzQsMTguNDc1NzAwMyAxMC4yNzE3ODExLDE4LjQ4NzcwNTIgMTAuMzQzMTI4LDE4LjczOTgwNzMgQzEwLjU4MDk1MSwxOS41MjAxMjM1IDExLjUyMDM1MTcsMjAuMzQ4NDU5MSAxMi41NjY3NzI4LDIwLjcwODYwNTEgTDEzLjMwNDAyNCwyMC45NjA3MDcyIEwxMi42NjE5MDIsMjEuMzQ0ODYyOSBDMTEuNzEwNjEwMSwyMS44OTcwODY2IDEwLjU5Mjg0MjIsMjIuMjA5MjEzMSA5LjQ3NTA3NDE5LDIyLjIzMzIyMjggQzguOTM5OTcyNSwyMi4yNDUyMjc3IDguNSwyMi4yOTMyNDcyIDguNSwyMi4zMjkyNjE4IEM4LjUsMjIuNDQ5MzEwNCA5Ljk1MDcyMDEzLDIzLjEyMTU4MjggMTAuNzk0OTkxNywyMy4zODU2ODk4IEMxMy4zMjc4MDYzLDI0LjE2NjAwNiAxNi4zMzYyNjY5LDIzLjgyOTg2OTggMTguNTk1NTg1MiwyMi40OTczMjk5IEMyMC4yMDA4OTAyLDIxLjU0ODk0NTYgMjEuODA2MTk1MywxOS42NjQxODE5IDIyLjU1NTMzNzYsMTcuODM5NDQyNSBDMjIuOTU5NjM2NywxNi44NjcwNDg1IDIzLjM2MzkzNTcsMTUuMDkwMzI4NiAyMy4zNjM5MzU3LDE0LjIzNzk4MzIgQzIzLjM2MzkzNTcsMTMuNjg1NzU5NCAyMy4zOTk2MDkyLDEzLjYxMzczMDIgMjQuMDY1NTEzNSwxMi45NTM0NjI3IEMyNC40NTc5MjE0LDEyLjU2OTMwNzEgMjQuODI2NTQ3LDEyLjE0OTEzNjggMjQuODk3ODkzOSwxMi4wMjkwODgyIEMyNS4wMTY4MDU0LDExLjgwMDk5NTcgMjUuMDA0OTE0MywxMS44MDA5OTU3IDI0LjM5ODQ2NTcsMTIuMDA1MDc4NCBDMjMuMzg3NzE4LDEyLjM2NTIyNDQgMjMuMjQ1MDI0MywxMi4zMTcyMDQ5IDIzLjc0NDQ1MjUsMTEuNzc2OTg2IEMyNC4xMTMwNzgxLDExLjM5MjgzMDMgMjQuNTUzMDUwNiwxMC42OTY1NDgyIDI0LjU1MzA1MDYsMTAuNDkyNDY1NSBDMjQuNTUzMDUwNiwxMC40NTY0NTA5IDI0LjM3NDY4MzQsMTAuNTE2NDc1MiAyNC4xNzI1MzM5LDEwLjYyNDUxOSBDMjMuOTU4NDkzMiwxMC43NDQ1Njc3IDIzLjQ4Mjg0NzIsMTAuOTI0NjQwNiAyMy4xMjYxMTI4LDExLjAzMjY4NDQgTDIyLjQ4Mzk5MDgsMTEuMjM2NzY3MSBMMjEuOTAxMzI0NSwxMC44NDA2MDY2IEMyMS41ODAyNjM1LDEwLjYyNDUxOSAyMS4xMjgzOTk4LDEwLjM4NDQyMTcgMjAuODkwNTc2OCwxMC4zMTIzOTI2IEMyMC4yODQxMjgzLDEwLjE0NDMyNDUgMTkuMzU2NjE4NywxMC4xNjgzMzQyIDE4LjgwOTYyNTgsMTAuMzYwNDEyIEMxNy4zMjMyMzIzLDEwLjkwMDYzMDkgMTYuMzgzODMxNSwxMi4yOTMxOTUyIDE2LjQ5MDg1MTksMTMuODE3ODEyOSBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=" alt="Twitter" class="social-box__img">
+                              </div>
+                              <div class="social-box__intro" style="margin:0">
+                                 <h3 class="social-box__title">Twitter</h3>
+                                 <span class="social-box__users">3535 users</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="grid-col-xl-4 grid-col-lg-6 grid-col-sm-6 _style-margin-b-md _style-display-f">
+                     <div class="social-box">
+                        <a href="https://www.reddit.com/r/EmerCoin/" class="social-box__link" target="_blank" onclick="dataLayer.push({'event': 'other_community'});">
+                           <div class="social-box__content">
+                              <div class="social-box__image-wrapper _flag _flag-en">
+                                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNHB4IiBoZWlnaHQ9IjM0cHgiIHZpZXdCb3g9IjAgMCAzNCAzNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT43RkFDQjVGOC01NjE3LTQyMUItQjZEOS1GQTQ2RDNGRkY2NzA8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ikljb25zL3NvY2lhbC9SZWRkaXQiPiAgICAgICAgICAgIDxnIGlkPSJSZWRkaXQiPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMC41LDE3IEMwLjUsMjYuMTEyNjk4OCA3Ljg4NzMwMTE2LDMzLjUgMTcsMzMuNSBDMjYuMTEyNjk4OCwzMy41IDMzLjUsMjYuMTEyNjk4OCAzMy41LDE3IEMzMy41LDcuODg3MzAxMTYgMjYuMTEyNjk4OCwwLjUgMTcsMC41IEM3Ljg4NzMwMTE2LDAuNSAwLjUsNy44ODczMDExNiAwLjUsMTcgWiIgaWQ9ImJhY2siIHN0cm9rZT0iI0ZGNDUwMCIgZmlsbD0iI0ZGNDUwMCI+PC9wYXRoPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTYuNjcwMzY0MSwxMi43NTg3NTA3IEwxOC43MDUyOTU1LDYuOCBMMjMuNjU5MzE3OSw4LjAyMDc5NzAxIEMyNC4wNTYxMTYsNy4yOTQwMTkyMyAyNC44Mjc1OTY5LDYuOCAyNS43MTI1LDYuOCBDMjcuMDAxMTIxOCw2LjggMjguMDUsNy44NDgzOTg3MiAyOC4wNSw5LjEzNzUgQzI4LjA1LDEwLjQyNjYwMTMgMjcuMDAxMTIxOCwxMS40NzUgMjUuNzEyNSwxMS40NzUgQzI0LjQyMzM5ODcsMTEuNDc1IDIzLjM3NSwxMC40MjY2MDEzIDIzLjM3NSw5LjEzNzUgQzIzLjM3NSw5LjA3MDYzNDk0IDIzLjM3NzgyMDcsOS4wMDQ0MTc0NyAyMy4zODMzNDkzLDguOTM4OTYwMzEgTDE5LjMwNDE5MTcsNy45MzM4NDQ3NyBMMTcuNjU4MTQzMiwxMi43NTU5MDg2IEMyMC40MjAyNjM5LDEyLjgyOTI3MzIgMjIuOTMwMDYyNiwxMy41ODE1NTc4IDI0LjgzNTIxOSwxNC43NzMzMTU3IEMyNS4zNzM2NjU2LDE0LjI4OTAxMTIgMjYuMDQ5MDg2MywxNC4wMjUgMjYuNzYyNTI4MiwxNC4wMjUgQzI4LjQwOTgwNDcsMTQuMDI1IDI5Ljc1LDE1LjQ0ODg5NTMgMjkuNzUsMTcuMTk4NzIzMiBDMjkuNzUsMTguMjU0MzY1MyAyOS4yNTUyOTMsMTkuMjM1MDk0NCAyOC40NDMyODk4LDE5LjgyMzAwNjggQzI4LjQ2NDMwMzUsMjAuMDEzNTAyMiAyOC40NzUsMjAuMjA1OTE5MiAyOC40NzUsMjAuNCBDMjguNDc1LDI0LjYxNzkwNCAyMy40MjI5MjM1LDI4LjA1IDE3LjIxMjUsMjguMDUgQzExLjAwMjA3NjUsMjguMDUgNS45NSwyNC42MTc5MDQgNS45NSwyMC40IEM1Ljk1LDIwLjIwNTg0NjMgNS45NjA3MDQ1MywyMC4wMTMzNTc2IDUuOTgxNzMzODQsMTkuODIyNzkyMSBDNS4xNjk1NjIzMSwxOS4yMzQ4NTU3IDQuNjc1LDE4LjI1NDIzNjggNC42NzUsMTcuMTk4NzIzMiBDNC42NzUsMTUuNDQ4ODk1MyA2LjAxNTEyOTU1LDE0LjAyNSA3LjY2MjMyNTE5LDE0LjAyNSBDOC4zNzU3NDMzNSwxNC4wMjUgOS4wNTExNDEsMTQuMjg5MDE5NiA5LjU4OTc0NDI3LDE0Ljc3MzMzODcgQzExLjQ3MjY5NjQsMTMuNTk1NDYwMiAxMy45NDYyODU5LDEyLjg0Njg3MjYgMTYuNjcwMzY0MSwxMi43NTg3NTA3IFogTTExLjksMTkuMzM3MjM5MyBDMTEuOSwyMC4zOTQwMDMxIDEyLjY2MDc4MjQsMjEuMjUgMTMuNjAwNDYzNSwyMS4yNSBDMTQuNTM5MjE3NiwyMS4yNSAxNS4zLDIwLjM5NDAwMzEgMTUuMywxOS4zMzcyMzkzIEMxNS4zLDE4LjI4MTUxODQgMTQuNTM5MjE3NiwxNy40MjUgMTMuNjAwNDYzNSwxNy40MjUgQzEyLjY2MDc4MjQsMTcuNDI1IDExLjksMTguMjgxNTE4NCAxMS45LDE5LjMzNzIzOTMgWiBNMTkuMTI1LDE5LjMzNzIzOTMgQzE5LjEyNSwyMC4zOTQwMDMxIDE5Ljg4NTc4MjQsMjEuMjUgMjAuODI1NDYzNSwyMS4yNSBDMjEuNzY0MjE3NiwyMS4yNSAyMi41MjUsMjAuMzk0MDAzMSAyMi41MjUsMTkuMzM3MjM5MyBDMjIuNTI1LDE4LjI4MTUxODQgMjEuNzY0MjE3NiwxNy40MjUgMjAuODI1NDYzNSwxNy40MjUgQzE5Ljg4NTc4MjQsMTcuNDI1IDE5LjEyNSwxOC4yODE1MTg0IDE5LjEyNSwxOS4zMzcyMzkzIFogTTE3LjM2MzkwODEsMjUuMDc1IEMyMC4yMjk2OTAzLDI1LjA3NSAyMS40OTc4MDM4LDIzLjc3NTE4MDggMjEuNTUwNTYxNiwyMy43MTk1OTU2IEMyMS43MjE4NDM2LDIzLjUzOTAwNDUgMjEuNzE1MDk4MywyMy4yNTQ1MjQ5IDIxLjUzNzc5MzcsMjMuMDgwMDAyIEMyMS4zNTk1MjU1LDIyLjkwNTIzNjQgMjEuMDczODE0NSwyMi45MDkzNjI4IDIwLjkwMDM2NDMsMjMuMDg3NTI2NiBDMjAuODg5NTIzNywyMy4wOTc5NjQgMTkuODE0ODU1NCwyNC4xNjQ3NjI0IDE3LjM2MzkwODEsMjQuMTY0NzYyNCBDMTQuOTU0ODc4MSwyNC4xNjQ3NjI0IDEzLjk5MzE5MzIsMjMuMTM0NjE2MyAxMy45NjcxNzU3LDIzLjEwNjIxNjkgQzEzLjgwNDU2NjIsMjIuOTE3ODU4NCAxMy41MjE3NDYsMjIuODk2OTgzNiAxMy4zMzMxMTksMjMuMDU5MTI3MiBDMTMuMTQzMjg3NCwyMy4yMjIyNDE4IDEzLjEyMTM2NTIsMjMuNTEwMTE5NiAxMy4yODM3MzM5LDIzLjcwMTE0ODEgQzEzLjMzMTE5MTgsMjMuNzU2OTc2IDE0LjQ4MzQzMDksMjUuMDc1IDE3LjM2MzkwODEsMjUuMDc1IFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==" alt="Reddit" class="social-box__img">
+                              </div>
+                              <div class="social-box__intro" style="margin:0">
+                                 <h3 class="social-box__title">Reddit</h3>
+                                 <span class="social-box__users">2188 users</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <a href="{% url 'news' %}" class="article__back-link">К списку новостей</a>
+      </div>
+   </div>
+    <!--
+   <div class="blueBox blueBox-subscribe center blueBox-gray bottomColor">
+      <div class="fix_ok fix_ok-blue">
+         <div class="fix_ok-text white"></div>
+      </div>
+      <div class="wrapper">
+         <div class="whiteTitle">
+            Подписаться
+            <div class="whiteTitle whiteTitle-min">на новости и события</div>
+         </div>
+         <form class="subscribe boxSubscribe" method="post" data-action="https://emercoin.com/ru/json/subscribe">
+            <div class="box_input">
+               <div class="label_input label_input-min">E-mail</div>
+               <div class="relative">
+                  <input class="form_input" type="text" name="email">
+               </div>
+            </div>
+            <button class="button button-blue button-blue-subscribe" type="submit">Подписаться</button>
+            <div class="actions"></div>
+         </form>
+      </div>
+   </div>
+   -->
+</main>
+{% endblock content %}

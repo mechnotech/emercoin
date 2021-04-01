@@ -1,0 +1,133 @@
+{% extends 'blankpage_en.html' %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="intro">
+      <div class="intro__inner animate-it _animated">
+         <div class="intro__title">Companies Partnering With Emercoin</div>
+         <div class="intro__hero">
+            <img src="{% static 'assets/images/partners-intro.png' %}" srcset="{% static 'assets/images/partners-intro@2x.png' %} 2x" alt="" class="intro__image">
+         </div>
+         <div class="intro__body">
+            <p>
+Since 2013 Emercoin has developed a wide range of services and dSDKs based on the blockchain. Blockchain solutions solve the problems of security, decentralized storage of information, protection of authorship and ownership and many more. Emercoin has partnered with many companies that are interested in distributed solutions. International and local companies as well as private and public sectors use dSDKs in projects that require a high level of security and reliability that blockchain provides.            </p>
+         </div>
+      </div>
+   </div>
+
+   <div class="projects">
+      <div class="projects__list animate-it _animated">
+          {% for company in partners %}
+         <div class="projects__item">
+            <a href="{% url 'partner' slug=company.slug %}" class="projects__link">
+               <div class="projects__hero">
+                  <img src="{{ company.logo.url }}" srcset="{{ company.logo_big.url }} 2x" alt="{{ company.title }}" class="clients__image">
+               </div>
+               <span class="projects__more">Learn more</span>
+            </a>
+            <div class="projects__text">{{ company.text_en|safe }}</div>
+         </div>
+          {% endfor %}
+      </div>
+   </div>
+
+
+{#   <div class="feedback _open animate-it   _filled   _bordered  ">#}
+{#      <div class="feedback__body">#}
+{#         <form data-action="https://emercoin.com/ru/json/feedback" class="feedback__form form feedback_modern">#}
+{#            <input type="hidden" name="page_uri" value="/ru/partners-and-projects">#}
+{#            <div class="feedback__form-inner">#}
+{#               <div class="feedback__title">#}
+{#                  Напишите нам#}
+{#               </div>#}
+{#               <div class="feedback__columns">#}
+{#                  <div class="feedback__leftside">#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">E-mail</div>#}
+{#                        <input type="text" name="email" class="form__entry entry">#}
+{#                     </div>#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">Полное имя</div>#}
+{#                        <input type="text" name="name" class="form__entry entry">#}
+{#                     </div>#}
+{#                  </div>#}
+{#                  <div class="feedback__rightside">#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">Сообщение</div>#}
+{#                        <textarea class="form__entry entry _textarea" name="message" style="overflow: hidden; overflow-wrap: break-word; height: 123.995px;"></textarea>#}
+{#                     </div>#}
+{#                  </div>#}
+{#               </div>#}
+{#               <div class="feedback__footer">#}
+{#                  <div class="feedback__btn-holder">#}
+{#                     <button type="submit" class="btn _type_default _size_lg _wide">Отправить</button>#}
+{#                  </div>#}
+{#               </div>#}
+{#            </div>#}
+{#         </form>#}
+{#         <div class="feedback__success">#}
+{#            <div class="feedback__success-caption">Спасибо!</div>#}
+{#            <div class="feedback__success-text">Ваша заявка успешно отправлена. Мы сообщим о своем решении в течение 7 дней.</div>#}
+{#         </div>#}
+{#      </div>#}
+{#   </div>#}
+
+
+   <div class="projects projects_static">
+      <h2 class="projects__title h2">Companies and projects using Emercoin technologies</h2>
+      <div class="projects__list">
+          {% for company in implements %}
+         <div class="projects__item">
+            <a href="{% url 'partner' slug=company.slug %}" class="projects__link">
+               <div class="projects__hero">
+                  <img src="{{ company.logo.url }}" srcset="{{ company.logo_big.url }} 2x" alt="{{ company.title }}" class="clients__image">
+               </div>
+               <span class="projects__more">Learn more</span>
+            </a>
+            <div class="projects__text">{{ company.text_en|safe }}</div>
+         </div>
+          {% endfor %}
+      </div>
+   </div>
+
+{#   <div class="feedback _open animate-it   _filled   _bordered  ">#}
+{#      <div class="feedback__body">#}
+{#         <form data-action="https://emercoin.com/ru/json/feedback" class="feedback__form form feedback_modern">#}
+{#            <input type="hidden" name="page_uri" value="/ru/partners-and-projects">#}
+{#            <div class="feedback__form-inner">#}
+{#               <div class="feedback__title">#}
+{#                  Напишите нам#}
+{#               </div>#}
+{#               <div class="feedback__columns">#}
+{#                  <div class="feedback__leftside">#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">E-mail</div>#}
+{#                        <input type="text" name="email" class="form__entry entry">#}
+{#                     </div>#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">Полное имя</div>#}
+{#                        <input type="text" name="name" class="form__entry entry">#}
+{#                     </div>#}
+{#                  </div>#}
+{#                  <div class="feedback__rightside">#}
+{#                     <div class="form__group">#}
+{#                        <div class="form__label _required">Сообщение</div>#}
+{#                        <textarea class="form__entry entry _textarea" name="message" style="overflow: hidden; overflow-wrap: break-word; height: 123.995px;"></textarea>#}
+{#                     </div>#}
+{#                  </div>#}
+{#               </div>#}
+{#               <div class="feedback__footer">#}
+{#                  <div class="feedback__btn-holder">#}
+{#                     <button type="submit" class="btn _type_default _size_lg _wide">Отправить</button>#}
+{#                  </div>#}
+{#               </div>#}
+{#            </div>#}
+{#         </form>#}
+{#         <div class="feedback__success">#}
+{#            <div class="feedback__success-caption">Спасибо!</div>#}
+{#            <div class="feedback__success-text">Ваша заявка успешно отправлена. Мы сообщим о своем решении в течение 7 дней.</div>#}
+{#         </div>#}
+{#      </div>#}
+{#   </div>#}
+</main>
+{% endblock content %}

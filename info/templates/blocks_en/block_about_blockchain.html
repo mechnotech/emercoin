@@ -1,0 +1,34 @@
+  <div class="wrapper">
+            <div class="asideBox">
+                <div class="asideBox-left">
+                    <div class="asideBox-left-title">
+                        Emercoin Blockchain
+                    </div>
+                </div>
+                <div class="asideBox-right">
+                    <p>
+                        Emercoin is a blockchain platform. Since 2013 it has developed a wide range of easy-to-use dSDKs. dSDK (Decentralized Software Development Kit) is a set of software development tools that allows the creation of software, services and solutions. Usually, it includes APIs, technical documentation and parts of code for fast and easy development on a certain platform.
+                    </p>
+                    <p>
+                        dSDKs are already implemented in numerous innovative technical solutions built on the blockchain. Emercoin offers services that have a potential to change the way different industries operate, providing means for data protection, secure storage of information, and creation of distributed services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="owl-carousel owl-carousel-2">
+                {% for block in emer_blocks %}
+                <div class="product">
+                    <div class="product-img product-img-min" style="background-image: url({{ block.image.url }})"></div>
+                    <div class="product-title product-title-big">
+                        {{ block.title_en }}
+                    </div>
+                    <div class="product-text product-text-big">
+                        {{ block.text_en }}
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+
+        </div>
