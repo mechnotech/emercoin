@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'info',
+    'emerdocs',
 ]
 
 MIDDLEWARE = [

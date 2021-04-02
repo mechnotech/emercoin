@@ -13,6 +13,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('info.urls')),
+    path('documentation/', include('emerdocs.urls'))
     #prefix_default_language=False
 )
 
