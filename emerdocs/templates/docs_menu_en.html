@@ -1,0 +1,154 @@
+<div class="docPage-menu">
+            <div class="docPage-menu-title">
+               Documentation
+               <div class="closeDocs"></div>
+            </div>
+            <ul class="docs">
+               <li class="docs__item ">
+                  <a href="{% url 'about-emercoin' %}" class="docs__link">About Emercoin</a>
+               </li>
+               <li class="docs__item {% if intro %}_active{% endif %}">
+                  <span class="docs__toggle {% if intro %}_active{% endif %}">Introduction</span>
+                  <ul class="docs__submenu {% if intro %}_active{% endif %}">
+                     <li class="docs__submenu-item {% if emc_currency %}_active{% endif %}">
+                        <a href="{% url 'the-emc-currency' %}" class="docs__submenu-link">The EMC Currency</a>
+                     </li>
+                     <li class="docs__submenu-item {% if specs %}_active{% endif %}">
+                        <a href="https://emercoin.com/en/documentation/introduction/specifications" class="docs__submenu-link">Emercoin Specifications</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/introduction/technology-tree" class="docs__submenu-link">Emercoin Tech Tree</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/introduction/security-principles" class="docs__submenu-link">Emercoin Security Principles</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="docs__item ">
+                  <span class="docs__toggle ">Install Software</span>
+                  <ul class="docs__submenu ">
+                     <li class="docs__submenu-item ">
+                        <span class="docs__submenu-toggle">Core Wallets</span>
+                        <ul class="docs__submenu">
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/install-software/core-wallets/gui-wallet" class="docs__submenu-link">GUI wallet</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/install-software/core-wallets/cli-daemon" class="docs__submenu-link">CLI daemon</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/install-software/core-wallets/emerweb-wallet" class="docs__submenu-link">EmerWEB wallet</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/install-software/other-wallets" class="docs__submenu-link">Other Wallets</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <span class="docs__submenu-toggle">Emercert</span>
+                        <ul class="docs__submenu">
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/install-software/emercert/trusted-diploma" class="docs__submenu-link">Trusted Diploma</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li class="docs__item ">
+                  <span class="docs__toggle ">Running Emercoin</span>
+                  <ul class="docs__submenu ">
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/running-emercoin/linux-quickstart" class="docs__submenu-link">Linux Quickstart</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/running-emercoin/command-line" class="docs__submenu-link">Command Line</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/running-emercoin/emercoin-conf" class="docs__submenu-link">emercoin.conf</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/running-emercoin/ports" class="docs__submenu-link">Ports</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/running-emercoin/testnet" class="docs__submenu-link">Testnet</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="docs__item ">
+                  <a href="https://emercoin.com/en/documentation/emercoin-api" class="docs__link">Emercoin API</a>
+               </li>
+               <li class="docs__item ">
+                  <span class="docs__toggle ">Blockchain Services</span>
+                  <ul class="docs__submenu ">
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/blockchain-services/introduction-to-emercoin-services" class="docs__submenu-link">Introduction to Emercoin Services</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/blockchain-services/emernvs" class="docs__submenu-link">EmerNVS</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/blockchain-services/emerssh" class="docs__submenu-link">EmerSSH</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <span class="docs__submenu-toggle">EmerSSL</span>
+                        <ul class="docs__submenu">
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-introduction" class="docs__submenu-link">EmerSSL Introduction</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-guide" class="docs__submenu-link">EmerSSL Guide</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-infocard" class="docs__submenu-link">EmerSSL InfoCard</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <span class="docs__submenu-toggle">EmerDNS</span>
+                        <ul class="docs__submenu">
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerdns/emerdns-introduction" class="docs__submenu-link">EmerDNS Introduction</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <span class="docs__submenu-toggle">EmerDPO</span>
+                        <ul class="docs__submenu">
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerdpo/emerdpo-introduction" class="docs__submenu-link">EmerDPO Introduction</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme" class="docs__submenu-link">The EmerDPO Antifake Programme</a>
+                           </li>
+                           <li class="docs__submenu-item ">
+                              <a href="https://emercoin.com/en/documentation/blockchain-services/emerdpo/emerdpo-sn-publisher" class="docs__submenu-link">EmerDPO SN-Publisher</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/blockchain-services/emermagnet" class="docs__submenu-link">EmerMAGNET</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/blockchain-services/enumer" class="docs__submenu-link">ENUMER</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="docs__item ">
+                  <span class="docs__toggle ">Block Generation</span>
+                  <ul class="docs__submenu ">
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/block-generation/proof-of-stake-minting" class="docs__submenu-link">Proof-of-Stake Minting</a>
+                     </li>
+                     <li class="docs__submenu-item ">
+                        <a href="https://emercoin.com/en/documentation/block-generation/proof-of-work-mining" class="docs__submenu-link">Proof-of-Work Mining</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="docs__item ">
+                  <a href="https://emercoin.com/en/documentation/emercoin-press-kit" class="docs__link">Emercoin Press Kit</a>
+               </li>
+               <li class="docs__item ">
+                  <a href="https://emercoin.com/en/documentation/links-resources" class="docs__link">Links &amp; Resources</a>
+               </li>
+            </ul>
+         </div>
