@@ -1,6 +1,7 @@
 import hashlib
 
 import requests
+from requests import RequestException
 
 from emercoin.settings import MEDIA_URL, MEDIA_ROOT
 
@@ -13,10 +14,10 @@ def download(link):
                       ' Safari/537.36', }
     try:
         r = requests.get(link, headers=headers, timeout=4.0)
-    except Exception:
+    except IOError:
         return None, None
     dw_hash = hashlib.sha256(r.content).hexdigest()
-    print(dw_hash)
+
     try:
         f = open(f'{MEDIA_ROOT}/{filename}', 'br').read()
         file_hash = hashlib.sha256(f).hexdigest()
@@ -26,8 +27,7 @@ def download(link):
             filename = filename.replace('.', '_1.')
             open(f'{MEDIA_ROOT}/{filename}', 'wb').write(r.content)
             return True, filename
-    except Exception as e:
-        print(e)
+    except FileExistsError:
         open(f'{MEDIA_ROOT}/{filename}', 'wb').write(r.content)
         return True, None
 
@@ -48,7 +48,7 @@ def auto_upload_images(text):
         if link.find('http') == -1:
             continue
         filename = link.split('/')[-1]
-        print(cur, link, filename)
+        # print(cur, link, filename)
         result, new_name = download(link)
         if result:
             text = text.replace(
