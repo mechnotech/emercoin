@@ -9,6 +9,7 @@ from django.core.validators import (
 )
 from django.db import models
 from slugify import slugify
+from .utils import auto_upload_images
 
 
 def desktop_image_validator(image):
@@ -339,6 +340,9 @@ class News(models.Model):
     )
 
     def save(self, *args, **kwargs):
+        self.text = auto_upload_images(self.text)
+        self.text_en = auto_upload_images(self.text_en)
+
         if not self.slug:
             if self.title and not self.title_en:
                 self.slug = slugify(self.title)
