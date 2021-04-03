@@ -1,0 +1,34 @@
+{% extends 'blankpage.html' %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="clickTopBox">
+      <div class="wrapper">
+         <div class="clickTop clickTop-menuDocs js_menuDocs_click">
+            Документация
+         </div>
+         <div class="clickTop clickTop-docs js_search_click">
+            Поиск
+         </div>
+      </div>
+   </div>
+   <div class="boxSearchTop">
+      <div class="wrapper">
+         <form class="searchTop" action="{% url 'about-redirect' %}" method="get">
+            <input class="search" name="s" type="text" required="">
+            <input class="button button-search" type="submit" value="Search">
+         </form>
+      </div>
+   </div>
+   <div class="wrapper">
+      <div class="docPage">
+
+          {% include 'docs_menu.html' %}
+
+            {% block docpage %}
+            {% endblock docpage %}
+
+      </div>
+   </div>
+</main>
+{% endblock content %}

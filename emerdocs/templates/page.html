@@ -1,0 +1,11 @@
+
+{% extends 'blank_docs_page.html' %}
+
+{% load static %}
+{% block docpage %}
+
+         <div class="docPage-center">
+            {{ page_data.text|safe }}
+         </div>
+
+{% endblock docpage %}
