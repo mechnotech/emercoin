@@ -1,7 +1,6 @@
 import hashlib
 
 import requests
-from requests import RequestException
 
 from emercoin.settings import MEDIA_URL, MEDIA_ROOT
 
@@ -27,7 +26,7 @@ def download(link):
             filename = filename.replace('.', '_1.')
             open(f'{MEDIA_ROOT}/{filename}', 'wb').write(r.content)
             return True, filename
-    except FileExistsError:
+    except (FileNotFoundError, FileExistsError):
         open(f'{MEDIA_ROOT}/{filename}', 'wb').write(r.content)
         return True, None
 
