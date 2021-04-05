@@ -1,0 +1,83 @@
+{% extends blank %}
+{% load static %}
+{% block content %}
+
+<main>
+   <div class="privacyPage-top privacyPage-top-marginNo">
+        {% if is_ru %}
+            <h1>{% if sent %}Сообщение отправлено{% else %}Контактная информация{% endif %}</h1>
+        {% else %}
+            <h1>{% if sent %}Message sent{% else %}Emercoin contact information{% endif %}</h1>
+        {% endif %}
+   </div>
+   <div class="contactPage">
+      <div class="contactPage-box">
+         <div class="wrapper">
+            <div class="contactFlex">
+               <div class="fix_ok">
+                  <div class="fix_ok-text"></div>
+               </div>
+               <div class="contactFlex-left">
+                  <div class="contactPage-info">
+                     <img src="{% static 'assets/images/contact.png' %}" srcset="{% static 'assets/images/contact@2x.png' %} 2x" alt="">
+                     {% if is_ru %}
+                         <p> Свяжитесь с нами по любым вопросам, связанным с проектом или услугами. </p>
+                       <p> Мы постараемся связаться с вами как можно скорее </p>
+                      {% else %}
+                      <p>Contact us about anything related to our project or services.</p>
+                     <p>We’ll do our best to get back to you as soon as possible</p>
+                      {% endif %}
+                  </div>
+               </div>
+
+               <div class="contactFlex-right">
+                   {% if not sent %}
+                  <form class="" data-action="{% url 'contacts' %}" method="post">
+                      {% csrf_token %}
+
+                     <input type="hidden" name="page_uri" value="С Сайта Эмера">
+                     <div class="box_input box_input-form">
+                        <div class="label_input black necessarily"> {% if is_ru %}Имя{% else %}Full name{% endif %}</div>
+                        <div class="relative">
+                            {{ form.name }}
+                            {{ form.name.errors }}
+{#                           <input class="form_input" type="text" name="name">#}
+                        </div>
+                     </div>
+                     <div class="box_input box_input-form">
+                        <div class="label_input black necessarily">E-mail</div>
+                        <div class="relative">
+                            {{ form.email }}
+                            {{ form.email.errors }}
+{#                           <input class="form_input" type="email" name="email" required="" id="id_email">#}
+                        </div>
+                     </div>
+                     <div class="box_input box_input-form topper">
+                        <div class="label_input label_input-top black necessarily">{% if is_ru %}Сообщение{% else %}Message{% endif %}</div>
+                        <div class="relative relative-textarea">
+                            {{ form.message }}
+                            {{ form.message.errors }}
+{#                           <textarea class="form_textarea" name="message"></textarea>#}
+                        </div>
+                     </div>
+                     <div class="relative actions">
+                        <div class="box_input box_input-form two">
+                           <button class="button button-blue button-blue-subscribe" type="submit">{% if is_ru %}Отправить{% else %}Send{% endif %}</button>
+                        </div>
+                        <p class="answer"></p>
+                     </div>
+                     <div class="box_input box_input-form two">
+                        <div class="emailForm-box">
+                           <a href="mailto:support@emercoin.com" class="emailForm">{% if is_ru %}отправить на{% else %}e-mail us on{% endif %} <span>support@emercoin.com</span></a>
+                        </div>
+                     </div>
+                  </form>
+                     {% endif %}
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+{% endblock content %}
