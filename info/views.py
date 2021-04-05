@@ -1,5 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import requires_csrf_token
+
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
 )
@@ -185,9 +187,22 @@ def road_map(request):
 
 
 def post(request, slug):
+    """Страница отдельной новости"""
     one_post = get_object_or_404(News, slug=slug)
     context = {'post': one_post}
     if request.LANGUAGE_CODE == 'ru':
+
         return render(request, 'post.html', context)
     else:
+
         return render(request, 'post_en.html', context)
+
+
+@requires_csrf_token
+def page_not_found(request, exception):
+    return render(request, 'misc/404.html', {"path": request.path}, status=404)
+
+
+@requires_csrf_token
+def server_error(request):
+    return render(request, "misc/500.html", status=500)

@@ -1,0 +1,49 @@
+{% load static %}
+{% csrf_token %}
+<html class=" js csstransforms3d csstransitions">
+   <head>
+      <title>500</title>
+      <meta name="Description" content="Emercoin">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+      <script src="{% static 'assets/js/modernizr.custom.js' %}" type="text/javascript"></script>
+   </head>
+   <body class="error">
+      <div class="box_flex">
+         <div class="b_box_error">
+            <div class="logo_error">
+               <a href="{% url 'emercoin' %}">
+               <img src="{% static 'assets/images/logo-white.svg' %}" alt="Emercoin">
+               </a>
+            </div>
+             {% if request.LANGUAGE_CODE == 'ru' %}
+                 <div class="center_error">
+                       <span>500</span><br>
+                       Внутренняя ошибка сервера
+                    </div>
+                    <div class="text_error">
+                       На сервере идут технические работы
+                    </div>
+                    <div class="box_button_error">
+                       <a class="button button-error" href="{% url 'emercoin' %}">
+                       вернуться обратно </a>
+                    </div>
+             {% else %}
+                    <div class="center_error">
+                       <span>500</span><br>
+                       Internal Server Error
+                    </div>
+                    <div class="text_error">
+                       Z-z-z-z-z-z....
+                    </div>
+                    <div class="box_button_error">
+                       <a class="button button-error" href="{% url 'emercoin' %}">
+                       return to the homepage </a>
+                    </div>
+             {% endif %}
+         </div>
+      </div>
+      <script type="text/javascript">(function(){window['__CF$cv$params']={r:'63b1309cacd1909f',m:'9fd1f63d65cf36a985336a3eb6ce89ccd983c11a-1617609072-1800-AcewLue2wGiaCM2mUds/axa6eZDOrToR9pI1AzK8mSfDrkGlU7hyJKwV0lAmQGyoQkpuO5ZWNsSovOCQfk/F2jK8CH6mE+HPJ4hCKVCoIv2Vd1h1lxIGcXNjfbLdyYrBC5dv6Vq26Fin7PMqL31laFW2PhBF5uD04Dj35W3FLXEC3Z52OpiwUCYHewLMrgljOw==',s:[0xde0ce21efa,0x66d926ed34],}})();</script>
+   </body>
+</html>
