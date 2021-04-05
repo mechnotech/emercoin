@@ -2,9 +2,11 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import requires_csrf_token
 
+from .forms import ContactForm
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
 )
+from .utils import get_blank_page, is_lang_rus, send_support
 
 DEFAULT_PAGE_SIZE = 9
 
@@ -206,3 +208,26 @@ def page_not_found(request, exception):
 @requires_csrf_token
 def server_error(request):
     return render(request, "misc/500.html", status=500)
+
+
+@requires_csrf_token
+def contacts(request):
+    blank_page = get_blank_page(request)
+    form = ContactForm()
+    context = {
+        'form': form,
+        'sent': False,
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request),
+    }
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            send_support(form)
+            context['sent'] = True
+            return render(request, 'contacts.html', context)
+        context['form'] = form
+
+    if request.GET.get('sent'):
+        context['sent'] = True
+    return render(request, 'contacts.html', context)

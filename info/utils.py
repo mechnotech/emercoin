@@ -1,8 +1,9 @@
 import hashlib
 
 import requests
+from django.core.mail import send_mail
 
-from emercoin.settings import MEDIA_URL, MEDIA_ROOT
+from emercoin.settings import MEDIA_URL, MEDIA_ROOT, EMAIL_HOST_USER, SUPPORT
 
 
 def download(link):
@@ -54,3 +55,29 @@ def auto_upload_images(text):
                 link,
                 f'{MEDIA_URL}{new_name if new_name else filename}', 1)
     return text
+
+
+def get_blank_page(request):
+    if request.LANGUAGE_CODE == 'ru':
+        return 'blankpage.html'
+    else:
+        return 'blankpage_en.html'
+
+
+def is_lang_rus(request):
+    if request.LANGUAGE_CODE == 'ru':
+        return True
+    return False
+
+
+def send_support(form):
+    name = str(form.cleaned_data.get('name'))
+    email = str(form.cleaned_data.get('email'))
+    message = str(form.cleaned_data.get('message'))
+    send_mail(
+        subject='С сайта emercoin',
+        message=f'Пользователь {name}({email}) написал:\n "{message}"',
+        from_email=EMAIL_HOST_USER,
+        recipient_list=(SUPPORT, ),
+        fail_silently=False,
+    )
