@@ -111,10 +111,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-gettext = lambda s: s
+
 LANGUAGES = (
-    ('ru', gettext('Russian')),
-    ('en', gettext('English')),
+    ('ru', 'Russian'),
+    ('en', 'English'),
 )
 
 CKEDITOR_CONFIGS = {
