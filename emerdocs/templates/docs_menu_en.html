@@ -1,0 +1,39 @@
+<div class="docPage-menu">
+            <div class="docPage-menu-title">
+               {% if is_ru %}Документация{% else %}Documentation{% endif %}
+               <div class="closeDocs"></div>
+            </div>
+            <ul class="docs">
+                {% for item in menu %}
+                    {% if item.toggle %}
+                        <li class="docs__item {% if item.active %}_active{% endif %}">
+                        <span class="docs__toggle {% if item.active %}_active{% endif %}">{% if is_ru %}{{ item.name }}{% else %}{{ item.name_en }}{% endif %}</span>
+                             <ul class="docs__submenu {% if item.active %}_active{% endif %}">
+                                {% for subitem in item.toggle %}
+                                    {% if subitem.toggle %}
+                                        <li class="docs__submenu-item {% if subitem.active %}_active{% endif %}">
+                                        <span class="docs__toggle {% if subitem.active %}_active{% endif %}">{% if is_ru %}{{ subitem.name }}{% else %}{{ subitem.name_en }}{% endif %}</span>
+                                         <ul class="docs__submenu {% if subitem.active %}_active{% endif %} ">
+                                         {% for sub_submenu in subitem.toggle %}
+                                               <li class="docs__submenu-item {% if sub_submenu.active %}_active{% endif %}">
+                                                  <a href="{% with sub_submenu.url as link %}{% url link %}{% endwith %}" class="docs__submenu-link">{% if is_ru %}{{ sub_submenu.name }}{% else %}{{ sub_submenu.name_en }}{% endif %}</a>
+                                               </li>
+                                         {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                         <li class="docs__submenu-item {% if subitem.active %}_active{% endif %}">
+                                            <a href="{% with subitem.url as link %}{% url link %}{% endwith %}" class="docs__submenu-link">{% if is_ru %}{{ subitem.name }}{% else %}{{ subitem.name_en }}{% endif %}</a>
+                                         </li>
+                                    {% endif %}
+                             {% endfor %}
+                             </ul>
+                        </li>
+                    {% else %}
+                   <li class="docs__item {% if item.active %}_active{% endif %}">
+                      <a href="{% with item.url as link %}{% url link %}{% endwith %}" class="docs__link">{% if is_ru %}{{ item.name }}{% else %}{{ item.name_en }}{% endif %}</a>
+                   </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+         </div>

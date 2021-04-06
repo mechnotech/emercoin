@@ -13,7 +13,8 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('info.urls')),
-    #prefix_default_language=False
+    path('documentation/', include('emerdocs.urls'))
+    # prefix_default_language=False
 )
 
 if settings.DEBUG:
@@ -21,3 +22,6 @@ if settings.DEBUG:
                           document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
+
+handler404 = "info.views.page_not_found"
+handler500 = "info.views.server_error"
