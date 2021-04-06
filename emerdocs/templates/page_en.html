@@ -1,11 +1,15 @@
 
-{% extends 'blank_docs_page_en.html' %}
+{% extends blank %}
 
 {% load static %}
 {% block docpage %}
 
          <div class="docPage-center">
+         {% if is_ru %}
+             {{ page_data.text|safe }}
+             {% else %}
             {{ page_data.text_en|safe }}
+         {% endif %}
          </div>
 
 {% endblock docpage %}

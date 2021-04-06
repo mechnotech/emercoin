@@ -1,6 +1,7 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
+from emercoin.settings import BASE_DIR
 from info.utils import auto_upload_images
 
 
@@ -18,13 +19,17 @@ class DocPage(models.Model):
         'Текст документа',
         max_length=25000,
         blank=True,
-        help_text='Текст (не более 25 тыс символов)'
+        help_text='Текст (не более 25 тыс символов)',
+        default=open(f'{BASE_DIR}/templates/help_us.html', 'r').read()
     )
     text_en = RichTextUploadingField(
         'Document text',
         max_length=25000,
         blank=True,
-        help_text='Text (no more 25K letters)'
+        help_text='Text (no more 25K letters)',
+        default=open(
+            f'{BASE_DIR}/templates/help_us_en.html',
+            'r').read()
     )
 
     def save(self, *args, **kwargs):
