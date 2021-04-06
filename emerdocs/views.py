@@ -45,7 +45,6 @@ def render_docs(request):
     blank_page = get_doc_blank_page(request)
     menu = activate(url)
     page = get_object_or_404(DocPage, url=url)
-    #page = get_object_or_404(DocPage, pk=1)
     context = {
         'menu': menu,
         'page_data': page,

@@ -55,4 +55,3 @@ class Command(BaseCommand):
 
         result = News.objects.count() - current
         print(f'В базу добавлено {result} рандомных постов')
-
