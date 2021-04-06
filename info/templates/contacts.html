@@ -60,6 +60,18 @@
 {#                           <textarea class="form_textarea" name="message"></textarea>#}
                         </div>
                      </div>
+                     <script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="box_input box_input-form topper">
+                        <div class="label_input label_input-top black necessarily">{% if is_ru %}Уверен{% else %}I'm sure{% endif %}</div>
+                     <div class="relative relative-textarea">
+                      <div class="form-group g-recaptcha" data-sitekey="{{ captcha_id }}"></div>
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                     </div>
+                    </div>
                      <div class="relative actions">
                         <div class="box_input box_input-form two">
                            <button class="button button-blue button-blue-subscribe" type="submit">{% if is_ru %}Отправить{% else %}Send{% endif %}</button>
