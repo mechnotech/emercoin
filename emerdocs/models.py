@@ -5,6 +5,12 @@ from emercoin.settings import BASE_DIR
 from info.utils import auto_upload_images
 
 
+with open(f'{BASE_DIR}/templates/help_us.html', 'r') as f:
+    HELP_US = f.read()
+with open(f'{BASE_DIR}/templates/help_us_en.html', 'r') as f:
+    HELP_US_EN = f.read()
+
+
 class DocPage(models.Model):
     url = models.SlugField(
         'Slug - URL',
@@ -20,16 +26,14 @@ class DocPage(models.Model):
         max_length=25000,
         blank=True,
         help_text='Текст (не более 25 тыс символов)',
-        default=open(f'{BASE_DIR}/templates/help_us.html', 'r').read()
+        default=HELP_US,
     )
     text_en = RichTextUploadingField(
         'Document text',
         max_length=25000,
         blank=True,
         help_text='Text (no more 25K letters)',
-        default=open(
-            f'{BASE_DIR}/templates/help_us_en.html',
-            'r').read()
+        default=HELP_US_EN,
     )
 
     def save(self, *args, **kwargs):

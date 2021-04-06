@@ -9,7 +9,15 @@ from django.core.validators import (
 )
 from django.db import models
 from slugify import slugify
+
+from emercoin.settings import BASE_DIR
 from .utils import auto_upload_images
+
+
+with open(f'{BASE_DIR}/templates/help_us.html', 'r') as f:
+    HELP_US = f.read()
+with open(f'{BASE_DIR}/templates/help_us_en.html', 'r') as f:
+    HELP_US_EN = f.read()
 
 
 def desktop_image_validator(image):
@@ -329,14 +337,16 @@ class News(models.Model):
         'Текст новости',
         max_length=10000,
         blank=True,
-        help_text='Текст (не более 10 тыс символов)'
+        help_text='Текст (не более 10 тыс символов)',
+        default=HELP_US
+
     )
     text_en = RichTextUploadingField(
         'News text',
         max_length=10000,
         blank=True,
-        null=True,
         help_text='Post (no more than 10K letters)',
+        default=HELP_US_EN
     )
 
     def save(self, *args, **kwargs):
