@@ -2,6 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import requires_csrf_token
 
+from emercoin.settings import GOOGLE_RECAPTCHA_ID
 from .forms import ContactForm
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
@@ -219,13 +220,15 @@ def contacts(request):
         'sent': False,
         'blank': blank_page,
         'is_ru': is_lang_rus(request),
+        'captcha_id': GOOGLE_RECAPTCHA_ID
     }
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        if form.is_valid():
-            send_support(form)
-            context['sent'] = True
-            return render(request, 'contacts.html', context)
+        if request.recaptcha_is_valid:
+            if form.is_valid():
+                send_support(form)
+                context['sent'] = True
+                return render(request, 'contacts.html', context)
         context['form'] = form
 
     if request.GET.get('sent'):

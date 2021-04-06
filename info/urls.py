@@ -1,5 +1,5 @@
 from django.urls import path
-
+from .utils import check_recaptcha
 from . import views
 
 urlpatterns = [
@@ -18,7 +18,7 @@ urlpatterns = [
     path('news/<slug:slug>', views.post, name='post'),
     path('news/', views.news, name='news'),
     path('road-map/', views.road_map, name='road-map'),
-    path('contacts/', views.contacts, name='contacts'),
+    path('contacts/', check_recaptcha(views.contacts), name='contacts'),
     path('rate/', views.rate, name='rate')
 
 
