@@ -19,6 +19,7 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('road-map/', views.road_map, name='road-map'),
     path('contacts/', views.contacts, name='contacts'),
+    path('rate/', views.rate, name='rate')
 
 
 

@@ -231,3 +231,12 @@ def contacts(request):
     if request.GET.get('sent'):
         context['sent'] = True
     return render(request, 'contacts.html', context)
+
+
+def rate(request):
+    blank_page = get_blank_page(request)
+    context = {
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request),
+    }
+    return render(request, 'rate.html', context)

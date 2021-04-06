@@ -1,0 +1,24 @@
+{% extends blank %}
+{% load static %}
+{% block content %}
+<main>
+   <div class="privacyPage-top">
+      <h1>{% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}</h1>
+   </div>
+<div class="blueBox-white">
+
+
+   <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="558" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+
+</div>
+
+   <div class="blueBox blueBox-still center blueBox-gray">
+      <div class="wrapper">
+         <div class="whiteTitle">
+            {% if is_ru %}У вас ещё нет Emercoin?{% else %}Still don't have Emercoins?{% endif %}
+         </div>
+         <a class="button button-blue" target="_blank" href="{%  url 'for-coinholders' %}#download">{% if is_ru %}Скачать{% else %}Download Wallet{% endif %}</a>
+      </div>
+   </div>
+</main>
+{% endblock content %}
