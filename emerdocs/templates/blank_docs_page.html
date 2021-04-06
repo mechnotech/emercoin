@@ -16,14 +16,14 @@
       <div class="wrapper">
          <form class="searchTop" action="{% url 'about-redirect' %}" method="get">
             <input class="search" name="s" type="text" required="">
-            <input class="button button-search" type="submit" value="Search">
+            <input class="button button-search" type="submit" value="Поиск">
          </form>
       </div>
    </div>
    <div class="wrapper">
       <div class="docPage">
 
-          {% include 'docs_menu.html' %}
+          {% include 'docs_menu_en.html' %}
 
             {% block docpage %}
             {% endblock docpage %}

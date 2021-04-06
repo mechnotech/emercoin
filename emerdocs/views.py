@@ -1,39 +1,59 @@
+from copy import deepcopy
+
 from django.shortcuts import render, redirect, get_object_or_404
 
 from emercoin.settings import MENU
 from .models import DocPage
 
 
+def get_doc_blank_page(request):
+    if request.LANGUAGE_CODE == 'ru':
+        return 'blank_docs_page.html'
+    else:
+        return 'blank_docs_page_en.html'
+
+
+def is_lang_rus(request):
+    if request.LANGUAGE_CODE == 'ru':
+        return True
+    return False
+
+
 def recursive(menu, url, flag=False):
+
     for item in menu:
+
         if item.get('url') == url:
             item['active'] = True
             return menu, True
         if item.get('toggle'):
             _, flag = recursive(item['toggle'], url)
             if flag:
-                item['active'] = True
+                item['active'] = flag
+                return menu, flag
+
     return menu, flag
 
 
 def activate(url):
-    menu = MENU
+    menu = deepcopy(MENU)
     return recursive(menu, url)[0]
 
 
 def render_docs(request):
     url = request.resolver_match.url_name
+    blank_page = get_doc_blank_page(request)
     menu = activate(url)
-    # page = get_object_or_404(DocPage, url=url)
-    page = get_object_or_404(DocPage, pk=1)
+    page = get_object_or_404(DocPage, url=url)
+    #page = get_object_or_404(DocPage, pk=1)
     context = {
         'menu': menu,
         'page_data': page,
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request)
     }
-    if request.LANGUAGE_CODE == 'ru':
-        return render(request, 'page.html', context)
-    else:
-        return render(request, 'page_en.html', context)
+
+    return render(request, 'page_en.html', context)
 
 
 def about_emercoin(request):
