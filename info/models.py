@@ -337,6 +337,7 @@ class News(models.Model):
         'Текст новости',
         max_length=10000,
         blank=True,
+        null=True,
         help_text='Текст (не более 10 тыс символов)',
         default=HELP_US
 
@@ -345,6 +346,7 @@ class News(models.Model):
         'News text',
         max_length=10000,
         blank=True,
+        null=True,
         help_text='Post (no more than 10K letters)',
         default=HELP_US_EN
     )
