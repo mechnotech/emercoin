@@ -85,7 +85,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           envs: MY_ENV
           script: |
-            cd foodgram
+            cd emercoin
             mv ./nginx/docker-compose.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
             sudo docker-compose pull
