@@ -131,7 +131,7 @@ dmypy.json
 
 # Static
 /static
-/media
+
 
 sent_emails
 /info/stale/
