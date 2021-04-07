@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="152" height="143" viewBox="0 0 152 143">
+    <defs>
+        <circle id="a" cx="68" cy="68" r="68"/>
+        <linearGradient id="b" x1="1.507%" x2="98.618%" y1="98.493%" y2="1.382%">
+            <stop offset="0%" stop-color="#B299D1"/>
+            <stop offset="100%" stop-color="#D5B1E4"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(16 7)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <use fill="#F6F2FB" xlink:href="#a"/>
+            <path fill="#F6F2FB" stroke="url(#b)" stroke-width="2" d="M105.867 129.825L86.627 97H49.101l-8.334 13.696M95.418 18.742L87 32.825 106.102 65h37.524" mask="url(#c)"/>
+        </g>
+        <path stroke="url(#b)" stroke-width="2" d="M46 5.825L65.102 38h37.524" transform="translate(1 1)"/>
+        <path stroke="url(#b)" stroke-width="2" d="M60.658 32L37.997 70.941l22.66 38.17h44.517L128 70.941 105.174 32z" transform="translate(1 1)"/>
+        <path fill="url(#b)" stroke="#7B6696" stroke-width="3" d="M64.102 38L45 70.825 64.102 103h37.524l19.241-32.175L101.627 38z" transform="translate(1 1)"/>
+        <text fill="#F6F2FB" font-family="Helvetica" font-size="42" transform="translate(1 1)">
+            <tspan x="68.321" y="87">6</tspan>
+        </text>
+        <g transform="translate(1 1)">
+            <circle cx="119.5" cy="134.5" r="3.5" stroke="#7B6696" stroke-width="2"/>
+            <circle cx="111.5" cy="22.5" r="3.5" stroke="#7B6696" stroke-width="2"/>
+            <circle cx="45.5" cy="3.5" r="3.5" stroke="#7B6696" stroke-width="2"/>
+            <circle cx="54.5" cy="120.5" r="3.5" stroke="#7B6696" stroke-width="2"/>
+            <text fill="#F6F2FB" font-family="Helvetica" font-size="25">
+                <tspan x="90.385" y="74">%</tspan>
+            </text>
+            <g transform="translate(0 13)">
+                <circle cx="23" cy="23" r="23" stroke="#B09CC9" stroke-width="2"/>
+                <path fill="url(#b)" d="M23 4C12.524 4 4 12.524 4 23c0 10.478 8.524 19 19 19s19-8.522 19-19c0-10.476-8.524-19-19-19"/>
+                <path fill="#FFF" d="M26.533 12l-2.392 2.478 3.383 3.504h-7.757c-3.732 0-6.767 3.144-6.767 7.01C13 28.855 16.035 32 19.767 32h1.691v-3.504h-1.691c-1.866 0-3.384-1.572-3.384-3.505 0-1.93 1.518-3.504 3.384-3.504h7.757l-3.383 3.504 2.392 2.478L34 19.734 26.533 12z"/>
+            </g>
+        </g>
+    </g>
+</svg>
