@@ -1,0 +1,10 @@
+.idea
+.github
+__pycache__
+static
+emails
+venv
+README.md
+Dockerfile
+.env
+*.sqlite3

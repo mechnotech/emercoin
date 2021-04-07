@@ -1,0 +1,1 @@
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes --exclude auth.user --exclude sessions.session --exclude admin.logentry > fixtures.json
