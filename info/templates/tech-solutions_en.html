@@ -1,16 +1,10 @@
-{% extends "blocks_en/base.html" %}
+{% extends "blankpage.html" %}
 {% load static %}
 
 {% block title %}
     Emercoin Tech Solutions
 {% endblock title %}
-    {% block css %}
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets/css/new.css' %}" rel="stylesheet" type="text/css">
-    {% endblock css %}
-    {% block open_scrypt %}
-    <script src="{% static 'assets/js/modernizr.custom.js' %} " type="text/javascript"></script>
-    {% endblock open_scrypt %}
+
 
 
     {% block content %}
@@ -111,27 +105,5 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
 
     {% endblock content %}
 
-    {% include 'blocks_en/footer.html' %}
 
 
-    {% block scrypt %}
-
-    <script src="{% static  'assets/js/jquery.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/script.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/js.js' %}" type="text/javascript"></script>
-
-    <script src="{% static  'assets/js/owl.carousel.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/swiper.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/fancybox-3.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/in-viewport.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/plugins.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/autosize.min.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/common.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/new.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
-        <!--[if IE]>
-    <script src="{% static  'assets/js/html5shiv.js' %}" type="text/javascript"></script>
-    <script src="{% static  'assets/js/respond.min.js' %}"></script>
-    <![endif]-->
-    {#    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>#}
-    {% endblock scrypt %}

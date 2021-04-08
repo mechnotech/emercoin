@@ -1,5 +1,8 @@
 {% extends blank %}
 {% load static %}
+{% block title %}
+     {% if is_ru %}Контакты{% else %}Contacts{% endif %}
+{% endblock title %}
 {% block content %}
 
 <main>

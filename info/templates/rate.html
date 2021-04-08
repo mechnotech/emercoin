@@ -1,5 +1,8 @@
 {% extends blank %}
 {% load static %}
+{% block title %}
+    {% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}
+{% endblock title %}
 {% block content %}
 <main>
    <div class="privacyPage-top">
