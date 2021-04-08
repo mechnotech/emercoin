@@ -1,5 +1,8 @@
 {% extends 'blankpage.html' %}
 {% load static %}
+{% block title %}
+    Болкчейн сервисы
+{% endblock title %}
 {% block content %}
 <main>
    <div class="technology">
@@ -21,7 +24,7 @@
          <div class="technology__main animate-it _animated">
             <div class="technology__text">
                 {{ one_service.text_more|safe }}
-                <p><a class="btn _type_default _size_md" href="{%  url one_service.slug %}">{{ one_service.title }} документация</a></p>
+                <p><a class="btn _type_default _size_md" href="{%  url 'introduction-to-emercoin-services' %}">{{ one_service.title }} документация</a></p>
             </div>
             <div class="technology__caption">{{ one_service.title }} подходит для:</div>
             <div class="t-list">

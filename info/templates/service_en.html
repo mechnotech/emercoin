@@ -1,5 +1,8 @@
 {% extends 'blankpage_en.html' %}
 {% load static %}
+{% block title %}
+    Blockchain Services
+{% endblock title %}
 {% block content %}
 <main>
    <div class="technology">
@@ -21,7 +24,7 @@
          <div class="technology__main animate-it _animated">
             <div class="technology__text">
                 {{ one_service.text_more_en|safe }}
-                <p><a class="btn _type_default _size_md" href="{%  url one_service.slug %}">{{ one_service.title }} Documentation</a></p>
+                <p><a class="btn _type_default _size_md" href="{%  url 'introduction-to-emercoin-services' %}">{{ one_service.title }} Documentation</a></p>
             </div>
             <div class="technology__caption">{{ one_service.title }} is the best solution:</div>
             <div class="t-list">
