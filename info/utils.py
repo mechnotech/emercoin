@@ -108,7 +108,7 @@ def send_support(form):
     message = str(form.cleaned_data.get('message'))
     send_mail(
         subject='С сайта emercoin',
-        message=f'Пользователь {name}({email}) написал:\n "{message}"',
+        message=f'Пользователь {name} ( {email} ) написал:\n "{message}"',
         from_email=EMAIL_HOST_USER,
         recipient_list=(SUPPORT, ),
         fail_silently=False,

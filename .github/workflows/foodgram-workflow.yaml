@@ -88,6 +88,7 @@ jobs:
             cd emercoin
             mv ./nginx/docker-compose.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
+            sudo docker images prune
             sudo docker-compose pull
             sudo docker-compose up -d --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
