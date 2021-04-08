@@ -19,7 +19,8 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('road-map/', views.road_map, name='road-map'),
     path('contacts/', check_recaptcha(views.contacts), name='contacts'),
-    path('rate/', views.rate, name='rate')
+    path('rate/', views.rate, name='rate'),
+    path('<slug:slug>', views.service, name='service'),
 
 
 

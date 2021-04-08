@@ -45,7 +45,7 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
                 <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
 {% for serv in services %}
-                        <div class="services__thumb swiper-slide" onclick="if (!window.__cfRLUnblockHandlers) return false; dataLayer.push({'event': 'GAevent', 'eventCategory': 'Tech Solutions', 'eventAction': 'Click', 'eventLabel': '{{ serv.title }}'});">
+                        <div class="services__thumb swiper-slide" onclick="dataLayer.push({'event': 'GAevent', 'eventCategory': 'Tech Solutions', 'eventAction': 'Click', 'eventLabel': '{{ serv.title }}'});">
                             <div class="services__thumb-hero">
                                 <img src="{{ serv.icon.url }}" width="92" height="106" alt="" class="services__icon">
                                     <svg width="92" height="106" viewBox="0 0 92 106" xmlns="http://www.w3.org/2000/svg" class="services__icon-overlay">
@@ -75,23 +75,23 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
 {#                                                                        <div class="technology__documentation">#}
 {#                                                                            <a class="btn _type_default _size_md" href="https://emercoin.com/documentation/blockchain-services/emerdns/emerdns-introduction">Документация EmerDNS</a>#}
 {#                                                                        </div>#}
-                                                                        {{ serv.text|safe }}
-                                                                        {{ serv.text_more|safe }}
+                                                                        {{ serv.text_en|safe }}
+                                                                        {{ serv.text_more_en|safe }}
                                                                     </div>
                                                                     <div class="s-links">
                                                                         <div class="s-links__list">
                                                                             <div class="s-links__item">
-                                                                                <a href="https://docs.emercoin.com/en/Introduction/Specifications.html" class="s-links__link _type_spec" rel="nofollow" target="_blank">
+                                                                                <a href="{% url 'specifications' %}" class="s-links__link _type_spec" rel="nofollow" target="_blank">
                                                                                     <span class="s-links__text">SPECIFICATIONS</span>
                                                                                 </a>
                                                                             </div>
                                                                             <div class="s-links__item">
-                                                                                <a href="https://docs.emercoin.com/en/Emercoin_API.html" class="s-links__link _type_api" rel="nofollow" target="_blank">
+                                                                                <a href="{% url 'emercoin-api' %}" class="s-links__link _type_api" rel="nofollow" target="_blank">
                                                                                     <span class="s-links__text">API REFERENCES</span>
                                                                                 </a>
                                                                             </div>
                                                                             <div class="s-links__item">
-                                                                                <a href="https://docs.emercoin.com/en/About_Emercoin.html" class="s-links__link _type_doc" rel="nofollow" target="_blank">
+                                                                                <a href="{% url 'about-emercoin' %}" class="s-links__link _type_doc" rel="nofollow" target="_blank">
                                                                                     <span class="s-links__text">GENERAL DOCUMENTATIONS</span>
                                                                                 </a>
                                                                             </div>

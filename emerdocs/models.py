@@ -23,16 +23,16 @@ class DocPage(models.Model):
     )
     text = RichTextUploadingField(
         'Текст документа',
-        max_length=25000,
+        max_length=200000,
         blank=True,
-        help_text='Текст (не более 25 тыс символов)',
+        help_text='Текст (не более 200 тыс символов)',
         default=HELP_US,
     )
     text_en = RichTextUploadingField(
         'Document text',
-        max_length=25000,
+        max_length=200000,
         blank=True,
-        help_text='Text (no more 25K letters)',
+        help_text='Text (no more 200K letters)',
         default=HELP_US_EN,
     )
 

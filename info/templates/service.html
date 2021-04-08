@@ -21,7 +21,7 @@
          <div class="technology__main animate-it _animated">
             <div class="technology__text">
                 {{ one_service.text_more|safe }}
-                <p><a class="btn _type_default _size_md" href="/documentation/blockchain-services/emerdns/emerdns-introduction">{{ one_service.title }} документация</a></p>
+                <p><a class="btn _type_default _size_md" href="{%  url one_service.slug %}">{{ one_service.title }} документация</a></p>
             </div>
             <div class="technology__caption">{{ one_service.title }} подходит для:</div>
             <div class="t-list">
@@ -31,19 +31,19 @@
             </div>
             <div class="docs-list">
                <div class="docs-list__item">
-                  <a href="https://docs.emercoin.com/en/Introduction/Specifications.html" target="_blank" class="docs-list__link">
+                  <a href="{% url 'specifications' %}" target="_blank" class="docs-list__link">
                   <img src="{% static 'assets/images/specification.svg' %}" alt="" class="docs-list__icon">
                   <span class="docs-list__text">Спецификации</span>
                   </a>
                </div>
                <div class="docs-list__item">
-                  <a href="https://docs.emercoin.com/en/Emercoin_API.html" target="_blank" class="docs-list__link">
+                  <a href="{% url 'emercoin-api' %}" target="_blank" class="docs-list__link">
                   <img src="{% static 'assets/images/api-references.svg' %}" alt="" class="docs-list__icon">
                   <span class="docs-list__text">Справочник API</span>
                   </a>
                </div>
                <div class="docs-list__item">
-                  <a href="https://docs.emercoin.com/en/About_Emercoin.html" target="_blank" class="docs-list__link">
+                  <a href="{% url 'about-emercoin' %}" target="_blank" class="docs-list__link">
                   <img src="{% static 'assets/images/general-doc.svg' %}" alt="" class="docs-list__icon">
                   <span class="docs-list__text">Общая докумнтация</span>
                   </a>

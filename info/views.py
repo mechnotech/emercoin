@@ -8,6 +8,7 @@ from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
 )
 from .utils import get_blank_page, is_lang_rus, send_support
+from django.views.decorators.gzip import gzip_page
 
 DEFAULT_PAGE_SIZE = 9
 
@@ -19,6 +20,7 @@ def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
     return page, paginator
 
 
+@gzip_page
 def index(request):
     promos = Promo.objects.all()[:10]
     emer_blocks = AboutEmer.objects.all()
@@ -43,6 +45,7 @@ def index(request):
         return render(request, 'index_en.html', context)
 
 
+@gzip_page
 def blockchain(request):
     services = Services.objects.all()
     emer_blocks = AboutEmer.objects.all()
@@ -56,6 +59,7 @@ def blockchain(request):
         return render(request, 'emercoin-blockchain_en.html', context)
 
 
+@gzip_page
 def tech_solutions(request):
     services = Services.objects.all()
     context = {
@@ -67,6 +71,7 @@ def tech_solutions(request):
         return render(request, 'tech-solutions_en.html', context)
 
 
+@gzip_page
 def for_business(request):
     companies = Company.objects.all()
     context = {
@@ -86,6 +91,7 @@ def for_coinholders(request):
         return render(request, 'for-coinholders_en.html', context)
 
 
+@gzip_page
 def for_developers(request):
     companies = Company.objects.all()
     services = Services.objects.all()
@@ -99,6 +105,7 @@ def for_developers(request):
         return render(request, 'for-developers_en.html', context)
 
 
+@gzip_page
 def socials(request):
     news = News.objects.all()[:3]
     context = {
@@ -110,6 +117,7 @@ def socials(request):
         return render(request, 'social-communities_en.html', context)
 
 
+@gzip_page
 def partners(request):
     companies_partners = Company.objects.filter(is_partner=True)
     companies_implements = Company.objects.filter(is_used=True)
@@ -123,6 +131,7 @@ def partners(request):
         return render(request, 'partners-and-projects_en.html', context)
 
 
+@gzip_page
 def company(request, slug):
     comp = get_object_or_404(Company, slug=slug)
     context = {'company': comp}
@@ -132,6 +141,7 @@ def company(request, slug):
         return render(request, 'company_en.html', context)
 
 
+@gzip_page
 def service(request, slug):
     one_service = get_object_or_404(Services, slug=slug)
     services = Services.objects.all()
@@ -145,6 +155,7 @@ def service(request, slug):
         return render(request, 'service_en.html', context)
 
 
+@gzip_page
 def team(request):
     persons = Person.objects.all()
     context = {
@@ -156,6 +167,7 @@ def team(request):
         return render(request, 'team_en.html', context)
 
 
+@gzip_page
 def news(request):
     if request.LANGUAGE_CODE == 'ru':
         news_list = News.objects.filter(title__isnull=False)
@@ -175,6 +187,7 @@ def news(request):
         return render(request, 'news_en.html', context)
 
 
+@gzip_page
 def road_map(request):
     cnt = RoadMap.objects.count()
     roadmap = RoadMap.objects.all()[:cnt - 1]
@@ -189,6 +202,7 @@ def road_map(request):
         return render(request, 'roadmap_en.html', context)
 
 
+@gzip_page
 def post(request, slug):
     """Страница отдельной новости"""
     one_post = get_object_or_404(News, slug=slug)
@@ -236,6 +250,7 @@ def contacts(request):
     return render(request, 'contacts.html', context)
 
 
+@gzip_page
 def rate(request):
     blank_page = get_blank_page(request)
     context = {
