@@ -21,7 +21,7 @@ blockchain_serv = [
          name='emerssl-infocard'),
     path('emerdns/emerdns-introduction/', views.emerdns_intro,
          name='emerdns-introduction'),
-    #path('emerdns/', views.emerdns_intro, name='emerdpo-introduction'),
+    # path('emerdns/', views.emerdns_intro, name='emerdpo-introduction'),
     path('emerdpo/emerdpo-introduction/', views.emerdpo_into,
          name='emerdpo-introduction'),
     path('emerdpo/the-emerdpo-antifake-programme/', views.antifake,
