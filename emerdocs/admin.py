@@ -4,7 +4,7 @@ from .models import DocPage
 
 
 class DocPageAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'url', 'text', 'text_en')
+    list_display = ('pk', 'url',)
     empty_value_display = '-пусто-'
 
 

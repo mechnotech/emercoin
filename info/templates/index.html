@@ -108,7 +108,7 @@
 
       {% include 'blocks_ru/block_about_blockchain.html' with emer_blocks=emer_blocks %}
         <div class="box">
-                <a class="button" href="https://emercoin.com/ru/emercoin-blockchain">Learn more</a>
+                <a class="button" href="{% url 'blockchain' %}">Узнать больше</a>
             </div>
 
 
@@ -116,7 +116,7 @@
             <div class="wrapper">
                 <div class="whiteTitle">
                     У вас ещё нет Emercoin? </div>
-                <a class="button button-blue" target="_blank" href="/ru/benefits#download">Скачать кошелек</a>
+                <a class="button button-blue" target="_blank" href="{% url 'for-coinholders' %}#download">Скачать кошелек</a>
             </div>
         </div>
 

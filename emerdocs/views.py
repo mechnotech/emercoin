@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from emercoin.settings import MENU
 from .models import DocPage
+from django.views.decorators.gzip import gzip_page
 
 
 def get_doc_blank_page(request):
@@ -40,6 +41,7 @@ def activate(url):
     return recursive(menu, url)[0]
 
 
+@gzip_page
 def render_docs(request):
     url = request.resolver_match.url_name
     blank_page = get_doc_blank_page(request)
