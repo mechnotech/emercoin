@@ -421,6 +421,7 @@ class Person(models.Model):
                 self.facebook, self.twitter)
 
     class Meta:
+        ordering = ['pk']
         verbose_name_plural = 'Персоны'
         verbose_name = 'Персона'
 
