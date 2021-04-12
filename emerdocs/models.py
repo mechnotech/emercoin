@@ -2,8 +2,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 from emercoin.settings import BASE_DIR
-from info.utils import auto_upload_images
-
+from info.utils import auto_upload_images, cut_self_href
 
 with open(f'{BASE_DIR}/templates/help_us.html', 'r') as f:
     HELP_US = f.read()
@@ -39,6 +38,8 @@ class DocPage(models.Model):
     def save(self, *args, **kwargs):
         self.text = auto_upload_images(self.text)
         self.text_en = auto_upload_images(self.text_en)
+        self.text = cut_self_href(self.text)
+        self.text_en = cut_self_href(self.text_en)
         super().save(*args, **kwargs)
 
     class Meta:
