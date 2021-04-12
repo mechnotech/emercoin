@@ -15,7 +15,6 @@ def post_ru(post):
     text = post[11]
     image = post[9].split('/')[-1]
     slug = post[2]
-    # '2018-10-23 18:33:00'
     date_field = post[-2]
     date = datetime.datetime.strptime(date_field, '%Y-%m-%d %H:%M:%S')
     try:
@@ -43,7 +42,6 @@ def post_en(post):
     text = post[11]
     image = post[9].split('/')[-1]
     slug = post[2]
-    # '2018-10-23 18:33:00'
     date_field = post[-2]
     date = datetime.datetime.strptime(date_field, '%Y-%m-%d %H:%M:%S')
     try:
@@ -74,8 +72,8 @@ class Command(BaseCommand):
         current = News.objects.count()
         c = conn.cursor()
         c.execute(
-            "SELECT * FROM posts WHERE status=1 AND"
-            " ( lang='en' OR lang='ru')")
+            "SELECT * FROM posts WHERE status=1 AND ( lang='en' OR lang='ru')"
+        )
         for p in c.fetchall():
             if p[4] == 'en':
                 post_en(p)

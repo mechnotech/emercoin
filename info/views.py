@@ -10,7 +10,7 @@ from .models import (
 from .utils import get_blank_page, is_lang_rus, send_support
 from django.views.decorators.gzip import gzip_page
 
-DEFAULT_PAGE_SIZE = 9
+DEFAULT_PAGE_SIZE = 18
 
 
 def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
@@ -27,16 +27,16 @@ def index(request):
     services = Services.objects.all()
     medium = Media.objects.all()
     roadmap = RoadMap.objects.all()
-    news = News.objects.all()[:3]
-    advisers = Person.objects.filter(is_adviser=True)
-    teammates = Person.objects.filter(is_team=True)
+    news = News.objects.order_by("-date")[:3]
+    # advisers = Person.objects.filter(is_adviser=True)
+    teammates = Person.objects.filter(is_team=True)[:4]
     context = {'promos': promos,
                'emer_blocks': emer_blocks,
                'services': services,
                'medium': medium,
                'roadmap': roadmap,
                'news': news,
-               'advisers': advisers,
+               # 'advisers': advisers,
                'teammates': teammates,
                }
     if request.LANGUAGE_CODE == 'ru':
