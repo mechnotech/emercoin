@@ -6,7 +6,7 @@
 {% block content %}
 <main>
    <div class="privacyPage-top">
-      <h1 class="leftText">{{ post.title_en }}</h1>
+      <h1 class="leftText">{% if post.title_en %}{{ post.title_en }}{% else %}{{ post.title }}{% endif %}</h1>
    </div>
    <div class="article">
       <div class="article__back">
