@@ -65,11 +65,21 @@ def download(link):
         return True, None
 
 
+def image_check(filename):
+    ending = filename.split('.')[-1]
+    if ending == 'png' or ending == 'jpeg' or ending == 'jpg' \
+            or ending == 'svg':
+        return True
+    return False
+
+
 def auto_upload_images(text):
     """Найти все ссылки изображений в html, скачать и заменить ссылками
      на локальное хранилище /media/"""
     if not text:
         return text
+    if isinstance(text, tuple):
+        print(text)
     cur = 1
     while True:
         cur = text.find('src=', cur + 4)
@@ -78,6 +88,18 @@ def auto_upload_images(text):
         link_start = text.find('"', cur)
         link_finish = text.find('"', link_start + 1)
         link = text[link_start + 1:link_finish]
+
+        # if link.find('http') == -1 and link.find('storage') != -1:
+        #     filename = link.split('/')[-1]
+        #     if image_check(filename):
+        #         new_link = 'https://emercoin.com' + link
+        #         result, new_name = download(new_link)
+        #         if result:
+        #             text = text.replace(
+        #                 link,
+        #                 f'{MEDIA_URL}{new_name if new_name else filename}',
+        #                 1)
+
         if link.find('http') == -1:
             continue
         filename = link.split('/')[-1]
@@ -116,6 +138,6 @@ def send_support(form):
         subject='С сайта emercoin',
         message=f'Пользователь {name} ( {email} ) написал:\n "{message}"',
         from_email=EMAIL_HOST_USER,
-        recipient_list=(SUPPORT, ),
+        recipient_list=(SUPPORT,),
         fail_silently=False,
     )
