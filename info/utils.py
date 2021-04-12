@@ -89,6 +89,12 @@ def auto_upload_images(text):
     return text
 
 
+def cut_self_href(text):
+    if not text:
+        return text
+    return text.replace('href="https://emercoin.com', 'href="')
+
+
 def get_blank_page(request):
     if request.LANGUAGE_CODE == 'ru':
         return 'blankpage.html'

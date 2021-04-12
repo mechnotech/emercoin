@@ -11,8 +11,7 @@ from django.db import models
 from slugify import slugify
 
 from emercoin.settings import BASE_DIR
-from .utils import auto_upload_images
-
+from .utils import auto_upload_images, cut_self_href
 
 with open(f'{BASE_DIR}/templates/help_us.html', 'r') as f:
     HELP_US = f.read()
@@ -354,6 +353,8 @@ class News(models.Model):
     def save(self, *args, **kwargs):
         self.text = auto_upload_images(self.text)
         self.text_en = auto_upload_images(self.text_en)
+        self.text = cut_self_href(self.text)
+        self.text_en = cut_self_href(self.text_en)
 
         if not self.slug:
             if self.title and not self.title_en:
