@@ -493,3 +493,33 @@ class Company(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Terms(models.Model):
+    title = models.CharField('Заголовок', max_length=50)
+    title_en = models.CharField('Title', max_length=50)
+    date = models.DateTimeField('Дата и время', editable=True)
+    text = RichTextField('Описание', max_length=50000, blank=False)
+    text_en = RichTextField('Description', max_length=50000, blank=False)
+
+    class Meta:
+        verbose_name_plural = 'Emercoin and Conditions'
+        verbose_name = 'Термс'
+
+    def __str__(self):
+        return self.title
+
+
+class Privacy(models.Model):
+    title = models.CharField('Заголовок', max_length=50)
+    title_en = models.CharField('Title', max_length=50)
+    date = models.DateTimeField('Дата и время', editable=True)
+    text = RichTextField('Описание', max_length=50000, blank=False)
+    text_en = RichTextField('Description', max_length=50000, blank=False)
+
+    class Meta:
+        verbose_name_plural = 'Privacy Policy'
+        verbose_name = 'Privacy Policy'
+
+    def __str__(self):
+        return self.title

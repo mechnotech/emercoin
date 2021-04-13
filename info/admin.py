@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import (
-    Promo, AboutEmer, Services, Media, RoadMap, Content, News, Person, Company
+    Promo, AboutEmer, Services, Media,
+    RoadMap, Content, News, Person, Company,
+    Privacy, Terms,
+
 )
 
 
@@ -57,6 +60,14 @@ class CompanyAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 
+class TermsAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title')
+
+
+class PrivacyAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title')
+
+
 admin.site.register(Promo, PromoAdmin)
 admin.site.register(AboutEmer, AboutEmerAdmin)
 admin.site.register(Services, ServicesAdmin)
@@ -66,3 +77,5 @@ admin.site.register(RoadMap, RoadMapAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Person, PersonAdmin)
 admin.site.register(Company, CompanyAdmin)
+admin.site.register(Terms, TermsAdmin)
+admin.site.register(Privacy, PrivacyAdmin)

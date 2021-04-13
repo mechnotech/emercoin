@@ -13,13 +13,13 @@
                             <a href="{% url 'tech-solutions' %}">Tech Solutions</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/documentation/introduction/specifications">Specifications</a>
+                            <a href="{%  url 'specifications' %}">Specifications</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/documentation/emercoin-api">API references</a>
+                            <a href="{% url 'emercoin-api' %}">API references</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/documentation/about-emercoin">General Documentations</a>
+                            <a href="{% url 'about-emercoin' %}">General Documentations</a>
                         </div>
                         <div class="footerLink github">
                             <a href="https://github.com/emercoin" target="_blank" rel="nofollow">View on GitHub</a>
@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="footerLink ">
-                            <a href="/en/road-map">Road Map</a>
+                            <a href="{% url 'road-map' %}">Road Map</a>
                         </div>
                     </li>
                     <li>
@@ -68,7 +68,7 @@
                             <a href="{% url 'partners' %}">Our Partners</a>
                         </div>
                         <div class="footerLink ">
-                            <a href="/en/contacts">Contact us</a>
+                            <a href="{% url 'contacts' %}">Contact us</a>
                         </div>
                     </li>
                 </ul>
@@ -76,10 +76,10 @@
             <div class="footer-top-left">
                 <ul class="footer-top-left-terms">
                     <li>
-                        <a href="/en/emercoin-terms-and-conditions" target="_blank">Terms &amp; Conditions</a>
+                        <a href="{% url 'terms' %}" target="_blank">Terms &amp; Conditions</a>
                     </li>
                     <li>
-                        <a href="/en/emercoin-privacy-policy" target="_blank">Privacy Policy</a>
+                        <a href="{% url 'privacy' %}" target="_blank">Privacy Policy</a>
                     </li>
                     <li>
                             <a href="{% static 'files/pdf/whitepaper.pdf' %}" target="_blank">Whitepaper</a>

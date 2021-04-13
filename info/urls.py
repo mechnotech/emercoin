@@ -20,6 +20,8 @@ urlpatterns = [
     path('road-map/', views.road_map, name='road-map'),
     path('contacts/', check_recaptcha(views.contacts), name='contacts'),
     path('rate/', views.rate, name='rate'),
+    path('emercoin-terms-and-conditions', views.terms, name='terms'),
+    path('emercoin-privacy-policy', views.privacy, name='privacy'),
     path('<slug:slug>', views.service, name='service'),
 
 
