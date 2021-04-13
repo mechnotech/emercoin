@@ -334,19 +334,19 @@ class News(models.Model):
     )
     text = RichTextUploadingField(
         'Текст новости',
-        max_length=10000,
+        max_length=15000,
         blank=True,
         null=True,
-        help_text='Текст (не более 10 тыс символов)',
+        help_text='Текст (не более 15 тыс символов)',
         default=HELP_US
 
     )
     text_en = RichTextUploadingField(
         'News text',
-        max_length=10000,
+        max_length=15000,
         blank=True,
         null=True,
-        help_text='Post (no more than 10K letters)',
+        help_text='Post (no more than 15K letters)',
         default=HELP_US_EN
     )
 

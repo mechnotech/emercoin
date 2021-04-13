@@ -1,7 +1,21 @@
  <div class="wrapper services__block">
             <div class="bigTitle bigTitle-services center" id="techsolutions">Распределённые блокчейн-сервисы для личных и бизнес-целей.</div>
             <div class="businesBox">
-                {% for service in services %}
+                {% for service in services|slice:":4" %}
+                <a href="{{ service.slug }}" class="businesBox-item">
+                    <div class="businesBox-item-img" style="background-image: url({{ service.icon.url }});"></div>
+                    <div class="businesBox-item-title">{{ service.title }}</div>
+                    <div class="businesBox-item-text">
+                        {{ service.text|safe }}
+                    </div>
+                    <div class="businesBox-item-more">
+                        <span>Узнать больше</span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="businesBox all" style="display: none">
+                {% for service in services|slice:"4:" %}
                 <a href="{{ service.slug }}" class="businesBox-item">
                     <div class="businesBox-item-img" style="background-image: url({{ service.icon.url }});"></div>
                     <div class="businesBox-item-title">{{ service.title }}</div>
