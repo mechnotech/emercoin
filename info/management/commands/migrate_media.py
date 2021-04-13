@@ -4,7 +4,6 @@ import sqlite3
 from django.core.management.base import BaseCommand
 
 from info.models import Content
-from info.utils import download
 
 db = pathlib.Path('oldemer.db').absolute()
 conn = sqlite3.connect(db)
