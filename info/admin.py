@@ -42,7 +42,8 @@ class RoadMapAdmin(admin.ModelAdmin):
 
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'date', 'title', 'slug', 'image', 'text')
+    list_display = ('pk', 'date', 'title', 'slug', 'image',)
+    search_fields = ('date', 'title', 'slug', 'text', 'text_en')
     empty_value_display = '-пусто-'
 
 
