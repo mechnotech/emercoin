@@ -1,7 +1,7 @@
 {% extends 'blankpage.html' %}
 {% load static %}
 {% block title %}
-    Болкчейн сервисы
+    Блокчейн сервисы
 {% endblock title %}
 {% block content %}
 <main>
@@ -23,6 +23,7 @@
          </div>
          <div class="technology__main animate-it _animated">
             <div class="technology__text">
+                {{ one_service.text|safe }}
                 {{ one_service.text_more|safe }}
                 <p><a class="btn _type_default _size_md" href="{%  url 'introduction-to-emercoin-services' %}">{{ one_service.title }} документация</a></p>
             </div>
@@ -82,4 +83,14 @@
       </div>
    </div>
 </main>
+    <div class="popup js-popup" id="zoom-image">
+<div class="popup__inner">
+<div class="popup__body js-popup-body">
+<button type="button" class="popup__close js-popup-close-button" title="Закрыть"></button>
+<div class="zoom-image">
+<img src="{{ one_service.image.url }}" alt="" class="zoom-image__hero">
+</div>
+</div>
+</div>
+</div>
 {% endblock content %}
