@@ -5,7 +5,8 @@ from django.views.decorators.csrf import requires_csrf_token
 from emercoin.settings import GOOGLE_RECAPTCHA_ID
 from .forms import ContactForm
 from .models import (
-    Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company
+    Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company,
+    Terms, Privacy
 )
 from .utils import get_blank_page, is_lang_rus, send_support
 from django.views.decorators.gzip import gzip_page
@@ -258,3 +259,25 @@ def rate(request):
         'is_ru': is_lang_rus(request),
     }
     return render(request, 'rate.html', context)
+
+
+def terms(request):
+    term = Terms.objects.last()
+    blank_page = get_blank_page(request)
+    context = {
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request),
+        'terms': term,
+    }
+    return render(request, 'misc/terms.html', context)
+
+
+def privacy(request):
+    priv = Privacy.objects.last()
+    blank_page = get_blank_page(request)
+    context = {
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request),
+        'privacy': priv,
+    }
+    return render(request, 'misc/privacy.html', context)

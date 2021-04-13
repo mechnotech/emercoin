@@ -14,13 +14,13 @@
                                 <a href="{% url 'tech-solutions' %}">Технологии</a>
                             </div>
                             <div class="footerLink ">
-                                <a href="/ru/documentation/introduction/specifications">Спецификации</a>
+                                <a href="{%  url 'specifications' %}">Спецификации</a>
                             </div>
                             <div class="footerLink ">
-                                <a href="/ru/documentation/emercoin-api">Справочник API</a>
+                                <a href="{% url 'emercoin-api' %}">Справочник API</a>
                             </div>
                             <div class="footerLink ">
-                                <a href="/ru/documentation/about-emercoin">Общая документация</a>
+                                <a href="{% url 'about-emercoin' %}">Общая документация</a>
                             </div>
                             <div class="footerLink github">
                                 <a href="https://github.com/emercoin" target="_blank" rel="nofollow">Наш GitHub</a>
@@ -56,13 +56,13 @@
                                 <a href="{% url 'news' %}">Последние новости</a>
                             </div>
                             <div class="footerLink ">
-                                <a href="/ru/road-map">Road Map</a>
+                                <a href="{% url 'road-map' %}">Road Map</a>
                             </div>
                         </li>
                         <li>
                             <div class="title">О нас</div>
                             <div class="footerLink ">
-                                <a href="/ru/contacts">Контакты</a>
+                                <a href="{% url 'contacts' %}">Контакты</a>
                             </div>
                             <div class="footerLink ">
                                 <a href="{% url 'partners' %}">Наши партнеры</a>
@@ -76,10 +76,10 @@
                 <div class="footer-top-left">
                     <ul class="footer-top-left-terms">
                         <li>
-                            <a href="/ru/emercoin-terms-and-conditions" target="_blank">Условия использования</a>
+                            <a href="{% url 'terms' %}" target="_blank">Условия использования</a>
                         </li>
                         <li>
-                            <a href="/ru/emercoin-privacy-policy" target="_blank">Политика конфиденциальности</a>
+                            <a href="{% url 'privacy' %}" target="_blank">Политика конфиденциальности</a>
                         </li>
                         <li>
                             <a href="{% static 'files/pdf/whitepaper.pdf' %}" target="_blank">Whitepaper</a>

@@ -1,0 +1,32 @@
+{% extends blank %}
+{% load static %}
+{% block title %}
+    {% if is_ru %}
+     {{ terms.title }}
+    {% else %}
+    {{ terms.title_en }}
+    {% endif %}
+{% endblock title %}
+{% block content %}
+<main>
+   <div class="privacyPage">
+      <div class="privacyPage-top">
+         <h1>{% if is_ru %}
+            {{ terms.title }}
+            {% else %}
+            {{ terms.title_en }}
+            {% endif %}</h1>
+      </div>
+      <div class="wrapper">
+         <div class="privacyPage-box">
+            <div class="date">{% if is_ru %}Последняя редакция: {% else %}Last Revised: {% endif %}{{ terms.date }}</div>
+            {% if is_ru %}
+            {{ terms.text|safe }}
+            {% else %}
+            {{ terms.text_en|safe }}
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</main>
+{% endblock content %}
