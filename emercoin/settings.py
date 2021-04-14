@@ -165,7 +165,7 @@ CKEDITOR_CONFIGS = {
 # Меню раздела docs emercoin
 MENU = [
     {
-        'name': 'О Эмеркоине',
+        'name': 'Об Эмеркоине',
         'name_en': 'About Emercoin',
         'url': 'about-emercoin',
         'active': False,
