@@ -238,6 +238,7 @@ class Media(models.Model):
         related_name='medium',
     )
 
+    @property
     def count(self):
         return self.contents.count()
 
@@ -248,7 +249,7 @@ class Media(models.Model):
         return content
 
     class Meta:
-        ordering = ['pk']
+        ordering = ['-pk']
         verbose_name_plural = 'СМИ'
         verbose_name = 'СМИ'
 

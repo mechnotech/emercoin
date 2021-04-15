@@ -1,4 +1,5 @@
 from django.core.paginator import Paginator
+from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import requires_csrf_token
 
@@ -26,9 +27,12 @@ def index(request):
     promos = Promo.objects.all()[:10]
     emer_blocks = AboutEmer.objects.all()
     services = Services.objects.all()
-    medium = Media.objects.all()
+
+    medium = Media.objects.annotate(
+        q_count=Count('contents')
+    ).order_by('-q_count')
+
     roadmap = RoadMap.objects.all()
-    news = News.objects.order_by("-date")[:3]
     # advisers = Person.objects.filter(is_adviser=True)
     teammates = Person.objects.filter(is_team=True)[:4]
     context = {'promos': promos,
@@ -36,13 +40,18 @@ def index(request):
                'services': services,
                'medium': medium,
                'roadmap': roadmap,
-               'news': news,
                # 'advisers': advisers,
                'teammates': teammates,
                }
     if request.LANGUAGE_CODE == 'ru':
+        news = News.objects.filter(
+            title__isnull=False).order_by("-date")[:3]
+        context['news'] = news
         return render(request, 'index.html', context)
     else:
+        news = News.objects.filter(
+            title_en__isnull=False).order_by("-date")[:3]
+        context['news'] = news
         return render(request, 'index_en.html', context)
 
 
