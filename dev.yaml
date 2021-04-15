@@ -1,0 +1,59 @@
+version: '3.2'
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
+
+networks:
+  nginx_network:
+    driver: bridge
+  database_network:
+    driver: bridge
+
+services:
+  db:
+    image: postgres:13.0
+    container_name: emer_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    networks:
+      - database_network
+
+  web:
+    image: mechnotech/emersite:latest
+    container_name: emer_web
+    restart: always
+    volumes:
+      - static_volume:/code/static
+      - media_volume:/code/media
+    command: gunicorn emercoin.wsgi:application --workers=5 --bind 0.0.0.0:8000
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - nginx_network
+      - database_network
+
+  nginx:
+    image: nginx:1.19.0-alpine
+    container_name: emer_nginx
+    volumes:
+      - type: volume
+        source: static_volume
+        target: /code/static
+      - type: volume
+        source: media_volume
+        target: /code/media
+      - type: bind
+        source: ./nginx/
+        target: /etc/nginx/conf.d/
+    ports:
+      - 80:80
+    depends_on:
+      - web
+    networks:
+      - nginx_network
