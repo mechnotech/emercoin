@@ -50,15 +50,15 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.MY_APP }}:latest
+          tags: ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.MY_APP }}:dev
           load: true
-      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.MY_APP }}:latest
+      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.MY_APP }}:dev
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
   deploy:
-    if: contains(github.ref, 'master')
+    if: contains(github.ref, 'dev')
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
@@ -68,11 +68,11 @@ jobs:
       - name: transfer nginx conf file to deploy server
         uses: appleboy/scp-action@v0.0.10
         with:
-            host: ${{ secrets.TEST_HOST }}
+            host: ${{ secrets.DEV_TEST_HOST }}
             username: ${{ secrets.TEST_HOST_ADMIN }}
             key: ${{ secrets.SSH_KEY }}
             strip_components: 1
-            source: "nginx/default.conf,./docker-compose.yaml"
+            source: "nginx/default.conf,./dev.yaml"
             target: "/home/mech/emercoin/nginx/"
 
       - name: executing remote ssh commands to deploy
@@ -80,26 +80,26 @@ jobs:
         env:
           MY_ENV: ${{ secrets.ENV }}
         with:
-          host: ${{ secrets.TEST_HOST }}
+          host: ${{ secrets.DEV_TEST_HOST }}
           username: ${{ secrets.TEST_HOST_ADMIN }}
           key: ${{ secrets.SSH_KEY }}
           envs: MY_ENV
           script: |
             cd emercoin
-            mv ./nginx/docker-compose.yaml .
+            mv ./nginx/dev.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
             sudo docker image prune -f
-            sudo docker-compose down
+            sudo docker-compose -f dev.yaml down
             sudo docker volume rm emercoin_media_volume
-            sudo docker-compose pull
-            sudo docker-compose up -d --remove-orphans --force-recreate
+            sudo docker-compose -f dev.yaml pull
+            sudo docker-compose -f dev.yaml up -d --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
             sudo docker exec -t emer_web python3 manage.py migrate
             sudo docker exec -t emer_web /bin/bash load.sh
             sudo docker exec -t emer_web python3 manage.py collectstatic --no-input
 
   send_message:
-    if: contains(github.ref, 'master')
+    if: contains(github.ref, 'dev')
     runs-on: ubuntu-latest
     needs: deploy
     steps:
@@ -108,4 +108,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: ${{ github.workflow }} выполнен успешно!
+          message: $Dev - {{ github.workflow }} выполнен успешно!
