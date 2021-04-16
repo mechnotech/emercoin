@@ -61,7 +61,8 @@ intro = [
 
 urlpatterns = [
     path('', views.about_redirect, name='about-redirect'),
-    path('about-emercoin/', views.about_emercoin, name='about-emercoin'),
+    re_path(r'^about-emercoin/?$',
+            views.about_emercoin, name='about-emercoin'),
     path('introduction/', include(intro)),
     path('install-software/', include(install_soft)),
     path('running-emercoin/', include(running_emc)),

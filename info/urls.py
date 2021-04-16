@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='emercoin'),
-    re_path(r'^emercoin-blockchain/?$', views.blockchain, name='blockchain'),
+    path('emercoin-blockchain/', views.blockchain, name='blockchain'),
     path('emercoin-blockchain/<slug:slug>', views.service, name='service'),
     re_path(r'^tech-solutions/?$',
             views.tech_solutions, name='tech-solutions'),
@@ -15,8 +15,8 @@ urlpatterns = [
     re_path(r'^for-developers/?$',
             views.for_developers, name='for-developers'),
     re_path(r'^our-social-communities/?$', views.socials, name='socials'),
+    path('partners-and-projects/', views.partners, name='partners'),
     path('partners-and-projects/<slug:slug>', views.company, name='partner'),
-    re_path(r'^partners-and-projects/?$', views.partners, name='partners'),
     re_path(r'^team/?$', views.team, name='team'),
     path('news/<slug:slug>', views.post, name='post'),
     re_path(r'^news/?$', views.news, name='news'),
@@ -27,6 +27,4 @@ urlpatterns = [
     path('emercoin-privacy-policy', views.privacy, name='privacy'),
     path('<slug:slug>', views.service, name='service'),
 
-
-
-    ]
+]
