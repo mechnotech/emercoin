@@ -129,10 +129,9 @@ LANGUAGES = (
     ('en', 'English'),
     ('es', 'Spanish'),
     ('ko', 'Korean'),
-    ('jp', 'Japan'),
+    ('ja', 'Japan'),
     ('de', 'German'),
     ('ar', 'Arabic'),
-    ('zh', '汉语'),
     ('vi', 'Vietnamese'),
 )
 
