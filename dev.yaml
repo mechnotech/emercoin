@@ -23,7 +23,7 @@ services:
       - database_network
 
   web:
-    image: mechnotech/emersite:latest
+    image: mechnotech/emersite:dev
     container_name: emer_web
     restart: always
     volumes:
