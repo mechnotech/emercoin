@@ -4,8 +4,21 @@ from django.urls import path, include, re_path
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
+
 
 urlpatterns = [
+    path(
+        'robots.txt',
+        TemplateView.as_view(template_name="sitemap/robots.txt",
+                             content_type="text/plain"),
+    ),
+    path(
+        'sitemap.xml',
+        TemplateView.as_view(template_name='sitemap/sitemap.xml',
+                             content_type='application/xml'
+                             )
+    ),
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
