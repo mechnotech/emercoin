@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from . import views
 
@@ -26,7 +26,7 @@ blockchain_serv = [
          name='emerdpo-introduction'),
     path('emerdpo/the-emerdpo-antifake-programme/', views.antifake,
          name='the-emerdpo-antifake-programme'),
-    path('emerdpo/emerdpo-sn-publisher', views.sn_publ,
+    path('emerdpo/emerdpo-sn-publisher/', views.sn_publ,
          name='emerdpo-sn-publisher'),
     path('emermagnet/', views.emermagnet, name='emermagnet'),
     path('enumer/', views.enumer, name='enumer'),
@@ -52,8 +52,10 @@ install_soft = [
 ]
 
 intro = [
-    path('the-emc-currency/', views.intro_currency, name='the-emc-currency'),
-    path('specifications/', views.specifications, name='specifications'),
+    re_path(r'^the-emc-currency/?$',
+            views.intro_currency, name='the-emc-currency'),
+    re_path(r'^specifications/?$',
+            views.specifications, name='specifications'),
     path('security-principles/', views.secutity, name='security-principles'),
 ]
 
