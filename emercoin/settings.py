@@ -59,7 +59,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'emercoin.wsgi.application'
 
-
 if DEBUG:
     DATABASES = {
         'default': {
@@ -98,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Email
 if DEBUG:
     EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'emails')
@@ -126,10 +124,16 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 LANGUAGES = (
     ('ru', 'Russian'),
     ('en', 'English'),
+    ('es', 'Spanish'),
+    ('ko', 'Korean'),
+    ('jp', 'Japan'),
+    ('de', 'German'),
+    ('ar', 'Arabic'),
+    ('zh', '汉语'),
+    ('vi', 'Vietnamese'),
 )
 
 CKEDITOR_CONFIGS = {
@@ -445,9 +449,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
+APPEND_SLASH = True
