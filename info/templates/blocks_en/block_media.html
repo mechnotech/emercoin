@@ -9,7 +9,7 @@
                         <div class="clients__item swiper-slide">
                             <a href="#media-{{ media.pk }}" class="clients__link _toggle" title="{{ media.name }}">
                                 <div class="clients__hero">
-                                    <img src="{{ media.logo.url }}" srcset="{{ media.logo_big.url }} 2x" alt="{{ media.name }}" class="clients__image" />
+                                    <img src="{{ media.logo.url }}" srcset="{{ media.logo_big.url }} 2x" alt="{{ media.name }}" class="clients__image" loading="lazy" />
                                 </div>
                                 {% if media.count > 1 %}
                                     <div class="clients__number">{{ media.count }}</div>

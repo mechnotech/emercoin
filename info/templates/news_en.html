@@ -15,7 +15,7 @@
               {% if post.title_en %}
          <a href="{% url 'post' slug=post.slug %}" class="latestNews-item">
             <div class="latestNews-item-img">
-               <img src="{{ post.image_en.url }}" alt="{{ post.title_en }}">
+               <img src="{{ post.image_en.url }}" alt="{{ post.title_en }} " loading="lazy" width="350">
             </div>
             <div class="latestNews-item-info">
                <div class="latestNews-item-info-date">{{ post.date }}</div>
