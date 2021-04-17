@@ -4,6 +4,8 @@ __pycache__
 static
 emails
 venv
+media-full
+media-resized
 README.md
 Dockerfile
 .env

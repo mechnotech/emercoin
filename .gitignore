@@ -136,3 +136,5 @@ dmypy.json
 sent_emails
 /info/stale/
 /emerdocs/stale/
+/media-full/
+/media-resized/
