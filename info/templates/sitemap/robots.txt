@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /*?*
-Allow: *.css?*
-Allow: *.js?*
+Disallow: *.css?*
+Disallow: *.js?*
 Sitemap: https://emercoin.com/sitemap.xml
