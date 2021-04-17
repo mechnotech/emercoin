@@ -12,7 +12,7 @@
                             <div class="product">
                                 <div class="product-img">
                         {% include 'misc/product-social.html' with person=person %}
-                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" />
+                                    <img src="{{ person.image.url }}" srcset="{{ person.image.url }} 2x" alt="{{ person.name_en }}" loading="lazy"/>
                                 </div>
                                 <div class="product-title">{{ person.name_en }}</div>
                                 <div class="product-text">{{ person.whois_en }}</div>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="box box-team">
-                    <a class="button" href="{% url 'team' %}">MEET EVERYONE</a>
+                    <a class="button" target="_blank" href="{% url 'team' %}">MEET EVERYONE</a>
                 </div>
 
 <!--

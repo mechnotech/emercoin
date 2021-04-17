@@ -31,7 +31,7 @@
          <div class="clients__content" id="company-{{ company.pk }}">
             <div class="company">
                <div class="company__hero">
-                  <img src="{{ company.logo.url }}" srcset="{{ company.logo.url }} 2x" alt="{{ company.title }}" class="clients__image">
+                  <img src="{{ company.logo.url }}" srcset="{{ company.logo.url }} 2x" alt="{{ company.title }}" loading="lazy" class="clients__image">
                </div>
                <div class="company__body">
                   <div class="company__title">{{ company.title }}</div>
