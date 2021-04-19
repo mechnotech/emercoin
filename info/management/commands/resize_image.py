@@ -3,12 +3,8 @@ import pathlib
 import shutil
 
 from django.core.management.base import BaseCommand
-
-# from info.models import News
 from PIL import Image
-
 from resizeimage import resizeimage
-
 from info.models import News
 
 
