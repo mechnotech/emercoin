@@ -401,6 +401,12 @@ MENU = [
                 'url': 'enumer',
                 'active': False,
             },
+            {
+                'name': 'File Validator',
+                'name_en': 'File Validator',
+                'url': 'fv',
+                'active': False,
+            },
         ]
     },
     {
