@@ -30,6 +30,7 @@ blockchain_serv = [
          name='emerdpo-sn-publisher'),
     path('emermagnet/', views.emermagnet, name='emermagnet'),
     path('enumer/', views.enumer, name='enumer'),
+    path('fv/', views.file_validator, name='fv'),
 
 ]
 
