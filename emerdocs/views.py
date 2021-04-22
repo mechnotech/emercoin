@@ -187,3 +187,11 @@ def secutity(request):
 
 def docker(request):
     return render_docs(request)
+
+
+def file_validator(request):
+    return render_docs(request)
+
+
+def randpay(request):
+    return render_docs(request)
