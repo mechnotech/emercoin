@@ -401,6 +401,18 @@ MENU = [
                 'url': 'enumer',
                 'active': False,
             },
+            {
+                'name': 'File Validator',
+                'name_en': 'File Validator',
+                'url': 'fv',
+                'active': False,
+            },
+            {
+                'name': 'Randpay',
+                'name_en': 'Randpay',
+                'url': 'randpay',
+                'active': False,
+            },
         ]
     },
     {
