@@ -12,7 +12,7 @@ DEBUG = False if os.getenv('DEBUG') == 'False' else True
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com']
+    ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
