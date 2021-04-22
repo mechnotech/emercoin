@@ -407,6 +407,12 @@ MENU = [
                 'url': 'fv',
                 'active': False,
             },
+            {
+                'name': 'Randpay',
+                'name_en': 'Randpay',
+                'url': 'randpay',
+                'active': False,
+            },
         ]
     },
     {
