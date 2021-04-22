@@ -17,8 +17,11 @@
    </div>
    <div class="boxSearchTop">
       <div class="wrapper">
-         <form class="searchTop" action="{% url 'about-redirect' %}" method="get">
-            <input class="search" name="s" type="text" required="">
+         <form class="searchTop" action="{% url 'results' %}" method="post">
+             {% csrf_token %}
+             {{ form.find }}
+{#             {{ form.find.errors }}#}
+{#            <input class="search" name="s" type="text" required="">#}
             <input class="button button-search" type="submit" value="Поиск">
          </form>
       </div>
