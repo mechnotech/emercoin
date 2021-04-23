@@ -1,8 +1,12 @@
 from copy import deepcopy
 
+from django.contrib.postgres.search import SearchVector
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.cache import cache_page
+from django.views.decorators.csrf import requires_csrf_token
 
 from emercoin.settings import MENU
+from .forms import SearchForm
 from .models import DocPage
 from django.views.decorators.gzip import gzip_page
 
@@ -21,7 +25,6 @@ def is_lang_rus(request):
 
 
 def recursive(menu, url, flag=False):
-
     for item in menu:
 
         if item.get('url') == url:
@@ -43,18 +46,58 @@ def activate(url):
 
 @gzip_page
 def render_docs(request):
+    form = SearchForm()
     url = request.resolver_match.url_name
     blank_page = get_doc_blank_page(request)
     menu = activate(url)
     page = get_object_or_404(DocPage, url=url)
     context = {
         'menu': menu,
+        'form': form,
         'page_data': page,
         'blank': blank_page,
         'is_ru': is_lang_rus(request)
     }
 
     return render(request, 'page_en.html', context)
+
+
+def search(text):
+    res = DocPage.objects.annotate(
+        search=SearchVector('text_en', 'text'), ).filter(search=text)
+    urls = []
+    for u in res:
+        urls.append(u.url)
+    return urls
+
+
+@cache_page(60)
+@requires_csrf_token
+def results(request):
+    url = ''
+    form = SearchForm()
+    blank_page = get_doc_blank_page(request)
+    menu = activate(url)
+    context = {
+        'menu': menu,
+        'form': form,
+        'sent': False,
+        'blank': blank_page,
+        'is_ru': is_lang_rus(request),
+        # 'captcha_id': GOOGLE_RECAPTCHA_ID
+    }
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        # if request.recaptcha_is_valid:
+        if form.is_valid():
+            context['page_data'] = search(form.cleaned_data['find'])
+            context['sent'] = True
+            return render(request, 'results.html', context)
+        context['form'] = form
+
+    if request.GET.get('sent'):
+        context['sent'] = True
+    return render(request, 'results.html', context)
 
 
 def about_emercoin(request):

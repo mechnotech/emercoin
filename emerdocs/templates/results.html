@@ -1,0 +1,18 @@
+
+{% extends blank %}
+
+{% load static %}
+{% block docpage %}
+
+         <div class="docPage-center">
+         <ol>
+         {% for u in page_data %}
+
+             <li>
+              <a href="{% url u %}">{{ u|capfirst }}</a>
+             </li>
+         {% endfor %}
+         </ol>
+         </div>
+
+{% endblock docpage %}
