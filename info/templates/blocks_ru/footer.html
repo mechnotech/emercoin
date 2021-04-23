@@ -1,3 +1,5 @@
+{% load cache %}
+{% cache 600 footerrus %}
 {% load static %}
 <footer class="footer">
     <div class="up" style="display: block;"></div>
@@ -124,3 +126,4 @@
         </div>
 
     </footer>
+{% endcache %}

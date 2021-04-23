@@ -1,15 +1,15 @@
 version: "3.6"
 
 volumes:
-  postgres_data:
+  dev_postgres_data:
 
 services:
   db:
     image: postgres:13.0
-    container_name: emer_db
+    container_name: dev_emer_db
     restart: always
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - dev_postgres_data:/var/lib/postgresql/data/
     env_file:
       - .env
     networks:

@@ -2,6 +2,7 @@ from copy import deepcopy
 
 from django.contrib.postgres.search import SearchVector
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import requires_csrf_token
 
 from emercoin.settings import MENU
@@ -70,6 +71,7 @@ def search(text):
     return urls
 
 
+@cache_page(60)
 @requires_csrf_token
 def results(request):
     url = ''

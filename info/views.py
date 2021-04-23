@@ -1,7 +1,10 @@
 from django.core.paginator import Paginator
 from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.gzip import gzip_page
+from django.views.decorators.http import require_http_methods, require_safe
 
 from emercoin.settings import GOOGLE_RECAPTCHA_ID
 from .forms import ContactForm
@@ -10,7 +13,6 @@ from .models import (
     Terms, Privacy
 )
 from .utils import get_blank_page, is_lang_rus, send_support
-from django.views.decorators.gzip import gzip_page
 
 DEFAULT_PAGE_SIZE = 18
 
@@ -22,6 +24,8 @@ def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
     return page, paginator
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def index(request):
     promos = Promo.objects.all()[:10]
@@ -55,6 +59,8 @@ def index(request):
         return render(request, 'index_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def blockchain(request):
     services = Services.objects.all()
@@ -69,6 +75,8 @@ def blockchain(request):
         return render(request, 'emercoin-blockchain_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def tech_solutions(request):
     services = Services.objects.all()
@@ -81,6 +89,8 @@ def tech_solutions(request):
         return render(request, 'tech-solutions_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def for_business(request):
     companies = Company.objects.all()
@@ -93,6 +103,9 @@ def for_business(request):
         return render(request, 'for-business_en.html', context)
 
 
+@require_safe
+@cache_page(60)
+@gzip_page
 def for_coinholders(request):
     context = {}
     if request.LANGUAGE_CODE == 'ru':
@@ -101,6 +114,8 @@ def for_coinholders(request):
         return render(request, 'for-coinholders_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def for_developers(request):
     companies = Company.objects.all()
@@ -115,6 +130,8 @@ def for_developers(request):
         return render(request, 'for-developers_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def socials(request):
     news = News.objects.all()[:3]
@@ -127,6 +144,8 @@ def socials(request):
         return render(request, 'social-communities_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def partners(request):
     companies_partners = Company.objects.filter(is_partner=True)
@@ -141,6 +160,8 @@ def partners(request):
         return render(request, 'partners-and-projects_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def company(request, slug):
     comp = get_object_or_404(Company, slug=slug)
@@ -151,6 +172,8 @@ def company(request, slug):
         return render(request, 'company_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def service(request, slug):
     one_service = get_object_or_404(Services, slug=slug)
@@ -165,6 +188,8 @@ def service(request, slug):
         return render(request, 'service_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def team(request):
     persons = Person.objects.all()
@@ -177,6 +202,8 @@ def team(request):
         return render(request, 'team_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def news(request):
     if request.LANGUAGE_CODE == 'ru':
@@ -197,6 +224,8 @@ def news(request):
         return render(request, 'news_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def road_map(request):
     cnt = RoadMap.objects.count()
@@ -212,6 +241,8 @@ def road_map(request):
         return render(request, 'roadmap_en.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def post(request, slug):
     """Страница отдельной новости"""
@@ -225,16 +256,24 @@ def post(request, slug):
         return render(request, 'post_en.html', context)
 
 
-@requires_csrf_token
+@require_safe
+@cache_page(60)
+@gzip_page
 def page_not_found(request, exception):
     return render(request, 'misc/404.html', {"path": request.path}, status=404)
 
 
-@requires_csrf_token
+@require_safe
+@cache_page(60)
+@gzip_page
 def server_error(request):
     return render(request, "misc/500.html", status=500)
 
 
+require_http_methods(['GET', 'POST'])
+
+
+@cache_page(60)
 @requires_csrf_token
 def contacts(request):
     blank_page = get_blank_page(request)
@@ -260,6 +299,8 @@ def contacts(request):
     return render(request, 'contacts.html', context)
 
 
+@require_safe
+@cache_page(60)
 @gzip_page
 def rate(request):
     blank_page = get_blank_page(request)
@@ -270,6 +311,9 @@ def rate(request):
     return render(request, 'rate.html', context)
 
 
+@require_safe
+@cache_page(60)
+@gzip_page
 def terms(request):
     term = Terms.objects.last()
     blank_page = get_blank_page(request)
@@ -281,6 +325,9 @@ def terms(request):
     return render(request, 'misc/terms.html', context)
 
 
+@require_safe
+@cache_page(60)
+@gzip_page
 def privacy(request):
     priv = Privacy.objects.last()
     blank_page = get_blank_page(request)

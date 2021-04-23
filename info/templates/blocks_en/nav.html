@@ -1,3 +1,5 @@
+{% load cache %}
+{% cache 600 naven %}
 {% load static %}
 <header>
 <div class="header">
@@ -144,3 +146,4 @@
     </div>
 </div>
 </header>
+{% endcache %}
