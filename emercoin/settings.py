@@ -12,7 +12,7 @@ DEBUG = False if os.getenv('DEBUG') == 'False' else True
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com', 'www.emercoin.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -90,13 +90,13 @@ else:
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'TIMEOUT': 60,
+        'TIMEOUT': 300,
         'OPTIONS': {
             'MAX_ENTRIES': 2000
         }
     }
 }
-CACHE_MIDDLEWARE_SECONDS = 60
+CACHE_MIDDLEWARE_SECONDS = 300
 
 AUTH_PASSWORD_VALIDATORS = [
     {

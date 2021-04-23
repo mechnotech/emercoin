@@ -26,6 +26,12 @@
 
 </head>
 <body>
+
+{% block css %}
+{% endblock css %}
+{% block open_scrypt %}
+{% endblock open_scrypt %}
+
         {% include 'blocks_en/nav.html' %}
 
 
@@ -37,10 +43,7 @@
 
         {% include 'blocks_en/footer.html' %}
 </body>
-{% block css %}
-{% endblock css %}
-{% block open_scrypt %}
-{% endblock open_scrypt %}
+
 {% block scrypt %}
 {% endblock scrypt %}
 </html>
