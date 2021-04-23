@@ -138,3 +138,5 @@ sent_emails
 /emerdocs/stale/
 /media-full/
 /media-resized/
+
+*.sqlite3

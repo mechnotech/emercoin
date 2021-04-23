@@ -9,7 +9,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='5xj52xgg71lp2')
 
 DEBUG = False if os.getenv('DEBUG') == 'False' else True
 
-ALLOWED_HOSTS = ['*']
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,8 +32,10 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -61,9 +66,13 @@ WSGI_APPLICATION = 'emercoin.wsgi.application'
 
 if DEBUG:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": os.getenv('DB_ENGINE'),
+            "NAME": os.getenv('DB_NAME'),
+            "USER": os.getenv('POSTGRES_USER'),
+            "PASSWORD": os.getenv('POSTGRES_PASSWORD'),
+            "HOST": '172.16.238.10',
+            "PORT": os.getenv('DB_PORT'),
         }
     }
 else:
@@ -77,6 +86,17 @@ else:
             "PORT": os.getenv('DB_PORT'),
         }
     }
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'TIMEOUT': 60,
+        'OPTIONS': {
+            'MAX_ENTRIES': 2000
+        }
+    }
+}
+CACHE_MIDDLEWARE_SECONDS = 60
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -72,8 +72,6 @@ urlpatterns = [
     path('block-generation/', include(block_generation)),
     path('emercoin-api/', views.emer_api, name='emercoin-api'),
     path('emercoin-press-kit/', views.press_kit, name='emercoin-press-kit'),
-    path('links-resources/', views.links, name='links-resources')
-
-
-
+    path('links-resources/', views.links, name='links-resources'),
+    path('results/', views.results, name='results'),
 ]
