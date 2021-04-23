@@ -24,10 +24,6 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    {% block css %}
-    {% endblock css %}
-    {% block open_scrypt %}
-    {% endblock open_scrypt %}
 
 </head>
 <body>
@@ -42,7 +38,10 @@
 
         {% include 'blocks_ru/footer.html' %}
 </body>
-
+    {% block css %}
+    {% endblock css %}
+    {% block open_scrypt %}
+    {% endblock open_scrypt %}
 {% block scrypt %}
 {% endblock scrypt %}
 </html>
