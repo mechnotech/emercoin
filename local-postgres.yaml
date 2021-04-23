@@ -4,7 +4,7 @@ volumes:
   dev_postgres_data:
 
 services:
-  db:
+  dev_db:
     image: postgres:13.0
     container_name: dev_emer_db
     restart: always
