@@ -5,7 +5,7 @@ from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import requires_csrf_token
 from django.views.decorators.http import require_http_methods, require_safe
 
-from emercoin.settings import GOOGLE_RECAPTCHA_ID
+from emercoin.settings import GOOGLE_RECAPTCHA_ID, P_CACHE
 from .forms import ContactForm
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company,
@@ -24,7 +24,7 @@ def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def index(request):
     promos = Promo.objects.all()[:10]
     emer_blocks = AboutEmer.objects.all()
@@ -58,7 +58,7 @@ def index(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def blockchain(request):
     services = Services.objects.all()
     emer_blocks = AboutEmer.objects.all()
@@ -73,7 +73,7 @@ def blockchain(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def tech_solutions(request):
     services = Services.objects.all()
     context = {
@@ -86,7 +86,7 @@ def tech_solutions(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def for_business(request):
     companies = Company.objects.all()
     context = {
@@ -99,7 +99,7 @@ def for_business(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def for_coinholders(request):
     context = {}
     if request.LANGUAGE_CODE == 'ru':
@@ -109,7 +109,7 @@ def for_coinholders(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def for_developers(request):
     companies = Company.objects.all()
     services = Services.objects.all()
@@ -124,7 +124,7 @@ def for_developers(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def socials(request):
     news = News.objects.all()[:3]
     context = {
@@ -137,7 +137,7 @@ def socials(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def partners(request):
     companies_partners = Company.objects.filter(is_partner=True)
     companies_implements = Company.objects.filter(is_used=True)
@@ -152,7 +152,7 @@ def partners(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def company(request, slug):
     comp = get_object_or_404(Company, slug=slug)
     context = {'company': comp}
@@ -163,7 +163,7 @@ def company(request, slug):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def service(request, slug):
     one_service = get_object_or_404(Services, slug=slug)
     services = Services.objects.all()
@@ -178,7 +178,7 @@ def service(request, slug):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def team(request):
     persons = Person.objects.all()
     context = {
@@ -191,7 +191,7 @@ def team(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def news(request):
     if request.LANGUAGE_CODE == 'ru':
         news_list = News.objects.filter(title__isnull=False)
@@ -212,7 +212,7 @@ def news(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def road_map(request):
     cnt = RoadMap.objects.count()
     roadmap = RoadMap.objects.all()[:cnt - 1]
@@ -228,7 +228,7 @@ def road_map(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def post(request, slug):
     """Страница отдельной новости"""
     one_post = get_object_or_404(News, slug=slug)
@@ -242,13 +242,13 @@ def post(request, slug):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def page_not_found(request, exception):
     return render(request, 'misc/404.html', {"path": request.path}, status=404)
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def server_error(request):
     return render(request, "misc/500.html", status=500)
 
@@ -256,7 +256,7 @@ def server_error(request):
 require_http_methods(['GET', 'POST'])
 
 
-@cache_page(60)
+@cache_page(P_CACHE)
 @requires_csrf_token
 def contacts(request):
     blank_page = get_blank_page(request)
@@ -283,7 +283,7 @@ def contacts(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def rate(request):
     blank_page = get_blank_page(request)
     context = {
@@ -294,7 +294,7 @@ def rate(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def terms(request):
     term = Terms.objects.last()
     blank_page = get_blank_page(request)
@@ -307,7 +307,7 @@ def terms(request):
 
 
 @require_safe
-@cache_page(60)
+@cache_page(P_CACHE)
 def privacy(request):
     priv = Privacy.objects.last()
     blank_page = get_blank_page(request)

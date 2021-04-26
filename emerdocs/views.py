@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import requires_csrf_token
 
-from emercoin.settings import MENU
+from emercoin.settings import MENU, P_CACHE
 from .forms import SearchForm
 from .models import DocPage
 from django.views.decorators.gzip import gzip_page
@@ -44,6 +44,7 @@ def activate(url):
     return recursive(menu, url)[0]
 
 
+@cache_page(P_CACHE)
 @gzip_page
 def render_docs(request):
     form = SearchForm()
@@ -71,7 +72,7 @@ def search(text):
     return urls
 
 
-@cache_page(60)
+@cache_page(P_CACHE)
 @requires_csrf_token
 def results(request):
     url = ''
