@@ -97,6 +97,8 @@ CACHES = {
     }
 }
 CACHE_MIDDLEWARE_SECONDS = 300
+# Кешируем основные статраницы
+P_CACHE = 60 if not DEBUG else 1
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -130,7 +132,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('YA_LOGIN')
 EMAIL_HOST_PASSWORD = os.getenv('YA_PASS')
 SUPPORT = os.getenv('YA_SUPPORT')
-# DEFAULT_CHARSET = 'utf8'
 GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('RECAPCHA_KEY')
 GOOGLE_RECAPTCHA_ID = os.getenv('RECAPCHA_ID')
 
@@ -169,13 +170,13 @@ CKEDITOR_CONFIGS = {
                     "Underline",
                     "Strike",
                     "SpellChecker",
-                    "Undo",
-                    "Redo",
+                    'NumberedList',
+                    'BulletedList',
                 ],
                 ["Link", "Unlink", "Anchor"],
                 ["Image", "Iframe", "Table", "HorizontalRule"],
                 ["TextColor", "BGColor"],
-                ["Smiley", "SpecialChar"],
+                ["SpecialChar"],
                 ["Source"],
             ],
             "toolbar": "Full",
@@ -235,23 +236,23 @@ MENU = [
                         'active': False,
                     },
                     {
-                        'name': 'Комндная строка CLI',
-                        'name_en': 'CLI daemon',
-                        'url': 'cli-daemon',
-                        'active': False,
-                    },
-                    {
-                        'name': 'Веб интерфейс',
-                        'name_en': 'EmerWEB wallet',
-                        'url': 'emerweb-wallet',
-                        'active': False,
-                    },
-                    {
                         'name': 'Docker контейнер',
                         'name_en': 'Docker',
                         'url': 'docker',
                         'active': False,
                     },
+                    {
+                        'name': 'Комндная строка CLI',
+                        'name_en': 'CLI daemon',
+                        'url': 'cli-daemon',
+                        'active': False,
+                    },
+                    # {
+                    #     'name': 'Веб интерфейс',
+                    #     'name_en': 'EmerWEB wallet',
+                    #     'url': 'emerweb-wallet',
+                    #     'active': False,
+                    # },
 
                 ]
             },
@@ -261,20 +262,6 @@ MENU = [
                 'url': 'other-wallets',
                 'active': False,
             },
-            {
-                'name': 'EmerCert',
-                'name_en': 'EmerCert',
-                'active': False,
-                'toggle': [
-                    {
-                        'name': 'Trusted Diploma',
-                        'name_en': 'Trusted Diploma',
-                        'active': False,
-                        'url': 'trusted-diploma'
-                    }
-                ]
-
-            }
         ]
     },
     {
@@ -420,6 +407,20 @@ MENU = [
                 'name_en': 'ENUMer',
                 'url': 'enumer',
                 'active': False,
+            },
+            {
+                'name': 'EmerCert',
+                'name_en': 'EmerCert',
+                'active': False,
+                'toggle': [
+                    {
+                        'name': 'Trusted Diploma',
+                        'name_en': 'Trusted Diploma',
+                        'active': False,
+                        'url': 'trusted-diploma'
+                    }
+                ]
+
             },
             {
                 'name': 'File Validator',
