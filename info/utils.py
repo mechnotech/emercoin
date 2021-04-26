@@ -117,6 +117,12 @@ def cut_self_href(text):
     return text.replace('href="https://emercoin.com', 'href="')
 
 
+def cut_space(text):
+    if not text:
+        return text
+    return text.replace('&nbsp;', ' ')
+
+
 def get_blank_page(request):
     if request.LANGUAGE_CODE == 'ru':
         return 'blankpage.html'
