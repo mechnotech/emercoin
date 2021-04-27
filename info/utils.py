@@ -78,10 +78,11 @@ def auto_upload_images(text):
      на локальное хранилище /media/"""
     if not text:
         return text
-    if isinstance(text, tuple):
-        print(text)
     cur = 1
     while True:
+        iframe = text.find('<iframe', cur)
+        if iframe > -1:
+            cur = text.find('</iframe', cur)
         cur = text.find('src=', cur + 4)
         if cur == -1:
             break
