@@ -381,12 +381,12 @@ MENU = [
                         'url': 'emerdpo-introduction',
                         'active': False,
                     },
-                    {
-                        'name': 'Программа Antifake',
-                        'name_en': 'The EmerDPO Antifake Programme',
-                        'url': 'the-emerdpo-antifake-programme',
-                        'active': False,
-                    },
+                    # {
+                    #     'name': 'Программа Antifake',
+                    #     'name_en': 'The EmerDPO Antifake Programme',
+                    #     'url': 'the-emerdpo-antifake-programme',
+                    #     'active': False,
+                    # },
                     {
                         'name': 'Программа SN-Publisher',
                         'name_en': 'EmerDPO SN-Publisher',
