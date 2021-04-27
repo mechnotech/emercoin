@@ -302,6 +302,12 @@ MENU = [
         ]
     },
     {
+                        'name': 'Восстановление',
+                        'name_en': 'How to recover',
+                        'url': 'recover',
+                        'active': False,
+    },
+    {
         'name': 'Эмеркоин API',
         'name_en': 'Emercoin API',
         'active': False,

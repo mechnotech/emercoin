@@ -239,3 +239,7 @@ def file_validator(request):
 
 def randpay(request):
     return render_docs(request)
+
+
+def recover(request):
+    return render_docs(request)
