@@ -78,10 +78,11 @@ def auto_upload_images(text):
      на локальное хранилище /media/"""
     if not text:
         return text
-    if isinstance(text, tuple):
-        print(text)
     cur = 1
     while True:
+        iframe = text.find('<iframe', cur)
+        if iframe > -1:
+            cur = text.find('</iframe', cur)
         cur = text.find('src=', cur + 4)
         if cur == -1:
             break
@@ -120,7 +121,10 @@ def cut_self_href(text):
 def cut_space(text):
     if not text:
         return text
-    return text.replace('&nbsp;', ' ')
+    text = text.replace('&nbsp;', ' ')
+    text = text.replace('&#39;', "'")
+    text = text.replace('&quot;', '"')
+    return text
 
 
 def get_blank_page(request):
