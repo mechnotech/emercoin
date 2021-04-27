@@ -121,7 +121,10 @@ def cut_self_href(text):
 def cut_space(text):
     if not text:
         return text
-    return text.replace('&nbsp;', ' ')
+    text = text.replace('&nbsp;', ' ')
+    text = text.replace('&#39;', "'")
+    text = text.replace('&quot;', '"')
+    return text
 
 
 def get_blank_page(request):
