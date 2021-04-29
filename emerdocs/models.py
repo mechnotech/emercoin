@@ -20,6 +20,8 @@ class DocPage(models.Model):
         help_text='Часть URL адреса документа, '
                   'по которому можно найти модель. Например "about-emercoin"'
     )
+    title = models.CharField(max_length=250, null=True, blank=True)
+    title_en = models.CharField(max_length=250, null=True, blank=True)
     text = RichTextUploadingField(
         'Текст документа',
         max_length=200000,

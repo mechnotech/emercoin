@@ -1,7 +1,23 @@
 
 {% extends blank %}
-
+{% block title %}
+    {% if is_ru %}Документация: {{ page_data.title }}{% else %}Community Documentation: {{ page_data.title_en }}{% endif %}
+{% endblock title %}
 {% load static %}
+{% block meta %}
+    {% if is_ru %}
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Документация, Эмеркоин" />
+    <meta name="description" content="Документация Emercoin, страница о: {{ page_data.title }}" />
+    <meta property="og:title" content="Документация: {{ page_data.title }}" />
+    {% else %}
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="docs, documentation, emercoin, {{ page_data.url }}" />
+    <meta name="description" content="Emercoin Community Documentation, page about: {{ page_data.title_en }}" />
+    <meta property="og:title" content="Community Documentation: {{ page_data.title_en }}" />
+    {% endif %}
+{% endblock %}
+
 {% block docpage %}
 
          <div class="docPage-center">

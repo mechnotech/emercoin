@@ -6,9 +6,10 @@
 {% endblock title %}
 
 {% block meta %}
-<meta name="keywords" content="Роадмэп, Дорожная карта, Эмеркоин" />
- <meta name="description" content="Дорожная карта развития Emercoin" />
-    <meta property="og:title" content="Дорожная карта" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Роадмэп, Дорожная карта, Эмеркоин" />
+     <meta name="description" content="Дорожная карта развития Emercoin" />
+        <meta property="og:title" content="Дорожная карта" />
 {% endblock %}
 
 {% block content %}
