@@ -3,7 +3,13 @@
 {% block title %}
     {{ post.title }}
 {% endblock title %}
-<Description>Новость: {{ post.title }}</Description>
+
+{% block meta %}
+<meta name="keywords" content="Новость, Эмеркоин" />
+ <meta name="description" content="Новость: {{ post.title }}" />
+    <meta property="og:title" content="{{ post.title }}" />
+{% endblock %}
+
 {% block content %}
 
 <main>
