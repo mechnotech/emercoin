@@ -3,7 +3,16 @@
 {% block title %}
     {% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}
 {% endblock title %}
+
+{% block meta %}
+<meta name="keywords" content="Курс, Цена, Эмеркоин" />
+ <meta name="description" content="{% if is_ru %}Обменный курс Emercoin{% else %}Emercoin rate{% endif %}" />
+    <meta property="og:title" content="{% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}" />
+{% endblock %}
+
+
 {% block content %}
+
 <main>
    <div class="privacyPage-top">
       <h1>{% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}</h1>

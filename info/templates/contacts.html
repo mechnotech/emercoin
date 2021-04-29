@@ -3,6 +3,12 @@
 {% block title %}
      {% if is_ru %}Контакты{% else %}Contacts{% endif %}
 {% endblock title %}
+{% block meta %}
+<meta name="keywords" content="email, контакт, Эмеркоин" />
+ <meta name="description" content="{% if is_ru %}Emercoin Контакты, связаться с авторами{% else %}Emercoin Contacts{% endif %}" />
+    <meta property="og:title" content="{% if is_ru %}Контакты{% else %}Contacts{% endif %}" />
+{% endblock meta %}
+
 {% block content %}
 
 <main>

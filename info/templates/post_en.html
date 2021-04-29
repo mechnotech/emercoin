@@ -3,7 +3,15 @@
 {% block title %}
     {{ post.title_en }}
 {% endblock title %}
+
+{% block meta %}
+<meta name="keywords" content="News, Emercoin" />
+ <meta name="description" content="News: {{ post.title }}" />
+    <meta property="og:title" content="{{ post.title }}" />
+{% endblock %}
+
 {% block content %}
+
 <main>
    <div class="privacyPage-top">
       <h1 class="leftText">{% if post.title_en %}{{ post.title_en }}{% else %}{{ post.title }}{% endif %}</h1>

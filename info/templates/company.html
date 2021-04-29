@@ -3,7 +3,15 @@
 {% block title %}
      Emercoin + {{ company.title }}
 {% endblock title %}
+
+{% block meta %}
+<meta name="keywords" content="Партнер, Бизнес, {{ company.title }}" />
+ <meta name="description" content="О компании-партнере Эмеркоина: {{ company.title }} " />
+    <meta property="og:title" content="Emercoin + {{ company.title }}" />
+{% endblock meta %}
+
 {% block content %}
+
 <main>
    <div class="privacyPage-top">
       <h1>{{ company.title }}</h1>

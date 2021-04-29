@@ -16,9 +16,10 @@
     <link rel="shortcut icon" href="{% static  'assets/images/favicon/favicon.ico' %}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <meta name="keywords" content="Blockchain" />
-    <meta name="description" content="Decentralized solutions for business" />
-    <meta property="og:title" content="Official website of Emercoin blockchain platform" />
+
+    {% block meta %}
+    {% endblock meta %}
+
 {#    <meta property="og:url" content="{% static  'ru' %}" />#}
     <meta property="og:image" content="{% static  'assets/img/share_image.png' %}" />
     <meta property="og:image:width" content="1200" />
