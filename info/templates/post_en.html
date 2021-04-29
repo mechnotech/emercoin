@@ -3,8 +3,9 @@
 {% block title %}
     {{ post.title_en }}
 {% endblock title %}
+<Description>News: {{ post.title }}</Description>
 {% block content %}
-    <Description>News: {{ post.title }}</Description>
+
 <main>
    <div class="privacyPage-top">
       <h1 class="leftText">{% if post.title_en %}{{ post.title_en }}{% else %}{{ post.title }}{% endif %}</h1>

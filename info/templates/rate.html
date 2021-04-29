@@ -3,8 +3,9 @@
 {% block title %}
     {% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}
 {% endblock title %}
+{% if is_ru %}<Description>Обменный курс Emercoin</Description>{% else %}<Description>Emercoin rate</Description>{% endif %}
 {% block content %}
-    {% if is_ru %}<Description>Обменный курс Emercoin</Description>{% else %}<Description>Emercoin rate</Description>{% endif %}
+
 <main>
    <div class="privacyPage-top">
       <h1>{% if is_ru %}Обменный курс{% else %}Emercoin Price and Exchange Rate{% endif %}</h1>
