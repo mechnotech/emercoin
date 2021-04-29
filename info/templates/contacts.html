@@ -3,12 +3,13 @@
 {% block title %}
      {% if is_ru %}Контакты{% else %}Contacts{% endif %}
 {% endblock title %}
-{% block content %}
-    {% if is_ru %}
+{% if is_ru %}
         <Description>Emercoin Контакты</Description>
     {% else %}
         <Description>Emercoin Contacts</Description>
     {% endif %}
+{% block content %}
+
 <main>
    <div class="privacyPage-top privacyPage-top-marginNo">
         {% if is_ru %}
