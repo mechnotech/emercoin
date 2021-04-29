@@ -1,9 +1,16 @@
 {% extends 'blankpage.html' %}
 {% load static %}
 {% block title %}
-    Блокчейн сервисы
+    Блокчейн сервис
 {% endblock title %}
- <Description>Сценарий использования: {{ one_service.title }}</Description>
+
+{% block meta %}
+<meta name="keywords" content="{{ one_service.title }}, Сервис, Сценарий, Технология, Эмеркоин" />
+ <meta name="description" content="Сценарий использования блокчейна Эмеркоин: {{ one_service.title }}" />
+    <meta property="og:title" content="Блокчейн сервис" />
+{% endblock %}
+
+
 {% block content %}
 
 <main>

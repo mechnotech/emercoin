@@ -1,9 +1,15 @@
 {% extends 'blankpage_en.html' %}
 {% load static %}
 {% block title %}
-    Blockchain Services
+    Blockchain Service
 {% endblock title %}
-<Description>Use Case: {{ one_service.title }} </Description>
+
+{% block meta %}
+<meta name="keywords" content="usecase, {{ one_service.title }}, Emercoin" />
+ <meta name="description" content="Emercoin Use Case: {{ one_service.title }}" />
+    <meta property="og:title" content="Blockchain Service" />
+{% endblock %}
+
 {% block content %}
 
 <main>
