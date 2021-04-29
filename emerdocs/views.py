@@ -243,3 +243,7 @@ def randpay(request):
 
 def recover(request):
     return render_docs(request)
+
+
+def known_bugs(request):
+    return render_docs(request)

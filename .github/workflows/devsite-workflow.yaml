@@ -89,9 +89,9 @@ jobs:
             mv ./nginx/dev.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
             sudo docker image prune -f
+            sudo docker-compose -f dev.yaml pull
             sudo docker-compose -f dev.yaml down
             sudo docker volume rm emercoin_media_volume
-            sudo docker-compose -f dev.yaml pull
             sudo docker-compose -f dev.yaml up -d --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
             sudo docker exec -t emer_web python3 manage.py migrate

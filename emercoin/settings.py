@@ -473,6 +473,12 @@ MENU = [
         'active': False,
         'url': 'links-resources'
     },
+    {
+        'name': 'Известные ошибки',
+        'name_en': 'Known Bugs',
+        'active': False,
+        'url': 'known-bugs'
+    },
 
 ]
 

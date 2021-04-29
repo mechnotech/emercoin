@@ -75,4 +75,5 @@ urlpatterns = [
     path('links-resources/', views.links, name='links-resources'),
     path('results/', views.results, name='results'),
     path('recover/', views.recover, name='recover'),
+    path('known-bugs/', views.known_bugs, name='known-bugs'),
 ]
