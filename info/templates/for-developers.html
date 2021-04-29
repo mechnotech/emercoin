@@ -4,9 +4,10 @@
     Как использовать?
 {% endblock title %}
 {% block meta %}
-<meta name="keywords" content="Технологии, Эмеркоин" />
- <meta name="description" content="Как использовать Emercoin? Страница для разработчиков и энтузиастов" />
-    <meta property="og:title" content="Владельцам монет" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Технологии, Эмеркоин" />
+     <meta name="description" content="Как использовать Emercoin? Страница для разработчиков и энтузиастов" />
+        <meta property="og:title" content="Владельцам монет" />
 {% endblock %}
 
 {% block content %}

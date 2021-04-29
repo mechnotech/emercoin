@@ -5,9 +5,10 @@
 {% endblock title %}
 
 {% block meta %}
-<meta name="keywords" content="Сообщества, Соцсети, Чат, Эмеркоин" />
- <meta name="description" content="Emercoin в социальных сетях" />
-    <meta property="og:title" content="Наши сообщества" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Сообщества, Соцсети, Чат, Эмеркоин" />
+     <meta name="description" content="Emercoin в социальных сетях" />
+        <meta property="og:title" content="Наши сообщества" />
 {% endblock %}
 
 {% block content %}

@@ -5,9 +5,10 @@
 {% endblock title %}
 
 {% block meta %}
-<meta name="keywords" content="social, Emercoin" />
- <meta name="description" content="Emercoin Social Media" />
-    <meta property="og:title" content="Emercoin Social Media" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="social, Emercoin" />
+     <meta name="description" content="Emercoin Social Media" />
+        <meta property="og:title" content="Emercoin Social Media" />
 {% endblock %}
 
 {% block content %}
