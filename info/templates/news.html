@@ -5,8 +5,9 @@
 {% endblock title %}
 
 {% block meta %}
-<meta name="keywords" content="Новости, Эмеркоин" />
- <meta name="description" content="Emercoin - последние новости" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Новости, Эмеркоин" />
+     <meta name="description" content="Emercoin - последние новости" />
     <meta property="og:title" content="Новости" />
 {% endblock %}
 

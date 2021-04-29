@@ -4,9 +4,10 @@
     Компании, сотрудничающие с Emercoin
 {% endblock title %}
 {% block meta %}
-<meta name="keywords" content="Бизнес, Партнеры, Эмеркоин" />
- <meta name="description" content="Компании, сотрудничающие или как-то применяющие Emercoin" />
-    <meta property="og:title" content="Компании, сотрудничающие с Emercoin" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Бизнес, Партнеры, Эмеркоин" />
+     <meta name="description" content="Компании, сотрудничающие или как-то применяющие Emercoin" />
+        <meta property="og:title" content="Компании, сотрудничающие с Emercoin" />
 {% endblock %}
 
 {% block content %}

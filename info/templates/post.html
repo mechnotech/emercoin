@@ -5,9 +5,10 @@
 {% endblock title %}
 
 {% block meta %}
-<meta name="keywords" content="Новость, Эмеркоин" />
- <meta name="description" content="Новость: {{ post.title }}" />
-    <meta property="og:title" content="{{ post.title }}" />
+    {% include "misc/link-rels.html" %}
+    <meta name="keywords" content="Новость, Эмеркоин" />
+     <meta name="description" content="Новость: {{ post.title }}" />
+        <meta property="og:title" content="{{ post.title }}" />
 {% endblock %}
 
 {% block content %}
