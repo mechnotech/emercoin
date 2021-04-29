@@ -1,6 +1,8 @@
 
 {% extends blank %}
-
+{% block title %}
+    {% if is_ru %}Документация: {{ page_data.title }}{% else %}Community Documentation: {{ page_data.title_en }}{% endif %}
+{% endblock title %}
 {% load static %}
 {% block docpage %}
 
