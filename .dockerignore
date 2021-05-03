@@ -9,4 +9,6 @@ media-resized
 README.md
 Dockerfile
 .env
+dump.sh
+local-postgres.yaml
 *.sqlite3
