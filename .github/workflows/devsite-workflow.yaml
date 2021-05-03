@@ -97,6 +97,7 @@ jobs:
             sudo docker cp .env emer_web:/code/
             sudo docker exec -t emer_web python3 manage.py migrate
             sudo docker exec -t emer_web /bin/bash load.sh
+            sudo docker exec -t emer_web cp info/templates/sitemap/dev.txt info/templates/sitemap/robots.txt
             sudo docker exec -t emer_web python3 manage.py collectstatic --no-input
 
   send_message:
