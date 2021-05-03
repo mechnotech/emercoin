@@ -126,13 +126,17 @@ def for_developers(request):
 @require_safe
 @cache_page(P_CACHE)
 def socials(request):
-    news = News.objects.all()[:3]
-    context = {
-        'news': news,
-    }
+
+    context = {}
     if request.LANGUAGE_CODE == 'ru':
+        news = News.objects.filter(
+            title__isnull=False).order_by("-date")[:3]
+        context['news'] = news
         return render(request, 'social-communities.html', context)
     else:
+        news = News.objects.filter(
+            title_en__isnull=False).order_by("-date")[:3]
+        context['news'] = news
         return render(request, 'social-communities_en.html', context)
 
 
