@@ -1,4 +1,11 @@
 User-agent: *
+Disallow: /de/
+Disallow: /ar/
+Disallow: /vi/
+Disallow: /zh/
+Disallow: /es/
+Disallow: /ko/
+Disallow: /ja/
 Disallow: *.css?*
 Disallow: *.js?*
 Sitemap: https://emercoin.com/sitemap.xml
