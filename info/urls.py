@@ -25,6 +25,7 @@ urlpatterns = [
     re_path(r'^rate/?$', views.rate, name='rate'),
     path('emercoin-terms-and-conditions', views.terms, name='terms'),
     path('emercoin-privacy-policy', views.privacy, name='privacy'),
+    re_path(r'^getstarted/?$', views.for_developers, name='getstarted'),
     path('<slug:slug>', views.service, name='service'),
 
 ]
