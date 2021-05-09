@@ -1,7 +1,11 @@
 {% extends 'blankpage_en.html' %}
 {% load static %}
 {% block title %}
+    {% if post.title_en %}
     {{ post.title_en }}
+    {% else %}
+    {{ post.title }}
+    {% endif %}
 {% endblock title %}
 
 {% block meta %}
