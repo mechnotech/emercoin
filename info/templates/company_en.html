@@ -6,12 +6,11 @@
 
 {% block meta %}
     {% include "misc/link-rels.html" %}
-    <meta name="keywords" content="Blockchain" />
-        <meta name="description" content="Emercoin`s Decentralized solutions for business and personal use" />
-        <meta property="og:title" content="Official website of Emercoin blockchain platform" />
+    <meta name="keywords" content="Partner, Business, {{company.title}} " />
+        <meta name="description" content="About Emercoin partner company: {{company.title}}" />
+        <meta property="og:title" content="Emercoin + {{ company.title }}" />
 {% endblock %}
 
- <Description>Emercoin partner: {{ company.title }} </Description>
 {% block content %}
 
 <main>
