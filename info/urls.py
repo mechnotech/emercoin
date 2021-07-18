@@ -4,6 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='emercoin'),
+    path('2015-01-15-Emercoin_Reaches_Peering_Agreement_with_OpenNIC',
+         views.url1, name='url1'),
     path('emercoin-blockchain/<slug:slug>', views.service, name='service'),
     re_path(r'^emercoin-blockchain/?$', views.blockchain, name='blockchain'),
     re_path(r'^tech-solutions/?$',
