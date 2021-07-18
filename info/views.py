@@ -126,7 +126,6 @@ def for_developers(request):
 @require_safe
 @cache_page(P_CACHE)
 def socials(request):
-
     context = {}
     if request.LANGUAGE_CODE == 'ru':
         news = News.objects.filter(
@@ -321,3 +320,8 @@ def privacy(request):
         'privacy': priv,
     }
     return render(request, 'misc/privacy.html', context)
+
+
+# Хардкодим древние линки к существующим разделам со slug
+def url1(request):
+    return company(request, slug='opennic')
