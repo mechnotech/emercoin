@@ -257,5 +257,3 @@ def url1(request):
 
 def url2(request):
     return render_docs(request, url='emerdns-introduction')
-
-

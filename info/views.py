@@ -6,7 +6,6 @@ from django.views.decorators.csrf import requires_csrf_token
 from django.views.decorators.http import require_http_methods, require_safe
 
 from emercoin.settings import GOOGLE_RECAPTCHA_ID, P_CACHE
-from emerdocs.views import emerdns_intro
 from .forms import ContactForm
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company,
