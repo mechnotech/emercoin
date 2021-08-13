@@ -46,9 +46,10 @@ def activate(url):
 
 @cache_page(P_CACHE)
 @gzip_page
-def render_docs(request):
+def render_docs(request, url=None):
     form = SearchForm()
-    url = request.resolver_match.url_name
+    if not url:
+        url = request.resolver_match.url_name
     blank_page = get_doc_blank_page(request)
     menu = activate(url)
     page = get_object_or_404(DocPage, url=url)
@@ -247,3 +248,14 @@ def recover(request):
 
 def known_bugs(request):
     return render_docs(request)
+
+
+# Хардкодим старые прямые URL`s
+def url1(request):
+    return render_docs(request, url='emerdpo-introduction')
+
+
+def url2(request):
+    return render_docs(request, url='emerdns-introduction')
+
+
