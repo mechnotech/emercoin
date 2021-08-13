@@ -1,11 +1,19 @@
 from django.urls import path, re_path
 from .utils import check_recaptcha
 from . import views
+from emerdocs import views as doc_views
 
 urlpatterns = [
     path('', views.index, name='emercoin'),
+    # Хардкодим старые URL`s
+
     path('2015-01-15-Emercoin_Reaches_Peering_Agreement_with_OpenNIC',
          views.url1, name='url1'),
+    path('emcdpo-zh', doc_views.url1),
+    path('DNS_and_Name-Value_Storage', doc_views.url2),
+    path('EMCDNS_and_NVS', doc_views.url2),
+
+    # ------------------------
     path('emercoin-blockchain/<slug:slug>', views.service, name='service'),
     re_path(r'^emercoin-blockchain/?$', views.blockchain, name='blockchain'),
     re_path(r'^tech-solutions/?$',
