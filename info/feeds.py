@@ -46,6 +46,6 @@ class MyFeed(Feed):
 
     def item_link(self, item):
         if self.language == 'ru':
-            return f'/ru/{item.slug}'
+            return f'/ru/news/{item.slug}'
         else:
-            return f'/en/{item.slug}'
+            return f'/en/news/{item.slug}'
