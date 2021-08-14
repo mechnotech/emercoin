@@ -372,7 +372,7 @@ class News(models.Model):
         verbose_name = 'Новость'
 
     def __str__(self):
-        return f'Новость - {self.title}'
+        return f'Новость - {self.title}{self.title_en}'
 
 
 class Person(models.Model):
