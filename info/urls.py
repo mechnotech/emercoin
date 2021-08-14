@@ -2,6 +2,7 @@ from django.urls import path, re_path
 from .utils import check_recaptcha
 from . import views
 from emerdocs import views as doc_views
+from .feeds import MyFeed
 
 urlpatterns = [
     path('', views.index, name='emercoin'),
@@ -12,7 +13,9 @@ urlpatterns = [
     path('emcdpo-zh', doc_views.url1),
     path('DNS_and_Name-Value_Storage', doc_views.url2),
     path('EMCDNS_and_NVS', doc_views.url2),
-
+    path('feed', MyFeed(), name='news_feed'),
+    path('feeds', MyFeed()),
+    path('rss', MyFeed(), name='news_feed'),
     # ------------------------
     path('emercoin-blockchain/<slug:slug>', views.service, name='service'),
     re_path(r'^emercoin-blockchain/?$', views.blockchain, name='blockchain'),
