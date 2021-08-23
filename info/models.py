@@ -377,7 +377,7 @@ class News(models.Model):
 
 class Person(models.Model):
     name = models.CharField('Имя', max_length=90, blank=False)
-    name_en = models.CharField('Имя', max_length=90, blank=True, null=True)
+    name_en = models.CharField('Name', max_length=90, blank=True, null=True)
     image = models.ImageField(
         'Фото',
         max_length=250,
@@ -408,7 +408,7 @@ class Person(models.Model):
         null=True,
         help_text='No more 550 letters')
     is_team = models.BooleanField('Член команды?', default=False)
-    is_adviser = models.BooleanField('Адвайзер?', default=False)
+    is_adviser = models.BooleanField('Активист?', default=False)
     linkedin = models.URLField('LinkedIn', max_length=250, blank=True)
     facebook = models.URLField('Facebook', max_length=250, blank=True)
     twitter = models.URLField('Twitter', max_length=250, blank=True)
