@@ -52,9 +52,9 @@ services:
       - type: volume
         source: media_volume
         target: /code/media
-      - type: bind
-        source: ./nginx/
-        target: /etc/nginx/conf.d/
+#      - type: bind
+#        source: ./nginx/
+#        target: /etc/nginx/conf.d/
     ports:
       - 80:80
     depends_on:
