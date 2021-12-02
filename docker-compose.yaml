@@ -37,7 +37,7 @@ services:
       - network
 
   nginx:
-    image: nginx:1.19.0-alpine
+    image: nginx:1.19.2-alpine
     container_name: emer_nginx
     restart: always
     volumes:

@@ -72,7 +72,7 @@ jobs:
             username: ${{ secrets.TEST_HOST_ADMIN }}
             key: ${{ secrets.SSH_KEY }}
             strip_components: 1
-            source: "nginx/default.conf,./dev.yaml"
+            source: "nginx/site.conf,nginx/nginx.conf,./dev.yaml"
             target: "/home/mech/emercoin/nginx/"
 
       - name: executing remote ssh commands to deploy
