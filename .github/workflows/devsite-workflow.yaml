@@ -75,7 +75,6 @@ jobs:
             sudo docker volume rm emercoin_postgres_data
             sudo docker-compose -f dev.yaml up -d --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
-            sudo docker cp nginx/site.conf emer_nginx:/etc/nginx/conf.d/
             sudo docker exec -t emer_web cp info/templates/sitemap/dev.txt info/templates/sitemap/robots.txt
 
   send_message:
