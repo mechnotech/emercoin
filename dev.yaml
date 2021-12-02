@@ -7,6 +7,7 @@ volumes:
 
 networks:
   network:
+    name: emer_network
     driver: bridge
 
 services:
@@ -28,7 +29,11 @@ services:
     volumes:
       - static_volume:/code/static
       - media_volume:/code/media
-    command: gunicorn emercoin.wsgi:application --preload --max-requests 5000 --max-requests-jitter 250 --workers=3 --bind 0.0.0.0:8000
+    command: >
+      bash -c "python manage.py migrate
+      && sh load.sh
+      && python manage.py collectstatic --noinput
+      && gunicorn emercoin.wsgi:application --preload --max-requests 5000 --max-requests-jitter 250 --workers=5 --bind 0.0.0.0:8000 --log-level info"
     depends_on:
       - db
     env_file:
