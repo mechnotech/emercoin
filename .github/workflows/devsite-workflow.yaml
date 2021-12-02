@@ -85,6 +85,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           envs: MY_ENV
           script: |
+#            git clone -b dev git@github.com:mechnotech/emercoin.git
             cd emercoin
             mv ./nginx/dev.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
@@ -95,10 +96,8 @@ jobs:
             sudo docker volume rm emercoin_postgres_data
             sudo docker-compose -f dev.yaml up -d --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
-            sudo docker exec -t emer_web python3 manage.py migrate
-            sudo docker exec -t emer_web /bin/bash load.sh
+            sudo docker cp nginx/site.conf emer_nginx:/etc/nginx/conf.d/
             sudo docker exec -t emer_web cp info/templates/sitemap/dev.txt info/templates/sitemap/robots.txt
-            sudo docker exec -t emer_web python3 manage.py collectstatic --no-input
 
   send_message:
     if: contains(github.ref, 'dev')
