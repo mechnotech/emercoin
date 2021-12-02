@@ -85,7 +85,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           envs: MY_ENV
           script: |
-#            git clone -b dev git@github.com:mechnotech/emercoin.git
             cd emercoin
             mv ./nginx/dev.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
