@@ -12,7 +12,7 @@ DEBUG = False if os.getenv('DEBUG') == 'False' else True
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com', 'www.emercoin.com', '*']
+    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com', 'www.emercoin.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -97,7 +97,7 @@ CACHES = {
     }
 }
 CACHE_MIDDLEWARE_SECONDS = 300
-# Кешируем основные статраницы
+# Кешируем основные страницы
 P_CACHE = 60 if not DEBUG else 1
 
 AUTH_PASSWORD_VALIDATORS = [
