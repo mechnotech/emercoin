@@ -24,13 +24,13 @@ jobs:
           script: |
             cd emercoin
             git pull
-            sudo touch .env && echo "$MY_ENV" | sudo tee .env
-            sudo docker image prune -f
-            sudo docker-compose down
-            sudo docker volume rm emercoin_media_volume
-            sudo docker volume rm emercoin_postgres_data
-            sudo docker-compose up -d --build
-            sudo docker cp .env emer_web:/code/
+            touch .env && echo "$MY_ENV" | sudo tee .env
+            docker image prune -f
+            docker-compose down
+            docker volume rm emercoin_media_volume
+            docker volume rm emercoin_postgres_data
+            docker-compose up -d --build
+            docker cp .env emer_web:/code/
 
   send_message:
     if: contains(github.ref, 'master')
