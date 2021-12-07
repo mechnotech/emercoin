@@ -22,13 +22,17 @@ services:
       - network
 
   web:
+    build: .
     image: emercoin/site:latest
     container_name: emer_web
     restart: always
     volumes:
       - static_volume:/code/static
       - media_volume:/code/media
-    command: gunicorn emercoin.wsgi:application --workers=5 --bind 0.0.0.0:8000
+    command: bash -c "python manage.py migrate
+      && sh load.sh
+      && python manage.py collectstatic --noinput
+      && gunicorn emercoin.wsgi:application --preload --max-requests 5000 --max-requests-jitter 250 --workers=5 --bind 0.0.0.0:8000"
     depends_on:
       - db
     env_file:
