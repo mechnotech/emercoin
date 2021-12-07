@@ -24,7 +24,7 @@ jobs:
           script: |
             cd emercoin
             git pull
-            touch .env && echo "$MY_ENV" | sudo tee .env
+            touch .env && echo "$MY_ENV" | tee .env
             docker image prune -f
             docker-compose down
             docker volume rm emercoin_media_volume
