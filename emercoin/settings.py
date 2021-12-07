@@ -12,7 +12,7 @@ DEBUG = False if os.getenv('DEBUG') == 'False' else True
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com', 'www.emercoin.com']
+    ALLOWED_HOSTS = ['emercoin.com', 'dev.emercoin.com', 'www.emercoin.com', '*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -71,7 +71,7 @@ if DEBUG:
             "NAME": os.getenv('DB_NAME'),
             "USER": os.getenv('POSTGRES_USER'),
             "PASSWORD": os.getenv('POSTGRES_PASSWORD'),
-            "HOST": '172.16.238.10',
+            "HOST": os.getenv('DB_HOST'),
             "PORT": os.getenv('DB_PORT'),
         }
     }
