@@ -28,7 +28,7 @@ services:
     volumes:
       - static_volume:/code/static
       - media_volume:/code/media
-    command: gunicorn emercoin.wsgi:application --workers=3 --bind 0.0.0.0:8000
+    command: gunicorn emercoin.wsgi:application --workers=5 --bind 0.0.0.0:8000
     depends_on:
       - db
     env_file:
@@ -45,13 +45,6 @@ services:
       - ./nginx/site.conf:/etc/nginx/conf.d/site.conf:ro
       - static_volume:/code/static
       - media_volume:/code/media
-#        target: /code/static
-#      - type: volume
-#        source: media_volume
-#        target: /code/media
-#      - type: bind
-#        source: ./nginx/
-#        target: /etc/nginx/conf.d/
     ports:
       - "80:80"
     depends_on:
