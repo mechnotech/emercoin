@@ -4,6 +4,8 @@ volumes:
   postgres_data:
   static_volume:
   media_volume:
+  nginx_cache:
+    name: nginx_cache
 
 networks:
   network:
@@ -49,6 +51,7 @@ services:
       - ./nginx/site.conf:/etc/nginx/conf.d/site.conf:ro
       - static_volume:/code/static
       - media_volume:/code/media
+      - nginx_cache:/var/lib/nginx/proxy_cache
     ports:
       - "80:80"
     depends_on:
