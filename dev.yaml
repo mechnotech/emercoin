@@ -25,7 +25,8 @@ services:
       - network
 
   web:
-    image: emercoin/site:dev
+    build: .
+    image: emercoin/site:latest
     container_name: emer_web
     restart: always
     volumes:

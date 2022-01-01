@@ -35,14 +35,14 @@ jobs:
           envs: MY_ENV
           script: |
             cd emercoin
-            git pull
             git checkout dev
+            git pull
             mv ./nginx/dev.yaml .
             sudo touch .env && echo "$MY_ENV" | sudo tee .env
-            sudo docker image prune -f
             sudo docker-compose -f dev.yaml down
             sudo docker volume rm emercoin_media_volume
             sudo docker volume rm emercoin_postgres_data
+            sudo docker volume rm nginx_cache
             sudo docker-compose -f dev.yaml up -d --build --remove-orphans --force-recreate
             sudo docker cp .env emer_web:/code/
             sudo docker exec -t emer_web cp info/templates/sitemap/dev.txt info/templates/sitemap/robots.txt
