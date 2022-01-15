@@ -29,6 +29,7 @@ jobs:
             docker-compose down
             docker volume rm emercoin_media_volume
             docker volume rm emercoin_postgres_data
+            docker volume rm nginx_cache
             docker-compose up -d --build
             docker cp .env emer_web:/code/
 
