@@ -21,7 +21,7 @@ urlpatterns = [
     ),
     path('zh/', include('info.urls')),
     # path('admin/', admin.site.urls),
-    path('i18n/', include('django.conf.urls.i18n')),
+    path('i18n', include('django.conf.urls.i18n')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
