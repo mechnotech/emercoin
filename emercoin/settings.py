@@ -96,9 +96,9 @@ CACHES = {
         }
     }
 }
-CACHE_MIDDLEWARE_SECONDS = 300
+CACHE_MIDDLEWARE_SECONDS = 60
 # Кешируем основные страницы
-P_CACHE = 60 if not DEBUG else 1
+P_CACHE = 10 if not DEBUG else 1
 
 AUTH_PASSWORD_VALIDATORS = [
     {
