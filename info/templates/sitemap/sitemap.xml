@@ -1,1174 +1,1209 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 		<!--	created with www.mysitemapgenerator.com	-->
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://emercoin.com/</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/for-business</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/for-coinholders</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/for-developers</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/our-social-communities</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/emercoin-blockchain</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/tech-solutions</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/about-emercoin</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/introduction/specifications</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/emercoin-api/</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/rate</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/news</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/road-map</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/team</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/contacts</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/emercoin-update-0-7-11</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<loc>https://emercoin.com/emerdns</loc>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/emerdns-in-dnscrypt</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/emercoin-update-0-7-11/</loc>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/merenkov-Eugene-emercoin-developer-died-at-35</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/emerdns-in-dnscrypt/</loc>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/merenkov-Eugene-emercoin-developer-died-at-35/</loc>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/emercoin-terms-and-conditions</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/emercoin-privacy-policy</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/static/files/pdf/whitepaper.pdf</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/static/files/pdf/one-page.pdf</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:44+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/emerdns</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emerssh</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emerssl</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emerdpo</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/enumer</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emerlnx</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emernvs</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emertts</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/emermagnet</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/fv</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/randpay</loc>
-	<lastmod>2022-01-23T11:27:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
 	<loc>https://emercoin.com/ru/for-business</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme/</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
+	<loc>https://emercoin.com/en/emerdpo/</loc>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
 	<loc>https://emercoin.com/en/partners-and-projects/coca-cola</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/deloitte</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/foundico</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/kolionovo</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/bitfury</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/microsoft</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/beazley</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/lloyds</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/riskcooperative</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/aspanta</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/opennic</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/i-teco</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/redhat</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/blockchain-development-association-of-latvia</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/infopulse</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/codiv-ou</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/ezuce</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/hashing24</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/portaone</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/trustzone</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/partners-and-projects/peername</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:46+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/for-coinholders</loc>
-	<lastmod>2022-01-23T11:27:14+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/for-developers</loc>
-	<lastmod>2022-01-23T11:27:15+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
+	<loc>https://emercoin.com/en/emerdns/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/emerssh/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/emerssl/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/enumer/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
 	<loc>https://emercoin.com/documentation/introduction/the-emc-currency/</loc>
-	<lastmod>2022-01-23T11:27:15+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/documentation/blockchain-services/emernvs/</loc>
-	<lastmod>2022-01-23T11:27:15+01:00</lastmod>
-	<priority>0.2</priority>
+	<loc>https://emercoin.com/en/emerlnx/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/emernvs/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/emertts/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/emermagnet/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/fv/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/randpay/</loc>
+	<lastmod>2022-01-23T18:53:47+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/our-social-communities</loc>
-	<lastmod>2022-01-23T11:27:15+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emercoin-blockchain</loc>
+	<lastmod>2022-01-23T18:53:48+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/tech-solutions</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:48+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/documentation/about-emercoin</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/documentation/introduction/specifications</loc>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/introduction/the-emc-currency</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/introduction/security-principles/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/install-software/core-wallets/gui-wallet/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/install-software/core-wallets/docker/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/install-software/core-wallets/cli-daemon/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/install-software/other-wallets/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/running-emercoin/linux-quickstart/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/running-emercoin/command-line/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/running-emercoin/emercoin-conf/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/running-emercoin/ports/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/running-emercoin/testnet/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/recover/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/introduction-to-emercoin-services/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emernvs/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerssh/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-introduction/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-guide/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerssl/emerssl-infocard/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerdns/emerdns-introduction/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerdpo/emerdpo-introduction/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emerdpo/emerdpo-sn-publisher/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/emermagnet/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/enumer/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/install-software/emercert/trusted-diploma/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/fv/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/blockchain-services/randpay/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/block-generation/proof-of-stake-minting/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/block-generation/proof-of-work-mining/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/emercoin-press-kit/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/links-resources/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/known-bugs/</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
 	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/documentation/introduction/specifications</loc>
-	<lastmod>2022-01-23T11:27:16+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emercoin-blockchain</loc>
-	<lastmod>2022-01-23T11:27:17+01:00</lastmod>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/emercoin-api/</loc>
-	<lastmod>2022-01-23T11:27:17+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:49+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/documentation/about-emercoin</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emerdns-is-the-first-blockchain-based-alt-dns-it-supports-https-and-ssl-certificates/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/smartefact-digital-identity-for-your-artwork/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/file-validator/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/coinex-listing/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emc-scientific-pubs/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/augustseptember-digest/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/logging-on-to-livecoinnet-with-emerssl/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emercoin-digest-july2019/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emercoin-now-listed-on-deex/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/chto-delat-esli-s-koshelkom-emercoin-chto-to-poshlo-ne-tak/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/official-emercoin-resources/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emercoin-update079/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/here-what-we-have-done/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/hurify-started-cooperation-with-emercoin-in-the-field-of-iot/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emercoin-digest-june2019/</loc>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/rate</loc>
-	<lastmod>2022-01-23T11:27:17+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
 	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/news</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emerdns-is-the-first-blockchain-based-alt-dns-it-supports-https-and-ssl-certificates</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/smartefact-digital-identity-for-your-artwork</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/file-validator</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/coinex-listing</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emc-scientific-pubs</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/augustseptember-digest</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/logging-on-to-livecoinnet-with-emerssl</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emercoin-digest-july2019</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emercoin-now-listed-on-deex</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/chto-delat-esli-s-koshelkom-emercoin-chto-to-poshlo-ne-tak</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/official-emercoin-resources</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emercoin-update079</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/here-what-we-have-done</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/hurify-started-cooperation-with-emercoin-in-the-field-of-iot</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emercoin-digest-june2019</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/road-map</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/team</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects</loc>
-	<lastmod>2022-01-23T11:27:18+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/team</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/contacts</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/emerdns</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emerssh</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emerssl</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emerdpo</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/enumer</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emerlnx</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emernvs</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emertts</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/emermagnet</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/fv</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/randpay</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/news/emercoin-update-0-7-11</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<loc>https://emercoin.com/ru/emerdns/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emerdns-in-dnscrypt</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<loc>https://emercoin.com/ru/documentation/blockchain-services/introduction-to-emercoin-services/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emerssh/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/merenkov-Eugene-emercoin-developer-died-at-35</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<loc>https://emercoin.com/ru/emerssl/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emerdpo/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/enumer/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emerlnx/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emernvs/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emertts/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/emermagnet/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/fv/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/randpay/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/emercoin-terms-and-conditions</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/emercoin-privacy-policy</loc>
-	<lastmod>2022-01-23T11:27:19+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
+	<loc>https://emercoin.com/ru/news/emercoin-update-0-7-11/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/emerdns-in-dnscrypt/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/merenkov-Eugene-emercoin-developer-died-at-35/</loc>
+	<lastmod>2022-01-23T18:53:51+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerdpo/the-emerdpo-antifake-programme/</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/coca-cola</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/deloitte</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/foundico</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/kolionovo</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/bitfury</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/microsoft</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/beazley</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/lloyds</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/riskcooperative</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/aspanta</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/opennic</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/i-teco</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/redhat</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/blockchain-development-association-of-latvia</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/infopulse</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/codiv-ou</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/ezuce</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/hashing24</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/portaone</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/trustzone</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/partners-and-projects/peername</loc>
-	<lastmod>2022-01-23T11:27:25+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:55+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/introduction/the-emc-currency/</loc>
-	<lastmod>2022-01-23T11:27:29+01:00</lastmod>
-	<priority>0.2</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/ru/documentation/blockchain-services/emernvs/</loc>
-	<lastmod>2022-01-23T11:27:29+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/documentation/introduction/the-emc-currency/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/introduction/the-emc-currency</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/introduction/security-principles/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/install-software/core-wallets/gui-wallet/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/install-software/core-wallets/docker/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/install-software/core-wallets/cli-daemon/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/install-software/other-wallets/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/running-emercoin/linux-quickstart/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/running-emercoin/command-line/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/running-emercoin/emercoin-conf/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/running-emercoin/ports/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/running-emercoin/testnet/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/recover/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/documentation/blockchain-services/introduction-to-emercoin-services/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<loc>https://emercoin.com/ru/documentation/blockchain-services/emernvs/</loc>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerssh/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerssl/emerssl-introduction/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerssl/emerssl-guide/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerssl/emerssl-infocard/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerdns/emerdns-introduction/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerdpo/emerdpo-introduction/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emerdpo/emerdpo-sn-publisher/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/emermagnet/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/enumer/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/install-software/emercert/trusted-diploma/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.1</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/fv/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/blockchain-services/randpay/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/block-generation/proof-of-stake-minting/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/block-generation/proof-of-work-mining/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/emercoin-press-kit/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/links-resources/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/documentation/known-bugs/</loc>
-	<lastmod>2022-01-23T11:27:30+01:00</lastmod>
+	<lastmod>2022-01-23T18:53:58+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/media/EMCSSL.pdf</loc>
-	<lastmod>2022-01-23T11:27:33+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:01+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/media/Randpay%20whitepaper%28en%29.pdf</loc>
-	<lastmod>2022-01-23T11:27:35+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/for-coinholders/</loc>
-	<lastmod>2022-01-23T11:27:36+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:03+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/coin_galaxy_listing</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/coin_galaxy_listing/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emerdns-is-the-first-blockchain-based-alt-dns-it-supports-https-and-ssl-certificates</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emerdns-is-the-first-blockchain-based-alt-dns-it-supports-https-and-ssl-certificates/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/file-validator</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/file-validator/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/augustseptember-digest</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/augustseptember-digest/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/logging-on-to-livecoinnet-with-emerssl</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/logging-on-to-livecoinnet-with-emerssl/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emercoin-digest-july2019</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emercoin-digest-july2019/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emercoin-now-listed-on-deex</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emercoin-now-listed-on-deex/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/chto-delat-esli-s-koshelkom-emercoin-chto-to-poshlo-ne-tak</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/chto-delat-esli-s-koshelkom-emercoin-chto-to-poshlo-ne-tak/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/official-emercoin-resources</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/official-emercoin-resources/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emercoin-update079</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emercoin-update079/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/here-what-we-have-done</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/here-what-we-have-done/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/hurify-started-cooperation-with-emercoin-in-the-field-of-iot</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/hurify-started-cooperation-with-emercoin-in-the-field-of-iot/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emercoin-digest-june2019</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emercoin-digest-june2019/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emercoin-digest-may2019</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emercoin-digest-may2019/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/codiv-ou-vypustila-koshelek-kotoryy-podderzhivaet-emc</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/codiv-ou-vypustila-koshelek-kotoryy-podderzhivaet-emc/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/smartefact-digital-identity-for-your-artwork</loc>
-	<lastmod>2022-01-23T11:27:38+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/smartefact-digital-identity-for-your-artwork/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/coinex-listing</loc>
-	<lastmod>2022-01-23T11:27:39+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/emc-scientific-pubs/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emc-scientific-pubs</loc>
-	<lastmod>2022-01-23T11:27:39+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/coinex-listing/</loc>
+	<lastmod>2022-01-23T18:54:04+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/news/referendum-v-makedonii-predostavil-vozmozhnost-protestirovat-blokcheyn-platformu-dlya-notarizatsii-dokumentov</loc>
-	<lastmod>2022-01-23T11:27:40+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:05+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/news/buy-or-sell-emc-on-easyrabbitnet</loc>
-	<lastmod>2022-01-23T11:27:40+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:05+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/news/codiv-ou-has-presented-new-wallet-with-emc</loc>
-	<lastmod>2022-01-23T11:27:40+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:05+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/news/emerapi-0081-is-released</loc>
-	<lastmod>2022-01-23T11:27:40+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:05+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/news/randpay</loc>
-	<lastmod>2022-01-23T11:27:40+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://emercoin.com/en/news/emercoin-digest-may2019</loc>
-	<lastmod>2022-01-23T11:27:41+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:05+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/contacts/</loc>
-	<lastmod>2022-01-23T11:27:54+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:14+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/media/Randpay%20Whitepaper%20RU%20.pdf</loc>
-	<lastmod>2022-01-23T11:27:54+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:15+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/for-coinholders/</loc>
-	<lastmod>2022-01-23T11:27:55+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:15+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/coin_galaxy_listing</loc>
-	<lastmod>2022-01-23T11:28:00+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/coin_galaxy_listing/</loc>
+	<lastmod>2022-01-23T18:54:19+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/news/blokcheyn-v-obrazovanii-intervyu-s-razrabotchikami-finassessment</loc>
-	<lastmod>2022-01-23T11:28:01+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:20+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/ru/news/easyrabbitnet-teper-s-emercoin</loc>
-	<lastmod>2022-01-23T11:28:02+01:00</lastmod>
-	<priority>0.6</priority>
+	<lastmod>2022-01-23T18:54:20+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/emerapi-0081-is-released</loc>
-	<lastmod>2022-01-23T11:28:02+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/emercoin-digest-may2019/</loc>
+	<lastmod>2022-01-23T18:54:20+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/randpay</loc>
-	<lastmod>2022-01-23T11:28:02+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/codiv-ou-vypustila-koshelek-kotoryy-podderzhivaet-emc/</loc>
+	<lastmod>2022-01-23T18:54:21+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/codiv-ou-vypustila-koshelek-kotoryy-podderzhivaet-emc</loc>
-	<lastmod>2022-01-23T11:28:03+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/referendum-v-makedonii-predostavil-vozmozhnost-protestirovat-blokcheyn-platformu-dlya-notarizatsii-dokumentov/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/referendum-v-makedonii-predostavil-vozmozhnost-protestirovat-blokcheyn-platformu-dlya-notarizatsii-dokumentov</loc>
-	<lastmod>2022-01-23T11:28:05+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/referendum-v-makedonii-predostavil-vozmozhnost-protestirovat-blokcheyn-platformu-dlya-notarizatsii-dokumentov/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/codiv-ou-has-presented-new-wallet-with-emc</loc>
-	<lastmod>2022-01-23T11:28:05+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/codiv-ou-has-presented-new-wallet-with-emc/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/ru/news/buy-or-sell-emc-on-easyrabbitnet</loc>
-	<lastmod>2022-01-23T11:28:05+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/buy-or-sell-emc-on-easyrabbitnet/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/emerapi-0081-is-released/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/codiv-ou-has-presented-new-wallet-with-emc/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/emerapi-0081-is-released/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/randpay/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/buy-or-sell-emc-on-easyrabbitnet/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/randpay/</loc>
+	<lastmod>2022-01-23T18:54:22+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>https://emercoin.com/en/contacts/</loc>
-	<lastmod>2022-01-23T11:28:08+01:00</lastmod>
+	<lastmod>2022-01-23T18:54:24+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/easyrabbitnet-teper-s-emercoin</loc>
-	<lastmod>2022-01-23T11:28:09+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/ru/news/easyrabbitnet-teper-s-emercoin/</loc>
+	<lastmod>2022-01-23T18:54:25+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://emercoin.com/en/news/blokcheyn-v-obrazovanii-intervyu-s-razrabotchikami-finassessment</loc>
-	<lastmod>2022-01-23T11:28:10+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>https://emercoin.com/en/news/easyrabbitnet-teper-s-emercoin/</loc>
+	<lastmod>2022-01-23T18:54:25+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/ru/news/blokcheyn-v-obrazovanii-intervyu-s-razrabotchikami-finassessment/</loc>
+	<lastmod>2022-01-23T18:54:27+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emercoin.com/en/news/blokcheyn-v-obrazovanii-intervyu-s-razrabotchikami-finassessment/</loc>
+	<lastmod>2022-01-23T18:54:27+01:00</lastmod>
+	<priority>0.4</priority>
 </url>
 </urlset>
