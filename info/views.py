@@ -264,6 +264,8 @@ def road_map(request):
 @cache_page(P_CACHE)
 def post(request, slug):
     """Страница отдельной новости"""
+    if request.GET:
+        return render(request, 'misc/404.html', {"path": request.path}, status=404)
     one_post = get_object_or_404(News, slug=slug)
     context = {'post': one_post}
     if request.LANGUAGE_CODE == 'ru':
