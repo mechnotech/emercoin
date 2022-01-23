@@ -8,4 +8,5 @@ Disallow: /ko/
 Disallow: /ja/
 Disallow: *.css?*
 Disallow: *.js?*
+Clean-param: utm
 Sitemap: https://emercoin.com/sitemap.xml
