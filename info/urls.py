@@ -31,7 +31,7 @@ urlpatterns = [
     path('partners-and-projects/<slug:slug>', views.company, name='partner'),
     re_path(r'^partners-and-projects/?$', views.partners, name='partners'),
     re_path(r'^team/?$', views.team, name='team'),
-    path('news/<slug:slug>', views.post, name='post'),
+    path('news/<slug:slug>/', views.post, name='post'),
     re_path(r'^news/?$', views.news, name='news'),
     re_path(r'^road-map/?$', views.road_map, name='road-map'),
     re_path(r'^contacts/?$', check_recaptcha(views.contacts), name='contacts'),
@@ -39,6 +39,6 @@ urlpatterns = [
     path('emercoin-terms-and-conditions', views.terms, name='terms'),
     path('emercoin-privacy-policy', views.privacy, name='privacy'),
     re_path(r'^getstarted/?$', views.for_developers, name='getstarted'),
-    path('<slug:slug>', views.service, name='service'),
+    path('<slug:slug>/', views.service, name='service'),
 
 ]
