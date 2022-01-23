@@ -11,6 +11,6 @@ Disallow: *.js?*
 Clean-param: __cf_chl_jschl_tk__
 Clean-param: __cf_chl_captcha_tk__
 Clean-param: ref&p&wvstest
-Clean-param: __cf_chl_tk
+Clean-param: __cf_chl_tk&__cf_chl_f_tk
 Clean-param: _x_tr_sch&_x_tr_sl&_x_tr_tl&_x_tr_hl&_x_tr_pto
 Sitemap: https://emercoin.com/sitemap.xml
