@@ -47,8 +47,8 @@ def activate(url):
 @cache_page(P_CACHE)
 @gzip_page
 def render_docs(request, url=None):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     form = SearchForm()
     if not url:
         url = request.resolver_match.url_name

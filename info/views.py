@@ -27,8 +27,8 @@ def get_paginated_view(request, recipe_list, page_size=DEFAULT_PAGE_SIZE):
 @require_safe
 @cache_page(P_CACHE)
 def index(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     promos = Promo.objects.all()[:10]
     emer_blocks = AboutEmer.objects.all()
     services = Services.objects.all()
@@ -63,8 +63,8 @@ def index(request):
 @require_safe
 @cache_page(P_CACHE)
 def blockchain(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     services = Services.objects.all()
     emer_blocks = AboutEmer.objects.all()
     context = {
@@ -80,8 +80,8 @@ def blockchain(request):
 @require_safe
 @cache_page(P_CACHE)
 def tech_solutions(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     services = Services.objects.all()
     context = {
         'services': services,
@@ -95,8 +95,8 @@ def tech_solutions(request):
 @require_safe
 @cache_page(P_CACHE)
 def for_business(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     companies = Company.objects.all()
     context = {
         'companies': companies
@@ -110,8 +110,8 @@ def for_business(request):
 @require_safe
 @cache_page(P_CACHE)
 def for_coinholders(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     context = {}
     if request.LANGUAGE_CODE == 'ru':
         return render(request, 'for-coinholders.html', context)
@@ -122,8 +122,8 @@ def for_coinholders(request):
 @require_safe
 @cache_page(P_CACHE)
 def for_developers(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     companies = Company.objects.all()
     services = Services.objects.all()
     context = {
@@ -139,8 +139,8 @@ def for_developers(request):
 @require_safe
 @cache_page(P_CACHE)
 def socials(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     context = {}
     if request.LANGUAGE_CODE == 'ru':
         news = News.objects.filter(
@@ -157,8 +157,8 @@ def socials(request):
 @require_safe
 @cache_page(P_CACHE)
 def partners(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     companies_partners = Company.objects.filter(is_partner=True)
     companies_implements = Company.objects.filter(is_used=True)
     context = {
@@ -174,8 +174,8 @@ def partners(request):
 @require_safe
 @cache_page(P_CACHE)
 def company(request, slug):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     comp = get_object_or_404(Company, slug=slug)
     context = {'company': comp}
     if request.LANGUAGE_CODE == 'ru':
@@ -187,8 +187,8 @@ def company(request, slug):
 @require_safe
 @cache_page(P_CACHE)
 def service(request, slug):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     one_service = get_object_or_404(Services, slug=slug)
     services = Services.objects.all()
     context = {
@@ -204,8 +204,8 @@ def service(request, slug):
 @require_safe
 @cache_page(P_CACHE)
 def team(request):
-    if request.GET:
-        return render(request, 'misc/404.html', {"path": request.path}, status=404)
+    # if request.GET:
+    #     return render(request, 'misc/404.html', {"path": request.path}, status=404)
     persons = Person.objects.all()
     context = {
         'persons': persons
