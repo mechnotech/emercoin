@@ -7,7 +7,7 @@ services:
   db:
     image: postgres:13.0
     container_name: dev_emer_db
-    restart: always
+#    restart: always
     volumes:
       - dev_postgres_data:/var/lib/postgresql/data/
     env_file:
