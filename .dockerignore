@@ -12,4 +12,6 @@ Dockerfile
 dump.sh
 local-postgres.yaml
 *.sqlite3
-tokens.txt
+tokens.txtmedia
+media_orphaned
+dist

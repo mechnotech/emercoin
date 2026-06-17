@@ -144,3 +144,4 @@ tokens.txt
 # Медиа вынесено в Cloudflare R2 (media.emercoin.com); в git не храним
 /media/
 /media_orphaned/
+.r2.env
