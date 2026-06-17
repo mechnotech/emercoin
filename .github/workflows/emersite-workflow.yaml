@@ -69,11 +69,11 @@ jobs:
           rsync -az --delete -e "ssh -i ~/.ssh/id_rsa" dist/ \
             ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }}:~/emercoin-static/sites/prod/
 
-      - name: Start/refresh nginx
+      - name: Start/refresh nginx (zero-downtime)
         run: |
           ssh -i ~/.ssh/id_rsa ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }} \
-            'cd ~/emercoin-static && (docker compose -f static.yaml up -d --force-recreate \
-             || docker-compose -f static.yaml up -d --force-recreate)'
+            'cd ~/emercoin-static && (docker compose -f static.yaml up -d || docker-compose -f static.yaml up -d) \
+             && (docker exec emer_nginx_static nginx -s reload || true)'
 
   send_message:
     if: contains(github.ref, 'master')
