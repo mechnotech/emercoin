@@ -57,7 +57,7 @@ jobs:
       - name: Prepare remote directories
         run: |
           ssh -i ~/.ssh/id_rsa ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }} \
-            'mkdir -p ~/emercoin-static/nginx ~/emercoin-static/dist'
+            'mkdir -p ~/emercoin-static/nginx ~/emercoin-static/sites/dev ~/emercoin-static/sites/prod'
 
       - name: Upload nginx config and compose
         run: |
@@ -66,10 +66,10 @@ jobs:
           scp -i ~/.ssh/id_rsa static.yaml \
             ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }}:~/emercoin-static/
 
-      - name: Rsync static site
+      - name: Rsync static site (staging)
         run: |
           rsync -az --delete -e "ssh -i ~/.ssh/id_rsa" dist/ \
-            ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }}:~/emercoin-static/dist/
+            ${{ secrets.TEST_HOST_ADMIN }}@${{ secrets.DEV_TEST_HOST }}:~/emercoin-static/sites/dev/
 
       - name: Start/refresh nginx
         run: |
