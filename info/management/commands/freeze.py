@@ -36,14 +36,42 @@ NEWS_PAGINATION_RE = re.compile(r'href="/news/?\?page=(\d+)"')
 # /en/foo -> /foo, /en -> /, /en#x -> /#x (то же для /ru).
 LANG_DIR_RE = re.compile(r'(href|src)="/(?:en|ru)/')
 LANG_BARE_RE = re.compile(r'(href|src)="/(?:en|ru)(?=["#])')
+# HTML-комментарии (остатки ru-вёрстки) — вырезаем (не трогаем <!DOCTYPE>).
+HTML_COMMENT_RE = re.compile(r'<!--.*?-->', re.DOTALL)
+# Кириллические буквы-двойники латиницы (гомоглифы).
+HOMOGLYPHS = {
+    'А': 'A', 'В': 'B', 'Е': 'E', 'К': 'K', 'М': 'M', 'Н': 'H', 'О': 'O',
+    'Р': 'P', 'С': 'C', 'Т': 'T', 'Х': 'X', 'а': 'a', 'е': 'e', 'о': 'o',
+    'р': 'p', 'с': 'c', 'х': 'x', 'у': 'y', 'і': 'i', 'ј': 'j', 'ѕ': 's',
+    'І': 'I', 'Ј': 'J', 'Ѕ': 'S',
+}
+
+
+def fix_homoglyphs(s):
+    """Заменяет кириллический двойник на латиницу только если рядом латиница
+    (т.е. это слово на латинице с одной подменённой буквой). Настоящий русский
+    текст (соседи-кириллица) не трогаем."""
+    chars = list(s)
+    n = len(chars)
+    for i, ch in enumerate(chars):
+        rep = HOMOGLYPHS.get(ch)
+        if not rep:
+            continue
+        prev = chars[i - 1] if i > 0 else ''
+        nxt = chars[i + 1] if i + 1 < n else ''
+        if (prev.isascii() and prev.isalnum()) or (nxt.isascii() and nxt.isalnum()):
+            chars[i] = rep
+    return ''.join(chars)
 
 
 def rewrite_html(html):
-    """Чистка ссылок в готовом HTML: языковой префикс + пагинация новостей."""
+    """Чистка готового HTML: ссылки, пагинация, ru-комментарии, гомоглифы."""
     html = LANG_DIR_RE.sub(r'\1="/', html)
     html = LANG_BARE_RE.sub(r'\1="/', html)
     if EXTERNAL_MEDIA:
         html = html.replace('/media/', MEDIA_URL)
+    html = HTML_COMMENT_RE.sub('', html)
+    html = fix_homoglyphs(html)
 
     def repl(m):
         n = int(m.group(1))
