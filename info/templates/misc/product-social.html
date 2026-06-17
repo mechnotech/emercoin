@@ -1,8 +1,5 @@
 {% load static %}
 <div class="product-social">
-                                        {% if person.facebook %}
-                                            <a href="{{ person.facebook }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_fb.svg' %}" alt=""></a>
-                                        {% endif %}
                                         {% if person.linkedin %}
                                             <a href="{{ person.linkedin }}" rel="nofollow" target="_blank"><img src="{% static 'assets/images/social_ln.svg' %}" alt=""></a>
                                         {% endif %}
