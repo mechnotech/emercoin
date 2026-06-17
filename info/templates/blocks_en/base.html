@@ -19,11 +19,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-
     {% block meta %}
     {% endblock meta %}
 
-{#    <meta property="og:url" content="{% static  'ru' %}" />#}
     <meta property="og:image" content="{% static  'assets/img/share_image.png' %}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -38,12 +36,9 @@
 
         {% include 'blocks_en/nav.html' %}
 
-
-
                 {% block content %}
                 
                 {% endblock content %}
-
 
         {% include 'blocks_en/footer.html' %}
 </body>

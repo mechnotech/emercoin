@@ -12,8 +12,6 @@
         <meta property="og:title" content="Emercoin Tech Solutions" />
 {% endblock %}
 
-
-
     {% block content %}
 
         <main>
@@ -74,9 +72,7 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
                                                                 <img src="{{ serv.image.url }}" alt="" class="services__image"></div>
                                                                 <div class="services__body">
                                                                     <div class="services__item-text">
-{#                                                                        <div class="technology__documentation">#}
-{#                                                                            <a class="btn _type_default _size_md" href="https://emercoin.com/documentation/blockchain-services/emerdns/emerdns-introduction">Документация EmerDNS</a>#}
-{#                                                                        </div>#}
+
                                                                         {{ serv.text_en|safe }}
                                                                         {{ serv.text_more_en|safe }}
                                                                     </div>
@@ -104,7 +100,6 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
                                                         </div>
                                                     {% endfor %}
 
-
                                                 </div>
                                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                             </div>
@@ -112,6 +107,4 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
         </main>
 
     {% endblock content %}
-
-
 

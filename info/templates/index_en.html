@@ -12,43 +12,15 @@
     <meta property="og:title" content="Official website of Emercoin" />
 {% endblock %}
 
-
     {% block content %}
         <link class="en">
           <div class="loader" style="display: none;"></div>
     <main>
 
-
-{#        {% include 'blocks_en/block_promo.html' with promos=promos %}#}
-
-{#        <div class="blueLightBox">#}
-{#            <div class="wrapper">#}
-{#                <ul class="topLinkList">#}
-{#                    <li>#}
-{#                        <a href="/ru/emercoin-blockchain"><span>Блокчейн Emercoin</span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="/ru/benefits#download"><span>Купить Emercoin</span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="#techsolutions"><span class="dotted">Наши сервисы</span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="#UpcomingEvents"><span class="dotted">События</span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="/ru/our-social-communities"><span>Cообщество</span></a>#}
-{#                    </li>#}
-{#                </ul>#}
-{#            </div>#}
-{#        </div>#}
-
-
       {% include 'blocks_en/block_about_blockchain.html' with emer_blocks=emer_blocks %}
         <div class="box">
                 <a class="button" href="{% url 'blockchain' %}">Learn more</a>
             </div>
-
 
         <div class="blueBox blueBox-still center ">
             <div class="wrapper">
@@ -58,34 +30,10 @@
             </div>
         </div>
 
-
-
        {% include 'blocks_en/block_services.html' with services=services %}
         {% include 'blocks_en/block_media.html' with medium=medium %}
         {% include 'blocks_en/block_roadmap.html' with roadmap=roadmap %}
         {% include 'blocks_en/block_news.html' with news=news %}
-
-{#        <div class="blueBox blueBox-subscribe center ">#}
-{#            <div class="fix_ok fix_ok-blue">#}
-{#                <div class="fix_ok-text white"></div>#}
-{#            </div>#}
-{#            <div class="wrapper">#}
-{#                <div class="whiteTitle">#}
-{#                    Подписаться#}
-{#                    <div class="whiteTitle whiteTitle-min">на новости и события</div>#}
-{#                </div>#}
-{#                <form class="subscribe boxSubscribe" method="post" data-action="/ru/json/subscribe">#}
-{#                    <div class="box_input">#}
-{#                        <div class="label_input label_input-min">E-mail</div>#}
-{#                        <div class="relative">#}
-{#                            <input class="form_input" type="text" name="email" />#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <button class="button button-blue button-blue-subscribe" type="submit">Подписаться</button>#}
-{#                    <div class="actions"></div>#}
-{#                </form>#}
-{#            </div>#}
-{#        </div>#}
 
     {% include 'blocks_en/block_team.html' with advisers=advisers teammates=teammates  %}
 
