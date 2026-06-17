@@ -1,4 +1,3 @@
-from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include, re_path
 
@@ -19,22 +18,15 @@ urlpatterns = [
                              content_type='application/xml'
                              )
     ),
-    path('zh/', include('info.urls')),
-    # path('admin/', admin.site.urls),
-    path('i18n', include('django.conf.urls.i18n')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    # documentation идёт раньше info, иначе catch-all <slug>/ из info.urls
+    # перехватит /documentation/
+    path('documentation/', include('emerdocs.urls')),
+    path('', include('info.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns.append(path('admin/', admin.site.urls))
-
-urlpatterns += i18n_patterns(
-    path('', include('info.urls')),
-    path('documentation/', include('emerdocs.urls'))
-    # prefix_default_language=False
-)
-
-if settings.DEBUG:
+    urlpatterns.insert(0, path('admin/', admin.site.urls))
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL,

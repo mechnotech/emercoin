@@ -2,16 +2,14 @@ from django.core.paginator import Paginator
 from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
-from django.views.decorators.csrf import requires_csrf_token
-from django.views.decorators.http import require_http_methods, require_safe
+from django.views.decorators.http import require_safe
 
-from emercoin.settings import GOOGLE_RECAPTCHA_ID, P_CACHE
-from .forms import ContactForm
+from emercoin.settings import P_CACHE
 from .models import (
     Promo, AboutEmer, Services, Media, RoadMap, News, Person, Company,
     Terms, Privacy
 )
-from .utils import get_blank_page, is_lang_rus, send_support
+from .utils import get_blank_page, is_lang_rus
 
 DEFAULT_PAGE_SIZE = 18
 
@@ -278,32 +276,15 @@ def server_error(request):
     return render(request, "misc/500.html", status=500)
 
 
-require_http_methods(['GET', 'POST'])
-
-
+@require_safe
 @cache_page(P_CACHE)
-@requires_csrf_token
 def contacts(request):
+    # Статическая страница: форма заменена на mailto-ссылку.
     blank_page = get_blank_page(request)
-    form = ContactForm()
     context = {
-        'form': form,
-        'sent': False,
         'blank': blank_page,
         'is_ru': is_lang_rus(request),
-        'captcha_id': GOOGLE_RECAPTCHA_ID
     }
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if request.recaptcha_is_valid:
-            if form.is_valid():
-                send_support(form)
-                context['sent'] = True
-                return render(request, 'contacts.html', context)
-        context['form'] = form
-
-    if request.GET.get('sent'):
-        context['sent'] = True
     return render(request, 'contacts.html', context)
 
 

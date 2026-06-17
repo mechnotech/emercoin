@@ -119,22 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Email
-if DEBUG:
-    EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'emails')
-    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('YA_LOGIN')
-EMAIL_HOST_PASSWORD = os.getenv('YA_PASS')
-SUPPORT = os.getenv('YA_SUPPORT')
-GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('RECAPCHA_KEY')
-GOOGLE_RECAPTCHA_ID = os.getenv('RECAPCHA_ID')
-
 LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
@@ -145,15 +129,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Сайт только на английском. LocaleMiddleware оставлен ради request.LANGUAGE_CODE
+# в видах/шаблонах/фидах, но язык всегда один — en.
 LANGUAGES = (
-    ('ru', 'Russian'),
     ('en', 'English'),
-    ('es', 'Spanish'),
-    ('ko', 'Korean'),
-    ('ja', 'Japan'),
-    ('de', 'German'),
-    ('ar', 'Arabic'),
-    ('vi', 'Vietnamese'),
 )
 
 CKEDITOR_CONFIGS = {

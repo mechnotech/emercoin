@@ -1,5 +1,4 @@
 from django.urls import path, re_path
-from .utils import check_recaptcha
 from . import views
 from emerdocs import views as doc_views
 from .feeds import MyFeed
@@ -34,7 +33,7 @@ urlpatterns = [
     path('news/<slug:slug>/', views.post, name='post'),
     re_path(r'^news/?$', views.news, name='news'),
     re_path(r'^road-map/?$', views.road_map, name='road-map'),
-    re_path(r'^contacts/?$', check_recaptcha(views.contacts), name='contacts'),
+    re_path(r'^contacts/?$', views.contacts, name='contacts'),
     re_path(r'^rate/?$', views.rate, name='rate'),
     path('emercoin-terms-and-conditions', views.terms, name='terms'),
     path('emercoin-privacy-policy', views.privacy, name='privacy'),

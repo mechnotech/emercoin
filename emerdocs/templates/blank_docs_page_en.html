@@ -15,20 +15,6 @@
          <div class="clickTop clickTop-menuDocs js_menuDocs_click">
             Documentation
          </div>
-         <div class="clickTop clickTop-docs js_search_click">
-            Search
-         </div>
-      </div>
-   </div>
-   <div class="boxSearchTop">
-      <div class="wrapper">
-         <form class="searchTop" action="{% url 'results' %}" method="post">
-             {% csrf_token %}
-             {{ form.find }}
-{#             {{ form.find.errors }}#}
-{#            <input class="search" name="s" type="text" required="">#}
-            <input class="button button-search" type="submit" value="Search">
-         </form>
       </div>
    </div>
    <div class="wrapper">

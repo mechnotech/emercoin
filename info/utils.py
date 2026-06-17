@@ -1,42 +1,11 @@
 import hashlib
 
 import requests
-from django.core.mail import send_mail
-from django.contrib import messages
 
 from emercoin.settings import (
     MEDIA_URL,
     MEDIA_ROOT,
-    EMAIL_HOST_USER,
-    SUPPORT,
-    GOOGLE_RECAPTCHA_SECRET_KEY
 )
-
-
-def check_recaptcha(function):
-    def wrap(request, *args, **kwargs):
-        request.recaptcha_is_valid = None
-        if request.method == 'POST':
-            recaptcha_response = request.POST.get('g-recaptcha-response')
-            data = {
-                'secret': GOOGLE_RECAPTCHA_SECRET_KEY,
-                'response': recaptcha_response
-            }
-            r = requests.post(
-                'https://www.google.com/recaptcha/api/siteverify',
-                data=data
-            )
-            result = r.json()
-            if result['success']:
-                request.recaptcha_is_valid = True
-            else:
-                request.recaptcha_is_valid = False
-                messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-        return function(request, *args, **kwargs)
-
-    wrap.__doc__ = function.__doc__
-    wrap.__name__ = function.__name__
-    return wrap
 
 
 def download(link):
@@ -128,26 +97,8 @@ def cut_space(text):
 
 
 def get_blank_page(request):
-    if request.LANGUAGE_CODE == 'ru':
-        return 'blankpage.html'
-    else:
-        return 'blankpage_en.html'
+    return 'blankpage_en.html'
 
 
 def is_lang_rus(request):
-    if request.LANGUAGE_CODE == 'ru':
-        return True
     return False
-
-
-def send_support(form):
-    name = str(form.cleaned_data.get('name'))
-    email = str(form.cleaned_data.get('email'))
-    message = str(form.cleaned_data.get('message'))
-    send_mail(
-        subject='С сайта emercoin',
-        message=f'Пользователь {name} ( {email} ) написал:\n "{message}"',
-        from_email=EMAIL_HOST_USER,
-        recipient_list=(SUPPORT,),
-        fail_silently=False,
-    )

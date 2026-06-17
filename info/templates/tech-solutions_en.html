@@ -47,7 +47,7 @@ The Emercoin Blockchain, on the other hand, is like programming with words. The 
                 <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
 {% for serv in services %}
-                        <div class="services__thumb swiper-slide" onclick="dataLayer.push({'event': 'GAevent', 'eventCategory': 'Tech Solutions', 'eventAction': 'Click', 'eventLabel': '{{ serv.title }}'});">
+                        <div class="services__thumb swiper-slide">
                             <div class="services__thumb-hero">
                                 <img src="{{ serv.icon.url }}" width="92" height="106" alt="" class="services__icon">
                                     <svg width="92" height="106" viewBox="0 0 92 106" xmlns="http://www.w3.org/2000/svg" class="services__icon-overlay">

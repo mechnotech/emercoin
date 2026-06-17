@@ -21,8 +21,8 @@
                 </li>
             </ul>
             <div class="header-left-top">
-                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })">Get a wallet</a>
-                <a id="AB-button" href="{% url 'for-coinholders' %}#buy" data-ab="Get a wallet" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
+                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm">Get a wallet</a>
+                <a id="AB-button" href="{% url 'for-coinholders' %}#buy" data-ab="Get a wallet" class="get" style="border-radius: 5px">Get Emercoin</a>
             </div>
             <div id="pull">
                 <span></span>
@@ -36,8 +36,8 @@
     <div class="wrapper">
         <div class="header-right" style="display: flex;">
             <div class="header-right-top">
-                <a href="{% url 'for-coinholders' %}#buy" class="get" onclick="dataLayer.push({ event: 'getemercoin_click' })" style="border-radius: 5px">Get Emercoin</a>
-                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm" onclick="dataLayer.push({ event: 'getwallet_click' })">wallet</a>
+                <a href="{% url 'for-coinholders' %}#buy" class="get" style="border-radius: 5px">Get Emercoin</a>
+                <a href="{% url 'for-coinholders' %}#download" class="get _theme_orange _margin_l_sm">wallet</a>
             </div>
             <nav>
                 <ul class="menuTop">
@@ -132,9 +132,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        {% include 'misc/lang_selector.html' %}
-                            </li>
                 </ul>
             </nav>
         </div>

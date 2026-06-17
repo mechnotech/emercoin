@@ -73,7 +73,6 @@ urlpatterns = [
     path('emercoin-api/', views.emer_api, name='emercoin-api'),
     path('emercoin-press-kit/', views.press_kit, name='emercoin-press-kit'),
     path('links-resources/', views.links, name='links-resources'),
-    path('results/', views.results, name='results'),
     path('recover/', views.recover, name='recover'),
     path('known-bugs/', views.known_bugs, name='known-bugs'),
 ]
