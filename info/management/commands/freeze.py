@@ -8,8 +8,10 @@
 Запуск:  python manage.py freeze
 """
 import math
+import os
 import re
 import shutil
+from datetime import date
 from pathlib import Path
 
 from django.core.management.base import BaseCommand
@@ -27,6 +29,14 @@ SRC_MEDIA = Path(BASE_DIR) / 'media'
 # Если MEDIA_URL абсолютный (R2/CDN) — медиа не кладём в dist, а ссылки
 # /media/... переписываем на внешний хост.
 EXTERNAL_MEDIA = MEDIA_URL.startswith('http')
+# Канонический домен для sitemap/robots (prod).
+SITE_URL = os.getenv('SITE_URL', 'https://emercoin.com').rstrip('/')
+
+# Боты ИИ/LLM, которым явно разрешаем обход.
+LLM_BOTS = [
+    'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-Web',
+    'anthropic-ai', 'PerplexityBot', 'Google-Extended', 'CCBot', 'Bytespider',
+]
 
 # URL-имена, которые не нужно замораживать (служебные).
 SKIP_PREFIXES = ('/admin', '/ckeditor', '/i18n')
@@ -86,6 +96,7 @@ class Command(BaseCommand):
         self.client = Client()
         self.ok = 0
         self.bad = 0
+        self.pages = set()  # site-relative paths for sitemap
 
         self._reset_dist()
         self._copy_assets()
@@ -94,9 +105,11 @@ class Command(BaseCommand):
         self._freeze_specials()
         self._freeze_news_pagination()
         self._freeze_404()
+        self._generate_sitemap_robots()
 
         self.stdout.write(self.style.SUCCESS(
-            f'\nDone. pages OK={self.ok}, problems={self.bad}, out={DIST}'))
+            f'\nDone. pages OK={self.ok}, problems={self.bad}, '
+            f'sitemap urls={len(self.pages)}, out={DIST}'))
 
     # ---------- infrastructure ----------
     def _reset_dist(self):
@@ -151,10 +164,8 @@ class Command(BaseCommand):
             self._save(f'/news/{n.slug}/')
 
     def _freeze_specials(self):
-        # реальные файлы с расширением
-        self._save('/robots.txt', as_file=True)
-        self._save('/sitemap.xml', as_file=True)
-        # RSS: кладём как feed/index.html (xml-содержимое)
+        # RSS: кладём как feed/index.html (xml-содержимое).
+        # robots.txt и sitemap.xml генерируем сами (см. _generate_sitemap_robots).
         self._save('/feed')
 
     def _freeze_news_pagination(self):
@@ -172,12 +183,36 @@ class Command(BaseCommand):
                 (DIST / 'news' / 'page' / str(p) / 'index.html')
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(html, encoding='utf-8')
+            self.pages.add('/news/' if p == 1 else f'/news/page/{p}/')
             self.ok += 1
 
     def _freeze_404(self):
         r = self.client.get('/this-page-does-not-exist-404/')
         (DIST / '404.html').write_bytes(r.content)
         self.stdout.write('wrote 404.html')
+
+    def _generate_sitemap_robots(self):
+        # sitemap.xml из реально собранных страниц (канонический домен prod)
+        today = date.today().isoformat()
+        locs = sorted(SITE_URL + p for p in self.pages)
+        items = []
+        for loc in locs:
+            prio = '1.0' if loc.rstrip('/') == SITE_URL else '0.7'
+            items.append(
+                f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod>'
+                f'<priority>{prio}</priority></url>')
+        sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+                   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                   + '\n'.join(items) + '\n</urlset>\n')
+        (DIST / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+
+        # robots.txt — открыт для индексации, LLM-боты явно приветствуются.
+        lines = ['User-agent: *', 'Allow: /', '']
+        for bot in LLM_BOTS:
+            lines += [f'User-agent: {bot}', 'Allow: /', '']
+        lines += [f'Sitemap: {SITE_URL}/sitemap.xml', '']
+        (DIST / 'robots.txt').write_text('\n'.join(lines), encoding='utf-8')
+        self.stdout.write(f'wrote sitemap.xml ({len(locs)} urls) + robots.txt')
 
     def _save(self, url, as_file=False):
         r = self.client.get(url, follow=True)
@@ -189,6 +224,7 @@ class Command(BaseCommand):
         body = r.content
         if 'text/html' in r.get('Content-Type', ''):
             body = rewrite_html(r.content.decode('utf-8')).encode('utf-8')
+            self.pages.add(url if url.startswith('/') else '/' + url)
 
         if as_file:
             target = DIST / url.lstrip('/')

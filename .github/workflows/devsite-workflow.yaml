@@ -37,8 +37,15 @@ jobs:
           python manage.py migrate --noinput
           python manage.py loaddata fixtures.json
           python manage.py freeze
-          # dev окружение не индексируем
+          # dev окружение не индексируем (перетираем открытый robots)
           printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+
+      - name: Guard — no Cyrillic in output
+        run: |
+          if grep -rlP '[\x{0400}-\x{04FF}]' dist --include=*.html; then
+            echo "::error::Cyrillic found in build output (files listed above)"; exit 1
+          fi
+          echo "OK: no Cyrillic in dist/"
 
       - name: Set up SSH
         run: |
