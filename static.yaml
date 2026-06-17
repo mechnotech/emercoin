@@ -1,6 +1,5 @@
 # Раздача статического сайта (dist/) через nginx. Без Postgres/gunicorn.
 # dist/ доставляется на сервер отдельно (rsync из CI).
-version: '3.6'
 
 services:
   nginx:
