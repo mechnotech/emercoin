@@ -274,7 +274,7 @@ MENU = [
             },
             {
                 'name': 'Тестнет',
-                'name_en': 'Тestnet',
+                'name_en': 'Testnet',
                 'url': 'testnet',
                 'active': False,
             },

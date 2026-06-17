@@ -21,14 +21,14 @@
              {% if request.LANGUAGE_CODE == 'ru' %}
                  <div class="center_error">
                        <span>500</span><br>
-                       Внутренняя ошибка сервера
+                       Internal server error
                     </div>
                     <div class="text_error">
-                       На сервере идут технические работы
+                       The server is under maintenance
                     </div>
                     <div class="box_button_error">
                        <a class="button button-error" href="{% url 'emercoin' %}">
-                       вернуться обратно </a>
+                       go back </a>
                     </div>
              {% else %}
                     <div class="center_error">
