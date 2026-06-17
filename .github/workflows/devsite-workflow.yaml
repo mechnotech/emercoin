@@ -16,6 +16,8 @@ jobs:
       DB_ENGINE: django.db.backends.sqlite3
       DB_NAME: build.sqlite3
       SECRET_KEY: build-only-not-a-secret
+      # Медиа берётся из Cloudflare R2, не из репозитория
+      MEDIA_URL: https://media.emercoin.com/
     steps:
       - name: Checkout
         uses: actions/checkout@v4

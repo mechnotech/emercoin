@@ -12,3 +12,4 @@ Dockerfile
 dump.sh
 local-postgres.yaml
 *.sqlite3
+tokens.txt

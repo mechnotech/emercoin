@@ -466,7 +466,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media
-MEDIA_URL = '/media/'
+# Может быть абсолютным (https://media.emercoin.com/) — тогда медиа берётся
+# из внешнего хранилища (Cloudflare R2), а не из репозитория/origin.
+MEDIA_URL = os.getenv('MEDIA_URL', '/media/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'

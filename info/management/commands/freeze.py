@@ -17,13 +17,16 @@ from django.test import Client
 from django.urls import get_resolver, reverse
 from django.urls.resolvers import URLPattern, URLResolver
 
-from emercoin.settings import BASE_DIR
+from emercoin.settings import BASE_DIR, MEDIA_URL
 from info.models import News, Services, Company
 from info.views import DEFAULT_PAGE_SIZE
 
 DIST = Path(BASE_DIR) / 'dist'
 SRC_STATIC = Path(BASE_DIR) / 'info' / 'static'
 SRC_MEDIA = Path(BASE_DIR) / 'media'
+# Если MEDIA_URL абсолютный (R2/CDN) — медиа не кладём в dist, а ссылки
+# /media/... переписываем на внешний хост.
+EXTERNAL_MEDIA = MEDIA_URL.startswith('http')
 
 # URL-имена, которые не нужно замораживать (служебные).
 SKIP_PREFIXES = ('/admin', '/ckeditor', '/i18n')
@@ -39,6 +42,8 @@ def rewrite_html(html):
     """Чистка ссылок в готовом HTML: языковой префикс + пагинация новостей."""
     html = LANG_DIR_RE.sub(r'\1="/', html)
     html = LANG_BARE_RE.sub(r'\1="/', html)
+    if EXTERNAL_MEDIA:
+        html = html.replace('/media/', MEDIA_URL)
 
     def repl(m):
         n = int(m.group(1))
@@ -74,7 +79,9 @@ class Command(BaseCommand):
     def _copy_assets(self):
         shutil.copytree(SRC_STATIC, DIST / 'static')
         self.stdout.write('copied static/')
-        if SRC_MEDIA.exists():
+        if EXTERNAL_MEDIA:
+            self.stdout.write(f'media external ({MEDIA_URL}) — not bundled')
+        elif SRC_MEDIA.exists():
             shutil.copytree(SRC_MEDIA, DIST / 'media')
             self.stdout.write('copied media/')
 
