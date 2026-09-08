@@ -15,6 +15,7 @@ from datetime import date
 from pathlib import Path
 
 from django.core.management.base import BaseCommand
+from django.template.loader import render_to_string
 from django.test import Client
 from django.urls import get_resolver, reverse
 from django.urls.resolvers import URLPattern, URLResolver
@@ -187,8 +188,10 @@ class Command(BaseCommand):
             self.ok += 1
 
     def _freeze_404(self):
-        r = self.client.get('/this-page-does-not-exist-404/')
-        (DIST / '404.html').write_bytes(r.content)
+        # Рендерим шаблон напрямую: под DEBUG=True (а сборка идёт именно так)
+        # Django отдал бы технический debug-404 в обход handler404.
+        html = rewrite_html(render_to_string('misc/404.html', {'path': '/'}))
+        (DIST / '404.html').write_text(html, encoding='utf-8')
         self.stdout.write('wrote 404.html')
 
     def _generate_sitemap_robots(self):

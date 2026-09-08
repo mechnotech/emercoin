@@ -17,31 +17,17 @@
                <img src="{% static 'assets/images/logo-white.svg' %}" alt="Emercoin">
                </a>
             </div>
-             {% if request.LANGUAGE_CODE == 'ru' %}
-                 <div class="center_error">
-                       <span>404</span><br>
-                       Page not found
-                    </div>
-                    <div class="text_error">
-                       This page no longer exists or has not been created yet.
-                    </div>
-                    <div class="box_button_error">
-                       <a class="button button-error" href="{% url 'emercoin' %}">
-                       go back </a>
-                    </div>
-             {% else %}
-                    <div class="center_error">
-                       <span>404</span><br>
-                       Page not found
-                    </div>
-                    <div class="text_error">
-                       What you were looking for doesn’t exist or isn’t here anymore.
-                    </div>
-                    <div class="box_button_error">
-                       <a class="button button-error" href="{% url 'emercoin' %}">
-                       return to the homepage </a>
-                    </div>
-             {% endif %}
+            <div class="center_error">
+               <span>404</span><br>
+               Page not found
+            </div>
+            <div class="text_error">
+               What you were looking for doesn’t exist or isn’t here anymore.
+            </div>
+            <div class="box_button_error">
+               <a class="button button-error" href="{% url 'emercoin' %}">
+               return to the homepage </a>
+            </div>
          </div>
       </div>
 
