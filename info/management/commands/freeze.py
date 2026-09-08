@@ -228,6 +228,9 @@ class Command(BaseCommand):
         if 'text/html' in r.get('Content-Type', ''):
             body = rewrite_html(r.content.decode('utf-8')).encode('utf-8')
             self.pages.add(url if url.startswith('/') else '/' + url)
+        # RSS/Atom строят абсолютные URL из хоста тестового клиента —
+        # подменяем на канонический домен (в html такого нет, но дёшево).
+        body = body.replace(b'http://testserver', SITE_URL.encode())
 
         if as_file:
             target = DIST / url.lstrip('/')
