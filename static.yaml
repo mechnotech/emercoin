@@ -11,5 +11,6 @@ services:
       - ./nginx/static-nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/static.conf:/etc/nginx/conf.d/site.conf:ro
       - ./sites:/sites:ro
-    ports:
-      - "80:80"
+    # Host networking so the host firewall applies: port 80 accepts Cloudflare
+    # only (/etc/nftables.conf on the host). A published port would bypass it.
+    network_mode: host
