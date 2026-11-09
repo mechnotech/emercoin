@@ -3317,6 +3317,20 @@
   }
 },
 {
+  "model": "info.news",
+  "pk": 839,
+  "fields": {
+    "title": null,
+    "title_en": "Emercoin 0.8.6 released: security hardening and ARM64 builds",
+    "slug": "emercoin-0-8-6-release",
+    "date": "2026-11-09T12:00:00Z",
+    "image": "",
+    "image_en": "emer086_release.svg",
+    "text": "<p>Этот раздел ещё не переведен на русский</p> <p>Вы поможете сообществу, если переведете его</p> <p>&nbsp;</p> <p><a class=\"button button-telegram\" href=\"https://t.me/emernews\" rel=\"nofollow\" target=\"_blank\">Telegram</a></p>",
+    "text_en": "<p>We are pleased to announce the release of <strong>Emercoin Core 0.8.6</strong>. It brings improvements and bug fixes across the whole stack: EmerDNS, name services, RPC, the PoS minter, the Qt wallet and network handling. <strong>Upgrading is strongly recommended for all users.</strong> There are no consensus changes: 0.8.6 follows the same chain as 0.8.5 and works with older nodes. Stop the old version, install the new one and start it &mdash; wallets and the block database are used as they are, no reindex is needed.</p>\n\n<p>A large part of this release is <strong>security and robustness work</strong>. The node now handles invalid blocks and malformed or excessive P2P messages more strictly, rate-limits addresses received from peers, caps automatic bans and fixes a fee-filter issue that could stop peers from relaying transactions for minutes at a time. File access from the name RPCs (<code>name_show</code>, <code>name_new</code>, <code>name_update</code>) is now <strong>off by default</strong> and requires <code>namefileio=1</code> in <code>emercoin.conf</code>. Legacy JSON-RPC now decodes non-ASCII text correctly instead of corrupting it in permanent NVS records, and the PoS minter no longer releases UTXO locks too early or misses a block after a system clock jump.</p>\n\n<p>New in 0.8.6: the <code>selfns</code> option in EmerDNS (NS, PTR and CNAME records can use <code>@</code> to point at the gateway answering the query), <code>emercoin-cli -v</code> to print just the value of <code>name_show</code>, and a new <strong>Linux ARM64 build</strong> for Raspberry Pi 4/5 and ARM servers. This is also the first Emercoin release built, tested and published by CI on GitHub, with SHA256 checksums and build provenance attestations, so you can verify that every binary was built from the <code>v0.8.6emc</code> tag.</p>\n\n<p>Please check the &ldquo;Changes that may need your attention&rdquo; section before upgrading. For example, <code>sendrawtransaction</code> now takes an absolute <code>maxfee</code> in EMC, and the Qt wallet no longer has the &ldquo;Pay to other cryptocurrencies&rdquo; form. Full release notes and downloads (Windows, Linux x86_64, Linux ARM64):\n<a href=\"https://github.com/emercoin/emercoin/releases/tag/v0.8.6emc\" target=\"_blank\" rel=\"nofollow\">Emercoin 0.8.6 on GitHub</a>.</p>"
+  }
+},
+{
   "model": "info.person",
   "pk": 1,
   "fields": {
